@@ -21,12 +21,12 @@
     "capability": 3
   },
   "gui": {
-    "version": "0.8.0-source-en-r1",
-    "source_commit": "3bdbb52027415f65ec0a18a37b479af7efb29ceb",
-    "release_url": "https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r1",
-    "filename": "hawk-h102-iio-gui-0.8.0-source-en-r1.zip",
-    "bytes": 191947,
-    "sha256": "131f94a34dd2b50702b0491f71f532beb128b77073e625948d83fa34ee08729e",
+    "version": "0.8.0-source-en-r2",
+    "source_commit": "15d2b475f47873c75c29816def01944e1a8532ba",
+    "release_url": "https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r2",
+    "filename": "hawk-h102-iio-gui-0.8.0-source-en-r2.zip",
+    "bytes": 192475,
+    "sha256": "4a011f9b54571cac37176d0fda3999344f18ee6f797eaeffa28f43770f8a3d9e",
     "default_language": "en",
     "supported_languages": [
       "en",
@@ -44,6 +44,8 @@
   "scope": {
     "per_device_installation_and_boot_check": "REQUIRED",
     "new_hardware_qualification": false,
-    "usb_host_components": "SEPARATE_NOT_BUNDLED"
-  }
+    "usb_host_components": "SEPARATE_NOT_BUNDLED",
+    "complete_system_corresponding_source": "NOT_COMPLETE_SEE_SOURCE_AVAILABILITY"
+  },
+  "updated_date": "2026-10-21"
 }

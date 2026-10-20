@@ -8,7 +8,7 @@ Use the matching components below when provisioning a new H102. All linked repos
 |---|---|---|
 | Bootable SD image | H102 Kuiper 1.2.0 / 2024.1 | [Image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image); download all three parts and reassemble the XZ |
 | Device services | 1.0.0-en-r1 | [Service release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1); API36/cap3 plus network-performance 1.0.0 |
-| Standalone IIO GUI | 0.8.0-source-en-r1 | [GUI source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r1); bilingual desktop configuration, plots, IQ recording and supported TX |
+| Standalone IIO GUI | 0.8.0-source-en-r2 | [GUI source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r2); bilingual desktop configuration, plots, IQ recording and supported TX |
 | GNU Radio module | gr-logicrf 1.2.2rc2 English source | [Module source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2-rc2); native GRC examples, FM, IQ and time-domain applications |
 
 Exact filenames, sizes and SHA-256 values are in [the delivery manifest](../manifests/h102-customer-delivery-20261020.json). Source-delivery versions do not identify new firmware or extend earlier hardware tests. The Linux repository is an integration toolkit, not a complete standalone corresponding-source set for every system/vendor component.
@@ -27,7 +27,7 @@ The base image alone does not include these later IP-only services. The staged-f
 
 ## 3. Install the host application
 
-For the IIO GUI, follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.0-source-en-r1/docs/INSTALL.md). English is the first-launch default; Simplified Chinese and saved user preferences are retained.
+For the IIO GUI, follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.0-source-en-r2/docs/INSTALL.md). English is the first-launch default; Simplified Chinese and saved user preferences are retained.
 
 For GNU Radio, install the documented GNU Radio 3.10.12.0 environment and follow [module installation](https://github.com/logicrf/gr-logicrf/blob/v1.2.2-rc2/docs/INSTALL.md). Open the supplied editable `.grc` examples in Companion.
 
@@ -44,3 +44,6 @@ USB additionally requires the matching FT601 host service and applicable driver/
 Each component retains its own terms. The gr-logicrf GPL grant does not automatically relicense the standalone GUI, firmware, RTL or vendor SDK. Original qualified firmware archive bytes are preserved; English source/documentation updates are managed separately.
 
 This delivery adds source packaging, exact archive pairing, English installation guidance and offline staging checks. It does not add a new per-device installation, SD cold-boot, USB/RF, all-profile or arbitrary-duration qualification. Keep the existing release's precise hardware limits and perform the new unit's checks before application use.
+
+For component-specific source availability and remaining source-delivery review,
+read [Source availability](SOURCE-AVAILABILITY.md).

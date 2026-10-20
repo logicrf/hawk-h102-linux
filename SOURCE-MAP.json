@@ -1416,6 +1416,7 @@
   "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata",
   "generated_delivery_documents": [
     "docs/DELIVERY.md",
-    "manifests/h102-customer-delivery-20261020.json"
+    "manifests/h102-customer-delivery-20261020.json",
+    "docs/SOURCE-AVAILABILITY.md"
   ]
 }

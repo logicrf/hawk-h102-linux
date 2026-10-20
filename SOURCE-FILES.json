@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3405,
-      "sha256": "b4d2e429c9a30f2df1f705a6ffb7bf0689dc54a5c040b07089e02402d9d491f7"
+      "bytes": 3479,
+      "sha256": "1570806ca4bb32f657eb55e7d8541897270cae003090608626ca63b4164501d9"
     },
     "SOURCE-BASE.json": {
       "bytes": 823,
-      "sha256": "f43ac3e8adbb1c47234054c93ea07158fb4ffcd4dba3b05cd8a9bcfb11845009"
+      "sha256": "247a4c7e3f99248f991ba1a618fcca4935ba5750ea2fb56b737fa73bb1e3c9a7"
     },
     "SOURCE-MAP.json": {
-      "bytes": 73147,
-      "sha256": "38f5cc136375a7317dbd0f434bfa49f61437d8256245ef6e71417af76b533810"
+      "bytes": 73182,
+      "sha256": "a666457c9ce5f1952f0c6b138c0a0e97fe72af2981287c20a895481b8448c034"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -159,8 +159,8 @@
       "sha256": "7ab8e48a4ce66140cac3ea4557e11ee6598384d86c31973e3a69417e4bb70ec7"
     },
     "docs/DELIVERY.md": {
-      "bytes": 4692,
-      "sha256": "5a13eada537ba98a984229d0154a3e3adc1fbbb3e935761ce1981a4fbe645185"
+      "bytes": 4826,
+      "sha256": "0c5967e01e2036a51854da10ad74b025459ac29314953ed4c95f3fe6bc27fbba"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 3685,
@@ -185,6 +185,10 @@
     "docs/RELEASE.md": {
       "bytes": 2570,
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
+    },
+    "docs/SOURCE-AVAILABILITY.md": {
+      "bytes": 2825,
+      "sha256": "5be1e5e2eb11acd42d48242da2644bea1be297065a374ef56637963444c2b559"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -239,8 +243,8 @@
       "sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c"
     },
     "manifests/h102-customer-delivery-20261020.json": {
-      "bytes": 1817,
-      "sha256": "0f2acad284f9bea74ee80d2a8dc07e4114045b7522ad80d33f350b23a1d0e27a"
+      "bytes": 1933,
+      "sha256": "42762affec69c0cc27565ea13db4a4f55f556b0ca32be4f706699fd08589102e"
     },
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,

@@ -39,3 +39,5 @@ The historical image recipes retain their original source/asset checks. English 
 The [matching device-service bundle](docs/BOARD-SERVICES.md) supplies the later API36/cap3 and network add-ons separately from the released 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
 
 [Licensing](LICENSE.md) · [Third-party notices](LICENSES/THIRD-PARTY-NOTICES.md) · [English branch maintenance](docs/MAINTAINING.md)
+
+- [Source availability and component terms](docs/SOURCE-AVAILABILITY.md)
