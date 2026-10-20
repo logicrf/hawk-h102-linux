@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "development_commit": "02f8158d3cabccf0b740721e703ed014fa2c92d1",
+  "development_commit": "e85198a4fa16152da9587a21a0f9cad69de6edb9",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
@@ -1422,7 +1422,8 @@
   ],
   "derived_files": {
     "manifests/h102-product.json": "Selected current product/upstream/platform/release fields from the fixed development manifest",
-    "device-tree/h102-1.2.0-reference.dts": "dtc decompilation of the original SHA-pinned DTB"
+    "device-tree/h102-1.2.0-reference.dts": "dtc decompilation of the original SHA-pinned DTB",
+    "docs/BOARD-SERVICES.md": "Customer guide corrected using actual H102 Python 3.9.2 verify/stage results; original service payload and tool bytes unchanged"
   },
   "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata",
   "generated_delivery_documents": [

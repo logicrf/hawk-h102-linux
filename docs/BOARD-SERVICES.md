@@ -10,7 +10,7 @@ Use this administrator package after deploying the exact LogicRF Hawk H102 Kuipe
 | Kernel | `6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1` |
 | Device services | Hot-metadata add-on r5, API `0.1.0-ip36`, 108 pinned SDK files and actual FPGA capability 3 |
 | Network settings | network-performance 1.0.0 |
-| Host applications | IIO GUI source `3bdbb52` or gr-logicrf English source `304400e0`; install each application's documented dependencies |
+| Host applications | IIO GUI source packaging r2 `15d2b475` or gr-logicrf English source `304400e0`; install each application's documented dependencies |
 
 Download `H102-Board-Services-1.0.0-en-r1.zip` and its checksum from the [device-service release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1). Verify the full ZIP before extracting it into a new directory. The SD image is available separately; see [image download](IMAGE-DOWNLOAD.md).
 
@@ -18,7 +18,11 @@ The qualified firmware archives and their original installers are preserved byte
 
 ## Verify and prepare
 
-On Linux with Python 3.10 or later:
+Use the H102's supplied Python 3.9.2 for the board commands below. The unchanged
+verification/staging tool passed an actual two-archive verification and 46-file
+staging/readback on that interpreter. Host verification also passed on Python 3.10.
+The desktop GUI's Python requirement applies to the PC, not the H102. This corrects
+the 3.10+ statement in the original r1 ZIP guide; no tool or firmware bytes changed.
 
 ```bash
 python3 h102_board_services.py verify --bundle .
