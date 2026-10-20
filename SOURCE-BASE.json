@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "repository": "logicrf/hawk-h102-linux",
+  "development_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
+  "delivery_branch": "github-en",
+  "language": "English",
+  "status": "DOCUMENTATION_PREPARATION_ONLY",
+  "full_source_export": false,
+  "github_synchronized": false,
+  "firmware_modified": false,
+  "release_version": "1.2.0",
+  "source_notice": "Customer documentation rewritten from the development source; firmware/code redistribution scope remains separate"
+}
