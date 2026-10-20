@@ -30,7 +30,7 @@ The source checker is offline: it verifies the included file set, hashes, Englis
 
 ## Images and exact-version inputs
 
-Download the actual `.img.xz` through the delivery channel supplied with the product and verify the hashes in [release information](docs/RELEASE.md). Images, generated firmware/stream binaries, vendor SDKs, complete RTL and build outputs are not stored in this Git repository. A source archive is not a bootable image.
+Download all three parts from the private [1.2.0 SD image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image), then follow [image download instructions](docs/IMAGE-DOWNLOAD.md) to restore and verify the actual `.img.xz`. Images, generated firmware/stream binaries, vendor SDKs, complete RTL and build outputs are not stored in this Git repository. A source archive is not a bootable image.
 
 The historical image recipes retain their original source/asset checks. English translation changes source hashes: this export is **not** a new firmware release or a claim that translated files reproduce the released image byte-for-byte. Exact historical reconstruction requires the original pinned inputs listed in [build inputs](docs/BUILD.md). The source checkout alone is insufficient for a complete image build.
 

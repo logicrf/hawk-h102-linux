@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3021,
-      "sha256": "db0ff0a3b00583212a8bd91baa4b24d420a1b4348a0583cfc392ac6b90ca088a"
+      "bytes": 3130,
+      "sha256": "1c5000722553b8cf190d4b33319543e50169065d7daad6e398c6cd11bcb5eaad"
     },
     "SOURCE-BASE.json": {
-      "bytes": 706,
-      "sha256": "fc248a158ac495e8b18e170e3a587ebfdfffe8fca39b91cf07e87f1debffd9e9"
+      "bytes": 756,
+      "sha256": "5ff30b6428276f37ef192dfec7e59b0857b6abd303385e456929990b0ddab050"
     },
     "SOURCE-MAP.json": {
-      "bytes": 70610,
-      "sha256": "ceb1478a085c1a7b396d63cd8e814eb95810389305f95e7c658d389b2d1f68be"
+      "bytes": 70632,
+      "sha256": "ceef8dd2f7cefa0507fbd7c83d13495e76500a8ce4fac57b51539966337763ba"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -162,6 +162,10 @@
       "bytes": 2799,
       "sha256": "b07da180cf4fb1ad29cca55a5bff5fe910d5f14921fea9f522721936ae5ffdeb"
     },
+    "docs/IMAGE-DOWNLOAD.md": {
+      "bytes": 3609,
+      "sha256": "caf7b1e97a39dba39d4c3373464ae307f75ffbd24587a44cef557a65965ffda0"
+    },
     "docs/MAINTAINING.md": {
       "bytes": 1189,
       "sha256": "ddc146c1fcd42a94e4a800113cf2f9bfdf53aecb438fa07e83c0909e6b37b9e2"
@@ -171,8 +175,8 @@
       "sha256": "5e8fc6f4f02c2d7dbcbed03348f8c7c276892a1e1170016b79b7709efec2908b"
     },
     "docs/RELEASE.md": {
-      "bytes": 2136,
-      "sha256": "2b402557ac726d8a890339fb72b4b34c20c3442cbe5fdcfdd3e17af1ac0d09cb"
+      "bytes": 2570,
+      "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -225,6 +229,10 @@
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,
       "sha256": "9b6edcec88d221706b9458bd51c354249848e1c57950d65fe04b46ff3d7337cd"
+    },
+    "manifests/h102-image-parts-1.2.0.json": {
+      "bytes": 1107,
+      "sha256": "509f634f5e74ad5bf59ee5e2efa8d18706b99279b75ae5812259286ec369734a"
     },
     "manifests/h102-portable-host-pins.json": {
       "bytes": 1309,
@@ -481,6 +489,10 @@
     "scripts/h102_profile_iio_broker.py": {
       "bytes": 11016,
       "sha256": "07ce1ca369bf0503d411e187b96bb089fbb2b8a8094db1b8a6c7fb89eb3ec367"
+    },
+    "scripts/h102_reassemble_image.py": {
+      "bytes": 7112,
+      "sha256": "ab5a4daa03b818a3d80dc28a34b481db78710df12f664231b6a3a4c0bcb3c32c"
     },
     "scripts/h102_rf_owner.py": {
       "bytes": 27258,

@@ -22,3 +22,7 @@ The release includes calibration power-state fixes, bounded ADC register access,
 Two H102 units completed the recorded release-specific checks. Test windows cover boot/setup, representative Qt operation, finite IQ recording, USB digital paths and recovery; they do not establish unlimited-duration losslessness for all hosts/profiles, calibrated absolute RF power/UTC or dual-channel phase coherence. New units still need first-boot identity/network checks and a receive test.
 
 This toolkit includes deployment and integration source; images and complete corresponding-source/vendor inputs are supplied separately. See SOURCE-BASE.json for exact provenance and docs/BUILD.md for reconstruction requirements. This English source update produces no new image, RTL, kernel or hardware qualification.
+
+## Download the SD image
+
+The private [H102 Kuiper 1.2.0 image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image) supplies three binary parts, a complete hash manifest, the reassembly tool and an English SD deployment-tool ZIP. Download all parts and follow [image download instructions](IMAGE-DOWNLOAD.md). Reassembly preserves the released image SHA; it does not create a new firmware build.

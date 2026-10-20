@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "product": "LogicRF Hawk H102 Kuiper",
+  "version": "1.2.0",
+  "platform": "2024.1",
+  "image": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz",
+  "bytes": 2759144392,
+  "sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+  "raw_bytes": 11823742976,
+  "raw_sha256": "22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d",
+  "parts": [
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz.part01",
+      "bytes": 1073741824,
+      "sha256": "666f8d9b6c7b98b9d63ff63721005247802cfec2cc72bc96555143c214a1997e"
+    },
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz.part02",
+      "bytes": 1073741824,
+      "sha256": "3cd9b7d5e475a94dcfea98e2ec1285747f627c5d2de4173cd3641ab5a76edc11"
+    },
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz.part03",
+      "bytes": 611660744,
+      "sha256": "efc381265f4bcc9dd98b89b010a6fa2a0a227d2460eb8a4b4508b55087ea1a01"
+    }
+  ],
+  "notice": "Download and reassemble all three parts before writing; bytes are identical to the existing 1.2.0 image, not a new build"
+}

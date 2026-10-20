@@ -1365,5 +1365,5 @@
     "manifests/h102-product.json": "Selected current product/upstream/platform/release fields from the fixed development manifest",
     "device-tree/h102-1.2.0-reference.dts": "dtc decompilation of the original SHA-pinned DTB"
   },
-  "new_files": "English customer documentation, package checker and distribution metadata"
+  "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata"
 }
