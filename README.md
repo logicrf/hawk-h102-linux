@@ -1,12 +1,39 @@
 # LogicRF Hawk H102 Kuiper
 
-English customer documentation for the LogicRF Hawk H102.
+H102-specific Linux integration, configuration and SD deployment tools for the LogicRF Hawk H102 SDR. The released operating-system baseline is **H102 Kuiper 1.2.0 / 2024.1**, using the 18 March 2025 ADI Kuiper Full userspace image and the pinned H102 kernel/boot inputs.
 
-This branch currently contains documentation and release provenance. Complete source exports and downloadable packages are managed separately; this branch does not claim to include them.
+This repository provides English source and customer documentation. It contains the image integration recipes, H102 kernel patches and software IIO module, system overlays, radio-profile generation requests and tools, SD deployment utilities, optional device-control service source, and C++/Python IIO examples. It is maintained as a **private source distribution**, with component-specific licensing.
 
-- [Getting started](docs/GETTING-STARTED.md)
-- [Sample profiles and RF configuration](docs/CONFIGURATION.md)
-- [Generating additional ADRV9002 profiles](docs/PROFILE-GENERATION.md)
-- [Release information](docs/RELEASE.md)
+## Choose your task
 
-Maintainers: see [delivery maintenance](docs/MAINTAINING.md).
+| Task | Start here |
+|---|---|
+| Write the released image and prepare a new H102 | [Deployment](docs/DEPLOYMENT.md) |
+| Connect and use built-in configurations | [Getting started](docs/GETTING-STARTED.md), [configuration](docs/CONFIGURATION.md) |
+| Generate additional ADRV9002 profiles | [Profile generation](docs/PROFILE-GENERATION.md) |
+| Modify kernel or system-image integration | [Build inputs and workflow](docs/BUILD.md) |
+| Install the optional IP-only control service | [Device control](control-api/README.md) |
+| Develop using libiio | [C++ and Python examples](examples/iio/README.md) |
+| Review versions, hashes and support limits | [Release information](docs/RELEASE.md) |
+
+## Verify this source package
+
+On Linux with Python 3.10 or newer, from the repository root:
+
+```bash
+python3 scripts/check_distribution.py
+python3 scripts/h102_sd_deploy.py --help
+python3 scripts/h102_check_new_board.py --help
+```
+
+The source checker is offline: it verifies the included file set, hashes, English text, Python syntax and local Python import closure. It does not open a board or disk. Dependencies required for individual operations are listed in the build and deployment guides.
+
+## Images and exact-version inputs
+
+Download the actual `.img.xz` through the delivery channel supplied with the product and verify the hashes in [release information](docs/RELEASE.md). Images, generated firmware/stream binaries, vendor SDKs, complete RTL and build outputs are not stored in this Git repository. A source archive is not a bootable image.
+
+The historical image recipes retain their original source/asset checks. English translation changes source hashes: this export is **not** a new firmware release or a claim that translated files reproduce the released image byte-for-byte. Exact historical reconstruction requires the original pinned inputs listed in [build inputs](docs/BUILD.md). The source checkout alone is insufficient for a complete image build.
+
+Later GRC/control add-ons are separate from the released 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
+
+[Licensing](LICENSE.md) · [Third-party notices](LICENSES/THIRD-PARTY-NOTICES.md) · [English branch maintenance](docs/MAINTAINING.md)

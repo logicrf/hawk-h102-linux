@@ -1,0 +1,205 @@
+--- a/drivers/iio/adc/navassa/adrv9002.c
++++ b/drivers/iio/adc/navassa/adrv9002.c
+@@ -672,19 +672,56 @@
+ 	return 0;
+ }
+ 
++/* FDD ports on a common LO cannot retain different RX/TX carriers. Unlike
++ * TDD, every enabled port on that LO is one tuning transaction. Keep ports
++ * that were powered down temporarily in CALIBRATED through RX Prime; turning
++ * TX power off before Prime can fail in the SDK1 firmware. Never use the
++ * normal power setter here: its cached state may still be RF_ENABLED.
++ */
++static bool adrv9002_fdd_shared_lo(struct adrv9002_rf_phy *phy,
++                                  const struct adrv9002_chan *c)
++{
++	bool rx = false, tx = false;
++	int i;
++
++	if (phy->curr_profile->sysConfig.duplexMode != ADI_ADRV9001_FDD_MODE)
++		return false;
++
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		const struct adrv9002_chan *chan = phy->channels[i];
++
++		if (!chan->enabled || chan->lo != c->lo)
++			continue;
++		rx |= chan->port == ADI_RX;
++		tx |= chan->port == ADI_TX;
++	}
++
++	return rx && tx;
++}
++
+ static int adrv9002_phy_rerun_cals(struct adrv9002_rf_phy *phy,
+ 				   struct adi_adrv9001_InitCals *init_cals, unsigned long port_mask)
+ {
+ 	unsigned long powered_for_cals = 0;
++	bool restore_before_power = false;
+ 	u8 error;
+ 	int ret, i;
+ 
+ 	if (!init_cals->chanInitCalMask[0] && !init_cals->chanInitCalMask[1])
+ 		return 0;
+ 
++	/* Shared FDD RX Prime needs the TX ports still powered in CALIBRATED. */
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		if (phy->channels[i]->enabled && adrv9002_fdd_shared_lo(phy, phy->channels[i])) {
++			restore_before_power = true;
++			break;
++		}
++	}
++
+ 	/* Calibration requires configured channels powered, even for RX-only retune.
+ 	 * All ports are CALIBRATED here. Do not restore a cached RF_ENABLED state
+-	 * while temporarily powering a port; restore power before cached states.
++	 * while temporarily powering a port. Shared FDD must retain temporary power
++	 * through RX Prime; the other profile paths keep their original ordering.
+ 	 */
+ 	ret = adrv9002_phy_rerun_cals_setup(phy, port_mask, false);
+ 	if (ret)
+@@ -716,6 +753,8 @@
+ 	dev_dbg(&phy->spi->dev, "Re-run init cals: mask: %08X, %08X\n",
+ 		init_cals->chanInitCalMask[0], init_cals->chanInitCalMask[1]);
+ 	ret = api_call(phy, adi_adrv9001_cals_InitCals_Run, init_cals, 60000, &error);
++	if (!ret && restore_before_power)
++		ret = adrv9002_phy_rerun_cals_setup(phy, port_mask, true);
+ 
+ restore_power:
+ 	/* Also undo partial power preparation or failed calibration. Keep the
+@@ -734,7 +773,7 @@
+ 		else if (!ret)
+ 			ret = restore_ret;
+ 	}
+-	if (ret)
++	if (ret || restore_before_power)
+ 		return ret;
+ 
+ 	return adrv9002_phy_rerun_cals_setup(phy, port_mask, true);
+@@ -980,6 +1019,98 @@
+ 	}
+ 
+ 	return 0;
++}
++
++static int adrv9002_fdd_shared_lo_write(struct adrv9002_rf_phy *phy,
++                                      struct adrv9002_chan *c, u64 freq)
++{
++	struct adi_adrv9001_InitCals init_cals = {0};
++	unsigned long moved = 0, powered = 0, port_mask = 0;
++	int i, ret = 0, cleanup_ret;
++
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		struct adrv9002_chan *chan = phy->channels[i];
++
++		if (!chan->enabled || chan->lo != c->lo)
++			continue;
++		ret = adrv9002_channel_to_state(phy, chan,
++					       ADI_ADRV9001_CHANNEL_CALIBRATED, true);
++		if (ret)
++			goto cleanup;
++		set_bit(i, &moved);
++		port_mask |= ADRV9002_PORT_MASK(chan);
++	}
++
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		struct adrv9002_chan *chan = phy->channels[i];
++
++		if (!test_bit(i, &moved) || chan->power)
++			continue;
++		ret = api_call(phy, adi_adrv9001_Radio_Channel_PowerUp,
++			       chan->port, chan->number);
++		if (ret)
++			goto cleanup;
++		chan->power = true;
++		set_bit(i, &powered);
++	}
++
++	/* Collect both RX and TX calibration masks only after all carriers agree. */
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		if (!test_bit(i, &moved))
++			continue;
++		ret = adrv9002_phy_lo_set(phy, phy->channels[i], &init_cals, freq);
++		if (ret)
++			goto cleanup;
++	}
++	ret = adrv9002_phy_rerun_cals(phy, &init_cals, port_mask);
++	if (ret)
++		goto cleanup;
++
++	/* Keep temporary TX power until every RX has returned through Prime. */
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		struct adrv9002_chan *chan = phy->channels[i];
++
++		if (!test_bit(i, &moved) || chan == c)
++			continue;
++		ret = adrv9002_channel_to_state(phy, chan, chan->cached_state, false);
++		if (ret)
++			goto cleanup;
++	}
++	ret = adrv9002_channel_to_state(phy, c, c->cached_state, false);
++
++cleanup:
++	/* A failed partial carrier/calibration update must not resume user RF.
++	 * Preserve the primary error and still undo every temporary power-up.
++	 */
++	if (ret) {
++		for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++			if (!test_bit(i, &moved))
++				continue;
++			cleanup_ret = adrv9002_channel_to_state(phy, phy->channels[i],
++						ADI_ADRV9001_CHANNEL_CALIBRATED, false);
++			if (cleanup_ret)
++				dev_err(&phy->spi->dev, "Shared LO state cleanup failed: %d\n",
++					cleanup_ret);
++		}
++	}
++	for (i = ARRAY_SIZE(phy->channels) - 1; i >= 0; i--) {
++		struct adrv9002_chan *chan = phy->channels[i];
++
++		if (!test_bit(i, &powered))
++			continue;
++		cleanup_ret = api_call(phy, adi_adrv9001_Radio_Channel_PowerDown,
++				       chan->port, chan->number);
++		if (!cleanup_ret)
++			chan->power = false;
++		else {
++			dev_err(&phy->spi->dev, "Shared LO power cleanup failed: %d\n",
++				cleanup_ret);
++			if (!ret)
++				ret = cleanup_ret;
++		}
++	}
++
++	return ret;
+ }
+ 
+ /*
+@@ -1017,6 +1148,11 @@
+ 	guard(mutex)(&phy->lock);
+ 	if (!c->enabled)
+ 		return -ENODEV;
++
++	if (adrv9002_fdd_shared_lo(phy, c)) {
++		ret = adrv9002_fdd_shared_lo_write(phy, c, freq);
++		return ret ? ret : len;
++	}
+ 
+ 	/* move all channels on the same lo to the calibrated state */
+ 	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
+@@ -2524,6 +2660,7 @@
+ 
+ static IIO_CONST_ATTR(frequency_hopping_hop_table_select_available, "TABLE_A TABLE_B");
+ static IIO_CONST_ATTR(initial_calibrations_available, "off auto run");
++static IIO_CONST_ATTR(fdd_shared_lo_atomic, "1");
+ static IIO_DEVICE_ATTR(frequency_hopping_hop1_table_select, 0600, adrv9002_attr_show,
+ 		       adrv9002_attr_store, ADRV9002_HOP_1_TABLE_SEL);
+ static IIO_DEVICE_ATTR(frequency_hopping_hop2_table_select, 0600, adrv9002_attr_show,
+@@ -2539,6 +2676,7 @@
+ static IIO_DEVICE_ATTR(multi_chip_sync, 0200, NULL, adrv9002_attr_store, ADRV9002_MCS);
+ 
+ static struct attribute *adrv9002_sysfs_attrs[] = {
++	&iio_const_attr_fdd_shared_lo_atomic.dev_attr.attr,
+ 	&iio_const_attr_initial_calibrations_available.dev_attr.attr,
+ 	&iio_const_attr_frequency_hopping_hop_table_select_available.dev_attr.attr,
+ 	&iio_dev_attr_frequency_hopping_hop1_table_select.dev_attr.attr,

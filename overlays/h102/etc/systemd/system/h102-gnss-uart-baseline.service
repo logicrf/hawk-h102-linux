@@ -1,0 +1,15 @@
+[Unit]
+Description=LogicRF H102 GNSS UART1 no-echo 38400 baseline
+After=local-fs.target
+Before=multi-user.target
+ConditionPathExists=/dev/ttyPS1
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -B /usr/local/lib/h102/scripts/h102_gnss_uart_baseline.py --report /run/h102-gnss-uart-baseline.json
+TimeoutStartSec=10
+Restart=no
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

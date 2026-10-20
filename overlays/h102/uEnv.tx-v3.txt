@@ -1,0 +1,7 @@
+# H102 boot configuration for the board-tested TX v3 laboratory bitstream.
+bootargs=console=ttyPS0,115200 root=/dev/mmcblk0p2 rw earlycon rootfstype=ext4 rootwait clk_ignore_unused cpuidle.off=1
+loadbit_addr=0x100000
+bitstream_image=h102_logicrf_master_tx_v3_lab.bit
+fit_addr=0x10000000
+uenvcmd=echo H102-LOGICRF-TX-V3-LAB-20260930 && run mmc_loadbit && echo H102-TX-V3-LOAD-DONE && load mmc 0 ${fit_addr} image.ub && echo H102-FIT-LOAD-DONE && bootm ${fit_addr}
+mmc_loadbit=echo Loading bitstream from SD/MMC/eMMC to RAM.. && mmcinfo && load mmc 0 ${loadbit_addr} ${bitstream_image} && fpga loadb 0 ${loadbit_addr} ${filesize}

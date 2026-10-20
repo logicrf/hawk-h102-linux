@@ -1,0 +1,164 @@
+{
+  "status": "PASS_OFFLINE_BUILD_INPUTS_MODULES_FIT_PENDING_BOARD",
+  "kernel": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
+  "host": "logicrf-build",
+  "jobs": 8,
+  "driver": {
+    "before_sha256": "fdc10bbd52cebb98741a0e34a32f10195281a432d465ff3e99259f87bba84cb6",
+    "after_sha256": "41d1cdf773fbb8a2520d204a495a5456f6134ecb6248243240025cd586bb9705",
+    "patch_sha256": "5d5e11dfa58562575e53c428cc17c2c2fff6da10da791f86e110a83f595189e0"
+  },
+  "artifacts": {
+    "boot-candidate/image-sdk1-sharedlo1.ub": {
+      "bytes": 8617972,
+      "sha256": "d4703c4f80c937a1bbf0dd7e8292f871ce2e9757bc221d32faaff7bd147470ea"
+    },
+    "boot-candidate/system.dtb": {
+      "bytes": 28895,
+      "sha256": "169feae5b8ba630c07628ae53d160778bdf3c71b8287838c99f34c2bfd518382"
+    },
+    "boot-candidate/h102-sharedlo1.its": {
+      "bytes": 751,
+      "sha256": "c3e7fb3dff654152f485d7e0a193dad8800609eac401efbeef7894b40dcf93c4"
+    },
+    "boot-candidate/zImage": {
+      "bytes": 8587208,
+      "sha256": "8804c840eb83986e77318c6c3593111377c540aba3ecced72b5cdc9fa362ab2b"
+    }
+  },
+  "modules": {
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.symbols": {
+      "bytes": 1061,
+      "sha256": "c89289acf8bc1114854a1b24f38413393acdac2f8539fc1b881cd4bf6c68b43d"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.builtin.modinfo": {
+      "bytes": 158237,
+      "sha256": "6d3a42957d5b8ebda2a6e7e736243478a365a46db8d3299f0aea7f1ff1383621"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.alias": {
+      "bytes": 561,
+      "sha256": "d1c9e8fe118f0042b8757228cf55561f939a292e567bb49e5db778fcca175377"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.builtin.bin": {
+      "bytes": 28807,
+      "sha256": "994a8d9b2e6c54d9571b10c745e2766e1aa13cfe0be8ca0985e38a7c1e76ca86"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.softdep": {
+      "bytes": 55,
+      "sha256": "ac2de753255c506934be29e69261f1485f51ee9cf9c2bf467bcc0c4cf95f8713"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.devname": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.symbols.bin": {
+      "bytes": 1198,
+      "sha256": "fd13974e4f001a0ca7ff47c6cfc13cb0f9288cdad80bf75e23b935ad57174f93"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.builtin.alias.bin": {
+      "bytes": 46974,
+      "sha256": "b616a9553dd0fa62d6d2433a43390f5ac64f94916cceb6870e77a05ccb8287cc"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.dep.bin": {
+      "bytes": 1193,
+      "sha256": "ff9f72a2c0df00cac4830ece9f3225252888441c97cc744db5c8f29aba9f8139"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.alias.bin": {
+      "bytes": 922,
+      "sha256": "08943e4709a6dd42c2fc1e4900ea13f9a28416dbfa899b1634a2a7b724ac8e13"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.dep": {
+      "bytes": 567,
+      "sha256": "6daace9876849bb1c51cc503d81c3f054312d14379b2cdca10bad8a248ccfb3b"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.builtin": {
+      "bytes": 27457,
+      "sha256": "ad215c35eab4c92ea998a602b07c78c985059b4edb4dd661d700f5feb46de9cf"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/modules.order": {
+      "bytes": 267,
+      "sha256": "115a6a02c7b7bc66c381518450ca1bba74da9fb7b80936eb932082027769d131"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/net/ipv4/ipip.ko": {
+      "bytes": 15296,
+      "sha256": "2a22387d8fb246c97a27c075a873a8e3fd073e3afa9149c01832d4a0a861f3f9"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/net/8021q/8021q.ko": {
+      "bytes": 39400,
+      "sha256": "8259d425473a1e3adb4239394da0c35399da610154452e826dd0fffe8e5f19bb"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/rpmsg/rpmsg_ns.ko": {
+      "bytes": 7912,
+      "sha256": "b7a45a89b5054fd0f497fafc97dd95b480ba30decfdcdc4e6cf7eec9b7947caf"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/rpmsg/rpmsg_char.ko": {
+      "bytes": 17252,
+      "sha256": "db5b1cde430a3b787a1b15d0778e0e2cbf3867014f24fe0a5505d23ddffb9f21"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/rpmsg/rpmsg_core.ko": {
+      "bytes": 22332,
+      "sha256": "22f1bad81da299c91de2923612043e9a17026fe6ae2b4f1b0131b6cae609137b"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/rpmsg/rpmsg_ctrl.ko": {
+      "bytes": 10016,
+      "sha256": "4f63ec846c97bf59ec98413484676ef4157ac3b1d72204622f334adba0e585ee"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/rpmsg/virtio_rpmsg_bus.ko": {
+      "bytes": 20696,
+      "sha256": "c4acb910ccbf90309e16a489ef1d4d591f67286630ca5972c3b0412ec42fe008"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/kernel/drivers/uio/uio_pdrv_genirq.ko": {
+      "bytes": 10692,
+      "sha256": "a05a693dfee1a377b6a9109979a4a52ff17581f9cb8a079e6f16aa0a288647cc"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/updates/h102_axi_trig.ko": {
+      "bytes": 10016,
+      "sha256": "f054675af0ffaddf7a954d03a193d337470a1b2c0f30b5937201ef3f642c47c6"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/updates/h102_axi_reg.ko": {
+      "bytes": 9108,
+      "sha256": "c2e833bd468bdcb1a82400e872ff34446cc5ac5df9d73b96469b5f2f0123d6aa"
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1/updates/h102_profile_control.ko": {
+      "bytes": 14656,
+      "sha256": "75c97ab7914d9ee2a1d63bcdec8a6b5e0c75ad3a037a22c621f08567519143c9"
+    }
+  },
+  "source_inputs": {
+    "base": "c8daf49830b2d19b155756d151f4c881a001a67e",
+    "files": {
+      "kernel-base-c8daf498.tar.gz": {
+        "bytes": 296809169,
+        "sha256": "66c275c5d26bd2d69831361ee44e6783b6bd330f49cc32889448d17ad2c5db48"
+      },
+      "sdk1-calfix1-regbounds1.patch": {
+        "bytes": 216872,
+        "sha256": "270d16169b3c1a20d0d61398537b4f42b677862644a9cded1d17b594f1ab0b05"
+      },
+      "sdk1-untracked-r2.tar.gz": {
+        "bytes": 30641,
+        "sha256": "f1e8cbe8a4f41253450f281271964272570b3a6ff8b66488e48fe6b1278edea2"
+      },
+      "kernel.config": {
+        "bytes": 161810,
+        "sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae"
+      },
+      "h102-fdd-shared-lo.patch": {
+        "bytes": 6744,
+        "sha256": "5d5e11dfa58562575e53c428cc17c2c2fff6da10da791f86e110a83f595189e0"
+      },
+      "firmware-inputs.tar.gz": {
+        "bytes": 819973,
+        "sha256": "d042c66e3234fb0d482a224b924054cd3aafbc1bd2b337723f84262b7e240d19"
+      }
+    }
+  },
+  "model_test": {
+    "returncode": 0,
+    "stdout": "PASS actual-driver-functions cases=28 scoped-model-only\n",
+    "stderr": "",
+    "driver_sha256": "41d1cdf773fbb8a2520d204a495a5456f6134ecb6248243240025cd586bb9705"
+  },
+  "board_qualified": false,
+  "evidence_root": "/data/logicrf/h102-builds/rx2-init-repeatability-20261015-01/sharedlo-driver-r1"
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Disable H102 RF TX before digital-only lab tests
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+Before=iiod.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/h102-lab-disable-tx
+RemainAfterExit=yes
+TimeoutStartSec=25
+
+[Install]
+WantedBy=multi-user.target

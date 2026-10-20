@@ -1,0 +1,15 @@
+[connection]
+id=USRP
+uuid=f6a7696d-4958-48f4-b1eb-c2ab9de0a838
+type=802-3-ethernet
+autoconnect=true
+
+[802-3-ethernet]
+auto-negotiate=true
+cloned-mac-address=stable
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

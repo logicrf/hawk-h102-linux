@@ -19,7 +19,7 @@ H102 1.2.0 does not provide an on-device arbitrary-profile generator or a profil
 
 ## Workflow
 
-Use the matching LogicRF profile-development tools supplied separately. This documentation branch does not contain the generator scripts, ADI SDK or generated packages.
+The generator code and request catalogs are included under `scripts/windows` and `profiles/requests`. Supply the licensed ADI SDK separately; generated binary packages are not bundled.
 
 1. Verify the SDK ZIP and extract it to a clean directory. Do not mix SDK releases or copy individual DLLs between them.
 2. Use the matching profile-generator scripts and pinned request catalogs from the H102 source/tool package.
@@ -31,3 +31,14 @@ Use the matching LogicRF profile-development tools supplied separately. This doc
 Generator output includes `profile.json`, `stream.bin`, request/stream settings, success markers and `generation-receipt.json`. `stream.bin` configures the transceiver stream processor; it is not an FPGA bitstream. An imported package is not automatically approved for production use.
 
 Do not infer analog corner settings from bandwidth alone. The released narrowband profiles contain validated analog settings that differ from a simple BW/2 calculation. Changes to SSI, reference clock, channel topology or native sample rates also require driver/RTL compatibility review.
+
+## Executable generation commands
+
+On Windows 11, use the SDK root containing `prototype/DLLs` and `prototype/resources`. Replace the paths with your actual verified SDK and two new output directories:
+
+```powershell
+powershell -File scripts/windows/h102-generate-profiles.ps1 -SdkVersion 1.0.0 -SdkRoot C:\inputs\adrv9001-sdk\pkg -OutputDirectory C:\work\new-independent -PresetCatalog profiles/requests/h102-built-in-sdk1-presets.json
+powershell -File scripts/windows/h102-generate-profiles.ps1 -SdkVersion 1.0.0 -SdkRoot C:\inputs\adrv9001-sdk\pkg -OutputDirectory C:\work\new-shared -PresetCatalog profiles/requests/h102-common-lo-sdk1-presets.json
+```
+
+The tool verifies the SDK file set against `manifests/h102-profile-generator-sdk-pins.json`, compiles the included C# entry and uses a fresh process per preset. Retain both original output directories and receipts. On Linux, inspect `python3 scripts/h102_import_generated_profiles.py --help` and provide the approved request catalog, generated roots and new output directory explicitly. The importer accepts only matching native generation output; do not hand-edit JSON fields or combine a new profile with an old stream binary.

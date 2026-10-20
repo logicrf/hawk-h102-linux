@@ -1,0 +1,10 @@
+{
+  "origin": "H102 PetaLinux2024.1 project-spec/meta-user/recipes-modules/h102-iio/files",
+  "scope": "original legacy sources unchanged; matched candidate kernel rebuild required",
+  "module_license": "GPL as declared by MODULE_LICENSE in original sources",
+  "sha256": {
+    "Makefile": "23c699dae79aab9feddbe2cd48f9a8976d6f3c78de56eaa0669186423119a594",
+    "h102_axi_reg.c": "de89af831beff549f02ddfcc0906610e62edcd239e7ada7e5eda699372fa5b60",
+    "h102_axi_trig.c": "cd762ac67e87a1715e92352f23eee9e6984ac9a1b0127e40a8545d1b4e941f6a"
+  }
+}

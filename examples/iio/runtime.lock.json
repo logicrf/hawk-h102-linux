@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "gui_commit": "f782657cc911834d31bf136da5b19260e25aeea8",
+  "source_repository": "logicrf/hawk-h102-iio-gui",
+  "runtime_files": {
+    "h102_iio_demo/__init__.py": "1fad47fb54b5988c977cdc10b31ea98203f3e2daced76f38427733100f9bd838",
+    "h102_iio_demo/__main__.py": "e100cd5a0f779d4e661df6fd1a566f8418af0929603ee7f3e0c8280de5470547",
+    "h102_iio_demo/backend.py": "6dc655a7a384b00f0860851654c8584908cbf8a9072f43d6c6efbb934bbc9418",
+    "h102_iio_demo/board_capture.py": "035c9a91bb8aa6652c361b9a05f222d7ce6333362e99952212f4a1808bb3908a",
+    "h102_iio_demo/board_radio.py": "fd5dec1a90f33177f5cd2230a4fc6572c155fec8292eaa9f86040c8c082e0e33",
+    "h102_iio_demo/board_session.py": "df4ca96578cde57692f0e5500a529e21d9b97a43d37b577b24284960bf8487d8",
+    "h102_iio_demo/board_tx.py": "ae2e1a352e77643e5f583690ca573b2dfca9952eb55e8b2f310522adea7f290b",
+    "h102_iio_demo/gui.py": "56efc211ebdeba4ee27aa9890be1d104477715116302b2b9187d55ae5324e675",
+    "h102_iio_demo/i18n.py": "561029de33845217276c8627ffd860446acc6edc25d86a4cc8cf0163a602b066",
+    "h102_iio_demo/instrument_widgets.py": "cac54655cc1a8d7832fa11720d112bc55d2d7adf383ea41df8190b11a971e6ad",
+    "h102_iio_demo/model.py": "98a3a63abb2c19ec96e7a10fa07315858e383eddd67f44469317c83dc7e2cb94",
+    "h102_iio_demo/preset_modes.py": "cdf7c08c813955201c4d76f2ea7bd487e10abe7455060c52d958225695a2cb02",
+    "h102_iio_demo/recorder.py": "c7f6537eb86640214a883795a97f9539e0dd02a22591eb02de82d98a8d33942f",
+    "h102_iio_demo/session_link.py": "1e626616c6de715f7edfa4a71ebabf6f858e5dff9d0729586bac173017253741",
+    "h102_iio_demo/sweep.py": "a227918f3969e0efacc66e4b14375759f17368b3e1ed20c064085ad7d1dc7258",
+    "h102_iio_demo/tx_backend.py": "21930a5ddee35964d33251ce863b04cf1c5f28d056a5dc6fc8498cc238762caf",
+    "h102_iio_demo/tx_cyclic.py": "c2db6ed391c2c0df40ecdddbf936e70916b0a7bfeed1a85bed7616853304764d",
+    "h102_iio_demo/tx_model.py": "2d6dc3b1cbdc182fc3cd31eec1e5ac55e86f305b27b3119578c63a93c4e09361",
+    "h102_iio_demo/tx_panel.py": "8e10e203d03715856c5e093dc6934bf8f4eeb23f168fac6bed854cb56b007ec8",
+    "h102_iio_demo/window_chrome.py": "d56233ef84fd682c005f11a8f70d312016e66becdb2398c374cc39a907991d62",
+    "scripts/h102_iio_finite.py": "58e5f6b32a49e4fa742642122977a59e0f61da6dd561f723abdc8bb60ca35164",
+    "scripts/h102_iio_rx_continuous.py": "242514c9c7f3cd5288edaeb603860b65337cba532e2869b00b34a6badd36fd59",
+    "scripts/run_h102_sdk1_iio_rx.py": "b55cdd341d3f8c48a7848e3f9a1df1b10a4d63694cf51bb1432d04738e5cdbb9"
+  },
+  "linux_helpers": {
+    "scripts/run_h102_sdk1_iio_rx.py": "99630fc6d51baf90f865194d00a49fc14aed40c774734ca92fa9f65c53558f58",
+    "scripts/h102_iio_finite.py": "fa018b553ebff7ab5bf84d2ceed66f5aa43bb772a6b8d845d072806b98c07637"
+  },
+  "original_linux_helpers": {
+    "scripts/run_h102_sdk1_iio_rx.py": "b55cdd341d3f8c48a7848e3f9a1df1b10a4d63694cf51bb1432d04738e5cdbb9",
+    "scripts/h102_iio_finite.py": "58e5f6b32a49e4fa742642122977a59e0f61da6dd561f723abdc8bb60ca35164"
+  },
+  "local_helper_notice": "linux_helpers pins the English host-side sources; original_linux_helpers retains their pre-translation provenance. Board installed SDK/firmware locks are unchanged."
+}

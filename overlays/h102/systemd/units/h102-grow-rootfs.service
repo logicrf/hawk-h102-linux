@@ -1,0 +1,14 @@
+[Unit]
+Description=Expand LogicRF H102 compact SD root filesystem
+After=local-fs.target
+Before=multi-user.target
+ConditionPathExists=/etc/h102/compact-image
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/h102-grow-rootfs
+TimeoutStartSec=15min
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

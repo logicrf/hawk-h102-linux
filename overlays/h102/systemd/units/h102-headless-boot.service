@@ -1,0 +1,15 @@
+# Finish Plymouth even when LightDM is skipped, releasing serial login and boot targets.
+[Unit]
+Description=Finish Plymouth during LogicRF H102 headless boot
+After=plymouth-start.service rc-local.service systemd-user-sessions.service
+Before=plymouth-quit-wait.service
+ConditionPathExists=!/etc/h102/enable-desktop
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/bin/plymouth quit
+RemainAfterExit=yes
+TimeoutStartSec=20
+
+[Install]
+WantedBy=multi-user.target

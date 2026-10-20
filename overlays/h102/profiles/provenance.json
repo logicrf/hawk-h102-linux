@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "upstream": "Analog Devices ADRV9002",
+  "profile_file": "40msps-20mhz-rx-a.json",
+  "sha256": "ce64b92cacc6f3caedd155787f813d24df5f13c88861ae4b9b9f39a2f7f75021",
+  "api_version": "68.13.7",
+  "sample_rate_hz": 40000000,
+  "rf_bandwidth_hz": 20000000,
+  "interface": "LVDS",
+  "duplex": "FDD",
+  "RX_port": "A",
+  "input_artifact": "artifacts/h102-rf-profile-a-20261001-02",
+  "not_a_same_boot_profile_loading_receipt": true,
+  "physical_port_register_readback": false,
+  "automatic_RF_enable": false
+}

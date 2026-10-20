@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "status": "PASS_SCOPED_REGISTER_BOUNDS_NOT_RELEASED",
+  "kernel_release": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1",
+  "base_release": "1.1.1",
+  "base_linux_commit": "4b62726411de3b533ef6b33dd488892ac6baf613",
+  "base_kernel_commit": "c8daf49830b2d19b155756d151f4c881a001a67e",
+  "jobs": 8,
+  "patch_sha256": "fa900e28e6046fb6598f362b3678130eb5960b97e20c0b13c29b63f8985e3119",
+  "source_pins": {
+    "drivers/iio/adc/h102_adc_reg_bounds.h": {
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after": "de61d4dfb2c289900513a09b9f613ecc34180cc2d3ad99baf62ad96793136b53"
+    },
+    "drivers/iio/adc/ad_adc.c": {
+      "before": "f0ff3cdd16ae694d7d7637ea7f98c8dd8c2096d00c1558675dcdf5cb4ad45d70",
+      "after": "32b75ede399f805677cbc5e981b61992bcd692c2c1b7c753faa5e9a475d38607"
+    },
+    "drivers/iio/adc/cf_axi_adc_core.c": {
+      "before": "6ee29b00692094be1627c9438c330c63ebedbcbbc4857841f5b2ce278eccbc50",
+      "after": "1aabb3f2cfddd0dfd4575369258a32efb9e018e45d1d6b1c7d29db1e682a089e"
+    }
+  },
+  "artifacts": {
+    "boot-candidate/system.dtb": {
+      "sha256": "169feae5b8ba630c07628ae53d160778bdf3c71b8287838c99f34c2bfd518382",
+      "bytes": 28895
+    },
+    "boot-candidate/image-sdk1-regbounds1.ub": {
+      "sha256": "c426644cdb375e21c4aa035c60d1034af9b9205d49490ff9ede7452d0de561fc",
+      "bytes": 8618904
+    },
+    "boot-candidate/zImage": {
+      "sha256": "c03078d348c34cc5341b469ef31199740d9923464bf62457e6436b952f39c237",
+      "bytes": 8588152
+    },
+    "boot-candidate/h102-regbounds1.its": {
+      "sha256": "4410add23af4ed6b0544118bce72df667a5bd9655c24c628fb44b6ee219a1691",
+      "bytes": 741
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/updates/h102_profile_control.ko": {
+      "sha256": "ad7059f63fc478fb968c30fb03b6f13076c5ceb7331eab5b5d2846e3b36753e2",
+      "bytes": 15028
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/updates/h102_axi_reg.ko": {
+      "sha256": "89d7ae934d10ea4eb1f5410e62b4eade609d2b6961a51725cbeda7673f20d07a",
+      "bytes": 9492
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/updates/h102_axi_trig.ko": {
+      "sha256": "2119121be441db9de12d7e6727c3ececef9a9ac931b8c5a3cd95862ada706cc7",
+      "bytes": 10404
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/net/ipv4/ipip.ko": {
+      "sha256": "ea0bcf7a219b8429c4618663d32e18a80b49119fc6fc1038c692b945a5d7f96f",
+      "bytes": 15616
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/net/8021q/8021q.ko": {
+      "sha256": "7ee4bf6faa26be464e6e73a1171546444872b55580da9705bf1e060f2745d17f",
+      "bytes": 39892
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/rpmsg/rpmsg_core.ko": {
+      "sha256": "5c05ded7fd645d5c70ca98f97230c1f49b3d8d46f30c2bb269095443dbf2af90",
+      "bytes": 22780
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/rpmsg/rpmsg_char.ko": {
+      "sha256": "cda661ba5c9473820ad6bfd9fb851d5d0a82bbcbe2314f05170e4029c0449b6c",
+      "bytes": 17604
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/rpmsg/rpmsg_ctrl.ko": {
+      "sha256": "b9bd8b47931d74e55188cb90d496f25a4a0bfd55c5f7d81adb0f609dd2b7c539",
+      "bytes": 10332
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/rpmsg/rpmsg_ns.ko": {
+      "sha256": "524a2840eee4dd250273ea508e82bf601d991ccf1eb6399829ea47773c7e9992",
+      "bytes": 8304
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/rpmsg/virtio_rpmsg_bus.ko": {
+      "sha256": "91820844844d41af527f4c9ee44ab788f8bb51e1539363dfc4f0ddd4eb2345b5",
+      "bytes": 21084
+    },
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1-regbounds1/kernel/drivers/uio/uio_pdrv_genirq.ko": {
+      "sha256": "0ddb51f2db205f06175b9da3d9559bb77c357e4e9f934fded0affb6d5e5b270c",
+      "bytes": 11084
+    }
+  },
+  "evidence_root": "/data/logicrf/h102-builds/gui-rf-settle-regbounds-20261014-01",
+  "offline_guard_cases": 22,
+  "board_register_bounds": {
+    "boot_id": "67ada03b-e31c-4d62-8fbd-61ee2f53f8a6",
+    "invalid_read_write_cases": 14,
+    "valid_after_every_invalid": true,
+    "no_new_oops": true,
+    "report": "register-bounds-board.json"
+  },
+  "activation": {
+    "software_reboot": true,
+    "bootstrap_success": true,
+    "physical_cold_boot": false
+  },
+  "gui_regression": {
+    "source_commit": "4abef8f58758a3908e965538176e3027cf2ed156",
+    "dual_rx_profile": "8msps-1mhz",
+    "record_seconds": 20,
+    "record_samples_per_channel": 160432128,
+    "files_sha256_readback": true,
+    "record_status": "PASS_ADC_DMA_TO_FILE_NO_DROP",
+    "fast_sweep_seconds": [
+      9.826045606052503
+    ],
+    "restored_settings": 41,
+    "source_idle": true,
+    "assets_verified": 407
+  }
+}

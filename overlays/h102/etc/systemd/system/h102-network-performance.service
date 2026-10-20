@@ -1,0 +1,22 @@
+[Unit]
+Description=LogicRF H102 IIO Ethernet software coalescing
+Wants=h102-network-affinity.service
+After=network-online.target h102-network-affinity.service
+Before=iiod.service iiod_ffs.service h102-control-api.service
+
+[Service]
+Type=oneshot
+ExecCondition=/usr/bin/python3 -B /usr/local/lib/h102/network-performance/1.0.0/h102_network_performance.py available
+ExecStart=/usr/bin/python3 -B /usr/local/lib/h102/network-performance/1.0.0/h102_network_performance.py apply
+ExecStopPost=/usr/bin/python3 -B /usr/local/lib/h102/network-performance/1.0.0/h102_network_performance.py restore
+RuntimeDirectory=h102-network-performance
+RuntimeDirectoryMode=0700
+RuntimeDirectoryPreserve=yes
+RemainAfterExit=yes
+Restart=no
+TimeoutStartSec=15
+TimeoutStopSec=15
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

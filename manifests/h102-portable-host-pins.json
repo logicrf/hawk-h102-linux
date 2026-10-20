@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "source_files": {
+    "h102_ft601_digital_mixed": "628d1a93d447886f7450290a472a06ebd900d63d37c13775ae8d345878572e4e",
+    "h102_ft601_rf_rx": "bb85102bf4c1e4f8230411f7a0cf1de89d5b934d328767e28b9296c1402d18a4",
+    "h102_host_deployment.py": "581e114d8c8975ac5473396d77e20c328db4546110b0d2fa06f1c9f25597a8a8",
+    "h102_host_user_data.py": "3823635c069e51fd82a22dd6631a40bbf0e65ca3737cbe1fc530874bf9afcdad",
+    "h102_rf_manager_refs.py": "ac28ad543dd710833ebf977365eea8688d3776550590659dff924d4c75bd1b8c",
+    "h102_runtime_ft601_mixed.py": "b1552ac37aea92f341ce81d8be16aba9a51ece7d77d90cd8efa59653521e308c",
+    "h102_runtime_ft601_rx.py": "fbcd27f67abcb2e283894e65a520e243cbaf77b6c11cdce73bb2bbdce080c664",
+    "h102_runtime_rates.py": "6267badbc614b8fcf1d70d84b7b8fcc740c6b27e41cc6d7d2350d633ffc77538",
+    "libftd3xx.so": "949445eb019a6fe3e314e54cc45af1b8ddb1fcdf0c377f1144a59143d0a08752",
+    "libftd3xx.so.1.1.8": "949445eb019a6fe3e314e54cc45af1b8ddb1fcdf0c377f1144a59143d0a08752"
+  },
+  "qualification": "docs/receipts/20261012-portable-host-board.json",
+  "source_commit": "40efa76",
+  "scope": "Linux x86_64 RX255 and mixed ordinary-user data entry; not other-host performance",
+  "profile_capability": "matched runtime board control required",
+  "contains_host_identity": false
+}

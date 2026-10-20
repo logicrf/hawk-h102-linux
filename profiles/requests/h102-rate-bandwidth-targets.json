@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "status": "generated_new_sdk_offline_pending_matched_driver_and_board_qualification",
+  "api_version": "68.13.7",
+  "device_clock_hz": 300000000,
+  "interface": "LVDS",
+  "lanes": 2,
+  "ddr": true,
+  "iq_bits": 16,
+  "duplex": "FDD",
+  "rx_channels": [
+    1,
+    2
+  ],
+  "tx_channels": [
+    1,
+    2
+  ],
+  "rx_ports": [
+    "A",
+    "A"
+  ],
+  "targets": [
+    {
+      "id": "40msps-20mhz-rx-a",
+      "sample_rate_hz": 40000000,
+      "rf_bandwidth_hz": 20000000
+    },
+    {
+      "id": "20msps-10mhz-rx-a",
+      "sample_rate_hz": 20000000,
+      "rf_bandwidth_hz": 10000000
+    },
+    {
+      "id": "8msps-4mhz-rx-a",
+      "sample_rate_hz": 8000000,
+      "rf_bandwidth_hz": 4000000
+    }
+  ],
+  "generation_dependency": "matched_driver_firmware_and_generator_provenance_required",
+  "acceptance": "init_and_SSI_readback_then_recovery_then_IIO_and_USB_data_at_actual_rate",
+  "existing_baseline": "40msps-20mhz-rx-a",
+  "api_version_note": "Current device API; offline outputs identify 68.21.6 or 68.20.12 separately and cannot be loaded interchangeably",
+  "generation_receipt": "docs/receipts/20261007-windows-profile-generation.json"
+}

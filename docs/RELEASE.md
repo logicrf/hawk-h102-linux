@@ -21,4 +21,4 @@ The release includes calibration power-state fixes, bounded ADC register access,
 
 Two H102 units completed the recorded release-specific checks. Test windows cover boot/setup, representative Qt operation, finite IQ recording, USB digital paths and recovery; they do not establish unlimited-duration losslessness for all hosts/profiles, calibrated absolute RF power/UTC or dual-channel phase coherence. New units still need first-boot identity/network checks and a receive test.
 
-Images, deployment tools and complete corresponding-source packaging are distributed separately from this documentation branch. See SOURCE-BASE.json for this branch's exact development source and preparation status. No new image, RTL, kernel or hardware test was produced by the English documentation update.
+This toolkit includes deployment and integration source; images and complete corresponding-source/vendor inputs are supplied separately. See SOURCE-BASE.json for exact provenance and docs/BUILD.md for reconstruction requirements. This English source update produces no new image, RTL, kernel or hardware qualification.

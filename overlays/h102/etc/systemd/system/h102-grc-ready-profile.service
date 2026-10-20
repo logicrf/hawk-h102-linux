@@ -1,0 +1,17 @@
+[Unit]
+Description=Prepare approved 4MSPS profile for H102 GNU Radio at boot
+Requires=h102-sdk1-bootstrap.service
+After=h102-sdk1-bootstrap.service
+Before=h102-network-affinity.service h102-network-performance.service h102-profile-control.service h102-control-api.service iiod.service iiod_ffs.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -B /usr/local/lib/h102/sdk1/scripts/h102_profile_config.py --stack sdk1-candidate --catalog /usr/local/lib/h102-config-sdk1/profiles apply 4msps-2mhz-common
+RemainAfterExit=yes
+Restart=no
+TimeoutStartSec=210
+TimeoutStopSec=15
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

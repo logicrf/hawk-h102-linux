@@ -9,7 +9,7 @@ LogicRF Hawk H102 Kuiper is the H102-specific Linux system based on ADI Kuiper. 
 3. Write the complete disk image using the supplied deployment tools or an image writer that supports the file format. Select the correct removable card; writing replaces its contents. Copying the file onto an existing SD partition is not sufficient.
 4. Wait for writing and verification to finish, then safely eject the card.
 
-The deployment tools and image are not included in this documentation branch. Refer to the instructions supplied with those tools for their exact commands and supported host systems.
+The deployment tools are included in this source package; the image is supplied separately. Follow [deployment instructions](DEPLOYMENT.md) for exact commands and supported hosts.
 
 ## First boot
 

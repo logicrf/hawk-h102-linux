@@ -1,0 +1,760 @@
+{
+  "normalization": "CRLF_to_LF_only",
+  "files": [
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_radio.c",
+      "sdk_sha256": "edcb2de25ab1a54d8666b5f09caf926b4687101eef4e22bd1f09a3a9cc3fbdb9",
+      "import_sha256": "2313a280ae77ea32e21194192bf1f781b9d6767223e39e2ee98d002ad899e92f"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_cals.c",
+      "sdk_sha256": "c17f3af540fc6e2b9a3490d41b174ffa02672e1f90daf0e9a288b04a9c6f5b72",
+      "import_sha256": "76da3d8a176710171b783632b3834af4888c150e990dd9067d9fd2042f1f745e"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_utilities.c",
+      "sdk_sha256": "1467bfe82c28228e54d7eff09e2543c8d22c5bb58c9909c042ef3f6950a1b768",
+      "import_sha256": "9e62672e8777f891552242024f0ff34212644712d8fc3a4aef65167e6a56e11f"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_stream.c",
+      "sdk_sha256": "369a1bbdfd0bc73017d864ee26027c5dbc89a97b054d793de243e20b356e1983",
+      "import_sha256": "204c5aaf265ca6e3be518abed68177bc158438f684649f0f7e8f45807e28e400"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_rx.c",
+      "sdk_sha256": "ec1365694df9084c6415cb3772fd7098dc060c3792c6ccb36a06cf8094b8e104",
+      "import_sha256": "b4dcf109dd7a70ccd8323a779e3329c4b0a43b42e824b3c35b8991b70d156d0f"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_profileutil.c",
+      "sdk_sha256": "a6135085689fc1b0a5ebfb4b6f7305e993c332d40cd4773237276a71dd5ded87",
+      "import_sha256": "cddbf69cd13c6114e04164671917dc7a71e009e59721dd3cfbc822b4f513bf5b"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_arm.c",
+      "sdk_sha256": "c176608b8d5a31a32e7c3bdb0f513b07bb3f96508b5fd68a373646273d20d106",
+      "import_sha256": "6ffa4154d9e44b5e44e3aab719856c9222b86f8ccd8272eb6822aa9b3cbaa748"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_tx.c",
+      "sdk_sha256": "71864dc1da7b7aa47829849742ab8819c2e5902f4e823b34c63cd83711e8bbd2",
+      "import_sha256": "3048666bd3cb7f05f802968920b4e8a39934f90b7501a45f8f6d6861bbb63081"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_rx_gaincontrol.c",
+      "sdk_sha256": "99b998e1e278ae5b03923ceb2776321f22bc7348bb58b7a380cb1cc778e9e6e6",
+      "import_sha256": "c657aa78d2f932cb5ff54c74a59c6610095b9ffb96295047c4cb0a220e754828"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_bbdc.c",
+      "sdk_sha256": "c31152f48fc7c1755e7e5c63605bab9692c7188168a704806b10abecba44be07",
+      "import_sha256": "c42e7b8876ef82f6807eef36334ddb560ea47ae7c228c079df7525b5df553be0"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_orx.c",
+      "sdk_sha256": "b66438c8cef6bbebe02ed7c4d80083eef5dadc5a5f31fec626b9af2e51893e15",
+      "import_sha256": "339c6d1707a61ec33e65399a3238ccdcd5cd096cf1656d31c61620d9e3604f61"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_auxdac.c",
+      "sdk_sha256": "f7538fc23dfed976ebb47ade366ee7b480a7c649e8503fa9ee6ead5ee197fb5b",
+      "import_sha256": "ff913072a6499262fc6b4bbd645a5fb1af41965f723784cbc3ebf97f1824ff68"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_mcs.c",
+      "sdk_sha256": "0391d5072b4ef6e4ac745ae7a5e4c708b20d11a4488e2626ccc37c68ef070ae6",
+      "import_sha256": "c492aeba16ef296df44ac1a70769d4ee145846125db23866f5cf3dbf20c891e0"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_spi.c",
+      "sdk_sha256": "7686f8e1a8015f9efa377f4a630b019c9ae7d894b2acf24d129b5705f9413773",
+      "import_sha256": "328d08fe952f6105b0a372feb5e290ca9e5f66ebed72c7592dc4dacac34f2742"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_dpd.c",
+      "sdk_sha256": "38bda8a557c8d933faef678da5025d7779e99565dea8e7de09015537c1dc0f70",
+      "import_sha256": "99838dff1094c7a3d8fc4eb4fe8f336480d158844bc40d4be5847386f7f51023"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_powersavingandmonitormode.c",
+      "sdk_sha256": "44c85de55d5311574f5829a3bed88158be3eb9a66c0ae923b9f66abf0ead82a6",
+      "import_sha256": "43a90402b8bdc5538d328c44351dfdd41857e06c57958c1001dcc36b057c596a"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_ssi.c",
+      "sdk_sha256": "bce14d967fdfa76ad7e208ef17104a837b0588f95a11a490fcd8bb5680f8b0b2",
+      "import_sha256": "dd646898fbf0d2c6f5f5656b186e9d9b8b31a366df313e0e5429ece0c409f9e2"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_auxadc.c",
+      "sdk_sha256": "8de249a6d66fed22c41c3b6ef333dcfa561e413c203b3b044322bf8bb2975c3d",
+      "import_sha256": "8e6b380b6a2407b93d034052b8a8269bf37dd1992af33458f4d9a23a84f7ffb0"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_powermanagement.c",
+      "sdk_sha256": "8f9223bfeb190a03557c89c7b1e4b1c70d9fef7a925993c692826972b108d749",
+      "import_sha256": "297526da88ea656a0615d057cfb2f97f71b8117297cc0ce18949415102b728f4"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_common.c",
+      "sdk_sha256": "f2ee1991f201ccbef076455bc203bee067fbd3d722f22387a6b259a239bf5967",
+      "import_sha256": "e2cd9d53c9ad626cd0329210fffa8dcea3d16cb2dc9393a12cf981d071ec76a9"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_fh.c",
+      "sdk_sha256": "220f519e5fec0307465552061c6ff1121a44e754f6709f6b6f5b1a5b5b74fb0f",
+      "import_sha256": "6d7a440626cee636aefe820bade446e5b4509413744bd4a681c12a7a78b1ea1c"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001.c",
+      "sdk_sha256": "d3ddd2490a5909d8fdbe997592e7e3f74bf60e9be265b0108f43245911cc64c9",
+      "import_sha256": "0cc4801a552c89687589b010a649822e5282f42b78ca140d5984ef595465c63a"
+    },
+    {
+      "path": "devices/adrv9001/public/src/adi_adrv9001_gpio.c",
+      "sdk_sha256": "5f144da8170e1b5e8b4ee80665fd0ef406ea13d25a4d3fbab2e9ccb040549039",
+      "import_sha256": "1b38534d7858b21c43403fc3f3c014f65f20d422a06448e7b52e0220671f9dd5"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_ssi_types.h",
+      "sdk_sha256": "6468ebcc84f58d37bc99bc5cf0b051a8c4343c2e9e7cd6943a71e4d7d3444e44",
+      "import_sha256": "798d096e84ac25734ecec93be8140014107fd90804296769d1eea6f930ae8d3b"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_hal.h",
+      "sdk_sha256": "5c0bce6d1814063d470a87167fceaafb2346b4ffeccdaf2b3522b3ea71d68f3d",
+      "import_sha256": "711ab5479895af5d4a8d79430a9dcc108399bc5b59c7758a6c3bc2b733de498f"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_spi.h",
+      "sdk_sha256": "d3643e124a36cff0d1e6f1ad2a12f4581ae2dbfb1a55788c0f8bdff443308934",
+      "import_sha256": "f1c22be605d5b731168b912fde2deff3487cc8827ced6f4089e2a537a6d12812"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_types.h",
+      "sdk_sha256": "94e5758e1e5bbc5caeb28033bd87d04d6432275628c10f28ed59c74b85450b8a",
+      "import_sha256": "d135d6d4371b062f90fc6d229d6d25b0e9259355dcd8ce609630717dc5bc6811"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adrv9001_Init_t_parser.h",
+      "sdk_sha256": "e7b84bb3b3d1a70c818810887803ffb67c668edd513ef080166d60245ef89769",
+      "import_sha256": "402179b81b9b124bb6506121f8ba6e753d9e5239678839d48f1eee3bc79a1ae5"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_auxdac_types.h",
+      "sdk_sha256": "d4d16ddaf4d926d5de2c1a54417f35fe64a014075c83c1c897475e7ea77cc294",
+      "import_sha256": "d0fdd2e1281513505f7208cd77e3cb280d94d8b31514d7a0b113588d7b97618f"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_rx_gaincontrol_types.h",
+      "sdk_sha256": "22d95652350b85a62d217a3280adb988af4ab07b1c91ea4e17303e6529d863fb",
+      "import_sha256": "07ebb56e833024f97aa4c3728c25d04cceb32e1629df28ee816f92e0056fdfb1"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_rx_types.h",
+      "sdk_sha256": "2a00e0218fde25c1d9d2cd224685f043d7ad807a2f0871e5c5bd9f4fc0a26ed2",
+      "import_sha256": "a9574a2316b1e5b162abf7fb707d29aa2961b05c8ab641113e543d96446fdd99"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_txSettings_types.h",
+      "sdk_sha256": "369a645824fadc554dc3547820952377030082004a38edd30933489180e2dd3f",
+      "import_sha256": "20281151f7977ee275ee0e63f2517094b31f65231c110f87549d0145b6af4ebd"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_radio.h",
+      "sdk_sha256": "79c4e4ca20ae1bb630bb871189e7495d894579e70c1a10129b5f2ef41fcfb5d4",
+      "import_sha256": "e8545f64e761e1ec13b9e6259eb1cea232c0b958b3883b219e81303485cd365f"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_stream_types.h",
+      "sdk_sha256": "0813cad94784821f73b455d61d7710de2dd4939e7288ee947f3cb7136d379948",
+      "import_sha256": "4de03b03b0ddd0eb659525c88f046127df73a21dbf1a9e1958085f99c4bf7543"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_fh_types.h",
+      "sdk_sha256": "b3b195476377c1d7a771bdd1c1b166864fdc71d459704b9fbe97e3933d36692e",
+      "import_sha256": "3fda9e00521ed6e617e742996caeb22d8cc06a0c92bd034072be47be1f73528a"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_deviceSysConfig_types.h",
+      "sdk_sha256": "54da9e25d0b3890d4ee5c2295a692cc1a1fbff7c7653fa1a1a27b2b9a92b861c",
+      "import_sha256": "482a58415b7e9d4afccd8fcfd5d7f89f72a29fafcfc022baf6b79e66a572a606"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_rxSettings_types.h",
+      "sdk_sha256": "d1c689a9ec5b39c69fac25b933a6f6651ace140e5083b651acba5de5965b5d55",
+      "import_sha256": "37ebbbf61a076b5c23c6c802356910737e64d4920ea0668e192f3fc1b9e13743"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_bbdc_types.h",
+      "sdk_sha256": "9db576aa7780ca0e550af8ca5458c31b959f034ae874218ce98603d1ebed2bc4",
+      "import_sha256": "9bf6b19e6798711baacc8f55652edc485790c6d55acca2e52ca51ea0416073d5"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_rx_gaincontrol.h",
+      "sdk_sha256": "1fbd55e664595394151a92d6d8643a9786eb28bf6c8c4b52a80515e4ab107a02",
+      "import_sha256": "3f29203dacf6dfc243a03aaef7f6fbeb533d2a3a5b685f25118353221a919ba2"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_gpio.h",
+      "sdk_sha256": "d0913ddd1d128ceb8bb94a1693e1f4b440646a2036f16fd40c46f9ba041b7596",
+      "import_sha256": "d8d211aa54fd696640f1224eece556c81b3a651785a3e44a66cac02d81118f81"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_timing_docs.h",
+      "sdk_sha256": "265afc7c6dda2a3d10effec4ff0aec5f77b127305a26ad02942b0987a962704c",
+      "import_sha256": "a99a0a31d069d519dc819fc9a120d2c4a8c91b6824f3e97e94becb16580c6f89"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_orx_types.h",
+      "sdk_sha256": "3b2a06db6117496a427f20d2aef1001aa0dca098d8f95c30ea0b9c7b44dcd43e",
+      "import_sha256": "36621c4a542e576c361f08338a772e841b0dd57096469a66d8417c698115b492"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_utilities.h",
+      "sdk_sha256": "359945357aa2258067fdc687061f662a849fee1a39a84647e231c1fcd6c4eef0",
+      "import_sha256": "3b1fd4dcfba08c720cb8cb1a978bad47716ff84c08fa370a0a53a5f8ed5f53a2"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_auxadc.h",
+      "sdk_sha256": "b3224cbcceaf46850ac3740223f825ca83cae438d0fb9315b10936cbd287d4b2",
+      "import_sha256": "1007db12dc9a733f61ca935614ada0ed49799a67290e573fdf55190c817339f9"
+    },
+    {
+      "path": "devices/adrv9001/public/include/Adrv9001ProfileTypes_server_shims.h",
+      "sdk_sha256": "31f9776b5ccf25825aceb167bb16dfb9d326a0398bf18b986e16bb8e03b71d0a",
+      "import_sha256": "32e5160afb913297fc03247d17f0fba5e397a6986d9e109ce4839812ee22b94f"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_bbdc.h",
+      "sdk_sha256": "72c8a541b67a9aa23a25a625d2f4bfbecad3e23d8fb32bff50f7debd226245a4",
+      "import_sha256": "0313d04188b4a7433f841b62166ef243800e7590495b749a3c572111dfa4fb76"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_tx.h",
+      "sdk_sha256": "9a7c297f4f46349cad7648fc4cfdf9a12024fc3b6f0e8cfd914078f774a5659d",
+      "import_sha256": "c75441f1c1d4bfef59338cdd3797d365872830160e2214d86405b903a0ee40c9"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_clockSettings_types.h",
+      "sdk_sha256": "8e0d284f5eae15b0373d90f78ab5e5bee53e8d0aa0d4cecfc50383d4c4807b2a",
+      "import_sha256": "fc55b3dbedb266653c875d602fe5a3588ab55914849229f20ec01c030205c544"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001.h",
+      "sdk_sha256": "c2c49e7ef933430a24015c46d7a5a2f04db800f1941a90fb1ed8815808298534",
+      "import_sha256": "7d47866009c4275739d484f6e6b4fee650a030c4dbee5ad73bdc5d89df60ab5e"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_ssi.h",
+      "sdk_sha256": "cf19e220b77e08ca3ae95d43f93a3e48cff985a83e418fb984613c2bf70ca6f3",
+      "import_sha256": "704b6cc63089a9ee61cda3b04984b1a39e0730c531458fb37b33ec9b4871ea50"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_version.h",
+      "sdk_sha256": "5345cd61edda174431eaa43ae9e1cc0f774197267370b6024cb51ab55ce0cf4e",
+      "import_sha256": "78fc7a57b389041365f8517f6d3a9bdf6d79f5cdb30050f3adede4d3cac754c5"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_auxadc_types.h",
+      "sdk_sha256": "3ea8fa80bbb9d1ed59b3524f5959ab7c514d0635fccc89c80741151b95a6c123",
+      "import_sha256": "4880762ea5fd45ee89c90c9baf4d238687af24d21acad13a76327faca25b73f4"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_common.h",
+      "sdk_sha256": "7c29cec50bb5230dc7ee7e0e1cbcbea3b665b487c8fc37ffcf169aa68d7d7407",
+      "import_sha256": "3665a8cb913ef482293beb05b0216152c27b661dcdd9b8b8e870f8e3e59f9e55"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_cals.h",
+      "sdk_sha256": "63c29be14bb7736f2691119f1f07111cc7e8386c52d8fb99aca742f6c6ad78dd",
+      "import_sha256": "2fe833fbbdf733765f8d2766907d66d1616b5ab34de234ded03392ecc57fc757"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_mcs.h",
+      "sdk_sha256": "bf7b5148b182ccffea77a0207bbeb2c04a4b2e12aa98665b1b2a105306e8871e",
+      "import_sha256": "a96a122d4f0e490eba306f1f2d0cb43c28416d81b5b9a6f809861d26ead8dffc"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_profile_types.h",
+      "sdk_sha256": "da67a7311e01d0fdf1ff26557774f2461264bd2b8ff27bd908b4efd41f98a5a7",
+      "import_sha256": "dfbc7daaf024e50b2a4e75e719078ba5ad4453df5e7ba20129e93eb4e8d510f1"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_spi_types.h",
+      "sdk_sha256": "7ac59177e55b734a3f32095da57c01d74d7447b436ea307dc7a39cd4366fbe47",
+      "import_sha256": "872e9f4c1231d3b4e9f1b99e30948e3987cd18e4e26e26e74ecb5d2ef4f41abf"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_fh.h",
+      "sdk_sha256": "02b97d42f6f1d48d4d0dce9c4108ae535e1748791ed28e93861f55c79431cd76",
+      "import_sha256": "c057296123c67790ba63d6caab9c8880f4dacee2f49976c83d799811af88df2d"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_error.h",
+      "sdk_sha256": "e256fbcca35d721d3cf32d280f5798eeb17f06c9e9fa25da15c099507c1e0f54",
+      "import_sha256": "0c8eba8763c9d237d19028f4151d65f56dd0906abf6af5a066356727ce23bf7c"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_radio_types.h",
+      "sdk_sha256": "c1dad4b0f75f2468fb5e47ea11123032ae079ddb53c24c1777f9e1794892caf3",
+      "import_sha256": "d2ba1119c3801580af10151db051e04c2a1ebe3d0046fdbd7016813f8d2fff64"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_arm_types.h",
+      "sdk_sha256": "43582fc5dca964fb6b023734f310b774491822d6eb99818bdde632f66074c4d8",
+      "import_sha256": "154a0cc2edf28311bdc08d95fcad85d19a0494cfed40325da5129a4b2c2e40d3"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_gpio_types.h",
+      "sdk_sha256": "16fb4aa20c3c097cdb42f861ecdfdf91490450480316b51db68877d139b1895b",
+      "import_sha256": "5fe9984a79a9ac4d197b9fce4fd10240954129ded45f66fd1f2bf8d0d4fde0de"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_tx_types.h",
+      "sdk_sha256": "c3c063b3cda1bc905a47effc757c461993113badd3b66c419a9d66944e1b3543",
+      "import_sha256": "0ce583d08d8be38c234a19996b0fcab510ce2cdc895fd7b9aea89bfcd29acd49"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_mcs_types.h",
+      "sdk_sha256": "26e1bde5a3cae2f8ea9c0c39dd701ea07be9075dda624aff7e4f417ef5121445",
+      "import_sha256": "8b5eb8368dfff17d0791323076306b458da7a7732a320afca7bcdadc8e624d33"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_defines.h",
+      "sdk_sha256": "993b21c028dfa86d29f6b9a3d093a779ca729b85191b92abc2c896cf975fe1d3",
+      "import_sha256": "3f1e6283eb1ccd876eafedc5a3127209308eab8904f1a61b073471cdd3d1f780"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_auxdac.h",
+      "sdk_sha256": "ef22b19d48fa982bb4a2e52c05bce9f0c818904c3fc37d8ab819706f4d33fc4d",
+      "import_sha256": "49c5c7d9f27760c50edc976f4e3cadabfc58f23d951656cba3fd4801d759d38d"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_powermanagement_types.h",
+      "sdk_sha256": "edd72106b2b0a45a3fb8f410d84672876e9213749dc4dd8384f2f5e77cadf796",
+      "import_sha256": "4f5e042f9a5ec2fba094d28cedb3290828da2bb77f0468308a58be69d5edcece"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_powersavingandmonitormode_types.h",
+      "sdk_sha256": "fca9ea1e4d6c0bfd79c41019d2758b523f4fc48c127b1d6cbe7748c4d321b65e",
+      "import_sha256": "a180b6e0213c1b0947547cd537a8230847e9ddcc26d2025794d6833105243377"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_rx.h",
+      "sdk_sha256": "6f5f01021f54d93b4b4ff104d3b232cee033d5ca3037799c2ddb82eebe4627db",
+      "import_sha256": "ece908c529023f9ea4298c0d56faf5439f741d9ecb301eb84f9ad30e6593a5c6"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_dpd_types.h",
+      "sdk_sha256": "e9dd021448fc38a6e1051d05e5c64dfb9b8664b6c4dc5917edfc6091ffe4dd60",
+      "import_sha256": "db992d3b1c4f22c7acd26791f34a548d82d54069189bde44df0c338e94e8c00a"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_profileutil.h",
+      "sdk_sha256": "c2bde3fe0f575f1b8187fbc6fd33a01487ddf42facfca0f6e0ef915024a5aaf8",
+      "import_sha256": "a72440a0bb4337962cb5fb6bd8a2e21b2d53fbef1d9f7d46d24e02eb10b029c2"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_dpd.h",
+      "sdk_sha256": "b2cff4d7c998c91b0ee2040fa9f67579bc3bc57bb599cab0f9e2b9dc86d3587e",
+      "import_sha256": "12ce53dd3aa31469aa4cfdc23c16011be978bd4ce14647700e9fb4e5f65df5d5"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_user.h",
+      "sdk_sha256": "b013734ee5a023ac5deadbe7b8947399ab3ba2ce4f03a3dda6fc6fdfe462b74d",
+      "import_sha256": "eeea170cdfd31404e7df6b8b80835fa9ff1b0f8c229aed328d4a3a3b301ee2ca"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_powermanagement.h",
+      "sdk_sha256": "9f9cca168f8bbdd4a6367bfc8b5290b32d6239d03220d60da796c69a9eb69eb6",
+      "import_sha256": "7ac5e43e8f173923f71c5495f6a741f4afce8c42ac127bb0c77940ba9d2e7d0b"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_powersavingandmonitormode.h",
+      "sdk_sha256": "8c018d0d1f84ad5a9a55f66d7fb4c031dbcfe7e2156b52a2bede3ca7fbb04f08",
+      "import_sha256": "5392c49b9cc627204d9c06001f1555a13196a7732395fe893907a70f20cf31ae"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_dynamicProfile_types.h",
+      "sdk_sha256": "3325b2a250875a50344aa17f8ceea67c7e49ee705fd0ac616f5d9c01941561b8",
+      "import_sha256": "45d5469d5b9eba408136ed2f63e8e7e067138ce1ab2e6d953626b1d8156f2a5e"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_common_types.h",
+      "sdk_sha256": "a033af450f9dda7fd4cf3867f679485f29b2e62fb8c733688373a1afb0759540",
+      "import_sha256": "0d92d9c973ee2e08795a7940db47a49900a41e77fb99dc68b1a2a1c556dbbdff"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_pfirBuffer_types.h",
+      "sdk_sha256": "9734cd1346cc2440ac9882a6a2d6d5b5d5aa48c3a9235db4da3c71006b44464b",
+      "import_sha256": "54cc6dd56247876988a601f63e9b2f6e636c7b44c451c4e8456cad473463f36b"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_stream.h",
+      "sdk_sha256": "4f759248800a67f6a2317cb83c718bab6188fe6ccd19fa7f9aaafb0471d32656",
+      "import_sha256": "74e1d0d7d7ed4d5879e28e297a41f53d129167c063026ca28956f9a0d3343e90"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_arm.h",
+      "sdk_sha256": "2250b141e527d57ce2fe0cc53beef3b56a99a30ed44dfa1d07192e4d5a68356d",
+      "import_sha256": "fa6809cca7231b0e16b70b58b5ee78edc3a22adb3e37b60662ac00ad6dbdd4c1"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_orx.h",
+      "sdk_sha256": "1d29898017e43925707cf8fb24a6d323f587cc8ba0665b84391a85b5e2c8ad69",
+      "import_sha256": "0af49c23ed37bee175338043c25670578be726fa4fe801131c6375c842823624"
+    },
+    {
+      "path": "devices/adrv9001/public/include/adi_adrv9001_cals_types.h",
+      "sdk_sha256": "327c109032c6a52ae85549ad8315b0f104c0abc845df5d2f4030596f196bb48f",
+      "import_sha256": "d6d58a16fe3b099d07de8abf47f2508f6d44eea59ba961b0291a3e470f1ab7dd"
+    },
+    {
+      "path": "devices/adrv9001/internal/src/adi_adrv9001_internal_utilities.c",
+      "sdk_sha256": "c7d829e43b961c4837d905a1c7288695327ab31feb88d22eacf94e1e77f9fa37",
+      "import_sha256": "e99983ab1ee22042299371dc4166f8dc030115619109ed5fb86eef824fb286b0"
+    },
+    {
+      "path": "devices/adrv9001/internal/src/adi_adrv9001_internal_bbdc.c",
+      "sdk_sha256": "73b3a2b16e14d67f341ec72a055cfb6b4f26f6a02b450d83c3e3988271e7a0dd",
+      "import_sha256": "c8ca34d9d38ec66fc48d203b1e45ec799f7a8df294bbe8379e9bb88497076a0c"
+    },
+    {
+      "path": "devices/adrv9001/internal/src/adi_adrv9001_internal_fh.c",
+      "sdk_sha256": "7efb87aeb564cecbd74b0cae9ad7727ba0732b4c6b82c8bf957b8ed1b7af6e3e",
+      "import_sha256": "21860e872eceef6d68251be921e01e4900924ffd6d8a0436561cb4d9f5c505dd"
+    },
+    {
+      "path": "devices/adrv9001/internal/include/adi_adrv9001_internal_utilities.h",
+      "sdk_sha256": "5f3f0256f30d96a78eeb0c932dd76da885a2a22766bccbeccadb7a1426f1f100",
+      "import_sha256": "1fbe434977429fe9d4651696f53691b6476e1185de1ff49a90ac9c6d769aef9e"
+    },
+    {
+      "path": "devices/adrv9001/internal/include/adi_adrv9001_internal_fh.h",
+      "sdk_sha256": "5006c6bbb46d2985a74accfc16d97854df1dae4d3ae0641cf93580148c07f42a",
+      "import_sha256": "5f7ad58d6a1ccb0dbf037de3828e83c0131b9a95e8c6a3f6c680dda14e73904f"
+    },
+    {
+      "path": "devices/adrv9001/internal/include/adi_adrv9001_internal_bbdc.h",
+      "sdk_sha256": "026053e61ae01fdf97cd2a5bb3f6e9dde2fd1472bfc57656586962be5f15b049",
+      "import_sha256": "d82af9d8fd40d3765624c02022ff31381cab241a61f2d4f1c145f172123d47a9"
+    },
+    {
+      "path": "devices/adrv9001/internal/include/adi_adrv9001_internal_fh_types.h",
+      "sdk_sha256": "850c365a7dec44f1853e0cf3d16dfeefcff7b8c5e9f8c2f059c79044608f9716",
+      "import_sha256": "a8e5dd3894578388e436a5abd92f4e47cc4cac4a761e0c21f28312636c5bef33"
+    },
+    {
+      "path": "devices/adrv9001/internal/include/adi_adrv9001_internal_utilities_types.h",
+      "sdk_sha256": "a659e7c0c5a82fb22b0b5e1a1c4276a1565aa4bc7e64e895c2dc951f521a13ed",
+      "import_sha256": "3d5ffd289c70e01bc9a03e7ea71741136981d1aa28630fcc69efed3e3d5dfe07"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_gpio.c",
+      "sdk_sha256": "d6b286e4075430e2ffce2a6f5ccfb5c695de8c715544f82546a41340f3d6042e",
+      "import_sha256": "8817febea2a2e9edf129d762cc423dbf28caa151b02c50240974333c4790c994"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_validators.c",
+      "sdk_sha256": "6f2e82386247f34ec3638fb44887edb0f688c1bb723007d31f75efcc9b5fdc4b",
+      "import_sha256": "7e72179689a0542890897613136db25a6dd56c05898bc7b460952e69c80fc4c9"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_radio.c",
+      "sdk_sha256": "9b439409d46c427ecd2a6b29b550578364f2d455bd3ec60f2520d08cead527c3",
+      "import_sha256": "b6fec4ee6c964df026cba502beb3d00611170f5d09bd96e8f98fd9eb9fa0d1f1"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_rx.c",
+      "sdk_sha256": "0e49960133f614ade0d138c0034eb4ced6cb68614c05e2e0b77e46efc05b51d7",
+      "import_sha256": "a753997bcd1b0251980a278e75dc9418a2fb946d3efdd10e4a9a553b236af2e1"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_init.c",
+      "sdk_sha256": "5475b9f7ebdd8f9cfc6234c72acdcfe6e4e948f01d60e64cfd485602adf34885",
+      "import_sha256": "52655de5d904b024c48f6137afb43d367955a58a5bc6703d98c0e41ee984aa10"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_arm.c",
+      "sdk_sha256": "591fb1adf2194af15dc6529e042ee6e3338724c17713c20b10ba45e827e8035b",
+      "import_sha256": "56a4665679dea0319317d29940989c7552ebe9c66d65a5e9f59670e3cc7abb4c"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_crc32.c",
+      "sdk_sha256": "7b9163d5422cc20a517dc11848847d7d7bafde7bc53b2ecff98699f834238a20",
+      "import_sha256": "1f46e9c81eae1b254b7891532d379371cdfb74b450820c09ee70e57a90d9f0f0"
+    },
+    {
+      "path": "devices/adrv9001/private/src/adrv9001_bf_hal.c",
+      "sdk_sha256": "f0e5ad5cb7547607987026f8df022ed06b383ea972fe24ba2b342b446d909384",
+      "import_sha256": "312d0af0188ba210e1bebc5bb2a8bb90bdf753465ea54cfeea4fef58fd1b8211"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_rx.h",
+      "sdk_sha256": "125896371e05dc4527201d499dc6511882dda8acf5040d22789384aeaeba7bd1",
+      "import_sha256": "826426b502271b1216c28ba0f50c6c71c820ce1ef2f171c3ad386319f91c0fb2"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_fh_types.h",
+      "sdk_sha256": "5a579dec22e7ee437467f013b91acfaeaddce7768c23cc0ef5eddfee30d022c3",
+      "import_sha256": "a36375010b3697bbc7ada507ce3c4b85463850d1c571b68b9925f2f199a77067"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_arm.h",
+      "sdk_sha256": "6ae76eb752dc7948598f86cc99aee44e127e47383c1611c214353e5f2f3bea13",
+      "import_sha256": "a3377828cfac27e1d779885bcd3027dd2b5c075b49c97d58eb41dffbaaaa3d70"
+    },
+    {
+      "path": "devices/adrv9001/private/include/object_ids.h",
+      "sdk_sha256": "36d2d647b5f05756fd66c889b8c0ad0d70f53bf211fa6572e73ef93cd58080cc",
+      "import_sha256": "8a40810a93f672e4d19be902e768b3e8628bce969908554d5b7b6f48858e4d3e"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_arm_error_mapping.h",
+      "sdk_sha256": "d4894e31d8c1b92fb00f3286ac51c9a5e55fafda9982ac0e68fbab54567f018e",
+      "import_sha256": "e5fc1af921cdaced5a66f417eb04f7d9da62429962ae00bb39838c7d1f8e89b8"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_init_types.h",
+      "sdk_sha256": "42a76172ee21d3328c692244dbe520867b962cab4e9606fe4608cb338dcaefc6",
+      "import_sha256": "b182cbb5bf333535d842b059d1f8cc47a72aec655c362455c647117f1175b270"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_crc32.h",
+      "sdk_sha256": "d5ea45cdb97efe3a687bd1d8dd42f2ef8119fd52f2ad8cac9e76a19eb7dc6800",
+      "import_sha256": "4a86565c88ee10bb4de9a9478827a0b81b29e2dd4c44c23cbb7f8b0238cc3d7c"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_init.h",
+      "sdk_sha256": "01981bbb44aa5a3fabdfb3de089602547a1e20b2810af220f2c3869131fb0bf4",
+      "import_sha256": "8328e01877c3114c56fad35bf3bfe58567e204f4e7aa669ad1fff9240875bb9f"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_validators.h",
+      "sdk_sha256": "d043faef5b20a16b2c29ed73dfbbea6b516da0573bfbae675b096c4b5a68f022",
+      "import_sha256": "047b375dcec7ced2c6e6d0fc609a14b1ce1e57bdd4af173487bb86ffc0a72d10"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_arm_macros.h",
+      "sdk_sha256": "003a883245dd152cddad34b695682aaf39a04bd866e63f280dec774d4506cc69",
+      "import_sha256": "a6267d1aaed16ea966ad64dcbf2c8ceea6ad2f737a77196c50297cb9e29d32c1"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_reg_addr_macros.h",
+      "sdk_sha256": "d94ecd71a953f4711b20d99335011a28ba78b9aa84a9b2aa4f31e875c44d7b66",
+      "import_sha256": "0a9a881f8157669ff4180525317cb9e92c3520ffa74e1f0623e2668efc1535e4"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_gpio.h",
+      "sdk_sha256": "72dff0ada3bc1be5c12e523bc2bf568fc5ebc1fd4c1d325565d407dbf2213fe1",
+      "import_sha256": "dd04a717f187054ebd0cf30297db43b60662ca2d0805aad716c8f5f8608ba8d0"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_rx_gain_table.h",
+      "sdk_sha256": "663b9eeb83336109a01e0c7a0bcf0ef00c6db25b2e2433a5dec3fbe8a37ebd16",
+      "import_sha256": "981938cc723e4dc8743253ba3589b60cecadd89d13da796677ff25a7c5d56836"
+    },
+    {
+      "path": "devices/adrv9001/private/include/adrv9001_radio.h",
+      "sdk_sha256": "7c68a0f4520da9f1e54d52ac795116b60b8d7822d92ebee6c90423e2e5abb251",
+      "import_sha256": "33ebe46473637c7748d72bfc2b133ebe082a5d0fca88db966a961511d8bfdaec"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_core_2.h",
+      "sdk_sha256": "b4faff785c8659541dac7c274f756fd8e03038b77167fa659597047d70beb9ec",
+      "import_sha256": "c84fae32466b41c220d2aa2aa14e72e8787dd7b8dff63f26b3d5859de2009ae4"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_analog_rx_mem_map.h",
+      "sdk_sha256": "90d0682a6a6909056b3f28a344139d7f111395ec5399c5f329eca5f451468a08",
+      "import_sha256": "9f045e5daaa97c415864999102ce7b7a2fa6f39e65a969e6760e34ca2dd78b7b"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_rxb.h",
+      "sdk_sha256": "4b16740fa3620a42b8edbe1b2d03cea586764efb81357855921dec94daaffedc",
+      "import_sha256": "1be7a10bb51449c70b4e1780d68d8c17e2f9f377467e9ec987bec19794d52f58"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_adc2_mem_map.h",
+      "sdk_sha256": "da8a7aa490ae37c6cded73ae69f354b9d8ed5fb7af70f84dc40bf6422f44ed5a",
+      "import_sha256": "09d54eefcd6da575e4e2c1d6434f04caa80ee385ca8464e11070c0e77f21f618"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_pll_mem_map.h",
+      "sdk_sha256": "0fd5905f94533cfba88766d7cc175df331322db043c7495080dce994b17032fb",
+      "import_sha256": "80eefbe24cd101391d3995014f00e7cf6fd6a19582b459605e8539df20924e7b"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_txdac_mem_map.h",
+      "sdk_sha256": "6893539e229658a0d6eb6956206d28d10c2e4ad8e7dc489c2ed681e6a26221ba",
+      "import_sha256": "ab8f437e4688cfb7766a741cff5b5296cbffe9616c46db7c112a18e9a0eb242d"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_analog_tx_mem_map.h",
+      "sdk_sha256": "27949db12008e2de01ee16799c417e5e1eb5a0f60949e289a0224cd83614948d",
+      "import_sha256": "93aaa822f857a08f5949f12a803f8576317db6a466cf645c35fa6ddfda3b352b"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_bf.h",
+      "sdk_sha256": "ac6fbffb7812d7c3c9cd3a6b6a742f25377323d78ab6910dcdc5c2c8c1680150",
+      "import_sha256": "bebdd51db5526dc968b754138e9b4f36d6ae2a2aae4b8570c3e9bba50b9c862d"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_analog_rxb_mem_map.h",
+      "sdk_sha256": "eec86fd4e19c58e8141513fda20bdb25a5e2d33f4a9e5e5a2bccaa24ebd5335f",
+      "import_sha256": "dd9287e3291058d993f501248014c69a9542a7ebd8f3518c10c54b944cf5f736"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_core.h",
+      "sdk_sha256": "e7f05cfd35c4f53fc3ffafef3e6cdf9debb784e9ce7b37a017f53bf50a2b72f5",
+      "import_sha256": "314355a65206770d518e4295f6606004a8eb3c6f489e0b54362e84e7b88fdeee"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_tx.h",
+      "sdk_sha256": "cb2caefb407cbadc48b777d83bb83e7348f3716a19718b4395e232ce94501eb0",
+      "import_sha256": "f495ac9a306e21f67d31606e4c7cd9e3bd38d03ea8d9597270454a3016e653ee"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_bf_hal.h",
+      "sdk_sha256": "ac5f67cb1dc3dfc4f9aa7c9991596565660d6cb60796bd9e6c4fa1de0f25a21a",
+      "import_sha256": "6a983d4bcaa6eae56622c10014447efcc111ec0786fc24ba5616dbb1ec7c0d44"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_core_3.h",
+      "sdk_sha256": "7bb1a1c3fb7dcd6677e66610bc704427a86135eadb6ce88e49795840ae59e6f8",
+      "import_sha256": "28c4fe249998ddd8c493f11190c38b418a0c74351b5f37e8204a55fd46734944"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_adc1_mem_map.h",
+      "sdk_sha256": "ad70013ac40fb44d1cd5ad573913b1e53d30e6a1687256da678356e8d6c11764",
+      "import_sha256": "e029f8389491deeb32a6706da698ec5d3b5c4caa2c4e71267ecf9ef6ae760b2c"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_vco_adc_mem_map.h",
+      "sdk_sha256": "0ec748aac2f870d0a6d4426bbc2ff95c8a498cae18fcc29fa3dd6083e33f6404",
+      "import_sha256": "26ad4da7dd38516e5509f5d09025313cdb8b2993b11295f7c689689e21233f63"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_core_1.h",
+      "sdk_sha256": "475369425aadc8e63246a2b312f734af472b613c520e8fb8c6bbbdb811146483",
+      "import_sha256": "5c0e98745c20a84f00375508b48dd334566c648b03755352909a947fb47f8a82"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_rx.h",
+      "sdk_sha256": "3a653f2b2fa1ba176d71a56b31cbe32b075029f2daed36a8335f09565d680441",
+      "import_sha256": "60461a5f3a6986a0d06cef1f321db997a6b254a8632694a3a3e01491bc036c18"
+    },
+    {
+      "path": "devices/adrv9001/private/include/bitfields/c0/adrv9001_nvs_regmap_txb.h",
+      "sdk_sha256": "8bd58b520190f404734b87ff8b7c5aa065bfbda64fb870bb09160312d4d1da73",
+      "import_sha256": "06fcfa271b39c6887af4089eeea26a93ab3f40ed6a3a134da17cf46f74bd2cc5"
+    },
+    {
+      "path": "common/adi_common_hal_wrapper.c",
+      "sdk_sha256": "4a53a0e33fb03bfae488e82dd4b9b7c8fa3a7e5475d5726601abd9e2a896dec8",
+      "import_sha256": "213dfdd776febc16154863d33b0e805daa5a859106c9f57531ff96820f772197"
+    },
+    {
+      "path": "common/adi_common_error.c",
+      "sdk_sha256": "496a7477b912b60a84311eec965b01f3d19920e79414240d4125d72916f30194",
+      "import_sha256": "8a15aa901b77f6376243863165cb456203940fb3b1b6ab51394434833dbb3d9d"
+    },
+    {
+      "path": "common/adi_common_error_types.h",
+      "sdk_sha256": "a240b8eeae2787c2d17e40fdb7d311fbfd2fedeb5c6f7f6d2628d63c6b74daf5",
+      "import_sha256": "22f13b8c74ccf21b24660c08f2cdd3594e33be9571bfe8c32fc32395c2e276c0"
+    },
+    {
+      "path": "common/adi_common_error.h",
+      "sdk_sha256": "58d05341ccb51171d75d59c5b084123ceeaea9bd1667229dd62cc0d9fc3bd413",
+      "import_sha256": "37345b0109a3b16fb6d7a0dc091c47d1880baaea5d9065052f455843e776e057"
+    },
+    {
+      "path": "common/adi_common_hal_wrapper.h",
+      "sdk_sha256": "2af707c65d16b3295748a905654da016adff71a47e12d71fec4d7ab914395248",
+      "import_sha256": "4b8596cd179e94389a74942d57938664f88e78db4bfe63cbbc24d6de66701364"
+    },
+    {
+      "path": "common/adi_common_log.c",
+      "sdk_sha256": "7b4d8867ed88b6f01693482dce63ec7271edd3bf7ac0ed8c9310a13fa0978341",
+      "import_sha256": "a6b21cb88c9680c334cbdd91762cdbc0bfe203bd259f3807ca846a11c20ff681"
+    },
+    {
+      "path": "common/adi_common_types.h",
+      "sdk_sha256": "1d61e0ed07c1aa3cddef4ecc9676bdaeb727a9f72e05245d07449d606ea6d8aa",
+      "import_sha256": "5ba545feff860ae941d2d95453e76b1cbd7ade3b93082bccbf69bd1d329b6859"
+    },
+    {
+      "path": "common/adi_common_macros.h",
+      "sdk_sha256": "c5f486abc09e7941752f4cd47113246bcd159612fe8efd0096a27cb9a2a25888",
+      "import_sha256": "4da867e338157b7ab3638b21bceb4d6d7e50178db6d5efc23c0a12938c0f25cc"
+    },
+    {
+      "path": "common/adi_common.h",
+      "sdk_sha256": "c0c735790f414e3a3a54e6613c15ea396c7757618d538a3d2a4a133ba570116a",
+      "import_sha256": "0e830ae94e8453667a4d21776cafe316b22a791294b5a84f2387cfcff9a4f44d"
+    },
+    {
+      "path": "common/adi_common_hal.h",
+      "sdk_sha256": "4ad4500fce351d99675052a515957ad1afa2aeec51d5e361f2e4cd9638a51ac0",
+      "import_sha256": "15ac6dba45a93090a22bc3fbd2de892d409b3ee135f2a0c8fb56c420048e855b"
+    },
+    {
+      "path": "common/adi_common_log.h",
+      "sdk_sha256": "6640a10bd2008ee33f951c4127b53452016187c9ed136b9efafa96322dbdc133",
+      "import_sha256": "462f892396cd33749687e14759fcac511a8b15ba74700fa910d62e22dfb1d31a"
+    }
+  ],
+  "sdk": "1.0.0",
+  "sdk_zip_sha256": "5bd9ae08e9eedda15b48c643c01328557dcce9a52172dc52f4f32e180aad6653",
+  "kernel_base": "c8daf49830b2d19b155756d151f4c881a001a67e",
+  "kernel_release": "6.6.0-h102-sdk1-candidate+",
+  "api_version": "68.21.6",
+  "firmware_version": "1.0.2",
+  "stream_version": "0.7.22.0",
+  "patch_sha256": "e94e8795595aea936ec317b9067e97c6afcb9a2a80b4cc9393f373aa0b8fb6f9",
+  "board_qualified": false,
+  "profiles": [
+    {
+      "id": "40msps-20mhz",
+      "sample_rate_hz": 40000000,
+      "rf_bandwidth_hz": 20000000,
+      "rx_analog_corner_khz": 10000,
+      "sha256": {
+        "profile.json": "4533ee5696994cf5f24dcc1662133a8a856cd09e521a24b2a0180ec5f7afcf83",
+        "stream.bin": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+        "stream-settings.json": "f95db1002525d864ff7a7fd1aa94e05af0d3fbf031d6466d5660323a20b66631",
+        "request-blueprint.json": "e5ac81201fbd99461320f9eeae9504bacd63052a89d1a350d30a8de794e025d3"
+      }
+    },
+    {
+      "id": "20msps-10mhz",
+      "sample_rate_hz": 20000000,
+      "rf_bandwidth_hz": 10000000,
+      "rx_analog_corner_khz": 5000,
+      "sha256": {
+        "profile.json": "158646e0f30758ec22c1fea83074bec77dcda62732799e5ecafd6491424dfe4f",
+        "stream.bin": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+        "stream-settings.json": "f95db1002525d864ff7a7fd1aa94e05af0d3fbf031d6466d5660323a20b66631",
+        "request-blueprint.json": "2516a7543473ae5d561bf85be663fab71dc6db8545c328e4f1679abc27639a74"
+      }
+    },
+    {
+      "id": "8msps-4mhz",
+      "sample_rate_hz": 8000000,
+      "rf_bandwidth_hz": 4000000,
+      "rx_analog_corner_khz": 3000,
+      "sha256": {
+        "profile.json": "1de490c009e612183e2b1a52d401db16c0c57922ac8bcc015440842c1074f0aa",
+        "stream.bin": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+        "stream-settings.json": "ebbb3761a92efb79882d4406087eb764e6b1000cb2212beaf9f83d70bccc27f4",
+        "request-blueprint.json": "7a8bfd10cdb3b0a2c0df6e8ccc81e9d17f5747192dd4567b0c4127785a403236"
+      }
+    }
+  ],
+  "reference_dtb_sha256": "169feae5b8ba630c07628ae53d160778bdf3c71b8287838c99f34c2bfd518382",
+  "kernel_config_sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae",
+  "firmware_sha256": "8e6dfb8ea2099c7f08621ff10e6f9edd4d8fdc5fb4c0b8dafca238ff5236c9b1"
+}

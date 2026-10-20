@@ -1,0 +1,113 @@
+diff --git a/drivers/iio/adc/navassa/adrv9002.c b/drivers/iio/adc/navassa/adrv9002.c
+index 98520f47cdc8..fe9e274353c4 100644
+--- a/drivers/iio/adc/navassa/adrv9002.c
++++ b/drivers/iio/adc/navassa/adrv9002.c
+@@ -2116,7 +2116,8 @@ static int adrv9002_phy_read_raw_no_rf_chan(const struct adrv9002_rf_phy *phy,
+ 	case IIO_CHAN_INFO_PROCESSED:
+ 		switch (chan->type) {
+ 		case IIO_TEMP:
+-			ret = api_call(phy, adi_adrv9001_Temperature_Get, &temp);
++			ret = api_call(phy, adi_adrv9001_Temperature_Get,
++				       ADI_ADRV9001_TEMPERATURE_READ_MAILBOX, &temp);
+ 			if (ret)
+ 				return ret;
+ 
+@@ -3477,6 +3478,7 @@ int adrv9002_intf_change_delay(const struct adrv9002_rf_phy *phy, const int chan
+ 			       u8 data_delay, const bool tx)
+ {
+ 	struct adi_adrv9001_SsiCalibrationCfg delays = {0};
++	int ret;
+ 
+ 	dev_dbg(&phy->spi->dev, "Set intf delay clk:%u, d:%u, tx:%d c:%d\n", clk_delay,
+ 		data_delay, tx, channel);
+@@ -3505,7 +3507,14 @@ int adrv9002_intf_change_delay(const struct adrv9002_rf_phy *phy, const int chan
+ 		}
+ 	}
+ 
+-	return api_call(phy, adi_adrv9001_Ssi_Delay_Configure, phy->ssi_type, &delays);
++	/* SDK1 configures one physical channel per call, including both RX and TX delays. */
++	ret = api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_1 + channel,
++		       phy->ssi_type, &delays);
++	if (ret || !phy->rx2tx2)
++		return ret;
++
++	return api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_2,
++			phy->ssi_type, &delays);
+ }
+ 
+ adi_adrv9001_SsiTestModeData_e adrv9002_get_test_pattern(const struct adrv9002_rf_phy *phy,
+@@ -3693,7 +3702,14 @@ static int adrv9002_intf_tuning(const struct adrv9002_rf_phy *phy)
+ 		}
+ 	}
+ 
+-	return api_call(phy, adi_adrv9001_Ssi_Delay_Configure, phy->ssi_type, &delays);
++	/* Commit both physical channels after their independent/shared-lane tuning. */
++	ret = api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_1,
++		       phy->ssi_type, &delays);
++	if (ret)
++		return ret;
++
++	return api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_2,
++			phy->ssi_type, &delays);
+ 
+ }
+ 
+diff --git a/drivers/iio/adc/navassa/adrv9002_debugfs.c b/drivers/iio/adc/navassa/adrv9002_debugfs.c
+index 1ef80fe9e6fb..c052085ec4cb 100644
+--- a/drivers/iio/adc/navassa/adrv9002_debugfs.c
++++ b/drivers/iio/adc/navassa/adrv9002_debugfs.c
+@@ -702,7 +702,12 @@ static ssize_t adrv9002_ssi_delays_write(struct file *file, const char __user *u
+ 	int ret;
+ 
+ 	guard(mutex)(&phy->lock);
+-	ret = api_call(phy, adi_adrv9001_Ssi_Delay_Configure, phy->ssi_type, &phy->ssi_delays);
++	/* The user-provided delay arrays cover both physical channels. */
++	ret = api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_1,
++		       phy->ssi_type, &phy->ssi_delays);
++	if (!ret)
++		ret = api_call(phy, adi_adrv9001_Ssi_Delay_Configure, ADI_CHANNEL_2,
++			       phy->ssi_type, &phy->ssi_delays);
+ 
+ 	return ret ? ret : count;
+ }
+diff --git a/drivers/iio/adc/navassa/third_party/adi_pmag_macros/adi_pmag_macros.h b/drivers/iio/adc/navassa/third_party/adi_pmag_macros/adi_pmag_macros.h
+index 204200c3261b..279d373511ed 100644
+--- a/drivers/iio/adc/navassa/third_party/adi_pmag_macros/adi_pmag_macros.h
++++ b/drivers/iio/adc/navassa/third_party/adi_pmag_macros/adi_pmag_macros.h
+@@ -88,7 +88,7 @@ ADI_PROCESS_ARRAY_X(ADI_STORE_INT(tokenArray, tokenIndex, jsonBuffer, parsingBuf
+ #define ADI_PROCESS_STRUCT_X(X, tokenArray, tokenIndex, jsonBuffer, parsingBuffer, structName) \
+ ADI_IF_JSON_EQ(jsonBuffer, tokenArray[tokenIndex], structName) { \
+     int16_t size = tokenArray[++tokenIndex].size; \
+-    int16_t end = tokenArray[tokenIndex].end; \
++    int32_t end = tokenArray[tokenIndex].end; \
+     { \
+         int16_t j = 0; \
+         for (j = 0; j < size; j++) { \
+@@ -97,7 +97,7 @@ ADI_IF_JSON_EQ(jsonBuffer, tokenArray[tokenIndex], structName) { \
+             X; \
+         } \
+     } \
+-    while (tokenArray[tokenIndex + 1].start <= end) { \
++    while (tokenIndex + 1 < numTokens && tokenArray[tokenIndex + 1].start <= end) { \
+         tokenIndex++; \
+     } \
+     continue; \
+@@ -108,7 +108,8 @@ ADI_IF_JSON_EQ(jsonBuffer, tokenArray[tokenIndex], structName) { \
+     int16_t size = tokenArray[++tokenIndex].size; \
+     int16_t indexName = 0; \
+     for (indexName = 0; indexName < size; indexName++) { \
+-        int16_t end, size = tokenArray[++tokenIndex].size; \
++        int32_t end; \
++        int16_t size = tokenArray[++tokenIndex].size; \
+         end = tokenArray[tokenIndex].end; \
+         { \
+             int16_t j = 0; \
+@@ -117,7 +118,7 @@ ADI_IF_JSON_EQ(jsonBuffer, tokenArray[tokenIndex], structName) { \
+                 X; \
+             } \
+         } \
+-        while (tokenArray[tokenIndex + 1].start <= end) { \
++        while (tokenIndex + 1 < numTokens && tokenArray[tokenIndex + 1].start <= end) { \
+             tokenIndex++; \
+         } \
+     } \

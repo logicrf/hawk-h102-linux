@@ -1,9 +1,9 @@
-# Delivery maintenance
+# Maintaining the English distribution
 
-Gitea `main` is the Chinese development branch. Gitea `github-en` stores the reviewed English delivery; GitHub `main` mirrors the same delivery commits when its component is ready. GitHub is private by default; publication requires a separate user decision.
+Develop and commit in Chinese on the internal Gitea main branch. Review a fixed input commit, then update Gitea github-en with English source comments, user messages, documentation and commit messages. GitHub main receives the same reviewed commit and remains private until a separate public-release decision.
 
-Write for customer tasks using natural English. Use installation, connection, supported profiles, recording and troubleshooting headings. Keep internal paths, incident timelines and superseded experiments out of customer guides. Preserve exact versions, units, attribution and known limitations.
+Do not mirror all internal branches or research history. Export only the reviewed file set and preserve SOURCE-BASE.json, SOURCE-MAP.json, component notices and original/translated hashes. Existing image and installed-helper hashes must not be replaced with translated hashes to make admission appear compatible.
 
-Develop functionality on main first. Record its exact revision in SOURCE-BASE.json, prepare only the approved file set and verify relevant behavior. Do not merge private development history into the English branch or mirror all refs to GitHub. Code, images, RTL IP, vendor tools and the full standalone GUI retain separate licensing and delivery scopes.
+Refresh SOURCE-FILES.json after intentional changes, run the distribution checker and relevant offline tests, then verify the exact remote commit and files from independent clones. Do not claim full image reconstruction, hardware compatibility or new RF qualification from a language/source packaging update.
 
-This branch is documentation preparation only. It is not a complete buildable source export and is not synchronized to a new GitHub repository yet. Check every delivered text file, Markdown link and commit message before synchronization.
+The released 1.2.0 image remains separate from this toolkit's source delivery version. Full upstream source, original reconstruction inputs, vendor rights and the optional control add-ons are tracked individually.

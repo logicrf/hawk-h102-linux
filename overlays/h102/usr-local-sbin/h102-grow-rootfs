@@ -1,0 +1,145 @@
+#!/bin/sh
+# Grow the last H102 SD partition and its mounted ext4 filesystem.
+# The entry point accepts only the actual /dev/mmcblk0p2 root. Functions are
+# sourceable by offline tests; no test device overrides exist in the service.
+set -eu
+export LC_ALL=C
+
+h102_log() {
+    printf '%s %s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" "$*" | tee -a "$state_dir/events.log"
+}
+
+h102_fail() {
+    h102_log "FAILED: $*"
+    exit 1
+}
+
+h102_atomic_state() {
+    # Rename after fsync so a power loss cannot expose a half-written marker.
+    printf '%s\n' "$2" > "$state_dir/$1.tmp"
+    sync -f "$state_dir/$1.tmp"
+    mv "$state_dir/$1.tmp" "$state_dir/$1"
+    sync -f "$state_dir"
+}
+
+h102_validate_layout() {
+    # Pin all boot-related geometry. Only root size may vary between cards.
+    sfdisk --dump "$disk" > "$state_dir/layout.current"
+    awk -v d="$disk" '
+      /^label:/ { if ($2 != "dos") bad=1; label++ }
+      /^label-id:/ { if ($2 != "0xa22286d2") bad=1; identity++ }
+      /^sector-size:/ { if ($2 != "512") bad=1 }
+      $1 ~ /^\/dev\// && $2 == ":" {
+        line=$0; gsub(/,/, "", line); n=split(line, a, /[[:space:]]+/)
+        start=""; size=""; type=""
+        for (i=1;i<=n;i++) {
+          if (a[i] == "start=") start=a[i+1]
+          if (a[i] == "size=") size=a[i+1]
+          if (a[i] ~ /^type=/) {type=a[i]; sub(/^type=/,"",type)}
+        }
+        if ($1 == d "p1") {if (start!=24576 || size!=4194304 || type!="c") bad=1; p1++}
+        else if ($1 == d "p2") {
+          if (start!=4218880 || size!~/^[0-9]+$/ || size<18874368 || type!="83") bad=1
+          root_size=size; p2++
+        }
+        else if ($1 == d "p3") {if (start!=8192 || size!=16384 || type!="a2") bad=1; p3++}
+        else bad=1
+      }
+      END {
+        if (bad || label!=1 || identity!=1 || p1!=1 || p2!=1 || p3!=1) exit 1
+        print root_size
+      }' "$state_dir/layout.current"
+}
+
+h102_filesystem_blocks() {
+    dumpe2fs -h "$root_device" 2> "$state_dir/dumpe2fs.stderr" |
+        awk '/^Block count:/ {count=$3} /^Block size:/ {size=$3}
+             END {if (count!~/^[0-9]+$/ || size!=4096) exit 1; print count}'
+}
+
+h102_request_reboot() {
+    systemctl --no-block reboot
+}
+
+h102_grow() {
+    # Inputs are trusted device/state paths supplied by the fixed entry point.
+    # Validate the disk again on every invocation, including completed boots.
+    disk=$1
+    root_device=$2
+    state_dir=$3
+    [ "$(id -u)" = 0 ] || return 1
+    [ "$root_device" = "${disk}p2" ] || return 1
+    [ -b "$disk" ] && [ -b "$root_device" ] || return 1
+    mkdir -p "$state_dir"
+    chmod 0700 "$state_dir"
+    exec 9> "$state_dir/lock"
+    flock -n 9 || return 1
+    [ "$(blockdev --getss "$disk")" = 512 ] || h102_fail 'unsupported sector size'
+    [ "$(blkid -p -s TYPE -o value "$root_device")" = ext4 ] || h102_fail 'root is not ext4'
+    current_size=$(h102_validate_layout) || h102_fail 'unexpected partition identity or geometry'
+    disk_sectors=$(blockdev --getsz "$disk")
+    # Leave at most seven sectors so the ext4 end remains 4 KiB aligned.
+    target_size=$(( (disk_sectors - 4218880) / 8 * 8 ))
+    [ "$target_size" -ge "$current_size" ] || h102_fail 'refusing to shrink a live root'
+    [ "$target_size" -le 4294967295 ] || h102_fail 'SD exceeds DOS partition limits'
+    if [ -f "$state_dir/completed" ] && [ "$(cat "$state_dir/completed")" != "$target_size" ]; then
+        rm "$state_dir/completed"
+        sync -f "$state_dir"
+    fi
+    if [ "$current_size" -lt "$target_size" ]; then
+        h102_log "partition: $current_size -> $target_size sectors"
+        [ -e "$state_dir/layout.before" ] || cp "$state_dir/layout.current" "$state_dir/layout.before"
+        sync -f "$state_dir"
+        # -N changes only entry 2. Never move its start or wipe any signature.
+        printf 'size=%s\n' "$target_size" |
+            sfdisk --no-reread --no-tell-kernel --force --wipe never \
+                --wipe-partitions never -N 2 "$disk" >> "$state_dir/partition.log" 2>&1 ||
+            h102_fail 'partition update failed; inspect partition.log'
+        sync
+        current_size=$(h102_validate_layout) || h102_fail 'partition verification failed'
+        [ "$current_size" -eq "$target_size" ] || h102_fail 'root size was not updated'
+    fi
+    partx --update --nr 2 "$disk" >> "$state_dir/partition.log" 2>&1 || true
+    kernel_size=$(blockdev --getsz "$root_device")
+    if [ "$kernel_size" -ne "$target_size" ]; then
+        boot_id=$(cat /proc/sys/kernel/random/boot_id)
+        if [ -f "$state_dir/reboot-requested" ] &&
+           [ "$(sed -n '1p' "$state_dir/reboot-requested")" = "$target_size" ]; then
+            h102_fail 'kernel size still stale after one reboot request; no reboot loop'
+            return 1
+        fi
+        h102_atomic_state reboot-requested "$(printf '%s\n%s' "$target_size" "$boot_id")"
+        h102_log "kernel exposes $kernel_size sectors; requesting one reboot"
+        sync
+        h102_request_reboot || h102_fail 'reboot request failed; manual restart required'
+        return 0
+    fi
+    target_blocks=$((target_size / 8))
+    before_blocks=$(h102_filesystem_blocks) || h102_fail 'cannot read ext4 size'
+    [ "$before_blocks" -le "$target_blocks" ] || h102_fail 'ext4 exceeds partition'
+    if [ "$before_blocks" -lt "$target_blocks" ]; then
+        h102_log "filesystem: $before_blocks -> $target_blocks blocks"
+        resize2fs "$root_device" >> "$state_dir/resize.log" 2>&1 ||
+            h102_fail 'filesystem growth failed; state retained for retry'
+    fi
+    after_blocks=$(h102_filesystem_blocks) || h102_fail 'cannot verify ext4 size'
+    [ "$after_blocks" -eq "$target_blocks" ] || h102_fail 'ext4 growth incomplete'
+    h102_atomic_state completed "$target_size"
+    h102_log "COMPLETED: partition=$target_size sectors filesystem=$after_blocks blocks"
+}
+
+h102_main() {
+    PATH=/usr/sbin:/usr/bin:/sbin:/bin
+    export PATH
+    [ $# -eq 0 ] || { echo 'This first-boot service accepts no arguments.' >&2; return 1; }
+    [ "$(findmnt -n -o FSTYPE /)" = ext4 ] || return 1
+    actual_root=$(readlink -f "$(findmnt -n -o SOURCE /)")
+    [ "$actual_root" = /dev/mmcblk0p2 ] || {
+        echo 'Refusing to grow a root other than /dev/mmcblk0p2.' >&2; return 1;
+    }
+    h102_grow /dev/mmcblk0 "$actual_root" /var/lib/h102-grow-rootfs
+}
+
+if [ "${0##*/}" = h102-grow-rootfs ]; then
+    h102_main "$@"
+fi

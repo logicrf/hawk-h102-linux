@@ -1,0 +1,78 @@
+--- a/drivers/iio/adc/navassa/adrv9002.c
++++ b/drivers/iio/adc/navassa/adrv9002.c
+@@ -675,25 +675,68 @@
+ static int adrv9002_phy_rerun_cals(struct adrv9002_rf_phy *phy,
+ 				   struct adi_adrv9001_InitCals *init_cals, unsigned long port_mask)
+ {
++	unsigned long powered_for_cals = 0;
+ 	u8 error;
+-	int ret;
++	int ret, i;
+ 
+ 	if (!init_cals->chanInitCalMask[0] && !init_cals->chanInitCalMask[1])
+ 		return 0;
+ 
+-	/* move the missing ports to calibrated state and disable all the axi cores */
++	/* Calibration requires configured channels powered, even for RX-only retune.
++	 * All ports are CALIBRATED here. Do not restore a cached RF_ENABLED state
++	 * while temporarily powering a port; restore power before cached states.
++	 */
+ 	ret = adrv9002_phy_rerun_cals_setup(phy, port_mask, false);
+ 	if (ret)
+ 		return ret;
++
++	for (i = 0; i < ARRAY_SIZE(phy->channels); i++) {
++		struct adrv9002_chan *chan = phy->channels[i];
++		adi_adrv9001_ChannelState_e state;
++
++		if (!chan->enabled || chan->power)
++			continue;
++
++		ret = api_call(phy, adi_adrv9001_Radio_Channel_State_Get,
++			       chan->port, chan->number, &state);
++		if (ret)
++			goto restore_power;
++		if (state != ADI_ADRV9001_CHANNEL_CALIBRATED) {
++			ret = -EBUSY;
++			goto restore_power;
++		}
++		ret = api_call(phy, adi_adrv9001_Radio_Channel_PowerUp,
++			       chan->port, chan->number);
++		if (ret)
++			goto restore_power;
++		chan->power = true;
++		set_bit(i, &powered_for_cals);
++	}
+ 
+ 	dev_dbg(&phy->spi->dev, "Re-run init cals: mask: %08X, %08X\n",
+ 		init_cals->chanInitCalMask[0], init_cals->chanInitCalMask[1]);
+-
+ 	ret = api_call(phy, adi_adrv9001_cals_InitCals_Run, init_cals, 60000, &error);
+-	if (ret)
+-		return ret;
+-
+-	/* re-enable cores and re-set port states (those where the carrier is not being changed) */
++
++restore_power:
++	/* Also undo partial power preparation or failed calibration. Keep the
++	 * original error; a cleanup failure must not make a failed call succeed.
++	 */
++	for (i = ARRAY_SIZE(phy->channels) - 1; i >= 0; i--) {
++		struct adrv9002_chan *chan = phy->channels[i];
++		int restore_ret;
++
++		if (!test_bit(i, &powered_for_cals))
++			continue;
++		restore_ret = api_call(phy, adi_adrv9001_Radio_Channel_PowerDown,
++				       chan->port, chan->number);
++		if (!restore_ret)
++			chan->power = false;
++		else if (!ret)
++			ret = restore_ret;
++	}
++	if (ret)
++		return ret;
++
+ 	return adrv9002_phy_rerun_cals_setup(phy, port_mask, true);
+ }
+ 

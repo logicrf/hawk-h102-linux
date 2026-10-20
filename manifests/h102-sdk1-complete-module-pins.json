@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "kernel": "6.6.0-h102-sdk1-candidate+",
+  "modules_archive": {
+    "bytes": 110628,
+    "sha256": "359b05d3b30cb1e61b5e96e5fe6cef2cc576ac70184937b71416d7c594dff522"
+  },
+  "extras": {
+    "h102_axi_reg.ko": {
+      "bytes": 9428,
+      "sha256": "751be94d2336ef4997786c84165d6e7e0419e47c40254a117f95e68d0921190e"
+    },
+    "h102_axi_trig.ko": {
+      "bytes": 10340,
+      "sha256": "1b9ae8427244c8213a795950210d555b7c247d8f4f5fa4f6cc9bfa1e2934cf8d"
+    },
+    "h102_profile_control.ko": {
+      "bytes": 14964,
+      "sha256": "488682f40a0d541d76fdfc4f40b8f0f3848c4a37da7c8bb668ed786ea5e8a5ba"
+    }
+  },
+  "source_context": {
+    "kernel_source_pins": "manifests/h102-sdk1-linux-source-pins.json",
+    "h102_axi_sources": "manifests/h102-sdk1-extra-module-sources.json",
+    "profile_control_sources": "kernel/h102-profile-control",
+    "board_file_identity_receipt": "20261011-sdk1-complete-modules.json",
+    "loaded_memory_binary_identity": "NOT_VERIFIED_BY_FILE_HASH"
+  }
+}

@@ -4,10 +4,13 @@
   "development_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
   "delivery_branch": "github-en",
   "language": "English",
-  "status": "DOCUMENTATION_PREPARATION_ONLY",
+  "status": "READY_PRIVATE_INTEGRATION_TOOLKIT",
   "full_source_export": false,
-  "github_synchronized": false,
   "firmware_modified": false,
   "release_version": "1.2.0",
-  "source_notice": "Customer documentation rewritten from the development source; firmware/code redistribution scope remains separate"
+  "source_notice": "English H102 downstream integration source and tools; original image reconstruction and vendor payloads require separately pinned inputs",
+  "includes_integration_source": true,
+  "complete_system_corresponding_source": false,
+  "source_package_version": "1.2.0-source-r1",
+  "remote_verification": "Recorded in the separate publication receipt after push"
 }

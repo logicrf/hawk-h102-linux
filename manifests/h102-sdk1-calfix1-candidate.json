@@ -1,0 +1,24 @@
+{
+  "base_source": "/data/logicrf/h102-sdk1-linux/kernel-source",
+  "base_driver_sha256": "c54c239253a090a10af7d7bb6b3f9972095159c8817ea229254afbff2f53bde4",
+  "patched_driver_sha256": "fdc10bbd52cebb98741a0e34a32f10195281a432d465ff3e99259f87bba84cb6",
+  "patch_sha256": "1bede0ca63b199caae6505cd11ba16d27b9c9326e4dca5ca61a1ae9e5389b8fd",
+  "config_sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae",
+  "jobs": 8,
+  "original_sources_unchanged": true,
+  "local_version_suffix": "-calfix1",
+  "schema": 1,
+  "status": "CANDIDATE_SCOPED_BOARD_PASS_NOT_RELEASED",
+  "kernel_release": "6.6.0-h102-sdk1-candidate-calfix1",
+  "base_release": "1.1.1",
+  "artifacts": {
+    "boot-candidate/zImage": "5187c2e7c186115c85869851c562ddef522285c8d0a337308cf31cfecfcbabdf",
+    "boot-candidate/system.dtb": "169feae5b8ba630c07628ae53d160778bdf3c71b8287838c99f34c2bfd518382",
+    "boot-candidate/image-sdk1-calfix1.ub": "e571c41283d4258ea7a9237ba0daff8e8e0dd0ff9036b343fdf62271604d830c",
+    "h102-calibration-power.patch": "1bede0ca63b199caae6505cd11ba16d27b9c9326e4dca5ca61a1ae9e5389b8fd",
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1/updates/h102_profile_control.ko": "5862589898df8231a6c8823e06d78650b089b9a2795fbb06b97dc631350e671b",
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1/updates/h102_axi_reg.ko": "2b7f60d9cfaeea1705245db58e57c519ded6f96dd8d93c3636786bf01ddc529c",
+    "modules-stage/lib/modules/6.6.0-h102-sdk1-candidate-calfix1/updates/h102_axi_trig.ko": "a731628ffe45488ad322afe86bfad135544057211728bacbb691b369bc46930a"
+  },
+  "evidence_root": "/data/logicrf/h102-builds/gui-cal-tx-20261013-01"
+}

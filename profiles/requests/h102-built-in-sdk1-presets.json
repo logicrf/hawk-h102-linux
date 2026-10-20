@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "sdk_version": "1.0.0",
+  "api_version": "68.21.6",
+  "device_clock_hz": 300000000,
+  "interface": "LVDS",
+  "lanes": 2,
+  "ddr": true,
+  "iq_bits": 16,
+  "duplex": "FDD",
+  "rx_ports": [
+    "A",
+    "A"
+  ],
+  "profiles": [
+    {
+      "id": "0p192msps-0p05mhz",
+      "sample_rate_hz": 192000,
+      "rf_bandwidth_hz": 50000,
+      "rx_analog_corner_khz": 12000
+    },
+    {
+      "id": "0p192msps-0p1mhz",
+      "sample_rate_hz": 192000,
+      "rf_bandwidth_hz": 100000,
+      "rx_analog_corner_khz": 12000
+    },
+    {
+      "id": "0p768msps-0p2mhz",
+      "sample_rate_hz": 768000,
+      "rf_bandwidth_hz": 200000,
+      "rx_analog_corner_khz": 12000
+    },
+    {
+      "id": "1p536msps-0p5mhz",
+      "sample_rate_hz": 1536000,
+      "rf_bandwidth_hz": 500000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "1p536msps-1mhz",
+      "sample_rate_hz": 1536000,
+      "rf_bandwidth_hz": 1000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "2msps-0p25mhz",
+      "sample_rate_hz": 2000000,
+      "rf_bandwidth_hz": 250000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "2msps-0p5mhz",
+      "sample_rate_hz": 2000000,
+      "rf_bandwidth_hz": 500000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "2msps-1mhz",
+      "sample_rate_hz": 2000000,
+      "rf_bandwidth_hz": 1000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "4msps-0p5mhz",
+      "sample_rate_hz": 4000000,
+      "rf_bandwidth_hz": 500000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "4msps-1mhz",
+      "sample_rate_hz": 4000000,
+      "rf_bandwidth_hz": 1000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "4msps-2mhz",
+      "sample_rate_hz": 4000000,
+      "rf_bandwidth_hz": 2000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "8msps-1mhz",
+      "sample_rate_hz": 8000000,
+      "rf_bandwidth_hz": 1000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "8msps-2mhz",
+      "sample_rate_hz": 8000000,
+      "rf_bandwidth_hz": 2000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "8msps-4mhz",
+      "sample_rate_hz": 8000000,
+      "rf_bandwidth_hz": 4000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "10msps-5mhz",
+      "sample_rate_hz": 10000000,
+      "rf_bandwidth_hz": 5000000,
+      "rx_analog_corner_khz": 4000
+    },
+    {
+      "id": "16msps-2mhz",
+      "sample_rate_hz": 16000000,
+      "rf_bandwidth_hz": 2000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "16msps-4mhz",
+      "sample_rate_hz": 16000000,
+      "rf_bandwidth_hz": 4000000,
+      "rx_analog_corner_khz": 3000
+    },
+    {
+      "id": "16msps-8mhz",
+      "sample_rate_hz": 16000000,
+      "rf_bandwidth_hz": 8000000,
+      "rx_analog_corner_khz": 6400
+    },
+    {
+      "id": "20msps-5mhz",
+      "sample_rate_hz": 20000000,
+      "rf_bandwidth_hz": 5000000,
+      "rx_analog_corner_khz": 4000
+    },
+    {
+      "id": "20msps-10mhz",
+      "sample_rate_hz": 20000000,
+      "rf_bandwidth_hz": 10000000,
+      "rx_analog_corner_khz": 5000
+    },
+    {
+      "id": "23p04msps-15mhz",
+      "sample_rate_hz": 23040000,
+      "rf_bandwidth_hz": 15000000,
+      "rx_analog_corner_khz": 12000
+    },
+    {
+      "id": "30p72msps-15p36mhz",
+      "sample_rate_hz": 30720000,
+      "rf_bandwidth_hz": 15360000,
+      "rx_analog_corner_khz": 12288
+    },
+    {
+      "id": "30p72msps-20mhz",
+      "sample_rate_hz": 30720000,
+      "rf_bandwidth_hz": 20000000,
+      "rx_analog_corner_khz": 10000
+    },
+    {
+      "id": "40msps-10mhz",
+      "sample_rate_hz": 40000000,
+      "rf_bandwidth_hz": 10000000,
+      "rx_analog_corner_khz": 5000
+    },
+    {
+      "id": "40msps-20mhz",
+      "sample_rate_hz": 40000000,
+      "rf_bandwidth_hz": 20000000,
+      "rx_analog_corner_khz": 10000
+    },
+    {
+      "id": "40msps-30mhz",
+      "sample_rate_hz": 40000000,
+      "rf_bandwidth_hz": 30000000,
+      "rx_analog_corner_khz": 15000
+    },
+    {
+      "id": "61p44msps-20mhz",
+      "sample_rate_hz": 61440000,
+      "rf_bandwidth_hz": 20000000,
+      "rx_analog_corner_khz": 10000
+    },
+    {
+      "id": "61p44msps-30mhz",
+      "sample_rate_hz": 61440000,
+      "rf_bandwidth_hz": 30000000,
+      "rx_analog_corner_khz": 15000
+    },
+    {
+      "id": "61p44msps-40mhz",
+      "sample_rate_hz": 61440000,
+      "rf_bandwidth_hz": 40000000,
+      "rx_analog_corner_khz": 20000
+    }
+  ],
+  "selection": "user_approved_first_batch_29"
+}

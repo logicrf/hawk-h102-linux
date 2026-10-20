@@ -1,0 +1,120 @@
+--- /dev/null
++++ b/drivers/iio/adc/h102_adc_reg_bounds.h
+@@ -0,0 +1,30 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/**
++ * Copyright (C) LogicRF Technologies (Chengdu) Co., Ltd. All Rights Reserved.
++ * @file       h102_adc_reg_bounds.h
++ * @brief      Validate debug register offsets before ADC MMIO and mutex access.
++ * @details    Preserve the bit31 selector and low16 offset ABI; reject aliases,
++ *             unaligned 32-bit accesses and resources shorter than one word.
++ * @author     LogicRF Technologies
++ * @architect  LogicRF
++ * @email      info@logicrf.com
++ * @website    https://www.logicrf.com
++ * @version    0.1.0
++ * @date       2026-10-14
++ * @note       Used by both primary and secondary AXI ADC debugfs callbacks.
++ */
++#ifndef H102_ADC_REG_BOUNDS_H
++#define H102_ADC_REG_BOUNDS_H
++
++#include <linux/ioport.h>
++
++/** Reject invalid offsets without issuing MMIO or acquiring the device mutex. */
++static inline bool h102_adc_reg_offset_valid(unsigned int reg, resource_size_t size)
++{
++	unsigned int offset = reg & 0xffffU;
++
++	return !(reg & ~0x8000ffffU) && !(offset & 3U) && size >= sizeof(u32) &&
++		offset <= size - sizeof(u32);
++}
++
++#endif /* H102_ADC_REG_BOUNDS_H */
+--- a/drivers/iio/adc/ad_adc.c
++++ b/drivers/iio/adc/ad_adc.c
+@@ -78,6 +78,8 @@
+ 
+ #define ADI_MAX_CHANNEL			128
+ 
++#include "h102_adc_reg_bounds.h"
++
+ struct adc_chip_info {
+ 	int (*special_probe)(struct platform_device *pdev);
+ 	bool has_no_sample_clk;
+@@ -90,6 +92,8 @@
+ struct axiadc_state {
+ 	void __iomem			*regs;
+ 	void __iomem			*slave_regs;
++	resource_size_t			regs_size;
++	resource_size_t			slave_regs_size;
+ 	struct iio_hw_consumer		*frontend;
+ 	struct clk 			*clk;
+ 	/* protect against device accesses */
+@@ -502,6 +506,7 @@
+ 		st->slave_regs = devm_ioremap_resource(&pdev->dev, mem);
+ 		if (IS_ERR(st->slave_regs))
+ 			return PTR_ERR(st->slave_regs);
++		st->slave_regs_size = resource_size(mem);
+ 
+ 		val = cf_axi_dds_to_signed_mag_fmt(1, 0);
+ 		axiadc_slave_write(st, ADI_REG_CORRECTION_COEFFICIENT(0), val);
+@@ -593,6 +598,11 @@
+ 			  unsigned int *readval)
+ {
+ 	struct axiadc_state *st = iio_priv(indio_dev);
++	resource_size_t size = st->slave_regs && (reg & 0x80000000) ?
++		st->slave_regs_size : st->regs_size;
++
++	if (!h102_adc_reg_offset_valid(reg, size))
++		return -EINVAL;
+ 
+ 	mutex_lock(&st->lock);
+ 	if (st->slave_regs && (reg & 0x80000000)) {
+@@ -727,6 +737,7 @@
+ 	st->regs = devm_ioremap_resource(&pdev->dev, mem);
+ 	if (IS_ERR(st->regs))
+ 		return PTR_ERR(st->regs);
++	st->regs_size = resource_size(mem);
+ 
+ 	platform_set_drvdata(pdev, indio_dev);
+ 
+--- a/drivers/iio/adc/cf_axi_adc_core.c
++++ b/drivers/iio/adc/cf_axi_adc_core.c
+@@ -43,6 +43,8 @@
+ 	unsigned int version;
+ };
+ 
++#include "h102_adc_reg_bounds.h"
++
+ struct axiadc_state {
+ 	struct device 			*dev_spi;
+ 	struct iio_info			iio_info;
+@@ -50,6 +52,7 @@
+ 	struct gpio_desc		*gpio_decimation;
+ 	struct jesd204_dev 		*jdev;
+ 	void __iomem			*regs;
++	resource_size_t			regs_size;
+ 	void __iomem			*slave_regs;
+ 	unsigned int			max_usr_channel;
+ 	unsigned int			id;
+@@ -233,8 +236,9 @@
+ 	struct axiadc_converter *conv = to_converter(st->dev_spi);
+ 	int ret;
+ 
+-	/* Check that the register is aligned */
+-	if ((reg & DEBUGFS_DRA_PCORE_REG_MAGIC) && (reg & 0x3))
++	/* Validate the complete mapped word before taking the converter lock. */
++	if ((reg & DEBUGFS_DRA_PCORE_REG_MAGIC) &&
++	    !h102_adc_reg_offset_valid(reg, st->regs_size))
+ 		return -EINVAL;
+ 
+ 	mutex_lock(&conv->lock);
+@@ -1087,6 +1091,7 @@
+ 	st->regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(st->regs))
+ 		return PTR_ERR(st->regs);
++	st->regs_size = resource_size(platform_get_resource(pdev, IORESOURCE_MEM, 0));
+ 
+ 	st->dev_spi = axiadc_spidev->dev_spi;
+ 

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "product": {
+    "name": "LogicRF Hawk H102 Kuiper",
+    "owner": "LogicRF",
+    "hardware": "LogicRF Hawk H102",
+    "repository": "logicrf/hawk-h102-linux",
+    "lifecycle_status": "released",
+    "released_image_version": "1.2.0"
+  },
+  "upstream": {
+    "project": "ADI Kuiper Linux",
+    "repository": "https://github.com/analogdevicesinc/kuiper",
+    "selection": "last vendor Full image listed in ADI's 2023_R2 Patch1 release notes",
+    "release": "2023_R2 Patch1",
+    "image_date": "2025-03-18",
+    "variant": "Full",
+    "image_filename": "2025-03-18-ADI-Kuiper-full.img",
+    "zip_url": "https://swdownloads.analog.com/cse/kuiper/image_2025-03-18-ADI-Kuiper-full.zip",
+    "published_zip_md5": "6c92259dd61520d08244012f6c92d7c6",
+    "published_image_md5": "873b4977617e40725025aa4958f3ca7e",
+    "verified_local_image_sha256": "6e995a96b06590c13d6b1deebe1ccbe1203e90fb6a3d5f71a76e70a1d10cadab",
+    "architecture": "armhf",
+    "base_userspace": "Debian Bullseye / Kuiper 11.2",
+    "rebuild_upstream_rootfs": false
+  },
+  "h102_base_image": {
+    "filename": "H102-LogicRF-Kuiper-full-2025-03-18-software2024.1-legacy-PL-AR8035.img",
+    "sha256": "c8ec26680ecc32c09bdfcc350507dccd73ae4f58622851fa9d5b9b1454cbd64d",
+    "status": "offline-filesystem-verified; base boot components were tested on H102, but this exact full image was not cold-booted",
+    "boot_bin_sha256": "44b478bc7f38538f99d084551151639bef8ca5fbfc6378b26a564140d147a4b4",
+    "image_ub_sha256": "689d3a342b1c425e13adfc9f67492e3d41507ebdfecef653a018782b72925fe4",
+    "adrv9002_firmware_bit_sha256": "6e2f2faccc6b80240ed89e229b67beca27380ebfcdffba5748c05d16932fb351",
+    "kernel_release": "6.6.0adi-v2024.1-24444-gc8daf49830b2"
+  },
+  "h102_platform": {
+    "vivado": "2024.1",
+    "petalinux": "2024.1",
+    "kernel_release": "6.6.0adi-v2024.1-24444-gc8daf49830b2",
+    "rtl_source_tag": "h102-2024.1-compact-mainline-20260929",
+    "rtl_source_commit": "347d267f74c9a27f4cb29e6389415d19fd765a74",
+    "rtl_candidate_bit_sha256": "da55372e54fa8c37b9c0cd8c0a2319bec5428f7b27e1fb0124722cf9aaf21555",
+    "rtl_board_tested_bit_sha256": "f8ce7183d3a74e464c63ddcecd95321fe29068ffbcac9ac02c09a3940e74c45b",
+    "rtl_board_test_scope": "2026-09-29 fixed 40 MSPS/channel, 20 MHz RF bandwidth digital USB stability; RF TX disabled",
+    "rtl_candidate_board_qualified": false,
+    "boot_chain_status": "Exact revised 49f2 image booted with f8ce TX v3 and 2024.1/Linux6.6; first-boot NM stable MAC, network/IIO, full warm-reboot UART and identity persistence passed. Full physical cold-boot UART, applicable USB smoke, multi-device identity and LFS release gates remain pending."
+  },
+  "current_product_release": {
+    "version": "1.2.0",
+    "platform": "2024.1",
+    "status": "released-qualified-common-lo-sdk1-scoped",
+    "released": true,
+    "hardware_qualified": true,
+    "image_path": "releases/LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz",
+    "image_manifest": "releases/LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz.json",
+    "compressed_sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+    "raw_sha256": "22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d",
+    "assembly_recipe_commit": "d9e3029535831b5f432f900f10c315f08306d91c",
+    "kernel_release": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
+    "adrv9002_api": "68.21.6",
+    "logical_profile_count": 29,
+    "physical_package_count": 58,
+    "rtl_delivery_commit": "3235bd59bba7e786b06cee2e5e7972fb3acbae71",
+    "rtl_delivery_tag": "h102-kuiper-1.1.0-rtl",
+    "release_tag": "v1.2.0",
+    "release_notes": "docs/releases/LogicRF-Hawk-H102-Kuiper-1.2.0.md",
+    "release_decision": "docs/receipts/20261015-1.2.0-release-decision.json",
+    "qualification_scope": {
+      "hardware": "Two H102 same1.2.0 image/payload; first postboot+full software reboot UART and scoped Qt/RF/record/USB; first earliest physical cold UART not captured; second original full physical cold qualified",
+      "profiles": "29 logical choices x independent/sharedLO=58 packages; all29 shared finite/auto on earlier same kernel/runtime, not58 continuous",
+      "default": "40MSPS/20MHz independent LO",
+      "network_RX": "Actual Qt shared8MSPS4MHz dual10s; complete file readback and zero window overflow/backpressure",
+      "USB": "Exact image40MSPS20MHz dualRX10s17checks and RX1TX1 digital10s49checks; RF off",
+      "RF": "Exact-image finite1GHz TX1/RX1A TX2/RX2A20dB loops; no absolute calibration",
+      "warm": "One software reboot, identity/SSH keys/root expansion/network policy/587assets/41settings unchanged"
+    },
+    "limitations": [
+      "Two tested H102 same image; new devices need own identity and scoped acceptance",
+      "First initial physical cold UART earliest stage not captured; software reboot full chain recorded",
+      "Observed first USB5000/0-byte timeout recovered by one idle FT601 reset; no universal hotplug guarantee",
+      "Network RX throughput only admitted configurations; dual8MSPS ten-second window here; prior long windows have their original source and boot identity",
+      "Finite1GHz loop and29 common packages do not prove all RF frequencies, absolute dBm/UTC or synchronized channels",
+      "No all58 continuous throughput matrix, arbitrary duration or arbitrary host guarantee",
+      "Network TX preloaded/cyclic IQ, not realtime full-rate Ethernet streaming",
+      "ADI IIO Oscilloscope/Scopy complete client journey NOT_RUN"
+    ],
+    "multi_device_provisioning_qualified": true,
+    "internal_build_version": "1.2.0-rc2",
+    "multi_device_scope": "Two independently provisioned/tested H102 only; same binary, unique identities; no arbitrary-device/performance guarantee",
+    "post_release_cross_board_report": "docs/h102-dual-board-1.2.0-20261015.md",
+    "post_release_first_board_receipt": "docs/receipts/20261015-1.2.0-first-unified-board.json"
+  }
+}

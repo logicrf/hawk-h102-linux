@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "date": "2026-10-08",
+  "release": false,
+  "sdk_archive": {
+    "archive": "/home/logicrf/Downloads/adrv9001-sdk-1pt0pt0.zip",
+    "archive_sha256": "5bd9ae08e9eedda15b48c643c01328557dcce9a52172dc52f4f32e180aad6653",
+    "pdf_member": "adrv9001-sdk.1.0.0-ga/adrv9001-sdk/license/2026-08-01-adrv9002-sdk-1.0.0-ga-click-thru-SLA.pdf",
+    "pdf_sha256": "e5b8d14f4594c2f3638df41f98d288e907c8518651675f0013eb2c9d3ac64e39",
+    "pkg_license_sha256": "0614fcf41f48a300be08467a7f25645f197b03742b18cb229e5548f9f57885c2"
+  },
+  "installed_components": [
+    "kernel/API68.21.6 target code",
+    "C0 FW1.0.2",
+    "29 profile.json/stream.bin preset results",
+    "matched h102_profile_control kernel module",
+    "H102 tools/necessary notices"
+  ],
+  "generation_host": "logicrf-ai Windows11; approved generation inputs separately pinned",
+  "notice_sources": {
+    "versions.html": "926cb7232287acfa300add0e4e573e4e218b45054690555db4fe75eb86f723d6",
+    "adrv9002-firmware-1.0.2.html": "f08f5501336abf2271e2a0505c191f3adc4645e6e1e589450f5f37f3cfe214bc",
+    "SDK1-20260801-SLA.pdf": "e5b8d14f4594c2f3638df41f98d288e907c8518651675f0013eb2c9d3ac64e39",
+    "SDK1-PKG-LICENSE.md": "0614fcf41f48a300be08467a7f25645f197b03742b18cb229e5548f9f57885c2",
+    "third-party-index.html": "40ae6d5b894015f4cfed5dc456902e6d0d510d48efedaf0002c28612ee8d704c",
+    "adrv9002-device-api-68.21.6.html": "13b2055caac3316778d31fc7677940c8b1bd6f2b5acc8b87ac80e54ada8ba582",
+    "common-api-2.2.3.html": "93482290e611b466081834c8c7fcd89b428fe69e6b8869b43eff3c145bbfb1a0",
+    "ADI-SLA-web-tool-snapshot.json": "c5ff4383acc97d350cdc438d9ff63747e2828dc64f97d09aaa6bc3525b988dc7",
+    "SLA-page1.png": "63d574de3816a83ea84fe5e3ac0563de11797e9a3a81d3b53692d04f2b7620e3",
+    "common-api-2.2.3-appendix-a.html": "75d211786a755f05fa640f11281ab9bfcc2e8e8c671e6375a656f65a2e1eec49",
+    "adrv9002-firmware-1.0.2-appendix-a.html": "284c41af2b8ce7289a808aa73920eb73905d3aa55bb164a5253c2aeb19d3f841",
+    "adrv9002-device-api-68.21.6-appendix-a.html": "b582e3206daca298ac64596fd1af42555f75e1f1f73f90a8010b9ee6988783b5",
+    "SDK1-20260801-SLA.txt": "8eb83fc86dc029d21406ebb39ecd39c633bbf51cfabdd123658d6472a31c048d",
+    "origin.json": "bd081565d458bd9b9edad6384b7ee632452bba0031685ceea1f29921832811a6"
+  },
+  "official_sla": "https://www.analog.com/en/support/software-license-agreement.html",
+  "official_component_notices": "https://download.analog.com/adrv9002-sdk/1.0.0-ga/LICENSES/index.html",
+  "source_distribution_license_cleared": false,
+  "image_sha256": null,
+  "rtl_candidate_commit": "4c72d31739d180f47ee4d59486ea661e2c3836d0",
+  "rtl_candidate_parent_commit": "e3a741154387807c95a32da1a45b296e567ce74e",
+  "rtl_candidate_branch": "feat/profile-runtime-clock",
+  "rtl_implementation_qualified": false,
+  "runtime_template_encoding_receipt": "docs/receipts/20261008-runtime-profile-templates.json",
+  "rtl_parent_candidate_commit": "1bf97eba1bc021e5f9f3a4400602272cfb09b09a",
+  "rtl_reuse_evidence": "/data/logicrf/h102-builds/profile-runtime-20261008-03/resume-01/reuse-inputs.json",
+  "rtl_implementation_status": "full project create/synthesis/route started through ROSS; result pending",
+  "runtime_profile_context_receipt": "docs/receipts/20261008-runtime-profile-context.json",
+  "rtl_placement_failure_receipt": "docs/receipts/20261008-runtime-rtl-placement-failure.json",
+  "rtl_clock_optimization_receipt": "docs/receipts/20261008-runtime-rtl-ross-clock-optimization.json",
+  "rtl_ross_build_receipt": "docs/receipts/20261008-runtime-rtl-ross-build.json"
+}

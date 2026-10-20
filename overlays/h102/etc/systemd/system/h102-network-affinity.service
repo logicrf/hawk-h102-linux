@@ -1,0 +1,21 @@
+[Unit]
+Description=LogicRF H102 Ethernet interrupt CPU distribution
+Requires=h102-sdk1-bootstrap.service
+After=network-online.target h102-sdk1-bootstrap.service
+Before=iiod.service iiod_ffs.service h102-profile-control.service
+
+[Service]
+Type=oneshot
+ExecCondition=/usr/bin/python3 -B /usr/local/lib/h102/sdk1/scripts/h102_network_affinity.py available --directory /run/h102-network-affinity
+ExecStart=/usr/bin/python3 -B /usr/local/lib/h102/sdk1/scripts/h102_network_affinity.py apply --directory /run/h102-network-affinity
+ExecStopPost=/usr/bin/python3 -B /usr/local/lib/h102/sdk1/scripts/h102_network_affinity.py restore --directory /run/h102-network-affinity
+RuntimeDirectory=h102-network-affinity
+RuntimeDirectoryMode=0700
+RemainAfterExit=yes
+Restart=no
+TimeoutStartSec=15
+TimeoutStopSec=15
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

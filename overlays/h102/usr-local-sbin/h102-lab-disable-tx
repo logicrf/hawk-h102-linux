@@ -1,0 +1,25 @@
+#!/bin/sh
+# Disable both RF transmitters once Linux IIO is ready for digital-only lab tests.
+# This runs after driver initialization; it does not suppress initialization cals
+# or protect against a later explicit profile reload or application TX enable.
+set -eu
+attempt=0
+while [ "$attempt" -lt 100 ]; do
+    for phy in /sys/bus/iio/devices/iio:device*; do
+        [ -r "$phy/name" ] || continue
+        [ "$(cat "$phy/name")" = adrv9002-phy ] || continue
+        for channel in 0 1; do
+            echo 0 > "$phy/out_voltage${channel}_en"
+        done
+        for channel in 0 1; do
+            enabled=$(cat "$phy/out_voltage${channel}_en")
+            [ "$enabled" = 0 ] || exit 1
+            echo "H102 lab: TX$((channel + 1)) disabled, en=$enabled"
+        done
+        exit 0
+    done
+    attempt=$((attempt + 1))
+    sleep 0.2
+done
+echo 'H102 lab: adrv9002-phy did not appear within 20 seconds' >&2
+exit 1

@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+build/
+artifacts/
+inputs/
+*.img
+*.img.xz
+*.ko
+*.so
+*.bin
+*.zip
+*.tar.gz

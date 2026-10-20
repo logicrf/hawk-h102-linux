@@ -1,0 +1,8 @@
+#!/bin/sh
+# LogicRF H102: repeated up events are idempotent; DHCP renewal never restarts IRQ policy.
+set -eu
+[ "${1:-}" = eth0 ] || exit 0
+case "${2:-}" in
+    up) systemctl --no-block start h102-network-affinity.service ;;
+    pre-down|down) systemctl --no-block stop h102-network-affinity.service ;;
+esac

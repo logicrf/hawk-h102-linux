@@ -1,0 +1,15 @@
+#!/bin/sh
+# Copyright (C) LogicRF Technologies (Chengdu) Co., Ltd. All Rights Reserved.
+# Fixed SDK1 entry; deploy this script and its profiles with the matching kernel.
+set -eu
+case "${1:-}" in
+  list|validate|status|apply|restore) ;;
+  *) echo 'Usage: h102-config-sdk1 list|validate ID|status|apply ID|restore' >&2; exit 2 ;;
+esac
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+catalog="$script_dir/../profiles"
+if [ -d "$catalog/sdk1-candidate" ]; then
+  catalog="$catalog/sdk1-candidate"
+fi
+exec /usr/bin/python3 -B "$script_dir/h102_profile_config.py" \
+  --stack sdk1-candidate --catalog "$catalog" "$@"

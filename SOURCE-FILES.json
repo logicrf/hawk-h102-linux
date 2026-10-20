@@ -1,0 +1,586 @@
+{
+  "schema": 1,
+  "scope": "All source package regular files except this self-referential manifest",
+  "files": {
+    ".gitignore": {
+      "bytes": 113,
+      "sha256": "bfb41f23ff075b4ac33cca0867986f72a7c43cb6dc9e514cb7bc8cf77fabca78"
+    },
+    "AGENTS.md": {
+      "bytes": 875,
+      "sha256": "aed55d5a45f7fcedad44408bc410dffe3167eec23e4bfcda025d572a77f15f58"
+    },
+    "LICENSE.md": {
+      "bytes": 535,
+      "sha256": "6aa343fc70c6cd6dabd8dfcdcf535481e3787e80b25d3a40e84b390394094f6e"
+    },
+    "LICENSES/THIRD-PARTY-NOTICES.md": {
+      "bytes": 1779,
+      "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
+    },
+    "README.md": {
+      "bytes": 3021,
+      "sha256": "db0ff0a3b00583212a8bd91baa4b24d420a1b4348a0583cfc392ac6b90ca088a"
+    },
+    "SOURCE-BASE.json": {
+      "bytes": 706,
+      "sha256": "fc248a158ac495e8b18e170e3a587ebfdfffe8fca39b91cf07e87f1debffd9e9"
+    },
+    "SOURCE-MAP.json": {
+      "bytes": 70610,
+      "sha256": "ceb1478a085c1a7b396d63cd8e814eb95810389305f95e7c658d389b2d1f68be"
+    },
+    "control-api/.gitignore": {
+      "bytes": 38,
+      "sha256": "599e8d09a18b6bac6f70ed12bf96f67e49c4d992ee2601bc173d92fbcb64b11d"
+    },
+    "control-api/README.md": {
+      "bytes": 3640,
+      "sha256": "fa1d122e87622f3e5e726494ce79b2eb05bfcee01ce51a272392345568866713"
+    },
+    "control-api/build_bundle.py": {
+      "bytes": 3337,
+      "sha256": "d3ccff3b32693bc00a1e2fbf437a5f9b31714fddfc93430401034329c2fda6e9"
+    },
+    "control-api/h102_control/__init__.py": {
+      "bytes": 712,
+      "sha256": "cf22f412cd87e88679e4cc3710a6767d23d2401ddfb9f07996754fe14a3e1a33"
+    },
+    "control-api/h102_control/__main__.py": {
+      "bytes": 1597,
+      "sha256": "dfa972f86c5b9798db267d8a8618b700f14344387590a08f1cff6f75e9a2c79a"
+    },
+    "control-api/h102_control/channel.py": {
+      "bytes": 4467,
+      "sha256": "b2cf7d6fe91d5cf12b044a0d192348633782c48338c4b30927bd0b17503ac362"
+    },
+    "control-api/h102_control/client.py": {
+      "bytes": 5194,
+      "sha256": "2ebaac23e6472a9d919c1ff23f39c50f9d96b37a75ddcbc2214f6d63766228a1"
+    },
+    "control-api/h102_control/compat.py": {
+      "bytes": 6374,
+      "sha256": "e15ea954887784838590f94c3d2221ef94121ad1185c155584a89a46bd2a8fab"
+    },
+    "control-api/h102_control/native.py": {
+      "bytes": 22485,
+      "sha256": "2a61c84f8b9c06ffa9a5e63dac081949b7db77ebcd0b22cce52adaa1030b18e8"
+    },
+    "control-api/h102_control/protocol.py": {
+      "bytes": 3625,
+      "sha256": "92f2113f1c4e6a4de0bef4093cba5ec8e08ddcec1f522bff6f9fc273ff05b8a4"
+    },
+    "control-api/h102_control/server.py": {
+      "bytes": 12671,
+      "sha256": "0cebad0a6acd3ff88b46ef0f205a99dcc5f23d9f59919893eef78a60492649e2"
+    },
+    "control-api/h102_control/session_evidence.py": {
+      "bytes": 5197,
+      "sha256": "9a1c3546c61b59a0bfe35cb52135f522eb7e477c8e01980bd148f053a3332cd6"
+    },
+    "control-api/h102_control/usb_worker.py": {
+      "bytes": 5875,
+      "sha256": "083806be912d2acde65c90364739a4fb76cad1572894118c2cae73e90f94fb07"
+    },
+    "control-api/hotmeta-base-sdk.lock.json": {
+      "bytes": 11021,
+      "sha256": "2dad04df2482cb307316e19abd774784ef6b8647469f1c4712cc43282bb6f500"
+    },
+    "control-api/hotmeta_preflight.py": {
+      "bytes": 4048,
+      "sha256": "5c20d2df6ed28c37a5ee8573bd5e274afa67f7a6ca21756336dd7991fb012707"
+    },
+    "control-api/hotmeta_transaction.py": {
+      "bytes": 6639,
+      "sha256": "b5b560bee1e22a93b08dd62bc42b6392f5186197a231c191d9ff443365bcd4b0"
+    },
+    "control-api/install_hotmeta_addon.py": {
+      "bytes": 14966,
+      "sha256": "10e413033e2c0d57e45ff475000b90114722fc82f7451caa736b4dc3fe747170"
+    },
+    "control-api/install_service.py": {
+      "bytes": 5196,
+      "sha256": "1a24b45dd5f65f9f091db06780a46ff278201f472ca2813ee0d0af272330d5c7"
+    },
+    "control-api/package_hotmeta_addon.py": {
+      "bytes": 5015,
+      "sha256": "db14a1f394cceccc78f487ed71bbef380fc41694496e1921194dad08a4e32418"
+    },
+    "control-api/prepare_hotmeta_inputs.py": {
+      "bytes": 6489,
+      "sha256": "33a7e590aa1003467365b55f4f043f229197806558c4e14bc56177b44c654d0d"
+    },
+    "control-api/tests/test_hotmeta_package.py": {
+      "bytes": 3181,
+      "sha256": "c9a7613835299faa813a2cd7f5ca1a787da406fc4355d4aedaf30389515669e1"
+    },
+    "control-api/tests/test_hotmeta_preflight.py": {
+      "bytes": 2485,
+      "sha256": "051b1c8fd3bff373427f6a195a24cd9c4292665f2068457dd485c45ad88aa733"
+    },
+    "control-api/tests/test_hotmeta_sdk_locks.py": {
+      "bytes": 3601,
+      "sha256": "2619477af1ab0d7ac927aba5dfdd28d60eb97c9d314407c647e4a031faac258c"
+    },
+    "control-api/tests/test_hotmeta_transaction.py": {
+      "bytes": 5541,
+      "sha256": "73188ecb16788a193876ed745f8317789f5dcf65f9ee484e0177f09aa6de93a7"
+    },
+    "control-api/tests/test_native_contract.py": {
+      "bytes": 2317,
+      "sha256": "8a015069db071bd77a5f3e392ad259e24a534bd69594d611b26105c17f61be4d"
+    },
+    "control-api/tests/test_protocol.py": {
+      "bytes": 2094,
+      "sha256": "496e3681860dfab40fe42470a3733e188c17c28326242c652ea7e0ff7275e53e"
+    },
+    "control-api/tests/test_transport.py": {
+      "bytes": 5162,
+      "sha256": "f877ce8ef7e94e34dd98082729e8a75aee5abcb97436d43695cffa045aab8180"
+    },
+    "device-tree/README.md": {
+      "bytes": 571,
+      "sha256": "ed8c376e93fc0ed42b8c6edb1732704a759a4dec8b513bd6bb4140ec539b1a25"
+    },
+    "device-tree/h102-1.2.0-reference.dts": {
+      "bytes": 29159,
+      "sha256": "d5f2e2ba69288b2cc232e66a947de74b73abae67aee595047a43b6d8f47ea828"
+    },
+    "docs/BUILD.md": {
+      "bytes": 6141,
+      "sha256": "6b1f2e50116f4aa6cc82172a7d1bd5d0603a62b1889f666a6afc10b30c5c0f71"
+    },
+    "docs/CONFIGURATION.md": {
+      "bytes": 2737,
+      "sha256": "7ab8e48a4ce66140cac3ea4557e11ee6598384d86c31973e3a69417e4bb70ec7"
+    },
+    "docs/DEPLOYMENT.md": {
+      "bytes": 3685,
+      "sha256": "d82b191a6684b2605fcdf5eab28551096fe17987aaaeaea8e93cf32a5841f9a6"
+    },
+    "docs/GETTING-STARTED.md": {
+      "bytes": 2799,
+      "sha256": "b07da180cf4fb1ad29cca55a5bff5fe910d5f14921fea9f522721936ae5ffdeb"
+    },
+    "docs/MAINTAINING.md": {
+      "bytes": 1189,
+      "sha256": "ddc146c1fcd42a94e4a800113cf2f9bfdf53aecb438fa07e83c0909e6b37b9e2"
+    },
+    "docs/PROFILE-GENERATION.md": {
+      "bytes": 4214,
+      "sha256": "5e8fc6f4f02c2d7dbcbed03348f8c7c276892a1e1170016b79b7709efec2908b"
+    },
+    "docs/RELEASE.md": {
+      "bytes": 2136,
+      "sha256": "2b402557ac726d8a890339fb72b4b34c20c3442cbe5fdcfdd3e17af1ac0d09cb"
+    },
+    "docs/VALIDATION.md": {
+      "bytes": 1938,
+      "sha256": "7fc4a192d0e270b21cab9160f29260777a577103ddbe6fbddb4d4d844961ab1f"
+    },
+    "examples/iio/README.md": {
+      "bytes": 3162,
+      "sha256": "d08d5dc1ada3c26b373cec8ab0bb4d35d1485140adf2afc097e2e688b3546eca"
+    },
+    "examples/iio/cpp/CMakeLists.txt": {
+      "bytes": 459,
+      "sha256": "7129a015fee486d85b75bf13f362bb136ab448ae321dc91ee6e24711735823ea"
+    },
+    "examples/iio/cpp/h102_iio.cpp": {
+      "bytes": 12904,
+      "sha256": "524628b6db851384a18fc49eabc05ec285afc39fa968231536e13a1df900dcca"
+    },
+    "examples/iio/python/h102_api.py": {
+      "bytes": 11631,
+      "sha256": "20eb768b35a3b7a05cab0aff4febe01e5c02099756b42ba21b0680b7d4228502"
+    },
+    "examples/iio/python/managed_iq.py": {
+      "bytes": 9965,
+      "sha256": "f9ef0885f80bff486b5ecb83e2c016c2d078eb95ada1ad4599a2755e524a758c"
+    },
+    "examples/iio/python/managed_session.py": {
+      "bytes": 5211,
+      "sha256": "429a78c40aa8a2b803a1c79762a1cb62f1eb1086b83895128653c4ed533e6310"
+    },
+    "examples/iio/requirements.txt": {
+      "bytes": 29,
+      "sha256": "d598e2934877a6b7ba74430f8bb7cea7a4da7509ca8f3285380c64a296c44d76"
+    },
+    "examples/iio/runtime.lock.json": {
+      "bytes": 3186,
+      "sha256": "6c1e7dc9f6e923772ac45a44644a3f06a74834aa6067d6c8551ec5a1d87f2904"
+    },
+    "kernel/h102-profile-control/Makefile": {
+      "bytes": 32,
+      "sha256": "981de51970c8f53aab4487e7863dbad21047d3e0b85e150178748bd14e1f19e2"
+    },
+    "kernel/h102-profile-control/h102_profile_control.c": {
+      "bytes": 11212,
+      "sha256": "adb82d4c9b01d23b7f2d30240d66e64107b221d64f41fa9cca30a472781122e7"
+    },
+    "kernel/h102-profile-control/h102_profile_control.h": {
+      "bytes": 1457,
+      "sha256": "270b11b93591b76ed07e0f6ce849253332e5f86482d0210cfa2b1b8bce53a616"
+    },
+    "manifests/h102-deployment-1.2.0.json": {
+      "bytes": 3259,
+      "sha256": "9b6edcec88d221706b9458bd51c354249848e1c57950d65fe04b46ff3d7337cd"
+    },
+    "manifests/h102-portable-host-pins.json": {
+      "bytes": 1309,
+      "sha256": "9913c31d736e14bbefe7cd6e23dc177b23f6cb246ca299b3430e15e55c6a154d"
+    },
+    "manifests/h102-product.json": {
+      "bytes": 5931,
+      "sha256": "cd0ad4d012e49faedc15028ce00f0c538a04c1f0af37f325a5d6819a107553fd"
+    },
+    "manifests/h102-profile-generator-sdk-pins.json": {
+      "bytes": 60593,
+      "sha256": "a7c61290be3e02f715861944c4cb8e4f2845d0dbb58e92b47f96b808c0b32742"
+    },
+    "manifests/h102-sdk1-calfix1-candidate.json": {
+      "bytes": 1663,
+      "sha256": "a43db8e175431ceb558a2cebc75766c44b426d41c65719b439626c151ce3e1df"
+    },
+    "manifests/h102-sdk1-complete-module-pins.json": {
+      "bytes": 1000,
+      "sha256": "6fd17e616ca7e54a960d823fa4165756d942e43472c57ca4b152ce5367ad7cad"
+    },
+    "manifests/h102-sdk1-extra-module-sources.json": {
+      "bytes": 544,
+      "sha256": "555a809db1c1c651cb9cca987f9cf6fc3efd0e669632a65c889edc7506551a69"
+    },
+    "manifests/h102-sdk1-kernel.config": {
+      "bytes": 161810,
+      "sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae"
+    },
+    "manifests/h102-sdk1-linux-source-pins.json": {
+      "bytes": 39519,
+      "sha256": "456d3fe669c62b1e321f8c16d17adddf1f5e3bde2e62aeea66fe246bc9536ecd"
+    },
+    "manifests/h102-sdk1-regbounds1-candidate.json": {
+      "bytes": 5045,
+      "sha256": "192457aa1d8e1d531e67875adb39d5e339c2ea4c0952707c739fc727900cf8a3"
+    },
+    "manifests/h102-sdk1-release-inputs.json": {
+      "bytes": 3556,
+      "sha256": "3f68b8296de4330d553efe8872f55034e5131ef85653ad2a9e709feb0a361604"
+    },
+    "manifests/h102-sdk1-sharedlo1-candidate.json": {
+      "bytes": 7897,
+      "sha256": "e438ff9c021d94e1642372ec3b37ae6f7ef570c2803dc227db019c590d8b3184"
+    },
+    "overlays/h102/NetworkManager-USRP.nmconnection": {
+      "bytes": 204,
+      "sha256": "c98ab858766b6aab3c4dc1eebcdbee003d85f30286838b6c149282837988726d"
+    },
+    "overlays/h102/etc/NetworkManager/dispatcher.d/25-h102-network-affinity": {
+      "bytes": 307,
+      "sha256": "24508594fbfbfb4be489baee78e9c07cabe74734cf43ef65978193746fce221d"
+    },
+    "overlays/h102/etc/systemd/system/h102-gnss-uart-baseline.service": {
+      "bytes": 385,
+      "sha256": "ae7b468c3ccdbf6397e7746077be84d700be2fa754ff6a8d51854d9666867c11"
+    },
+    "overlays/h102/etc/systemd/system/h102-grc-ready-profile.service": {
+      "bytes": 628,
+      "sha256": "35431947c87f7380e9d0fb83d3323238421c450bf7aaf155d550dec1744a9ef7"
+    },
+    "overlays/h102/etc/systemd/system/h102-network-affinity.service": {
+      "bytes": 845,
+      "sha256": "b50f534de16be9da869196f226d23fe5809324ba2fad28c71b754b01bab54d44"
+    },
+    "overlays/h102/etc/systemd/system/h102-network-performance.service": {
+      "bytes": 802,
+      "sha256": "c35455cd816cc1039c3f102f10aba06cc3dd072eba53af99a544d73c2cd8f7aa"
+    },
+    "overlays/h102/etc/systemd/system/iiod.service.d/50-h102-network-performance.conf": {
+      "bytes": 85,
+      "sha256": "82627dbe848f07ce4bb2573e20540cb78974540e75b98c8b446aebf00228e931"
+    },
+    "overlays/h102/etc/systemd/system/iiod_ffs.service.d/51-h102-network-performance-ffs.conf": {
+      "bytes": 85,
+      "sha256": "82627dbe848f07ce4bb2573e20540cb78974540e75b98c8b446aebf00228e931"
+    },
+    "overlays/h102/profiles/40msps-20mhz-rx-a.json": {
+      "bytes": 45152,
+      "sha256": "ea72b7d4dbeaa2527cb9255e3d2626390df61d7db8394d1f3e59b6e5e16f1fc0"
+    },
+    "overlays/h102/profiles/provenance.json": {
+      "bytes": 522,
+      "sha256": "ece4678d34f2a4c50fe49b82193e8bece30aa739b9dc86f96ac655245ade720a"
+    },
+    "overlays/h102/systemd/system/fan-control.service.d/20-h102-fan-condition.conf": {
+      "bytes": 170,
+      "sha256": "4f58116547dabada719459da006216ad07c382e60c061e59acbfcb208c6bd6b8"
+    },
+    "overlays/h102/systemd/system/iiod.service.d/20-h102-lab-guard.conf": {
+      "bytes": 78,
+      "sha256": "0bf296fda292046d95f7b70525f9eeb07ce9c872fd0d5145d7ef6565e416b544"
+    },
+    "overlays/h102/systemd/system/iiod_ffs.service.d/20-h102-iiod-ffs.conf": {
+      "bytes": 359,
+      "sha256": "bb96498f9834666b6a2d69fe0b52cef8f930734ea3f28ba42851341318090ecc"
+    },
+    "overlays/h102/systemd/system/lightdm.service.d/20-h102-desktop-condition.conf": {
+      "bytes": 140,
+      "sha256": "ed9c91bb4de6bb4053b2c9c7d5bc91c9c386ec649a23dbcd76c7ee028b5ed317"
+    },
+    "overlays/h102/systemd/system/x11vnc.service.d/20-h102-desktop-condition.conf": {
+      "bytes": 163,
+      "sha256": "e46538658bff123ee1813180fda69075fc75238616efda765c058eba479dc4c3"
+    },
+    "overlays/h102/systemd/units/h102-grow-rootfs.service": {
+      "bytes": 304,
+      "sha256": "91ee6b328c9418f382fe340b113d7f8b9ad8ac0e2c7c6a062f226a91e97d47a1"
+    },
+    "overlays/h102/systemd/units/h102-headless-boot.service": {
+      "bytes": 449,
+      "sha256": "ffcee29d54f24449d5d6bafedef44d2cb42fed8ca6241ef7b65cf24878716015"
+    },
+    "overlays/h102/systemd/units/h102-lab-disable-tx.service": {
+      "bytes": 303,
+      "sha256": "8e1329096e279858745f223a5bbb2d8c9413d862af0804335ea13e6fece8b08a"
+    },
+    "overlays/h102/uEnv.tx-v3.txt": {
+      "bytes": 628,
+      "sha256": "688a87447aeb3bc8637e8209661ba5de9d1633bdfef681994e7ed5fd5e82926b"
+    },
+    "overlays/h102/usr-local-lib/h102/sdk1_bootstrap.py": {
+      "bytes": 8064,
+      "sha256": "9bf6c0697ffb15f7080ba878982975bd231731774493fccdd181d5a8d09c9a95"
+    },
+    "overlays/h102/usr-local-sbin/h102-grow-rootfs": {
+      "bytes": 6349,
+      "sha256": "8a1da79268435eff53f932fc0a4d6a056cf8ba4d871ffe58455983b0e22004cd"
+    },
+    "overlays/h102/usr-local-sbin/h102-lab-disable-tx": {
+      "bytes": 913,
+      "sha256": "f63dd4f17c867bac87c95c3dbef978319d8300f01c2a97b17d1c9f0d8fbaa7e4"
+    },
+    "patches/h102-adc-register-bounds.patch": {
+      "bytes": 3723,
+      "sha256": "fa900e28e6046fb6598f362b3678130eb5960b97e20c0b13c29b63f8985e3119"
+    },
+    "patches/h102-fdd-shared-lo.patch": {
+      "bytes": 6744,
+      "sha256": "5d5e11dfa58562575e53c428cc17c2c2fff6da10da791f86e110a83f595189e0"
+    },
+    "patches/h102-sdk1-calibration-power.patch": {
+      "bytes": 2440,
+      "sha256": "1bede0ca63b199caae6505cd11ba16d27b9c9326e4dca5ca61a1ae9e5389b8fd"
+    },
+    "patches/h102-sdk1-linux-iio.patch": {
+      "bytes": 4845,
+      "sha256": "e94e8795595aea936ec317b9067e97c6afcb9a2a80b4cc9393f373aa0b8fb6f9"
+    },
+    "profiles/requests/h102-built-in-dual-lo-mode-sdk1-presets.json": {
+      "bytes": 8980,
+      "sha256": "a0ed0ef7993e3afb40321e7f70723ed3e7cda756339f30f22fea4ea9782d8521"
+    },
+    "profiles/requests/h102-built-in-sdk1-presets.json": {
+      "bytes": 4493,
+      "sha256": "91c85ab2d70d3f147cdd915d6969a1d636bf1613af5f0283b810c934d23cb979"
+    },
+    "profiles/requests/h102-common-lo-sdk1-presets.json": {
+      "bytes": 4727,
+      "sha256": "9e3a05ad98fb2aaf0a696ad1728cfd6129c1e94f31bbb6ec8fe7f005c1608640"
+    },
+    "profiles/requests/h102-common-sdk1-presets.json": {
+      "bytes": 6616,
+      "sha256": "0ac6042bf6c2112eaee62f34545c4f0eef4f04f7143008bcdd326b4b92dda927"
+    },
+    "profiles/requests/h102-rate-bandwidth-targets.json": {
+      "bytes": 1167,
+      "sha256": "23653159b1d70a46c57d215d5375c2c727cc617420684db3d3b82301e65fd970"
+    },
+    "references/h102-iio-legacy/Makefile": {
+      "bytes": 428,
+      "sha256": "23c699dae79aab9feddbe2cd48f9a8976d6f3c78de56eaa0669186423119a594"
+    },
+    "references/h102-iio-legacy/h102_axi_reg.c": {
+      "bytes": 13386,
+      "sha256": "ffa447f9f9df368427eb1e62ef2badb92c9eeb4bd8fcf23debcb2a796934a0d0"
+    },
+    "references/h102-iio-legacy/h102_axi_trig.c": {
+      "bytes": 22548,
+      "sha256": "e197c27078a901afe6f9ca70272490d35cbfe8759ef0b8809369ccd26b195525"
+    },
+    "scripts/build_h102_common_lo_image.py": {
+      "bytes": 9052,
+      "sha256": "3620f1102579469852b245adab1cf797eb71d7ff0f70acc74ba4a9133daa2c00"
+    },
+    "scripts/build_h102_driver_fix_image.py": {
+      "bytes": 11121,
+      "sha256": "8ac2b2fecf999fea9610c2dc821e24608d5cb8a1d21e22bc8ffdc2f359eb1304"
+    },
+    "scripts/build_h102_irq_hotfix_image.py": {
+      "bytes": 11396,
+      "sha256": "6b7cef3aae6c2c8bc4e5db4427efee4bb7e86fd8ca10e57d902c2cd06ee686f0"
+    },
+    "scripts/build_h102_sdk1_image.py": {
+      "bytes": 12834,
+      "sha256": "c09d2dfe9f894a6ae8aa98df1ada8106ed336829b334466258a95745b3b21778"
+    },
+    "scripts/check_distribution.py": {
+      "bytes": 5546,
+      "sha256": "5e5fa05ece0596a919f7e3409a06add55e3598eed48a1c892bdd4adb16783c57"
+    },
+    "scripts/compact_h102_image.py": {
+      "bytes": 21173,
+      "sha256": "a713a8b26308b73ca4d22886f740b4443071da3c024d54d61ea91e0efd11847b"
+    },
+    "scripts/h102-config-sdk1": {
+      "bytes": 619,
+      "sha256": "c69eb591aa74f603f879661277498ca949b1bd04d349c25a58e2b327894d0f74"
+    },
+    "scripts/h102_bit_identity.py": {
+      "bytes": 2493,
+      "sha256": "c87d44c3a5f85e50efe3570942a9159ceb95809d9ade5bbef011f32a142f8332"
+    },
+    "scripts/h102_check_new_board.py": {
+      "bytes": 23135,
+      "sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04"
+    },
+    "scripts/h102_gnss_uart_baseline.py": {
+      "bytes": 4727,
+      "sha256": "f2c62b7379199bda759d86dd02914528caef810f4231e540548c75f8ef4975df"
+    },
+    "scripts/h102_gnss_ubx.py": {
+      "bytes": 6947,
+      "sha256": "2d7240d24dd2d60965f1ac16fd3f91132714d8621e0547c8ec82155575d4ec92"
+    },
+    "scripts/h102_iio_finite.py": {
+      "bytes": 7274,
+      "sha256": "fa018b553ebff7ab5bf84d2ceed66f5aa43bb772a6b8d845d072806b98c07637"
+    },
+    "scripts/h102_iio_owner_lock.py": {
+      "bytes": 1709,
+      "sha256": "5b876117312291bfd29c7f1c99614fbfaa0e9cb854ca537ac43abf00c2c63c25"
+    },
+    "scripts/h102_import_generated_profiles.py": {
+      "bytes": 9989,
+      "sha256": "7e2447584085cb59c1bcc96e48b2b48d92fd68832d23a074cc31fff923e7471b"
+    },
+    "scripts/h102_network_affinity.py": {
+      "bytes": 5645,
+      "sha256": "96c07373313cf708ed62ae0dff5ec70a15e8a55324241858d0fd767e669cd534"
+    },
+    "scripts/h102_network_performance.py": {
+      "bytes": 11650,
+      "sha256": "e66c77d51f85b61eed9e5572b44014967f7eed681d0afa74fec947288b955fcd"
+    },
+    "scripts/h102_prepare_sdk1_kernel.py": {
+      "bytes": 6109,
+      "sha256": "121cbc4e10e2a4be83662f5055d555aac880b56adf8a178736fcb95118d42f1f"
+    },
+    "scripts/h102_profile_config.py": {
+      "bytes": 30491,
+      "sha256": "31f712170cb57ef989cf41a3019fde1ee0355e0e308c7fcce4e7c2081f56a348"
+    },
+    "scripts/h102_profile_iio_broker.py": {
+      "bytes": 11016,
+      "sha256": "07ce1ca369bf0503d411e187b96bb089fbb2b8a8094db1b8a6c7fb89eb3ec367"
+    },
+    "scripts/h102_rf_owner.py": {
+      "bytes": 27258,
+      "sha256": "67d2d74ae9b6751588c2f99e00fb0600f55b8f1a5af150947146724dfd52401c"
+    },
+    "scripts/h102_rf_usb_tx_storage.py": {
+      "bytes": 4885,
+      "sha256": "e29659cf5243d2ace540dcdfa6614dd40e8205bb5bb5d9c41385c1e3a729998a"
+    },
+    "scripts/h102_runtime_profile.py": {
+      "bytes": 12563,
+      "sha256": "0b4ba22433e4e49040a217dd8b4b4844a946f872c127061c20b776fa7a92f85b"
+    },
+    "scripts/h102_runtime_rates.py": {
+      "bytes": 12868,
+      "sha256": "055fba23f9ebf219679e5eb260e857701b3c58400fba64af1e22140acfe09027"
+    },
+    "scripts/h102_rx_v3_config.py": {
+      "bytes": 5634,
+      "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
+    },
+    "scripts/h102_sd_deploy.py": {
+      "bytes": 21131,
+      "sha256": "647866b79c066b3f42f5df1146d815779ad0980536ff9b88373cef7bfe602535"
+    },
+    "scripts/h102_tx_v3_config.py": {
+      "bytes": 4152,
+      "sha256": "5ad4589089db8a2960232de91832db6a03c4d01a4b1131e9c64d6a06ea8f8fe1"
+    },
+    "scripts/install_network_performance.py": {
+      "bytes": 8090,
+      "sha256": "e0037e0be4360ef17d2eec24d405bb643594a4c152c02058cbd65f4398017400"
+    },
+    "scripts/package_h102_iio_api_examples.py": {
+      "bytes": 4729,
+      "sha256": "1a486a87e81d154c4dc172593a4f9a8de2015a4690c591abdd0d85e11a5d91a1"
+    },
+    "scripts/package_network_performance.py": {
+      "bytes": 2618,
+      "sha256": "dfb446338217c1347c6a3106900fb185ff29995b905ea0ede0b90bbce4ec13e6"
+    },
+    "scripts/prepare_h102_common_lo_assets.py": {
+      "bytes": 10386,
+      "sha256": "50f094235c07058aa7eee164689806e9654be4568dafdc73ae6ed6b8909cddf6"
+    },
+    "scripts/prepare_h102_sdk1_assets.py": {
+      "bytes": 16617,
+      "sha256": "814fcd72d108a154320109769546092b75438590c18b6d8492ec73f90318143f"
+    },
+    "scripts/prepare_h102_sdk1_modules.py": {
+      "bytes": 10036,
+      "sha256": "2af3f30873336cc1490fa342e54fb2df3491f5341fc98fed543a248d1cae8b82"
+    },
+    "scripts/run_h102_sdk1_iio_rx.py": {
+      "bytes": 13529,
+      "sha256": "99630fc6d51baf90f865194d00a49fc14aed40c774734ca92fa9f65c53558f58"
+    },
+    "scripts/windows/H102ProfileGenerator.cs": {
+      "bytes": 7872,
+      "sha256": "f1011ad224cde697b7d5993cafc7b62a4649deb0b79293f8240e1997259b059d"
+    },
+    "scripts/windows/h102-generate-profiles.ps1": {
+      "bytes": 9623,
+      "sha256": "886fadac0b6fd99754060ce6e854e99f35d5ba28ac56b4d077ac5fc583277d47"
+    },
+    "tests/fixtures/iio-api/fake_iio.cpp": {
+      "bytes": 4465,
+      "sha256": "6f5aa08da22da46526e2dcb3a9902b3a395e5dc4207ab7f8612f3cd2cfa788f1"
+    },
+    "tests/test_calibration_idle.py": {
+      "bytes": 1664,
+      "sha256": "f2081ee8108e579d67f0e3b26b352484676d13517330ceab66f85ed07ffdab16"
+    },
+    "tests/test_h102_deployment.py": {
+      "bytes": 12250,
+      "sha256": "a61fb0d460c6103c2d9a40cf64bd298fd59d8a1edb99b57badf473377fe57aac"
+    },
+    "tests/test_iio_api_examples.py": {
+      "bytes": 8997,
+      "sha256": "acc08ba733b14320a62fc0803a80c542f4265e8f52cfc792511419a232b04750"
+    },
+    "tests/test_iio_owner_lock.py": {
+      "bytes": 2925,
+      "sha256": "080cc45be6aaaf3041cc00dd8e758bd2ebbaa7235c818a806bee2ef73edf9874"
+    },
+    "tests/test_network_installer.py": {
+      "bytes": 3434,
+      "sha256": "01babac426ee351a8bce4e9e888379dc6ac3ea83ac81e472e171732e73e6bbe4"
+    },
+    "tests/test_network_performance.py": {
+      "bytes": 6978,
+      "sha256": "ac0b3e6b35189b9dfd4944c6f544a9ac48dfadaa109e69ab249fd3b8729c51cf"
+    },
+    "tests/test_profile_config.py": {
+      "bytes": 19686,
+      "sha256": "3a077e4cc3eaedc2d3f4b0799759894b478d70dd4878fbf79674757b6e11341e"
+    },
+    "tests/test_profile_iio_broker.py": {
+      "bytes": 5345,
+      "sha256": "838ddee231055059cfe11a6c813e2aaae40d835a772034eb75694d51f88fcdae"
+    }
+  }
+}
