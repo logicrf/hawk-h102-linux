@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "version": "1.0.0-en-r1",
+  "base_image_sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+  "components": {
+    "hotmeta": {
+      "filename": "h102-grc-hotmeta-addon-1-r5-20261018.tar.xz",
+      "sha256": "b83bcff35b6a6a4fa1bb34a1713caae75f0f881f922e2dd7f27de667d5090bc8",
+      "bytes": 1642660,
+      "root": "h102-grc-hotmeta-addon-1-r5-20261018",
+      "manifest": "package.json",
+      "manifest_sha256": "03eada3019d48414fb15dd4f4ca1030a88fc2fcd7122d3fa094c49280e60c5cf"
+    },
+    "network": {
+      "filename": "h102-network-performance-1.0.0.tar.gz",
+      "sha256": "b934fca7de24647e9a7bf301ea50d2a6c1805097ebd98deba48db1a503233a47",
+      "bytes": 7764,
+      "root": "h102-network-performance-1.0.0",
+      "manifest": "manifest.json",
+      "manifest_sha256": "5e8c1616f786e606fd9fadf265f4e1b03fca66152117a6d8b7d33d45bd829aac"
+    }
+  },
+  "requirements": {
+    "base_system": "LogicRF Hawk H102 Kuiper 1.2.0",
+    "kernel": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
+    "installed_api": "0.1.0-ip36",
+    "sdk_files": 108,
+    "capability": 3
+  },
+  "qualification": "Repackaging existing qualified firmware bytes; no new board validation."
+}

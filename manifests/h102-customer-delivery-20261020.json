@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "product": "LogicRF Hawk H102",
+  "visibility": "private_by_default",
+  "base_image": {
+    "version": "1.2.0",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image",
+    "filename": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz",
+    "bytes": 2759144392,
+    "sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+    "download_parts": 3
+  },
+  "device_services": {
+    "version": "1.0.0-en-r1",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1",
+    "filename": "H102-Board-Services-1.0.0-en-r1.zip",
+    "bytes": 1662098,
+    "sha256": "56e192dc8e79aa2e81478d7d01ae1cf1ce922d5dacb73c6fe1457d8dfa49f013",
+    "api": "0.1.0-ip36",
+    "sdk_files": 108,
+    "capability": 3
+  },
+  "gui": {
+    "version": "0.8.0-source-en-r1",
+    "source_commit": "3bdbb52027415f65ec0a18a37b479af7efb29ceb",
+    "release_url": "https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r1",
+    "filename": "hawk-h102-iio-gui-0.8.0-source-en-r1.zip",
+    "bytes": 191947,
+    "sha256": "131f94a34dd2b50702b0491f71f532beb128b77073e625948d83fa34ee08729e",
+    "default_language": "en",
+    "supported_languages": [
+      "en",
+      "zh_CN"
+    ]
+  },
+  "gnu_radio": {
+    "version": "1.2.2rc2",
+    "source_commit": "304400e0e38f5d888cfa207147d598176e0123a8",
+    "release_url": "https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2-rc2",
+    "bytes": 585512,
+    "sha256": "6b492785b4cbb96446c0e71308cd15fe59ba7a2f904361195133db615ebbfde3",
+    "filename": "gr-logicrf-1.2.2rc2-source.zip"
+  },
+  "scope": {
+    "per_device_installation_and_boot_check": "REQUIRED",
+    "new_hardware_qualification": false,
+    "usb_host_components": "SEPARATE_NOT_BUNDLED"
+  }
+}

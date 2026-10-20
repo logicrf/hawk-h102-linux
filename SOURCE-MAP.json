@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "development_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
+  "development_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
@@ -1359,11 +1359,63 @@
       "english_sha256": "fa018b553ebff7ab5bf84d2ceed66f5aa43bb772a6b8d845d072806b98c07637",
       "mode": "100644",
       "modification": "Reused reviewed English comments/messages from gr-logicrf 304400e0"
+    },
+    {
+      "path": "scripts/h102_board_services.py",
+      "source_path": "scripts/h102_board_services.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
+      "source_sha256": "30286b5e48421b2283e378ae008e6a6e3ae9478eec26fdc401994b120ea81cf0",
+      "source_git_blob": "0e0b5c756b249adbb27a950d7557e0f0f139439a",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "30286b5e48421b2283e378ae008e6a6e3ae9478eec26fdc401994b120ea81cf0",
+      "modification": "Unmodified reviewed source"
+    },
+    {
+      "path": "tests/test_board_services.py",
+      "source_path": "tests/test_board_services.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
+      "source_sha256": "77a6b6f8b87c8c938d000e03be3ab8fe08511cbd502da7b7f11539df61f872a4",
+      "source_git_blob": "f5ed344d041f10dddfed50bc97d2d568f4f78832",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "77a6b6f8b87c8c938d000e03be3ab8fe08511cbd502da7b7f11539df61f872a4",
+      "modification": "Unmodified reviewed source"
+    },
+    {
+      "path": "manifests/h102-board-services-1.0.0.json",
+      "source_path": "manifests/h102-board-services-1.0.0.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
+      "source_sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c",
+      "source_git_blob": "62afc6873066adaee961e0ecc7e50e1d87f5bef3",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c",
+      "modification": "Unmodified reviewed source"
+    },
+    {
+      "path": "docs/BOARD-SERVICES.md",
+      "source_path": "docs/H102-BOARD-SERVICES.md",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
+      "source_sha256": "fc1cafee7762b91554a536696bc6ef1426a892744fd500be090d4719c88302ca",
+      "source_git_blob": "d01584d378c490fd15a68a0aafc846c01cb9cbef",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "6d6f5028eb2cefb6163380d9b469c14525cf149f07ba75a07f1bf5183e89b836",
+      "modification": "English customer guide"
     }
   ],
   "derived_files": {
     "manifests/h102-product.json": "Selected current product/upstream/platform/release fields from the fixed development manifest",
     "device-tree/h102-1.2.0-reference.dts": "dtc decompilation of the original SHA-pinned DTB"
   },
-  "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata"
+  "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata",
+  "generated_delivery_documents": [
+    "docs/DELIVERY.md",
+    "manifests/h102-customer-delivery-20261020.json"
+  ]
 }

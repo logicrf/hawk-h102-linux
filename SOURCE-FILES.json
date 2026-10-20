@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3130,
-      "sha256": "1c5000722553b8cf190d4b33319543e50169065d7daad6e398c6cd11bcb5eaad"
+      "bytes": 3405,
+      "sha256": "b4d2e429c9a30f2df1f705a6ffb7bf0689dc54a5c040b07089e02402d9d491f7"
     },
     "SOURCE-BASE.json": {
-      "bytes": 756,
-      "sha256": "5ff30b6428276f37ef192dfec7e59b0857b6abd303385e456929990b0ddab050"
+      "bytes": 823,
+      "sha256": "f43ac3e8adbb1c47234054c93ea07158fb4ffcd4dba3b05cd8a9bcfb11845009"
     },
     "SOURCE-MAP.json": {
-      "bytes": 70632,
-      "sha256": "ceef8dd2f7cefa0507fbd7c83d13495e76500a8ce4fac57b51539966337763ba"
+      "bytes": 73147,
+      "sha256": "38f5cc136375a7317dbd0f434bfa49f61437d8256245ef6e71417af76b533810"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -146,6 +146,10 @@
       "bytes": 29159,
       "sha256": "d5f2e2ba69288b2cc232e66a947de74b73abae67aee595047a43b6d8f47ea828"
     },
+    "docs/BOARD-SERVICES.md": {
+      "bytes": 5171,
+      "sha256": "6d6f5028eb2cefb6163380d9b469c14525cf149f07ba75a07f1bf5183e89b836"
+    },
     "docs/BUILD.md": {
       "bytes": 6141,
       "sha256": "6b1f2e50116f4aa6cc82172a7d1bd5d0603a62b1889f666a6afc10b30c5c0f71"
@@ -153,6 +157,10 @@
     "docs/CONFIGURATION.md": {
       "bytes": 2737,
       "sha256": "7ab8e48a4ce66140cac3ea4557e11ee6598384d86c31973e3a69417e4bb70ec7"
+    },
+    "docs/DELIVERY.md": {
+      "bytes": 4692,
+      "sha256": "5a13eada537ba98a984229d0154a3e3adc1fbbb3e935761ce1981a4fbe645185"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 3685,
@@ -225,6 +233,14 @@
     "kernel/h102-profile-control/h102_profile_control.h": {
       "bytes": 1457,
       "sha256": "270b11b93591b76ed07e0f6ce849253332e5f86482d0210cfa2b1b8bce53a616"
+    },
+    "manifests/h102-board-services-1.0.0.json": {
+      "bytes": 1220,
+      "sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c"
+    },
+    "manifests/h102-customer-delivery-20261020.json": {
+      "bytes": 1817,
+      "sha256": "0f2acad284f9bea74ee80d2a8dc07e4114045b7522ad80d33f350b23a1d0e27a"
     },
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,
@@ -446,6 +462,10 @@
       "bytes": 2493,
       "sha256": "c87d44c3a5f85e50efe3570942a9159ceb95809d9ade5bbef011f32a142f8332"
     },
+    "scripts/h102_board_services.py": {
+      "bytes": 10682,
+      "sha256": "30286b5e48421b2283e378ae008e6a6e3ae9478eec26fdc401994b120ea81cf0"
+    },
     "scripts/h102_check_new_board.py": {
       "bytes": 23135,
       "sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04"
@@ -561,6 +581,10 @@
     "tests/fixtures/iio-api/fake_iio.cpp": {
       "bytes": 4465,
       "sha256": "6f5aa08da22da46526e2dcb3a9902b3a395e5dc4207ab7f8612f3cd2cfa788f1"
+    },
+    "tests/test_board_services.py": {
+      "bytes": 5371,
+      "sha256": "77a6b6f8b87c8c938d000e03be3ab8fe08511cbd502da7b7f11539df61f872a4"
     },
     "tests/test_calibration_idle.py": {
       "bytes": 1664,

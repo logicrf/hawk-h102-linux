@@ -8,11 +8,13 @@ This repository provides English source and customer documentation. It contains 
 
 | Task | Start here |
 |---|---|
+| Find matching downloads and provision a new H102 | [Downloads and setup order](docs/DELIVERY.md) |
 | Write the released image and prepare a new H102 | [Deployment](docs/DEPLOYMENT.md) |
 | Connect and use built-in configurations | [Getting started](docs/GETTING-STARTED.md), [configuration](docs/CONFIGURATION.md) |
 | Generate additional ADRV9002 profiles | [Profile generation](docs/PROFILE-GENERATION.md) |
 | Modify kernel or system-image integration | [Build inputs and workflow](docs/BUILD.md) |
-| Install the optional IP-only control service | [Device control](control-api/README.md) |
+| Install matching GUI/GNU Radio device services | [Device-service bundle](docs/BOARD-SERVICES.md) |
+| Review the fixed device API source | [Device control](control-api/README.md) |
 | Develop using libiio | [C++ and Python examples](examples/iio/README.md) |
 | Review versions, hashes and support limits | [Release information](docs/RELEASE.md) |
 
@@ -34,6 +36,6 @@ Download all three parts from the private [1.2.0 SD image release](https://githu
 
 The historical image recipes retain their original source/asset checks. English translation changes source hashes: this export is **not** a new firmware release or a claim that translated files reproduce the released image byte-for-byte. Exact historical reconstruction requires the original pinned inputs listed in [build inputs](docs/BUILD.md). The source checkout alone is insufficient for a complete image build.
 
-Later GRC/control add-ons are separate from the released 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
+The [matching device-service bundle](docs/BOARD-SERVICES.md) supplies the later API36/cap3 and network add-ons separately from the released 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
 
 [Licensing](LICENSE.md) · [Third-party notices](LICENSES/THIRD-PARTY-NOTICES.md) · [English branch maintenance](docs/MAINTAINING.md)
