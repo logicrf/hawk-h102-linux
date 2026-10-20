@@ -24,11 +24,11 @@
     },
     "SOURCE-BASE.json": {
       "bytes": 823,
-      "sha256": "247a4c7e3f99248f991ba1a618fcca4935ba5750ea2fb56b737fa73bb1e3c9a7"
+      "sha256": "6e3e3c86bd6f5edf3eefd9b52327c9b67150e1a7bfa15dbc1b497bca942186da"
     },
     "SOURCE-MAP.json": {
-      "bytes": 73182,
-      "sha256": "a666457c9ce5f1952f0c6b138c0a0e97fe72af2981287c20a895481b8448c034"
+      "bytes": 73839,
+      "sha256": "c291e6e477891e4c012f1069649f855e60bef7fe8bac5710320dc2ac510e9ab4"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -159,12 +159,12 @@
       "sha256": "7ab8e48a4ce66140cac3ea4557e11ee6598384d86c31973e3a69417e4bb70ec7"
     },
     "docs/DELIVERY.md": {
-      "bytes": 4826,
-      "sha256": "0c5967e01e2036a51854da10ad74b025459ac29314953ed4c95f3fe6bc27fbba"
+      "bytes": 4962,
+      "sha256": "5a59c88536102145fe3b9673f0969732998b467ae3db233fc7b7c570b04a9694"
     },
     "docs/DEPLOYMENT.md": {
-      "bytes": 3685,
-      "sha256": "d82b191a6684b2605fcdf5eab28551096fe17987aaaeaea8e93cf32a5841f9a6"
+      "bytes": 4131,
+      "sha256": "6d459516a68541c47c26524bb0a69a8ec53d1f6ac22302ea48b6130738e1b499"
     },
     "docs/GETTING-STARTED.md": {
       "bytes": 2799,
@@ -243,8 +243,8 @@
       "sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c"
     },
     "manifests/h102-customer-delivery-20261020.json": {
-      "bytes": 1933,
-      "sha256": "42762affec69c0cc27565ea13db4a4f55f556b0ca32be4f706699fd08589102e"
+      "bytes": 2262,
+      "sha256": "5732e4daf24f939aa04d96fee11035233645dfaf4a4bfcd852a52cfc616280c4"
     },
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,
@@ -539,8 +539,8 @@
       "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
     },
     "scripts/h102_sd_deploy.py": {
-      "bytes": 21131,
-      "sha256": "647866b79c066b3f42f5df1146d815779ad0980536ff9b88373cef7bfe602535"
+      "bytes": 22832,
+      "sha256": "c5fc1e60a7b0c49fa3b505af6ecffe96fcaad974596df1a6d7aeb6c7e9c3cdb7"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,
@@ -593,6 +593,10 @@
     "tests/test_calibration_idle.py": {
       "bytes": 1664,
       "sha256": "f2081ee8108e579d67f0e3b26b352484676d13517330ceab66f85ed07ffdab16"
+    },
+    "tests/test_deployment_fd_fallback.py": {
+      "bytes": 3419,
+      "sha256": "16f48773aa1929afb4ac854960d6369ea6a6c8a43999a6ce20af0f4c65092c2a"
     },
     "tests/test_h102_deployment.py": {
       "bytes": 12250,

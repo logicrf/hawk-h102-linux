@@ -50,3 +50,12 @@ Check independent machine/MAC/SSH identities, matching kernel/boot assets, 58 pr
 ## Validation scope
 
 The released image has the recorded two-board checks. The SD deployment CLI has offline rejection and real regular-file/loop transfer evidence; it must not inherit a physical-card test from an older independent writer. This English packaging update performs no card writes, boot tests or RF operations. Preserve reports for the actual tool and card used.
+
+
+## Hosts using AppImage/FUSE
+
+Deployment tools 1.2.0-en-r2 handle a process descriptor that FUSE exposes to its
+owner but denies to root. A bounded read-only child drops privileges to that owner
+to classify it. Actual target block descriptors, unreadable descriptors and changed
+descriptors still refuse the write. No mount permissions are changed. A failure
+before `destructive_write_started_at` means the writer has not overwritten the card.

@@ -11,8 +11,8 @@
 @architect  LogicRF
 @email      info@logicrf.com
 @website    https://www.logicrf.com
-@version    0.1.0
-@date       2026-10-15
+@version    0.1.1
+@date       2026-10-21
 """
 from __future__ import annotations
 
@@ -165,6 +165,44 @@ def inspect_device(device: str, required_bytes: int) -> dict:
                 nodes=[dict(device=x['name'], major_minor=x['maj:min']) for x in descendants(node)])
 
 
+def process_fd_kind(fd: Path) -> tuple[int, int]:
+    """Read a process FD's type/rdev, dropping privileges for root-denying FUSE.
+
+    Retry EACCES only as the process owner in an isolated, bounded read-only
+    Python child. Preserve denial and process/FD races; never infer that an
+    unreadable descriptor is safe. No mount permissions or target FDs change.
+    """
+    try:
+        info = fd.stat()
+        return info.st_mode, info.st_rdev
+    except PermissionError:
+        owner = fd.parent.parent.stat()
+        if os.geteuid() != 0 or owner.st_uid == 0:
+            raise
+        before = os.readlink(fd)
+        probe = (
+            'import json,os,sys\n'
+            'try:\n'
+            ' s=os.stat(sys.argv[1]); print(json.dumps([s.st_mode,s.st_rdev]))\n'
+            'except OSError as e:\n'
+            ' print(json.dumps({"errno":e.errno}))\n'
+        )
+        result = subprocess.run(
+            [sys.executable, '-I', '-S', '-c', probe, str(fd)],
+            user=owner.st_uid, group=owner.st_gid, extra_groups=[],
+            capture_output=True, text=True, check=True, timeout=5,
+        )
+        value = json.loads(result.stdout)
+        if isinstance(value, dict) and 'errno' in value:
+            raise OSError(value['errno'], 'PROCESS_FD_OWNER_PROBE_FAILED', str(fd))
+        if (not isinstance(value, list) or len(value) != 2 or
+                any(type(item) is not int or item < 0 for item in value)):
+            raise ValueError('INVALID_PROCESS_FD_OWNER_PROBE')
+        if fd.parent.parent.stat().st_uid != owner.st_uid or os.readlink(fd) != before:
+            raise OSError(errno.EAGAIN, 'PROCESS_FD_CHANGED_DURING_PROBE', str(fd))
+        return tuple(value)
+
+
 def check_kernel_users(device: dict) -> None:
     """Require complete root preflight over mount namespaces, swap and block FDs.
 
@@ -188,10 +226,10 @@ def check_kernel_users(device: dict) -> None:
                     raise ValueError('MOUNTED_IN_PROCESS_NAMESPACE:' + process.name)
             for fd in (process / 'fd').iterdir():
                 try:
-                    info = fd.stat()
+                    mode, rdev = process_fd_kind(fd)
                 except FileNotFoundError:
                     continue
-                if stat.S_ISBLK(info.st_mode) and info.st_rdev in rdevs:
+                if stat.S_ISBLK(mode) and rdev in rdevs:
                     raise ValueError('BLOCK_FD_IN_USE:' + process.name)
         except (FileNotFoundError, ProcessLookupError):
             continue

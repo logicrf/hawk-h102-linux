@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "development_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
+  "development_commit": "02f8158d3cabccf0b740721e703ed014fa2c92d1",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
@@ -1106,13 +1106,13 @@
     {
       "path": "scripts/h102_sd_deploy.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
-      "source_sha256": "564dd7ceae5b63c44471eb64a1c793228b7125c267920f34f7dbb0015dc8d5a7",
-      "source_git_blob": "8fd0a1432e6822d54118507b50065f2f206dddd4",
+      "source_commit": "02f8158d3cabccf0b740721e703ed014fa2c92d1",
+      "source_sha256": "dc304197f8b4c98e13b20f24791e4dc066655c25270f8ae3f3ce2235b8d23f0d",
+      "source_git_blob": "bd5322d23fca7ea8d87360574b67623ca43b9d19",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "647866b79c066b3f42f5df1146d815779ad0980536ff9b88373cef7bfe602535",
-      "modification": "English comments/docstrings and localized messages only"
+      "english_sha256": "c5fc1e60a7b0c49fa3b505af6ecffe96fcaad974596df1a6d7aeb6c7e9c3cdb7",
+      "modification": "Export the reviewed owner-scoped FD probe and targeted tests; preserve other deployment checks"
     },
     {
       "path": "scripts/h102_tx_v3_config.py",
@@ -1407,6 +1407,17 @@
       "translation_reused": false,
       "english_sha256": "6d6f5028eb2cefb6163380d9b469c14525cf149f07ba75a07f1bf5183e89b836",
       "modification": "English customer guide"
+    },
+    {
+      "path": "tests/test_deployment_fd_fallback.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "mode": "100644",
+      "source_commit": "02f8158d3cabccf0b740721e703ed014fa2c92d1",
+      "source_sha256": "16f48773aa1929afb4ac854960d6369ea6a6c8a43999a6ce20af0f4c65092c2a",
+      "source_git_blob": "923d7d657d322a311a74d83ae394b43e3ae07fee",
+      "english_sha256": "16f48773aa1929afb4ac854960d6369ea6a6c8a43999a6ce20af0f4c65092c2a",
+      "translation_reused": false,
+      "modification": "Export the reviewed owner-scoped FD probe and targeted tests; preserve other deployment checks"
     }
   ],
   "derived_files": {

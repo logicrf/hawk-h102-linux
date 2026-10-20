@@ -15,7 +15,7 @@ Exact filenames, sizes and SHA-256 values are in [the delivery manifest](../mani
 
 ## 1. Prepare a new SD card
 
-Follow [image download and reassembly](IMAGE-DOWNLOAD.md), then [SD deployment](DEPLOYMENT.md). The writer streams XZ input, verifies the full compressed and expanded hashes and performs complete direct card readback. A source ZIP is not an SD image. Select and inspect the exact whole-card device before any write.
+Follow [image download and reassembly](IMAGE-DOWNLOAD.md), then use the [current deployment tools](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2) and [SD deployment guide](DEPLOYMENT.md). The writer streams XZ input, verifies the full compressed and expanded hashes and performs complete direct card readback. A source ZIP is not an SD image. Select and inspect the exact whole-card device before any write.
 
 Boot the H102 normally, allow initial identity creation/root expansion to finish, find its DHCP address and complete the documented first-boot checks. Each device needs independent identity; do not clone another unit's installation transactions or generated host keys.
 

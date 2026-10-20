@@ -47,5 +47,12 @@
     "usb_host_components": "SEPARATE_NOT_BUNDLED",
     "complete_system_corresponding_source": "NOT_COMPLETE_SEE_SOURCE_AVAILABILITY"
   },
-  "updated_date": "2026-10-21"
+  "updated_date": "2026-10-21",
+  "deployment_tools": {
+    "version": "1.2.0-en-r2",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2",
+    "filename": "H102-Deployment-Tools-1.2.0-en-r2.zip",
+    "bytes": 24074,
+    "sha256": "a765b3e9cae193f5005937dece6fa691590431ce849a9729b594f25dfd1a9ee1"
+  }
 }
