@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "development_commit": "4011dc735d64f44b7bf4bc1a5e7324473b242798",
+  "development_commit": "b9fe75f39c204ffc67fca822d9196d71b2d67e4a",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
@@ -1462,6 +1462,28 @@
       "translation_reused": false,
       "english_sha256": "775c1be2e10307ccc08f21b9fa11d37e83ec7a8e7350dc66ade89d1670e5eed9",
       "modification": "Unmodified scoped receipt or installed package/copyright index"
+    },
+    {
+      "path": "docs/SOURCE-CORRESPONDENCE.md",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "b9fe75f39c204ffc67fca822d9196d71b2d67e4a",
+      "source_sha256": "0fa465e8a48be028f25a9ddc35d50aae4706113dc0bd8daaae560cf75a5fc145",
+      "source_git_blob": "b8b46aa3cde04077bb22190cb46afdb49fbcab3c",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "7421821d74317e522284bebcd3456b49dcf40b4e9ddbcc4cc0e978d04d5b7003",
+      "modification": "English user source-correspondence guide"
+    },
+    {
+      "path": "manifests/h102-source-correspondence-1.2.0.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "b9fe75f39c204ffc67fca822d9196d71b2d67e4a",
+      "source_sha256": "1a39db9ab998063ec2b7c3fc12230adc33802e26518b2ca71314e8ece1825fdc",
+      "source_git_blob": "6e0fa492243ce02c4ef1ad5a174a390da7a54521",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "1a39db9ab998063ec2b7c3fc12230adc33802e26518b2ca71314e8ece1825fdc",
+      "modification": "Unmodified scoped source/BOOT correspondence summary without vendor source payloads"
     }
   ],
   "derived_files": {
@@ -1470,7 +1492,8 @@
     "docs/BOARD-SERVICES.md": "Customer Python 3.9.2 guide and link to new-card installation/RX acceptance; original payloads unchanged",
     "docs/DELIVERY.md": "Updated customer guidance from 2026-10-21 scoped new-card acceptance and source inventory; no new firmware",
     "docs/DEPLOYMENT.md": "Updated customer guidance from 2026-10-21 scoped new-card acceptance and source inventory; no new firmware",
-    "docs/SOURCE-AVAILABILITY.md": "Updated customer guidance from 2026-10-21 scoped new-card acceptance and source inventory; no new firmware"
+    "docs/SOURCE-AVAILABILITY.md": "User guide updated from exact kernel/source replay and BOOT composition review; no new firmware or complete system source distribution",
+    "docs/BUILD.md": "User guide updated from exact kernel/source replay and BOOT composition review; no new firmware or complete system source distribution"
   },
   "new_files": "English customer documentation, source checker, image reassembly tool and distribution metadata",
   "generated_delivery_documents": [

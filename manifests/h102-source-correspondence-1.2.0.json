@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "version": "H102-Kuiper-1.2.0-source-correspondence-r1",
+  "status": "PASS_KERNEL_SOURCE_AND_BOOT_COMPOSITION_SCOPED",
+  "hardware_operated": false,
+  "image_modified": false,
+  "kernel_rebuilt": false,
+  "boot_source_recompiled": false,
+  "kernel_release": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
+  "upstream": {
+    "repository": "https://github.com/analogdevicesinc/linux.git",
+    "commit": "c8daf49830b2d19b155756d151f4c881a001a67e",
+    "archive_git_objects_and_modes": "PASS",
+    "entries": 83443
+  },
+  "frozen_source_tree": {
+    "entries": 83492,
+    "replay_matches_actual_build": "PASS_EXACT_SOURCE_TREE",
+    "source_manifest_sha256": "117a40f259a44c1df6ae9bbcf339da8547f4cd32e9fd862c7c2f7e08e3064a2d",
+    "inputs": {
+      "kernel-base-c8daf498.tar.gz": {
+        "bytes": 296809169,
+        "sha256": "66c275c5d26bd2d69831361ee44e6783b6bd330f49cc32889448d17ad2c5db48"
+      },
+      "sdk1-calfix1-regbounds1.patch": {
+        "bytes": 216872,
+        "sha256": "270d16169b3c1a20d0d61398537b4f42b677862644a9cded1d17b594f1ab0b05"
+      },
+      "sdk1-untracked-r2.tar.gz": {
+        "bytes": 30641,
+        "sha256": "f1e8cbe8a4f41253450f281271964272570b3a6ff8b66488e48fe6b1278edea2"
+      },
+      "kernel.config": {
+        "bytes": 161810,
+        "sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae"
+      },
+      "h102-fdd-shared-lo.patch": {
+        "bytes": 6744,
+        "sha256": "5d5e11dfa58562575e53c428cc17c2c2fff6da10da791f86e110a83f595189e0"
+      },
+      "firmware-inputs.tar.gz": {
+        "bytes": 819973,
+        "sha256": "d042c66e3234fb0d482a224b924054cd3aafbc1bd2b337723f84262b7e240d19"
+      },
+      "external-inputs.tar.gz": {
+        "bytes": 8878,
+        "sha256": "55d1bffb55c35a6afc160d24e4416f4f58a76043e093a9ff0eb4c48b42775c2b"
+      }
+    }
+  },
+  "published_preparation": {
+    "input_check": "PASS_141_SDK_SOURCE_FILES_AND_THREE_INITIAL_PROFILE_PAIRS",
+    "patch_sequence": [
+      "h102-sdk1-linux-iio.patch",
+      "h102-sdk1-calibration-power.patch",
+      "h102-adc-register-bounds.patch",
+      "h102-fdd-shared-lo.patch"
+    ],
+    "source_comparison": "PASS_SOURCE_CODE_WITH_DOCUMENTED_PACKAGING_DIFFERENCES",
+    "source_content_differences": 0,
+    "added_document": "drivers/iio/adc/navassa/SDK1-SLA-20260801.pdf",
+    "same_firmware_bytes_relative_link_vs_regular_file": 36,
+    "driver_sha256": "41d1cdf773fbb8a2520d204a495a5456f6134ecb6248243240025cd586bb9705"
+  },
+  "build_identity": {
+    "cross_compiler": "arm-xilinx-linux-gnueabi-gcc.real GCC 12.2.0",
+    "linker": "GNU Binutils 2.39.0.20220819",
+    "toolchain_release": "Vitis 2024.1 AArch32 Linux GNU",
+    "jobs": 8,
+    "LOCALVERSION": "-calfix1-regbounds1-sharedlo1",
+    "config_sha256": "beb7250587be6e3d71ca22e559be5d9e81ad5d7df1e1d3997582d262b49f36ae",
+    "zImage_sha256": "8804c840eb83986e77318c6c3593111377c540aba3ecced72b5cdc9fa362ab2b",
+    "release_fit_sha256": "d4703c4f80c937a1bbf0dd7e8292f871ce2e9757bc221d32faaff7bd147470ea",
+    "DTB_sha256": "169feae5b8ba630c07628ae53d160778bdf3c71b8287838c99f34c2bfd518382",
+    "compiled_zImage_matches_released_FIT": true,
+    "all_11_module_hashes_match": true
+  },
+  "external_module_source": {
+    "files": [
+      {
+        "path": "h102-modules/Makefile",
+        "bytes": 428,
+        "build_source_sha256": "23c699dae79aab9feddbe2cd48f9a8976d6f3c78de56eaa0669186423119a594",
+        "same": true
+      },
+      {
+        "path": "h102-modules/h102_axi_reg.c",
+        "bytes": 13340,
+        "build_source_sha256": "de89af831beff549f02ddfcc0906610e62edcd239e7ada7e5eda699372fa5b60",
+        "same": true
+      },
+      {
+        "path": "h102-modules/h102_axi_trig.c",
+        "bytes": 22465,
+        "build_source_sha256": "cd762ac67e87a1715e92352f23eee9e6984ac9a1b0127e40a8545d1b4e941f6a",
+        "same": true
+      },
+      {
+        "path": "h102-profile-control/Makefile",
+        "bytes": 32,
+        "build_source_sha256": "981de51970c8f53aab4487e7863dbad21047d3e0b85e150178748bd14e1f19e2",
+        "same": true
+      },
+      {
+        "path": "h102-profile-control/h102_profile_control.c",
+        "bytes": 11133,
+        "build_source_sha256": "f80af889747a9dfedac31487418577b4ce99a803615726e0602a5447fcef04c5",
+        "same": true
+      },
+      {
+        "path": "h102-profile-control/h102_profile_control.h",
+        "bytes": 1366,
+        "build_source_sha256": "9bf54e23d7a2c8294ade9ba7ca599d4a6b9e27fc0f2982d71cdaf2e4e15d9fdf",
+        "same": true
+      }
+    ],
+    "scope": "six original source/Makefile entries match internal development main; translated exports retain separate source mapping"
+  },
+  "boot": {
+    "status": "PASS_BYTE_IDENTICAL_BOOT_REPACK",
+    "sha256": "44b478bc7f38538f99d084551151639bef8ca5fbfc6378b26a564140d147a4b4",
+    "tool": "Bootgen 2024.1",
+    "partitions": [
+      {
+        "component": "FSBL",
+        "bytes": 114704,
+        "sha256": "425447a8dc30c131dbb46dee9acef211536514082a3012b8f25ca0d2baa6f833",
+        "load_address": "0x0",
+        "entry": "0x0"
+      },
+      {
+        "component": "initial PL",
+        "bytes": 5979936,
+        "sha256": "d6c598746ba82469862f7c5cd0ee2bf96fe74b6ecf689310860dbb2c5ab9a301",
+        "load_address": "0x0",
+        "entry": "0x0"
+      },
+      {
+        "component": "U-Boot with control DTB",
+        "bytes": 1075088,
+        "sha256": "477988486c3016970020c375913cfd91d4cd49b23046191abe3fcbc801b35156",
+        "load_address": "0x4000000",
+        "entry": "0x4000000"
+      }
+    ],
+    "inputs": {
+      "zynq_fsbl.elf": {
+        "bytes": 496580,
+        "sha256": "6b5d5ea5b206229c2135930013811f3dee3f5f42dfa8d2fbbaf68301456f970f"
+      },
+      "h102_logicrf.bit": {
+        "bytes": 5980024,
+        "sha256": "392a21e8bfdf601906b392cbe679698455c9ca1f3af4714bd4bab287816fbcde"
+      },
+      "u-boot-dtb.elf": {
+        "bytes": 1141048,
+        "sha256": "1e408f952cd7bb2024253d03ea8c710aba2119005c4df6d78dc867b437d7a0aa"
+      }
+    },
+    "u_boot_recipe": {
+      "repository": "https://github.com/Xilinx/u-boot-xlnx",
+      "commit": "fbed1010e50d75e7d25acc1c2d09e1c34cb7e882",
+      "configuration_fragments_retained": true,
+      "full_generated_dot_config": "NOT_RECOVERED_AFTER_HISTORICAL_RM_WORK",
+      "source_to_binary_rebuild": "NOT_RUN"
+    },
+    "fsbl_recipe": {
+      "repository": "https://github.com/Xilinx/embeddedsw",
+      "commit": "b173d246826f662b9a98215d8f39e93d39d699b4",
+      "identity_scope": "recipe pin only, not proven complete source reconstruction",
+      "flags": "Release -O2 with FSBL_DEBUG_INFO",
+      "source_to_binary_rebuild": "NOT_RUN"
+    }
+  },
+  "distribution": {
+    "private_kernel_inputs_archived": true,
+    "vendor_import_patch_and_firmware_uploaded": false,
+    "complete_system_corresponding_source": false,
+    "open_items": [
+      "ADRV_SDK_import_file_license_and_distribution_terms",
+      "complete_version_matched_rootfs_source_archives_and_manual_components",
+      "full_FSBL_BSP_and_Uboot_generated_configuration_source_handoff",
+      "browser_blocked_release_asset_download_readback"
+    ]
+  },
+  "evidence_sha256": {
+    "source-tree-comparison.json": "4fd24118ee68609ad8f6bd6f390f3454d064dd2a81015de0f888d00542f5587f",
+    "source-replay.json": "c63b8bcde492fb1d456f5874157358c9907977b34fba480f29fa0ba08e051e82",
+    "upstream-fetch-final.json": "26f77f4006630d8d789f0243073c50a3e91d4f285919feea582b0d38412e63c2",
+    "published-sdk-input-check.json": "1445692cead542488a14798e33defbbdbb482158f55b9e7d8dc64db7e7b03398",
+    "published-recipe-source-comparison.json": "c8f42f8c16b6ead9174bd56711d121875548c6d51f52f821e38a9fadc5711200",
+    "external-module-source.json": "f742dc7e9cad5ae4c7e5076905f7bc5ca7a87689743316ed6ab73d18e266788b",
+    "released-kernel-linkage.json": "2e5deae79c71d0213fe388fe568f800265da06d84734d9e7e09df3ba3da6602f",
+    "boot-correspondence.json": "544fa5fc981632276e889e99ddeead01affb84b50b3e11e2be2f00ef17970bc8",
+    "actual-build-outputs.json": "88579e27f938694f608fd5983cf75ac688db0b48ce912ac6478895d2775af7c7"
+  }
+}

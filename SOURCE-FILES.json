@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3584,
-      "sha256": "e544bd9889718fb652b6f7081ce411aca3961be7bcd24e4552f69a9dbe713fed"
+      "bytes": 3695,
+      "sha256": "586c6839b6f53057164a8e5ec5983f17f6401d64183b922f910692058b68905a"
     },
     "SOURCE-BASE.json": {
       "bytes": 823,
-      "sha256": "82b03f1434bea29606eb57c23d77c21c636f27547d78f488a5b0c807e70a080a"
+      "sha256": "53bb02e76d62e707709730655ada39d4eac6d2e3ebed059d21999e853d603aad"
     },
     "SOURCE-MAP.json": {
-      "bytes": 76811,
-      "sha256": "3a6e8600d65f690dc2a961a37fb482c36983b5fbbcdb8020b82b3e018823cbcf"
+      "bytes": 78173,
+      "sha256": "c023a0ca3e494bfb2b0a1ae6f16fc0be8fd1865404fc08a4112e633a06206d12"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -151,8 +151,8 @@
       "sha256": "f94831b5350d2eed74381178b6c4e3316c24e26962545f01cb232f8808dff04d"
     },
     "docs/BUILD.md": {
-      "bytes": 6141,
-      "sha256": "6b1f2e50116f4aa6cc82172a7d1bd5d0603a62b1889f666a6afc10b30c5c0f71"
+      "bytes": 6518,
+      "sha256": "153d9e658090d13f10950e2ee89001a9ac352b318f724cefb90cb19442d2c144"
     },
     "docs/CONFIGURATION.md": {
       "bytes": 2737,
@@ -191,8 +191,12 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/SOURCE-AVAILABILITY.md": {
-      "bytes": 2938,
-      "sha256": "7cc9998e7e6e0fe06354a60f2c42ac31335ea1ed0c9ca8d96931b61a05551908"
+      "bytes": 3115,
+      "sha256": "d4ed7a97a6b621f824751b4017c92fbbc703190d181ef88a9128904ab5f8c434"
+    },
+    "docs/SOURCE-CORRESPONDENCE.md": {
+      "bytes": 4830,
+      "sha256": "7421821d74317e522284bebcd3456b49dcf40b4e9ddbcc4cc0e978d04d5b7003"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -313,6 +317,10 @@
     "manifests/h102-sdk1-sharedlo1-candidate.json": {
       "bytes": 7897,
       "sha256": "e438ff9c021d94e1642372ec3b37ae6f7ef570c2803dc227db019c590d8b3184"
+    },
+    "manifests/h102-source-correspondence-1.2.0.json": {
+      "bytes": 8104,
+      "sha256": "1a39db9ab998063ec2b7c3fc12230adc33802e26518b2ca71314e8ece1825fdc"
     },
     "overlays/h102/NetworkManager-USRP.nmconnection": {
       "bytes": 204,

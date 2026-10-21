@@ -75,3 +75,7 @@ PYTHONPATH=scripts:control-api python3 -m pytest -q \
 ```
 
 The tests use temporary regular files, real file locks and local protocol fixtures. They do not open SD devices or a board. Profile/SDK tests need separately supplied fixtures; C++ tests need libiio 0.x headers/runtime. See [verification scope](VALIDATION.md) for actual results of this package, including skipped inputs.
+
+## Checked source correspondence
+
+The [21 October source review](SOURCE-CORRESPONDENCE.md) exercised the preparation sequence and matched the frozen source to the actual release build. It documents the additional license PDF and firmware-link packaging differences. No new kernel was compiled by that review; source availability and vendor distribution terms remain separate.

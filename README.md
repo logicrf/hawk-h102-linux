@@ -16,6 +16,7 @@ This repository provides English source and customer documentation. It contains 
 | Install matching GUI/GNU Radio device services | [Device-service bundle](docs/BOARD-SERVICES.md) |
 | Review the fixed device API source | [Device control](control-api/README.md) |
 | Develop using libiio | [C++ and Python examples](examples/iio/README.md) |
+| Check release source correspondence | [Kernel and BOOT source availability](docs/SOURCE-CORRESPONDENCE.md) |
 | Review the new-card setup check | [Validation on 21 October 2026](docs/CUSTOMER-SETUP-VALIDATION.md) |
 | Review versions, hashes and support limits | [Release information](docs/RELEASE.md) |
 
