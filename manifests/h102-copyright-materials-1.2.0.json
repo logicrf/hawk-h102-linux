@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "image_version": "1.2.0",
+  "status": "PASS_INDEXED_COPYRIGHT_CONTENT_ARCHIVE_READBACK",
+  "file": "H102-Kuiper-1.2.0-installed-copyrights.tar.gz",
+  "bytes": 23776478,
+  "sha256": "75caf976e894453437c468cfb458902e90f16ccb6ae6f33ef9814836463e2b8a",
+  "copyright_paths": 2191,
+  "copyright_bytes": 173998822,
+  "index_file": "h102-kuiper-1.2.0-copyright-index.json",
+  "index_sha256": "775c1be2e10307ccc08f21b9fa11d37e83ec7a8e7350dc66ade89d1670e5eed9",
+  "scope": "Exact content for indexed installed copyright paths, archived as regular files; excludes unindexed manuals, bundled dependency notices and complete system license/source review",
+  "device_state_changed": false,
+  "complete_system_corresponding_source": false
+}

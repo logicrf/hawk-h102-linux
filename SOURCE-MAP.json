@@ -1,18 +1,18 @@
 {
   "schema": 1,
-  "development_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+  "development_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
-      "source_sha256": "742156d8d9446f3b5e2b496ef02b694b318c0f043fab86beea9c8d23fcd0fb21",
-      "source_git_blob": "28f140705b848b42fb6c7ce288ba09c95c1a1b5f",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "5f99d7344755f41d566f52062cafe96c9e80c84cf407480a3bafe6542204455f",
+      "source_git_blob": "c9887a628afcc91e210bf8a231a8bee931648c24",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "26ac695b6ff678f14cad61868f4cc1a93418e67b650b5a8efa92dde826dd454f",
-      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
+      "english_sha256": "b44e964f41d6d8068ab10342a223d115396a87e20bb991adb5814fccde962990",
+      "modification": "English source-material export and component availability guide; verified scope preserved"
     },
     {
       "path": "control-api/.gitignore",
@@ -349,36 +349,36 @@
     {
       "path": "docs/DELIVERY.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
-      "source_sha256": "14f2017e3adadfc68438b79675cbf359bb72e7c9536e635edf460eb171fd8490",
-      "source_git_blob": "5d6effd559fcf343b7e914597fd9e4ffddcb85e6",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "5f99d7344755f41d566f52062cafe96c9e80c84cf407480a3bafe6542204455f",
+      "source_git_blob": "c9887a628afcc91e210bf8a231a8bee931648c24",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "dc284a351987cb60c015d7ee76243459e6f81901070837f0bb02157c87a00cc2",
-      "modification": "English task-oriented delivery guide based on the approved internal README and linked source material manifests",
+      "english_sha256": "2cc0f82db29cc1c078903c0ff4c36f79ebddaaee011653070aeb4d5b3478f219",
+      "modification": "English source-material export and component availability guide; verified scope preserved",
       "source_path": "README.md"
     },
     {
       "path": "docs/MANUAL-SOURCES.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
-      "source_sha256": "e701f0e9181999928e44ac639effa6f186fc18eb90de3db80c24ab9864539bc7",
-      "source_git_blob": "d10da724b68542f8b1fba6231b4f3c1263c62c7c",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "2ca5ec594b05c43c5ec4d1cf59f597c545d12ae745483d56b6925de1a903ae1f",
+      "source_git_blob": "db6e4420ae9589555e3d2a13fd09160db405e49a",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "6b976b02736eeefc6b67293463794e898e694b51047b84b43e34d7a08b43aaed",
-      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
+      "english_sha256": "2e261851064dcecc141b692bbfcc1f22b4339746db9a9bf6f7ec1f80a99388f2",
+      "modification": "English source-material export and component availability guide; verified scope preserved"
     },
     {
       "path": "docs/ROOTFS-SOURCES.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
-      "source_sha256": "a5a98d5630b903796a40d3e0a941a102f6ccac5e00e2c887db826b25796c10d6",
-      "source_git_blob": "0680ce2d0f4386a17f809389e227b30f2818a92f",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "ac61a457f0dfc7d02ba1acddf40a7f4fbfc3fe191df66116d7d873ab4daeefa8",
+      "source_git_blob": "d228eeb4e1083c83a75393592d627bbb32994447",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "d200fb807646ecba07d9d3ad8afd05a1a158773af73b10d62995ef6e5d997130",
-      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
+      "english_sha256": "91cb57f2fd73a5ca164e306f9def948e660837132d72a1167442263f73b5a6cf",
+      "modification": "English source-material export and component availability guide; verified scope preserved"
     },
     {
       "path": "docs/SOURCE-AVAILABILITY.md",
@@ -401,6 +401,17 @@
       "translation_reused": false,
       "english_sha256": "674451cee08eaa0b47f730b15fb205666e8dca5d0ffa8871ba189b6949c0665f",
       "modification": "English user-facing source delivery documentation; exact versions and verified scope retained"
+    },
+    {
+      "path": "docs/SOURCE-MATERIALS.md",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "f4a4076ff37f9b1ded4753d5d9564056d0ebcb738721f2014040027411cb74ef",
+      "source_git_blob": "65c885ded411404123a08768a460e43cc5c22622",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "33cd217024444fd2641a6326cfe4701e024c69ef394edaea2f005d0289cd2396",
+      "modification": "English source-material export and component availability guide; verified scope preserved"
     },
     {
       "path": "examples/iio/cpp/CMakeLists.txt",
@@ -533,6 +544,17 @@
       "mode": "100644",
       "translation_reused": false,
       "english_sha256": "25c666b5bcb481aaf824b6c7f3846dfffee5274de406ce8dc830a119be620202",
+      "modification": "Unmodified"
+    },
+    {
+      "path": "manifests/h102-copyright-materials-1.2.0.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "483e3ad2fc8d2bd4667b847942231983ecbb7866b1ed96a238053091443a82ad",
+      "source_git_blob": "9d404492193f40ad23a24b624f93b1060b1c6e41",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "483e3ad2fc8d2bd4667b847942231983ecbb7866b1ed96a238053091443a82ad",
       "modification": "Unmodified"
     },
     {
@@ -1192,6 +1214,17 @@
       "translation_reused": false,
       "english_sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04",
       "modification": "English comments/docstrings and localized messages only"
+    },
+    {
+      "path": "scripts/h102_export_source_materials.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+      "source_sha256": "feb38482cff33eab7ee23fbf9d0acb4f35f8f507a98def252a7c0ce98b3dfb59",
+      "source_git_blob": "7e3562be9a0fcbdcc54e7a88909d7ddbe21d9506",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "feb38482cff33eab7ee23fbf9d0acb4f35f8f507a98def252a7c0ce98b3dfb59",
+      "modification": "Unmodified"
     },
     {
       "path": "scripts/h102_gnss_uart_baseline.py",

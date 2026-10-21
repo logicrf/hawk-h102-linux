@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3821,
-      "sha256": "26ac695b6ff678f14cad61868f4cc1a93418e67b650b5a8efa92dde826dd454f"
+      "bytes": 3874,
+      "sha256": "b44e964f41d6d8068ab10342a223d115396a87e20bb991adb5814fccde962990"
     },
     "SOURCE-BASE.json": {
       "bytes": 824,
-      "sha256": "51fac9ffb5140d2e7fcda66fc2f323b3b1012173d9fb80097c5846d145e6aabc"
+      "sha256": "0dccbcb7d3a4bf50c0cd72767c37e799915749da7dc11177c4aa0e6094c0b89b"
     },
     "SOURCE-MAP.json": {
-      "bytes": 84709,
-      "sha256": "9a073c73c3ff73d71b743130dc848e3f3d6733465081e50d9c3d2e876a6893ac"
+      "bytes": 86344,
+      "sha256": "45324efc7d718da58b1e6e4f5439e8b8b7c9b8f41f9042d387885074872061c3"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -167,8 +167,8 @@
       "sha256": "bb7e3dba7760b80918f0219fc571cf9820bf12866e280cf4f4ccf37fec490976"
     },
     "docs/DELIVERY.md": {
-      "bytes": 5320,
-      "sha256": "dc284a351987cb60c015d7ee76243459e6f81901070837f0bb02157c87a00cc2"
+      "bytes": 5535,
+      "sha256": "2cc0f82db29cc1c078903c0ff4c36f79ebddaaee011653070aeb4d5b3478f219"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 4263,
@@ -187,8 +187,8 @@
       "sha256": "ddc146c1fcd42a94e4a800113cf2f9bfdf53aecb438fa07e83c0909e6b37b9e2"
     },
     "docs/MANUAL-SOURCES.md": {
-      "bytes": 5272,
-      "sha256": "6b976b02736eeefc6b67293463794e898e694b51047b84b43e34d7a08b43aaed"
+      "bytes": 5341,
+      "sha256": "2e261851064dcecc141b692bbfcc1f22b4339746db9a9bf6f7ec1f80a99388f2"
     },
     "docs/PROFILE-GENERATION.md": {
       "bytes": 4214,
@@ -199,8 +199,8 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/ROOTFS-SOURCES.md": {
-      "bytes": 4711,
-      "sha256": "d200fb807646ecba07d9d3ad8afd05a1a158773af73b10d62995ef6e5d997130"
+      "bytes": 5027,
+      "sha256": "91cb57f2fd73a5ca164e306f9def948e660837132d72a1167442263f73b5a6cf"
     },
     "docs/SOURCE-AVAILABILITY.md": {
       "bytes": 3299,
@@ -209,6 +209,10 @@
     "docs/SOURCE-CORRESPONDENCE.md": {
       "bytes": 5251,
       "sha256": "674451cee08eaa0b47f730b15fb205666e8dca5d0ffa8871ba189b6949c0665f"
+    },
+    "docs/SOURCE-MATERIALS.md": {
+      "bytes": 4626,
+      "sha256": "33cd217024444fd2641a6326cfe4701e024c69ef394edaea2f005d0289cd2396"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -265,6 +269,10 @@
     "manifests/h102-boot-source-rebuild-1.2.0.json": {
       "bytes": 1560,
       "sha256": "25c666b5bcb481aaf824b6c7f3846dfffee5274de406ce8dc830a119be620202"
+    },
+    "manifests/h102-copyright-materials-1.2.0.json": {
+      "bytes": 769,
+      "sha256": "483e3ad2fc8d2bd4667b847942231983ecbb7866b1ed96a238053091443a82ad"
     },
     "manifests/h102-customer-delivery-20261020.json": {
       "bytes": 2262,
@@ -521,6 +529,10 @@
     "scripts/h102_check_new_board.py": {
       "bytes": 23135,
       "sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04"
+    },
+    "scripts/h102_export_source_materials.py": {
+      "bytes": 11619,
+      "sha256": "feb38482cff33eab7ee23fbf9d0acb4f35f8f507a98def252a7c0ce98b3dfb59"
     },
     "scripts/h102_gnss_uart_baseline.py": {
       "bytes": 4727,

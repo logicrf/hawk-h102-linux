@@ -44,10 +44,10 @@ available. A copyright index is an inventory, not a license grant.
 | systemd | `247.3-7+rpi1+deb11u6` |
 | widevine | `4.10.2252.0+3` |
 
-The original image provider's archives/build records or the relevant upstream
-distribution channel are needed to close these entries. A clarification request
-has been prepared but not sent. The package names alone do not determine their
-individual source or redistribution requirements.
+Matching public archives, project build records and retained inputs are used to
+close these entries. No ADI inquiry or response is a prerequisite for this work.
+The package names alone do not determine individual source or redistribution
+requirements.
 
 ## Software outside dpkg
 
@@ -85,3 +85,10 @@ supplementary inputs. Official BlueJ 5.0.3 and Greenfoot 3.7.0 sources are now
 archived, but their unbundled packaging inputs remain unresolved; the nine-package
 gap count is unchanged. This follow-up preserves all earlier archive counts and
 limits.
+
+## Export the collected materials
+
+Use [offline source export](SOURCE-MATERIALS.md) to restore original filenames,
+include the 2,191-path copyright archive and verify the resulting collection.
+Exact package records, Debian/Python candidates and manual inputs keep their
+individual provenance; missing entries are not filled with substitute versions.

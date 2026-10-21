@@ -72,8 +72,9 @@ reconstruction and component terms have distinct verification scopes.
 
 The system's retained upstream LICENSE.html contains a written source offer and the date
 text `18Sep2028`; its product-name template field is empty. The original file and
-hash have been retained. Any inquiry must identify the precise image filename
-and RAW hash. No request has been sent or fulfilled. This upstream text does not
+hash have been retained. The offer is retained as upstream documentation. An ADI inquiry or response is
+not a prerequisite for development or material assembly. No request has been
+sent or fulfilled. This upstream text does not
 establish a LogicRF offer or cover downstream additions automatically.
 
 Check [source availability and component terms](SOURCE-AVAILABILITY.md) and contact

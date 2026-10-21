@@ -51,3 +51,7 @@ read [Source availability](SOURCE-AVAILABILITY.md).
 ## Source materials
 
 See [boot software rebuild](BOOT-REBUILD.md), [rootfs source materials](ROOTFS-SOURCES.md) and [component source availability](SOURCE-AVAILABILITY.md) when requesting matching source inputs. The additional internal archives are not yet GitHub download attachments. These documentation and build-tool changes do not identify a new SD image.
+
+For a verified collection with original package filenames and installed copyright
+content, follow [offline source-material export](SOURCE-MATERIALS.md). It retains
+all recorded candidate and missing-source limits.
