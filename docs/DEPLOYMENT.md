@@ -49,7 +49,7 @@ Check independent machine/MAC/SSH identities, matching kernel/boot assets, 58 pr
 
 ## Validation scope
 
-The released image has the recorded two-board checks. The SD deployment CLI has offline rejection and real regular-file/loop transfer evidence; it must not inherit a physical-card test from an older independent writer. This English packaging update performs no card writes, boot tests or RF operations. Preserve reports for the actual tool and card used.
+The released image has the recorded two-board checks. The SD deployment CLI has offline rejection and real regular-file/loop transfer evidence; it must not inherit a physical-card test from an older independent writer. A later [new-card setup check on 21 October 2026](CUSTOMER-SETUP-VALIDATION.md) used the exact English r2 tools for a physical-card write/full direct readback and representative new-card RX setup. Preserve each actual tool/card report; that check did not transmit RF.
 
 
 ## Hosts using AppImage/FUSE

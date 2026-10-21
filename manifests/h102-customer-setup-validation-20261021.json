@@ -1,0 +1,256 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "status": "PASS_SCOPED_NEW_SD_RX_SETUP",
+  "hardware_units": 1,
+  "image_version": "1.2.0",
+  "image_xz_sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+  "image_raw_sha256": "22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d",
+  "deployment_tools": "1.2.0-en-r2",
+  "sd_card_bytes": 63864569856,
+  "write_readback": "PASS_FULL_SAME_FD_O_DIRECT",
+  "safe_eject": "PASS_SEPARATE_FRESH_IDLE_CHECK_AFTER_AUTOMATIC_EJECT_BUSY",
+  "base_checks": {
+    "files": 587,
+    "links": 4,
+    "profile_packages": 58,
+    "logical_profiles": 29,
+    "root_expanded": true,
+    "gigabit_link": true
+  },
+  "initial_power_on_uart": "NOT_CAPTURED_EARLIEST_BOOT; LOGIN_AND_BASELINE_VERIFIED",
+  "service_reboot_uart": "CAPTURED",
+  "board_services": "1.0.0-en-r1",
+  "board_service_zip_sha256": "56e192dc8e79aa2e81478d7d01ae1cf1ce922d5dacb73c6fe1457d8dfa49f013",
+  "actual_capability": 3,
+  "sdk_files": 108,
+  "device_api": "0.1.0-ip36",
+  "gui_source": "15d2b475f47873c75c29816def01944e1a8532ba",
+  "gr_source": "304400e0e38f5d888cfa207147d598176e0123a8",
+  "network_settings": {
+    "gro_flush_timeout_ns": 500000,
+    "napi_defer_hard_irqs": 2
+  },
+  "gui": {
+    "profile": "4msps-2mhz-common",
+    "channels": [
+      1,
+      2
+    ],
+    "requested_seconds": 5,
+    "status": "PASS_ADC_DMA_TO_FILE_NO_DROP",
+    "files": {
+      "1": {
+        "received_bytes": 81788928,
+        "written_bytes": 81788928,
+        "samples": 20447232,
+        "sha256": "532ed740e87b984072008a7e5fdb1c44af24da84c63b60417b3ee3b170be0cd3",
+        "checked": true,
+        "within_errors": 0,
+        "boundary_errors": 0,
+        "iq_errors": 0,
+        "timeouts": 0,
+        "device_guard": {
+          "channel": 1,
+          "cleared_ns": 208760453738,
+          "stage": "ended",
+          "armed_ns": 210954534900,
+          "initial_status": 0,
+          "polls": 12,
+          "checked_ns": 216148307721,
+          "final_status": 0,
+          "passed": true,
+          "checked_before_buffer_destroy": true,
+          "scope": "pinned RTL ADC FIFO through AXI DMA; TCP and file checked by host"
+        },
+        "device_guard_checked": true
+      },
+      "2": {
+        "received_bytes": 80740352,
+        "written_bytes": 80740352,
+        "samples": 20185088,
+        "sha256": "69151aa7b37f1dcdc273592e9f8f43f2d2a211326d8c8ccfafe738d60723df29",
+        "checked": true,
+        "within_errors": 0,
+        "boundary_errors": 0,
+        "iq_errors": 0,
+        "timeouts": 0,
+        "device_guard": {
+          "channel": 2,
+          "cleared_ns": 208919766535,
+          "stage": "ended",
+          "armed_ns": 211000815188,
+          "initial_status": 0,
+          "polls": 10,
+          "checked_ns": 216110244857,
+          "final_status": 0,
+          "passed": true,
+          "checked_before_buffer_destroy": true,
+          "scope": "pinned RTL ADC FIFO through AXI DMA; TCP and file checked by host"
+        },
+        "device_guard_checked": true
+      }
+    },
+    "simultaneous_channel_start_end_proven": false,
+    "render": "offscreen Qt using actual network IQ",
+    "english_and_chinese_during_rx": "PASS"
+  },
+  "grc": {
+    "profile": "8msps-4mhz-common",
+    "channels": [
+      1,
+      2
+    ],
+    "finite_samples_each": 16000000,
+    "files": {
+      "2": {
+        "samples": 16000000,
+        "bytes": 128000000,
+        "file": "rx2.cf32",
+        "sha256": "6dac82f306e158184882e045e6adddc0509f1ae99fb76661b6ff2a8d269ffa6f",
+        "index_file": "rx2.h1mi",
+        "frame_records": 0,
+        "index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "1": {
+        "samples": 16000000,
+        "bytes": 128000000,
+        "file": "rx1.cf32",
+        "sha256": "2614821f30b8004bece885eb4e41abbedbe10490cabcaab4cf98605069dc5194",
+        "index_file": "rx1.h1mi",
+        "frame_records": 0,
+        "index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "guards": {
+      "rx1": {
+        "begin": {
+          "channel": 1,
+          "cleared_ns": 316930847915,
+          "stage": "warming"
+        },
+        "arm": {
+          "channel": 1,
+          "cleared_ns": 316930847915,
+          "stage": "armed",
+          "armed_ns": 318200275232,
+          "initial_status": 0,
+          "polls": 0
+        },
+        "end": {
+          "channel": 1,
+          "cleared_ns": 316930847915,
+          "stage": "ended",
+          "armed_ns": 318200275232,
+          "initial_status": 0,
+          "polls": 12,
+          "checked_ns": 320228968283,
+          "final_status": 0,
+          "passed": true,
+          "checked_before_buffer_destroy": true,
+          "scope": "pinned RTL ADC FIFO through AXI DMA; TCP and file checked by host"
+        }
+      },
+      "rx2": {
+        "begin": {
+          "channel": 2,
+          "cleared_ns": 316933646894,
+          "stage": "warming"
+        },
+        "arm": {
+          "channel": 2,
+          "cleared_ns": 316933646894,
+          "stage": "armed",
+          "armed_ns": 318200935622,
+          "initial_status": 0,
+          "polls": 0
+        },
+        "end": {
+          "channel": 2,
+          "cleared_ns": 316933646894,
+          "stage": "ended",
+          "armed_ns": 318200935622,
+          "initial_status": 0,
+          "polls": 12,
+          "checked_ns": 320229636143,
+          "final_status": 0,
+          "passed": true,
+          "checked_before_buffer_destroy": true,
+          "scope": "pinned RTL ADC FIFO through AXI DMA; TCP and file checked by host"
+        }
+      }
+    },
+    "recording_status": "PASS_RECORDING",
+    "replay_each": "PASS_PLAYBACK",
+    "time_quality": "relative_only",
+    "stages": [
+      {
+        "stage": "grc4M_single_first_IQ",
+        "seconds": 5.694187812041491
+      },
+      {
+        "stage": "grc_hot_tune1001MHz",
+        "seconds": 2.2211971771903336
+      },
+      {
+        "stage": "grc_pause",
+        "seconds": 0.14267914602532983
+      },
+      {
+        "stage": "grc_resume_first_IQ",
+        "seconds": 1.5345483957789838
+      },
+      {
+        "stage": "final_close",
+        "seconds": 5.800193735864013
+      },
+      {
+        "stage": "grc8M_dual_first_IQ",
+        "seconds": 25.811021563597023
+      },
+      {
+        "stage": "grc8M_dual_record_complete",
+        "seconds": 7.512193012982607
+      },
+      {
+        "stage": "final_close",
+        "seconds": 0.006726441904902458
+      }
+    ]
+  },
+  "final_health": {
+    "same_machine": true,
+    "same_addon_boot": true,
+    "four_dma_idle": true,
+    "dds_off": true,
+    "tx_off": true,
+    "no_failed_units": true,
+    "no_h102_locks": true
+  },
+  "RF_TX": false,
+  "not_run": [
+    "new_RF_TX_or_loopback",
+    "new_USB_data",
+    "full_58_profile_stream_matrix",
+    "long_duration_campaign",
+    "calibrated_RF_power_or_ADC_UTC",
+    "second_board_new_card_setup"
+  ],
+  "delivery_open_items": [
+    "three_GitHub_image_part_downloads_blocked_by_browser",
+    "deployment_tool_r2_actual_GitHub_ZIP_download_blocked_by_browser",
+    "complete_corresponding_source_delivery_and_vendor_file_terms_review"
+  ],
+  "evidence_sha256": {
+    "new-sd-final.json": "eeb0a04d673407432772da58f0197b105944b4d8a7cd10025bbf0651a173c1ee",
+    "newcard-firstboot-check.json": "b2c6f0eced4fd9976963326b68765c62d8c5ca505e1796532f8d2941d498f3ab",
+    "newcard-activation-ready.json": "350432976302a341797af2259d9a63d415ea3797b75b03b6c0c9f39168c7d854",
+    "newcard-network-install.json": "6d8a00b28d2948415648e8982017ae2d964d5b92f9ffdbacf55bf3e6a2944cfa",
+    "gui-live-acceptance-r2.json": "accef3d60cc0c464a0573bcd0314600a185bd14aea57ba4f86ee4b0c8e867744",
+    "grc-live-acceptance.json": "5041c85626ebbd362d030e78457086af050321f14c1339f76d4c24f8de234400",
+    "grc-replay-acceptance.json": "c8f3c842d90bf15d233cb8a516731ff2773e62a5c2443829bcae9c00c7b72e88",
+    "newcard-final-health.json": "71ccc040d6bc42c2e46d044eb6dd4e397e972e449b53689d6c6e7653178ca2d8",
+    "newcard-packages.tsv": "7f0f5abb8e886fe17cd61bfc90e9aa397ca94b6c6a788f3c4e4e8331f3dc3bed",
+    "newcard-copyright-index.json": "775c1be2e10307ccc08f21b9fa11d37e83ec7a8e7350dc66ade89d1670e5eed9"
+  }
+}

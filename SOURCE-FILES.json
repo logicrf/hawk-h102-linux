@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3479,
-      "sha256": "1570806ca4bb32f657eb55e7d8541897270cae003090608626ca63b4164501d9"
+      "bytes": 3584,
+      "sha256": "e544bd9889718fb652b6f7081ce411aca3961be7bcd24e4552f69a9dbe713fed"
     },
     "SOURCE-BASE.json": {
       "bytes": 823,
-      "sha256": "94ea002b3816fa2986f801c47da5fea12b2bf0176ee6e13d89187254877bcfe6"
+      "sha256": "82b03f1434bea29606eb57c23d77c21c636f27547d78f488a5b0c807e70a080a"
     },
     "SOURCE-MAP.json": {
-      "bytes": 74000,
-      "sha256": "8010203df6149af843fee46a61998ced580af1131ff4a4a87e91e1c3fbf00bfc"
+      "bytes": 76773,
+      "sha256": "1a85f218328c06d432b91bcda5a498a6a9b1122832cea3c0f281a9c391c1112e"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -147,8 +147,8 @@
       "sha256": "d5f2e2ba69288b2cc232e66a947de74b73abae67aee595047a43b6d8f47ea828"
     },
     "docs/BOARD-SERVICES.md": {
-      "bytes": 5563,
-      "sha256": "140af4220c4c5ece38c5f932007709a5aaa09f3009b911606afdcf05bc6c8ae6"
+      "bytes": 5683,
+      "sha256": "f94831b5350d2eed74381178b6c4e3316c24e26962545f01cb232f8808dff04d"
     },
     "docs/BUILD.md": {
       "bytes": 6141,
@@ -158,13 +158,17 @@
       "bytes": 2737,
       "sha256": "7ab8e48a4ce66140cac3ea4557e11ee6598384d86c31973e3a69417e4bb70ec7"
     },
+    "docs/CUSTOMER-SETUP-VALIDATION.md": {
+      "bytes": 4816,
+      "sha256": "bb7e3dba7760b80918f0219fc571cf9820bf12866e280cf4f4ccf37fec490976"
+    },
     "docs/DELIVERY.md": {
-      "bytes": 4962,
-      "sha256": "5a59c88536102145fe3b9673f0969732998b467ae3db233fc7b7c570b04a9694"
+      "bytes": 4958,
+      "sha256": "867c17da75889f8f93ab52be6721d999a555e229d692a5f4f20d0885d832af57"
     },
     "docs/DEPLOYMENT.md": {
-      "bytes": 4131,
-      "sha256": "6d459516a68541c47c26524bb0a69a8ec53d1f6ac22302ea48b6130738e1b499"
+      "bytes": 4263,
+      "sha256": "3e1bb0f4de58586cae412652558a8ed45d8c751a90cd12125198c7db91727864"
     },
     "docs/GETTING-STARTED.md": {
       "bytes": 2799,
@@ -187,8 +191,8 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/SOURCE-AVAILABILITY.md": {
-      "bytes": 2825,
-      "sha256": "5be1e5e2eb11acd42d48242da2644bea1be297065a374ef56637963444c2b559"
+      "bytes": 2938,
+      "sha256": "7cc9998e7e6e0fe06354a60f2c42ac31335ea1ed0c9ca8d96931b61a05551908"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -246,6 +250,10 @@
       "bytes": 2262,
       "sha256": "5732e4daf24f939aa04d96fee11035233645dfaf4a4bfcd852a52cfc616280c4"
     },
+    "manifests/h102-customer-setup-validation-20261021.json": {
+      "bytes": 8229,
+      "sha256": "202e97a3c6ffe7bd3b391ef73614e15acc22628438e67fd4aef3ee68581540fe"
+    },
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,
       "sha256": "9b6edcec88d221706b9458bd51c354249848e1c57950d65fe04b46ff3d7337cd"
@@ -253,6 +261,14 @@
     "manifests/h102-image-parts-1.2.0.json": {
       "bytes": 1107,
       "sha256": "509f634f5e74ad5bf59ee5e2efa8d18706b99279b75ae5812259286ec369734a"
+    },
+    "manifests/h102-kuiper-1.2.0-copyright-index.json": {
+      "bytes": 597342,
+      "sha256": "775c1be2e10307ccc08f21b9fa11d37e83ec7a8e7350dc66ade89d1670e5eed9"
+    },
+    "manifests/h102-kuiper-1.2.0-installed-packages.tsv": {
+      "bytes": 115846,
+      "sha256": "7f0f5abb8e886fe17cd61bfc90e9aa397ca94b6c6a788f3c4e4e8331f3dc3bed"
     },
     "manifests/h102-portable-host-pins.json": {
       "bytes": 1309,

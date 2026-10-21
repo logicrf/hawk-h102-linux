@@ -64,7 +64,7 @@ After administrator setup, ordinary GUI and GNU Radio users enter only the H102 
 
 Ethernet IQ16 admission uses an aggregate 64 MB/s budget. Profiles beyond that budget are not qualified for uninterrupted Ethernet capture. USB additionally requires the matching host-side FT601 service, driver terms and connection checks, supplied separately.
 
-This delivery validates archive integrity, host/device source pairing and offline staging. It does not add a new SD cold-boot, device-installation, RF, USB or long-duration qualification.
+The original packaging checks covered archive integrity, pairing and offline staging. The [21 October new-card validation](CUSTOMER-SETUP-VALIDATION.md) adds one actual installation/reboot and representative GUI/GRC RX checks. RF, USB, other boards and long-duration qualification are outside that campaign.
 
 ## Roll back
 

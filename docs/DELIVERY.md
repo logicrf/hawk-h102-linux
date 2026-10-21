@@ -43,7 +43,7 @@ USB additionally requires the matching FT601 host service and applicable driver/
 
 Each component retains its own terms. The gr-logicrf GPL grant does not automatically relicense the standalone GUI, firmware, RTL or vendor SDK. Original qualified firmware archive bytes are preserved; English source/documentation updates are managed separately.
 
-This delivery adds source packaging, exact archive pairing, English installation guidance and offline staging checks. It does not add a new per-device installation, SD cold-boot, USB/RF, all-profile or arbitrary-duration qualification. Keep the existing release's precise hardware limits and perform the new unit's checks before application use.
+The [21 October 2026 new-card validation](CUSTOMER-SETUP-VALIDATION.md) exercised this installation sequence and representative GUI/GRC RX recording/replay on one device. It did not add USB/RF, all-profile or arbitrary-duration qualification. Keep the existing release's precise hardware limits and perform each new unit's checks before use.
 
 For component-specific source availability and remaining source-delivery review,
 read [Source availability](SOURCE-AVAILABILITY.md).

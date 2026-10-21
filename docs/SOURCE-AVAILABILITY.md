@@ -10,7 +10,7 @@ not a replacement for any source or notice obligations owed to a recipient.
 | IIO GUI 0.8.0 source r2 | [Private source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r2) and dependency requirements | Existing LogicRF delivery terms; dependencies keep their own licenses |
 | H102 Linux integration | This repository's patches, configuration, scripts and pinned inputs | Not a complete corresponding-source package for the SD image |
 | Linux kernel | ADI upstream commit `c8daf49830b2d19b155756d151f4c881a001a67e` plus H102 changes described in [BUILD.md](BUILD.md) | Exact full source delivery, SDK import terms and final build input availability remain under review |
-| Kuiper base and installed packages | Upstream source and per-package notices | A complete version-matched image package/source inventory has not yet been delivered here |
+| Kuiper base and installed packages | Upstream source and per-package notices | Installed package/source-version and copyright hash indexes are available in the [new-card validation](CUSTOMER-SETUP-VALIDATION.md); matching source archives and a complete system inventory remain open |
 | SDK, firmware, streams and generated profiles | Product-specific vendor inputs and matched binary payloads | Do not infer a general SDK source-redistribution grant from image or toolkit access |
 | BOOT, RTL and USB host components | Separate product inputs | Their source/IP and vendor terms are not granted by the GNU Radio module's GPL license |
 
