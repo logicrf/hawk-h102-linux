@@ -1,5 +1,7 @@
 # Matching the H102 1.2.0 source inputs
 
+Later checkpoint: [boot software rebuild](BOOT-REBUILD.md) now verifies the generated BSP, reconstructed configuration and actual compilation against the released BOOT bytes, with explicit initial-PL/XilRSA binary inputs. See [rootfs source materials](ROOTFS-SOURCES.md) for the archive inventory. The initial audit below is preserved as a historical checkpoint; its NOT_RUN statements do not describe that later build.
+
 The 21 October 2026 review matched the preserved kernel inputs to the actual release build and checked the BOOT composition. It did not change the image, compile new firmware or operate a device. Exact versions, complete hashes and scope are in the [source correspondence manifest](../manifests/h102-source-correspondence-1.2.0.json).
 
 ## Verified material

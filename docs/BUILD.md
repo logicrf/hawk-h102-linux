@@ -1,5 +1,7 @@
 # Build inputs and development workflow
 
+For the separately verified boot software, use [Rebuild BOOT](BOOT-REBUILD.md). The matching source kit reproduces the released BOOT with explicit vendor binary inputs. Rootfs source retrieval and remaining provenance gaps are listed in [source materials](ROOTFS-SOURCES.md).
+
 The repository is the H102 downstream integration toolkit, not a complete Linux distribution checkout. Start with the released image for ordinary deployment. Rebuilding a changed kernel or image is a development task requiring a matching set of external inputs and new validation.
 
 ## Required inputs

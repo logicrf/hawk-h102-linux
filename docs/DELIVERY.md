@@ -47,3 +47,7 @@ The [21 October 2026 new-card validation](CUSTOMER-SETUP-VALIDATION.md) exercise
 
 For component-specific source availability and remaining source-delivery review,
 read [Source availability](SOURCE-AVAILABILITY.md).
+
+## Source materials
+
+See [boot software rebuild](BOOT-REBUILD.md), [rootfs source materials](ROOTFS-SOURCES.md) and [component source availability](SOURCE-AVAILABILITY.md) when requesting matching source inputs. The additional internal archives are not yet GitHub download attachments. These documentation and build-tool changes do not identify a new SD image.

@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3695,
-      "sha256": "586c6839b6f53057164a8e5ec5983f17f6401d64183b922f910692058b68905a"
+      "bytes": 3769,
+      "sha256": "3ee2a7f403bc61bcaff7afe486346d0732ec8d3b0e664e0a66f24c4d1cf3a344"
     },
     "SOURCE-BASE.json": {
       "bytes": 823,
-      "sha256": "53bb02e76d62e707709730655ada39d4eac6d2e3ebed059d21999e853d603aad"
+      "sha256": "23c880f16faabb5cc1c7ea2d48c0a5e4b494ae64e6c681a1985b019ea50b4796"
     },
     "SOURCE-MAP.json": {
-      "bytes": 78173,
-      "sha256": "c023a0ca3e494bfb2b0a1ae6f16fc0be8fd1865404fc08a4112e633a06206d12"
+      "bytes": 83542,
+      "sha256": "597bd227578e817f9e915799986bb9fe1da69940061f7540fd7204c23f46887a"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -150,9 +150,13 @@
       "bytes": 5683,
       "sha256": "f94831b5350d2eed74381178b6c4e3316c24e26962545f01cb232f8808dff04d"
     },
+    "docs/BOOT-REBUILD.md": {
+      "bytes": 4381,
+      "sha256": "be777b020e64f835878286e8277eecffcb3c0e7d8661f3042d2abea435263300"
+    },
     "docs/BUILD.md": {
-      "bytes": 6518,
-      "sha256": "153d9e658090d13f10950e2ee89001a9ac352b318f724cefb90cb19442d2c144"
+      "bytes": 6795,
+      "sha256": "a9d499e04194b8e4fb312d2fca77d9b554b305a8339ae06a5e94072445af3a5c"
     },
     "docs/CONFIGURATION.md": {
       "bytes": 2737,
@@ -163,8 +167,8 @@
       "sha256": "bb7e3dba7760b80918f0219fc571cf9820bf12866e280cf4f4ccf37fec490976"
     },
     "docs/DELIVERY.md": {
-      "bytes": 4958,
-      "sha256": "867c17da75889f8f93ab52be6721d999a555e229d692a5f4f20d0885d832af57"
+      "bytes": 5320,
+      "sha256": "dc284a351987cb60c015d7ee76243459e6f81901070837f0bb02157c87a00cc2"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 4263,
@@ -190,13 +194,17 @@
       "bytes": 2570,
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
+    "docs/ROOTFS-SOURCES.md": {
+      "bytes": 4266,
+      "sha256": "bbbd7a0de3f8dc7ce7381bbf4b0b118d010ac6e19bfb3107f4de2c383551862d"
+    },
     "docs/SOURCE-AVAILABILITY.md": {
-      "bytes": 3115,
-      "sha256": "d4ed7a97a6b621f824751b4017c92fbbc703190d181ef88a9128904ab5f8c434"
+      "bytes": 3199,
+      "sha256": "2318f27100ba77d11ddd293647cb883887f02cacedede03d0e05c845dfc89f2f"
     },
     "docs/SOURCE-CORRESPONDENCE.md": {
-      "bytes": 4830,
-      "sha256": "7421821d74317e522284bebcd3456b49dcf40b4e9ddbcc4cc0e978d04d5b7003"
+      "bytes": 5251,
+      "sha256": "674451cee08eaa0b47f730b15fb205666e8dca5d0ffa8871ba189b6949c0665f"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -250,6 +258,10 @@
       "bytes": 1220,
       "sha256": "5dd2d0d67bf63de6f7ab00111cbbb4b225f0503ae72f957f5c752d70c842dc7c"
     },
+    "manifests/h102-boot-source-rebuild-1.2.0.json": {
+      "bytes": 1560,
+      "sha256": "25c666b5bcb481aaf824b6c7f3846dfffee5274de406ce8dc830a119be620202"
+    },
     "manifests/h102-customer-delivery-20261020.json": {
       "bytes": 2262,
       "sha256": "5732e4daf24f939aa04d96fee11035233645dfaf4a4bfcd852a52cfc616280c4"
@@ -285,6 +297,10 @@
     "manifests/h102-profile-generator-sdk-pins.json": {
       "bytes": 60593,
       "sha256": "a7c61290be3e02f715861944c4cb8e4f2845d0dbb58e92b47f96b808c0b32742"
+    },
+    "manifests/h102-rootfs-source-availability-1.2.0.json": {
+      "bytes": 1677596,
+      "sha256": "fd3639b7a7547119c6eeac60edaacb3c12d9cbea71859082f8e2a4cdfae00c21"
     },
     "manifests/h102-sdk1-calfix1-candidate.json": {
       "bytes": 1663,
@@ -541,6 +557,10 @@
     "scripts/h102_reassemble_image.py": {
       "bytes": 7112,
       "sha256": "ab5a4daa03b818a3d80dc28a34b481db78710df12f664231b6a3a4c0bcb3c32c"
+    },
+    "scripts/h102_rebuild_boot.sh": {
+      "bytes": 4657,
+      "sha256": "7b9877c8d1486b888d3eeadd72cc195993b1a6c26b6cf67139e085c624cb7488"
     },
     "scripts/h102_rf_owner.py": {
       "bytes": 27258,

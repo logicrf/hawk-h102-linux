@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "version": "H102-1.2.0-boot-source-rebuild-r1",
+  "status": "PASS_BYTE_IDENTICAL_BOOT_WITH_EXPLICIT_BINARY_INPUTS",
+  "kit": {
+    "filename": "H102-BOOT-Source-Kit-1.2.0-r1.tar.xz",
+    "bytes": 47747704,
+    "sha256": "d6e59cbd5029a0dcfa21426b1017cdb57bd09adb489ab0c9964f9081ee5b2c38",
+    "publication": "INTERNAL_SOURCE_DELIVERY_REVIEW_ONLY",
+    "archive_restoration": "PASS_ALL_SHA256SUMS"
+  },
+  "boot_sha256": "44b478bc7f38538f99d084551151639bef8ca5fbfc6378b26a564140d147a4b4",
+  "source_build": [
+    "FSBL/BSP",
+    "U-Boot",
+    "control DTB"
+  ],
+  "upstream_commits": {
+    "embeddedsw": "b173d246826f662b9a98215d8f39e93d39d699b4",
+    "u-boot": "fbed1010e50d75e7d25acc1c2d09e1c34cb7e882",
+    "ADI-linux": "c8daf49830b2d19b155756d151f4c881a001a67e"
+  },
+  "u_boot_full_config": "RECONSTRUCTED_AND_BINARY_VERIFIED_NOT_ORIGINAL_RM_WORK_RECOVERY",
+  "source_date_epoch": {
+    "FSBL": 1716086412,
+    "U-Boot": 1715657508
+  },
+  "vendor_binary_dependencies": [
+    {
+      "path": "embeddedsw/lib/sw_services/xilrsa/src/librsa.a",
+      "sha256": "995ca7be364ea47da5d26be5199b0ce1e1ec2b325da6f4388babf0d121231007",
+      "bytes": 12530,
+      "status": "prebuilt in pinned upstream; C implementation not found in source archive; file-level terms not concluded"
+    }
+  ],
+  "initial_PL": "PINNED_BINARY_NOT_REBUILT",
+  "whole_elf_identical": false,
+  "loaded_content_and_final_BOOT_identical": true,
+  "kernel_rebuilt": false,
+  "hardware_state_changed": false,
+  "complete_system_source_handoff": false
+}
