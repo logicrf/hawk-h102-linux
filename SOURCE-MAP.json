@@ -1,18 +1,18 @@
 {
   "schema": 1,
-  "development_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
+  "development_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
-      "source_sha256": "14f2017e3adadfc68438b79675cbf359bb72e7c9536e635edf460eb171fd8490",
-      "source_git_blob": "5d6effd559fcf343b7e914597fd9e4ffddcb85e6",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "742156d8d9446f3b5e2b496ef02b694b318c0f043fab86beea9c8d23fcd0fb21",
+      "source_git_blob": "28f140705b848b42fb6c7ce288ba09c95c1a1b5f",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "3ee2a7f403bc61bcaff7afe486346d0732ec8d3b0e664e0a66f24c4d1cf3a344",
-      "modification": "English user-facing source delivery documentation; exact versions and verified scope retained"
+      "english_sha256": "26ac695b6ff678f14cad61868f4cc1a93418e67b650b5a8efa92dde826dd454f",
+      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
     },
     {
       "path": "control-api/.gitignore",
@@ -359,26 +359,37 @@
       "source_path": "README.md"
     },
     {
-      "path": "docs/ROOTFS-SOURCES.md",
+      "path": "docs/MANUAL-SOURCES.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
-      "source_sha256": "dc75b0c07e5d4cff427676f96e05d058b98b6240a6494a7261cdb568101d7528",
-      "source_git_blob": "7fe440d88beb44a118c9a4d13f864ab3f22bb996",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "e701f0e9181999928e44ac639effa6f186fc18eb90de3db80c24ab9864539bc7",
+      "source_git_blob": "d10da724b68542f8b1fba6231b4f3c1263c62c7c",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "bbbd7a0de3f8dc7ce7381bbf4b0b118d010ac6e19bfb3107f4de2c383551862d",
-      "modification": "English user-facing source delivery documentation; exact versions and verified scope retained"
+      "english_sha256": "6b976b02736eeefc6b67293463794e898e694b51047b84b43e34d7a08b43aaed",
+      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
+    },
+    {
+      "path": "docs/ROOTFS-SOURCES.md",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "a5a98d5630b903796a40d3e0a941a102f6ccac5e00e2c887db826b25796c10d6",
+      "source_git_blob": "0680ce2d0f4386a17f809389e227b30f2818a92f",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "d200fb807646ecba07d9d3ad8afd05a1a158773af73b10d62995ef6e5d997130",
+      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
     },
     {
       "path": "docs/SOURCE-AVAILABILITY.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
-      "source_sha256": "f0b2473acce17b201d4e3c760f5c9fc080125810870a52a37528509f0cbf117b",
-      "source_git_blob": "5d6738077dcf3a7a303b3afbb24c5bdfd2757382",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "903dd198372a30a2f98498ba8b225b3eaae03b957a40506df333a401c799e833",
+      "source_git_blob": "270a10defe35b41ff180bbd3b88c24550595329d",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "2318f27100ba77d11ddd293647cb883887f02cacedede03d0e05c845dfc89f2f",
-      "modification": "English user-facing source delivery documentation; exact versions and verified scope retained"
+      "english_sha256": "ca8c80df963dfb5bc6916a70ff564f5993b27c392943a4e2a798b7f794204b44",
+      "modification": "English user-facing source provenance documentation; exact evidence scope and open items retained"
     },
     {
       "path": "docs/SOURCE-CORRESPONDENCE.md",
@@ -569,6 +580,17 @@
       "modification": "Unmodified scoped receipt or installed package/copyright index"
     },
     {
+      "path": "manifests/h102-manual-source-provenance-1.2.0.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "cabb14000ae75e6d006dd50234e9edd1b4895561753e5320dfb7c6f36a0c699c",
+      "source_git_blob": "b1bd7c60448de0cd9c6e3e496df1556b981b336e",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "cabb14000ae75e6d006dd50234e9edd1b4895561753e5320dfb7c6f36a0c699c",
+      "modification": "Unmodified"
+    },
+    {
       "path": "manifests/h102-portable-host-pins.json",
       "source_repository": "logicrf/hawk-h102-linux",
       "source_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
@@ -593,12 +615,12 @@
     {
       "path": "manifests/h102-rootfs-source-availability-1.2.0.json",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "014bb91dd1c0130e18740d75b07ea60d0b9fac34",
-      "source_sha256": "fd3639b7a7547119c6eeac60edaacb3c12d9cbea71859082f8e2a4cdfae00c21",
-      "source_git_blob": "e69a1e7de44676b6295b5ce13fd1a6acf7c7b7b6",
+      "source_commit": "1acb3cdab38dcdf22c7721915457636592aeec38",
+      "source_sha256": "119198453686a5d316f2f49b4b26b12b10c7b37d9314f37f786d99023820cd19",
+      "source_git_blob": "b336c415b5f4af116b7e256c2167250cdb7d2a23",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "fd3639b7a7547119c6eeac60edaacb3c12d9cbea71859082f8e2a4cdfae00c21",
+      "english_sha256": "119198453686a5d316f2f49b4b26b12b10c7b37d9314f37f786d99023820cd19",
       "modification": "Unmodified"
     },
     {

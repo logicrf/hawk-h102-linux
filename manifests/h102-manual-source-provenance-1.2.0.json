@@ -1,0 +1,395 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "image_version": "1.2.0",
+  "status": "PASS_SCOPED_SOURCE_IDENTITY_AND_ARCHIVE_INTEGRITY",
+  "scope": "Selected non-dpkg components and partial upstream source candidates; no full filesystem source audit or fresh binary rebuild",
+  "device_state_changed": false,
+  "complete_system_corresponding_source": false,
+  "retained_source": {
+    "components": [
+      {
+        "component": "colorimeter",
+        "repository": "https://github.com/analogdevicesinc/colorimeter.git",
+        "commit": "db018d4c03233b6d27bfd2edc6632715df2aeb9e",
+        "tracked_files": 17,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "colorimeter/"
+      },
+      {
+        "component": "diagnostic_report",
+        "repository": "https://github.com/analogdevicesinc/diagnostic_report.git",
+        "commit": "fc0ba060a9fb43d0aea07a1258ee40b0ef31b6c7",
+        "tracked_files": 7,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "diagnostic_report/"
+      },
+      {
+        "component": "fru_tools",
+        "repository": "https://github.com/analogdevicesinc/fru_tools.git",
+        "commit": "4a18979382d59dd956bc11a6606d460e3f8937ca",
+        "tracked_files": 34,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [
+          ".version"
+        ],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "fru_tools/"
+      },
+      {
+        "component": "gt",
+        "repository": "https://github.com/linux-usb-gadgets/gt.git",
+        "commit": "a2aa973640dcfde4de1ebc4bc4906195ba5826f9",
+        "tracked_files": 55,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 16,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "gt/"
+      },
+      {
+        "component": "iio-fm-radio",
+        "repository": "https://github.com/analogdevicesinc/iio-fm-radio.git",
+        "commit": "e67be7eb2ca539008fd4dde9469dbf402d7b40cb",
+        "tracked_files": 7,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "iio-fm-radio/"
+      },
+      {
+        "component": "iio-oscilloscope",
+        "repository": "https://github.com/analogdevicesinc/iio-oscilloscope.git",
+        "commit": "89b3848e85a7696ec468ca992c575ea2eb02dd56",
+        "tracked_files": 309,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 68,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "iio-oscilloscope/"
+      },
+      {
+        "component": "jesd-eye-scan-gtk",
+        "repository": "https://github.com/analogdevicesinc/jesd-eye-scan-gtk.git",
+        "commit": "f3babfb9f02933936ff5ca56aa1add01fec9d1a4",
+        "tracked_files": 12,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "jesd-eye-scan-gtk/"
+      },
+      {
+        "component": "libad9166-iio",
+        "repository": "https://github.com/analogdevicesinc/libad9166-iio.git",
+        "commit": "2916da36a01aeb0f1022d80a5cc48c782da17563",
+        "tracked_files": 55,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 6,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "libad9166-iio/"
+      },
+      {
+        "component": "libad9361-iio",
+        "repository": "https://github.com/analogdevicesinc/libad9361-iio.git",
+        "commit": "d692a52a869ac2665e9e49907c7e0db41c4d13f6",
+        "tracked_files": 89,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 14,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "libad9361-iio/"
+      },
+      {
+        "component": "libiio",
+        "repository": "https://github.com/analogdevicesinc/libiio.git",
+        "commit": "5e1e9cb567ffd6d6d810fdd7c44fe79e9613f56a",
+        "tracked_files": 231,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 36,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "libiio/"
+      },
+      {
+        "component": "libusbgx",
+        "repository": "https://github.com/linux-usb-gadgets/libusbgx.git",
+        "commit": "dbedf16f80c5b4e1807ea4f80cc89d1f15d36f0a",
+        "tracked_files": 86,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 2,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "libusbgx/"
+      },
+      {
+        "component": "linux_image_ADI-scripts",
+        "repository": "https://github.com/analogdevicesinc/linux_image_ADI-scripts.git",
+        "commit": "c643dd0fbc4277bf88111940fa6f4f948b7f83e6",
+        "tracked_files": 69,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 0,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "linux_image_ADI-scripts/"
+      },
+      {
+        "component": "wiki-scripts",
+        "repository": "https://github.com/analogdevicesinc/wiki-scripts.git",
+        "commit": "ded20fd1fcbde0abd926ba955198aa608a54b805",
+        "tracked_files": 24,
+        "official_head_tree": "PASS",
+        "retained_content_changes": [],
+        "retained_mode_changes": [],
+        "build_records": 4,
+        "source_archive": "Kuiper-retained-project-sources-r1.tar.gz",
+        "source_prefix": "wiki-scripts/"
+      }
+    ],
+    "tracked_files": 995,
+    "build_records": 146,
+    "archive": {
+      "file": "Kuiper-retained-project-sources-r1.tar.gz",
+      "bytes": 41960583,
+      "sha256": "148a80e72eddc6e3de4d30ce2bd656aa1f59771f6991e91e8326bb35fe864353"
+    },
+    "archive_member_readback": "PASS",
+    "fru_tools_version_note": "Retained .version is 8; official HEAD value is 7. Actual retained file is included without resetting it."
+  },
+  "adidt": {
+    "version": "0.0.1",
+    "commit": "2f53fda5f49f1c2eb251f051aaca855001bba031",
+    "installed_python_files": 31,
+    "exact_installed_python_match": "PASS",
+    "scope": "All .py files listed in installed distribution RECORD, including tests. Bytecode, entrypoint and dependency reconstruction excluded."
+  },
+  "colorimeter": {
+    "commit": "db018d4c03233b6d27bfd2edc6632715df2aeb9e",
+    "installed_python_files": 5,
+    "exact_retained_python_match": "PASS",
+    "generated_config_file": "colorimeter-generated-config.py",
+    "scope": "Four tracked library files and generated config; capture.so compilation and dependencies not rebuilt."
+  },
+  "libm2k": {
+    "version": "0.9.0",
+    "commit": "ce0cf95eb93e2a9c4f6023a9ae58f823ae080713",
+    "installed_header_git": "ce0cf95",
+    "upstream_tag": "v0.9.0",
+    "recipe_commit": "3126a323b1c03042ab91f086d2780f27030dc5f5",
+    "status": "PASS_INSTALLED_HEADER_AND_OLD_RECIPE_IDENTITY; BINARY_REBUILD_NOT_RUN"
+  },
+  "installed_binary_correspondence": {
+    "exact_retained_build_pairs": 5,
+    "pairs": [
+      {
+        "build_file": "/usr/local/src/iio-fm-radio/iio_fm_radio",
+        "installed_file": "/usr/local/bin/iio_fm_radio",
+        "build_sha256": "7911995ff2e5a3c3245064359a9037d445262cf00eb9419e19fa46b74f0f020d",
+        "installed_sha256": "7911995ff2e5a3c3245064359a9037d445262cf00eb9419e19fa46b74f0f020d",
+        "result": "PASS_IDENTICAL"
+      },
+      {
+        "build_file": "/usr/local/src/libusbgx/src/.libs/libusbgx.so.3.0.0",
+        "installed_file": "/usr/local/lib/libusbgx.so.3.0.0",
+        "build_sha256": "4e7fc93b29907a1e82e4a362f52c557d96dd09cf2d3dc933e3e9a9f0c97cb456",
+        "installed_sha256": "4e7fc93b29907a1e82e4a362f52c557d96dd09cf2d3dc933e3e9a9f0c97cb456",
+        "result": "PASS_IDENTICAL"
+      },
+      {
+        "build_file": "/usr/local/src/jesd-eye-scan-gtk/jesd_eye_scan",
+        "installed_file": "/usr/local/bin/jesd_eye_scan",
+        "build_sha256": "d8659c430c5319869781b29e6e058c8171835917f748fca6772b1aba69e75fa4",
+        "installed_sha256": "d8659c430c5319869781b29e6e058c8171835917f748fca6772b1aba69e75fa4",
+        "result": "PASS_IDENTICAL"
+      },
+      {
+        "build_file": "/usr/local/src/jesd-eye-scan-gtk/jesd_status",
+        "installed_file": "/usr/local/bin/jesd_status",
+        "build_sha256": "c5e3d4fb7db75d9a1dd2cb2e05d0ccbaee286c7c034ba7b0449a2f06fa18e6e4",
+        "installed_sha256": "c5e3d4fb7db75d9a1dd2cb2e05d0ccbaee286c7c034ba7b0449a2f06fa18e6e4",
+        "result": "PASS_IDENTICAL"
+      },
+      {
+        "build_file": "/usr/local/src/wiki-scripts/iio/iio_jesd204_fsm_sync/build/iio_jesd204_fsm_sync",
+        "installed_file": "/usr/local/bin/iio_jesd204_fsm_sync",
+        "build_sha256": "a0470448978c002026b07afd6d038a9eb7fe30db973a616339eaa78ce0afde7e",
+        "installed_sha256": "a0470448978c002026b07afd6d038a9eb7fe30db973a616339eaa78ce0afde7e",
+        "result": "PASS_IDENTICAL"
+      }
+    ],
+    "osc_install_replay": {
+      "status": "PASS_EXACT_INSTALLED_BYTES_AFTER_ORIGINAL_INSTALL_RPATH_CHANGE",
+      "replayed_sha256": "d8cd658f33f5585c2eaf0963825b5ddc9f6854ec9f91688ee6c85fe66d5a468c",
+      "installed_sha256": "d8cd658f33f5585c2eaf0963825b5ddc9f6854ec9f91688ee6c85fe66d5a468c",
+      "command": [
+        "cmake",
+        "-P",
+        "osc-rpath-replay.cmake"
+      ],
+      "scope": "offline replay of original recorded install transformation; no fresh compile or device write"
+    }
+  },
+  "upstream_archives": [
+    {
+      "component": "adidt",
+      "repository": "https://github.com/analogdevicesinc/pyadi-dt",
+      "requested_identity": "2f53fda5f49f1c2eb251f051aaca855001bba031",
+      "commit": "2f53fda5f49f1c2eb251f051aaca855001bba031",
+      "scope": "EXACT_INSTALLED_DIRECT_URL_COMMIT; installed file correspondence pending",
+      "file": "adidt-2f53fda5f49f.tar.gz",
+      "url": "https://codeload.github.com/analogdevicesinc/pyadi-dt/tar.gz/2f53fda5f49f1c2eb251f051aaca855001bba031",
+      "bytes": 3251781,
+      "sha256": "44ee8d3b459cb7cd298a4cb0876345df7bedebbd7b06cf463ed0dc1f40f8317f",
+      "archive_file_members": 71,
+      "notice_members": [
+        "pyadi-dt-2f53fda5f49f1c2eb251f051aaca855001bba031/LICENSE"
+      ],
+      "archive_parsed": "PASS"
+    },
+    {
+      "component": "libm2k",
+      "repository": "https://github.com/analogdevicesinc/libm2k",
+      "requested_identity": "v0.9.0",
+      "commit": "ce0cf95eb93e2a9c4f6023a9ae58f823ae080713",
+      "scope": "UPSTREAM_TAG_MATCHES_OLD_RECIPE; original build provenance pending",
+      "file": "libm2k-ce0cf95eb93e.tar.gz",
+      "url": "https://codeload.github.com/analogdevicesinc/libm2k/tar.gz/ce0cf95eb93e2a9c4f6023a9ae58f823ae080713",
+      "bytes": 15250543,
+      "sha256": "d0a2584eef6a970365ebb7ded9fa6417ba4b7584e0f5d12380ca907c476aa59a",
+      "archive_file_members": 309,
+      "notice_members": [
+        "libm2k-ce0cf95eb93e2a9c4f6023a9ae58f823ae080713/LICENSE"
+      ],
+      "archive_parsed": "PASS"
+    },
+    {
+      "component": "adi-kuiper-gen",
+      "repository": "https://github.com/analogdevicesinc/adi-kuiper-gen",
+      "requested_identity": "2023_r2_p1",
+      "commit": "3126a323b1c03042ab91f086d2780f27030dc5f5",
+      "scope": "RELEASE_TAG_MATCHES_BASELINE_LABEL; exact image generator build identity unconfirmed",
+      "file": "adi-kuiper-gen-3126a323b1c0.tar.gz",
+      "url": "https://codeload.github.com/analogdevicesinc/adi-kuiper-gen/tar.gz/3126a323b1c03042ab91f086d2780f27030dc5f5",
+      "bytes": 5146245,
+      "sha256": "a0efb17e0f2e3a317bd7e747398a6e38399a9bacee5734660d51a2d4edf13bb3",
+      "archive_file_members": 155,
+      "notice_members": [
+        "kuiper-3126a323b1c03042ab91f086d2780f27030dc5f5/LICENSE",
+        "kuiper-3126a323b1c03042ab91f086d2780f27030dc5f5/stage8/00-license-generation/LICENSE.md"
+      ],
+      "archive_parsed": "PASS"
+    },
+    {
+      "component": "bluej-unbundled",
+      "file": "BlueJ-source-503.zip",
+      "url": "https://www.bluej.org/download/files/source/BlueJ-source-503.zip",
+      "bytes": 19835056,
+      "sha256": "7ff7f0a335c2c4613b2b94b5c7534422f15564751f57ed0e2c0b56441ce08cd2",
+      "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+      "zip_crc": "PASS"
+    },
+    {
+      "component": "greenfoot-unbundled",
+      "file": "Greenfoot-source-370.zip",
+      "url": "https://www.greenfoot.org/download/files/source/Greenfoot-source-370.zip",
+      "bytes": 27584682,
+      "sha256": "b736eccf14eb3452e6b3e7d41992be11f58e6ddc5962b85fddcbbc889339cda4",
+      "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+      "zip_crc": "PASS"
+    }
+  ],
+  "gtkdatabox": {
+    "version": "1.0.0",
+    "url": "https://downloads.sourceforge.net/project/gtkdatabox/gtkdatabox-1/gtkdatabox-1.0.0.tar.gz",
+    "file": "gtkdatabox-1.0.0.tar.gz",
+    "scope": "URL and version match historical iio-oscilloscope recipe; original download hash and binary provenance not recovered"
+  },
+  "supplementary_inputs": {
+    "status": "PASS_ARCHIVE_SHA_AND_MEMBER_READBACK",
+    "files": [
+      {
+        "file": "BlueJ-source-503.zip",
+        "bytes": 19835056,
+        "sha256": "7ff7f0a335c2c4613b2b94b5c7534422f15564751f57ed0e2c0b56441ce08cd2"
+      },
+      {
+        "file": "Greenfoot-source-370.zip",
+        "bytes": 27584682,
+        "sha256": "b736eccf14eb3452e6b3e7d41992be11f58e6ddc5962b85fddcbbc889339cda4"
+      },
+      {
+        "file": "Kuiper-retained-project-sources-r1.tar.gz",
+        "bytes": 41960583,
+        "sha256": "148a80e72eddc6e3de4d30ce2bd656aa1f59771f6991e91e8326bb35fe864353"
+      },
+      {
+        "file": "adi-kuiper-gen-3126a323b1c0.tar.gz",
+        "bytes": 5146245,
+        "sha256": "a0efb17e0f2e3a317bd7e747398a6e38399a9bacee5734660d51a2d4edf13bb3"
+      },
+      {
+        "file": "adidt-2f53fda5f49f.tar.gz",
+        "bytes": 3251781,
+        "sha256": "44ee8d3b459cb7cd298a4cb0876345df7bedebbd7b06cf463ed0dc1f40f8317f"
+      },
+      {
+        "file": "colorimeter-generated-config.py",
+        "bytes": 20,
+        "sha256": "d2a3a4787bf52b7edb078b892bf4f8b0d31deefc3054c0c9957fa0b6f1ab335e"
+      },
+      {
+        "file": "gtkdatabox-1.0.0.tar.gz",
+        "bytes": 520992,
+        "sha256": "8bee70206494a422ecfec9a88d32d914c50bb7a0c0e8fedc4512f5154aa9d3e3"
+      },
+      {
+        "file": "libm2k-ce0cf95eb93e.tar.gz",
+        "bytes": 15250543,
+        "sha256": "d0a2584eef6a970365ebb7ded9fa6417ba4b7584e0f5d12380ca907c476aa59a"
+      }
+    ],
+    "bytes": 113549902,
+    "scope": "new supplementary materials only; previous 3545 objects unchanged"
+  },
+  "upstream_generator": {
+    "repository": "https://github.com/analogdevicesinc/adi-kuiper-gen",
+    "tag": "2023_r2_p1",
+    "commit": "3126a323b1c03042ab91f086d2780f27030dc5f5",
+    "scope": "Release label, date and component recipe match. No original generator job receipt; this is not proof of the precise image-generation checkout."
+  },
+  "open_items": [
+    "Nine exact packaged source/version records remain unresolved; BlueJ and Greenfoot upstream source alone does not recover Raspberry Pi unbundled packaging.",
+    "Original Raspbian source hashes/build provenance for 53 exact Debian-version candidates.",
+    "Scopy armhf AppImage build inputs and bundled third-party sources, gr-iio/gr-m2k deleted source checkouts, other native/manual dependencies.",
+    "Original wheel/native build inputs for the remaining Python packages and gtkdatabox.",
+    "SDK imported API/firmware file-level terms and the XilRSA prebuilt dependency delivery terms."
+  ],
+  "upstream_source_offer": {
+    "source": "Retained upstream /home/logicrf/LICENSE.html in the audited image",
+    "sha256": "b683d2f91b6d67b9030de92ef0d0afec03f3eab3e4cf37579e2405b99dc915e3",
+    "date_text": "18Sep2028",
+    "status": "ORIGINAL_SHIPPED_WRITTEN_OFFER_OBSERVED; NOT_CONTACTED_OR_FULFILLED",
+    "scope": "The product-name field in the original template is empty. An inquiry must identify the precise image filename and hash. No assumption that this is LogicRF own offer or covers downstream additions."
+  }
+}

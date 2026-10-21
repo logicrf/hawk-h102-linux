@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3769,
-      "sha256": "3ee2a7f403bc61bcaff7afe486346d0732ec8d3b0e664e0a66f24c4d1cf3a344"
+      "bytes": 3821,
+      "sha256": "26ac695b6ff678f14cad61868f4cc1a93418e67b650b5a8efa92dde826dd454f"
     },
     "SOURCE-BASE.json": {
-      "bytes": 823,
-      "sha256": "23c880f16faabb5cc1c7ea2d48c0a5e4b494ae64e6c681a1985b019ea50b4796"
+      "bytes": 824,
+      "sha256": "51fac9ffb5140d2e7fcda66fc2f323b3b1012173d9fb80097c5846d145e6aabc"
     },
     "SOURCE-MAP.json": {
-      "bytes": 83542,
-      "sha256": "597bd227578e817f9e915799986bb9fe1da69940061f7540fd7204c23f46887a"
+      "bytes": 84709,
+      "sha256": "9a073c73c3ff73d71b743130dc848e3f3d6733465081e50d9c3d2e876a6893ac"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -186,6 +186,10 @@
       "bytes": 1189,
       "sha256": "ddc146c1fcd42a94e4a800113cf2f9bfdf53aecb438fa07e83c0909e6b37b9e2"
     },
+    "docs/MANUAL-SOURCES.md": {
+      "bytes": 5272,
+      "sha256": "6b976b02736eeefc6b67293463794e898e694b51047b84b43e34d7a08b43aaed"
+    },
     "docs/PROFILE-GENERATION.md": {
       "bytes": 4214,
       "sha256": "5e8fc6f4f02c2d7dbcbed03348f8c7c276892a1e1170016b79b7709efec2908b"
@@ -195,12 +199,12 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/ROOTFS-SOURCES.md": {
-      "bytes": 4266,
-      "sha256": "bbbd7a0de3f8dc7ce7381bbf4b0b118d010ac6e19bfb3107f4de2c383551862d"
+      "bytes": 4711,
+      "sha256": "d200fb807646ecba07d9d3ad8afd05a1a158773af73b10d62995ef6e5d997130"
     },
     "docs/SOURCE-AVAILABILITY.md": {
-      "bytes": 3199,
-      "sha256": "2318f27100ba77d11ddd293647cb883887f02cacedede03d0e05c845dfc89f2f"
+      "bytes": 3299,
+      "sha256": "ca8c80df963dfb5bc6916a70ff564f5993b27c392943a4e2a798b7f794204b44"
     },
     "docs/SOURCE-CORRESPONDENCE.md": {
       "bytes": 5251,
@@ -286,6 +290,10 @@
       "bytes": 115846,
       "sha256": "7f0f5abb8e886fe17cd61bfc90e9aa397ca94b6c6a788f3c4e4e8331f3dc3bed"
     },
+    "manifests/h102-manual-source-provenance-1.2.0.json": {
+      "bytes": 17229,
+      "sha256": "cabb14000ae75e6d006dd50234e9edd1b4895561753e5320dfb7c6f36a0c699c"
+    },
     "manifests/h102-portable-host-pins.json": {
       "bytes": 1309,
       "sha256": "9913c31d736e14bbefe7cd6e23dc177b23f6cb246ca299b3430e15e55c6a154d"
@@ -299,8 +307,8 @@
       "sha256": "a7c61290be3e02f715861944c4cb8e4f2845d0dbb58e92b47f96b808c0b32742"
     },
     "manifests/h102-rootfs-source-availability-1.2.0.json": {
-      "bytes": 1677596,
-      "sha256": "fd3639b7a7547119c6eeac60edaacb3c12d9cbea71859082f8e2a4cdfae00c21"
+      "bytes": 1678762,
+      "sha256": "119198453686a5d316f2f49b4b26b12b10c7b37d9314f37f786d99023820cd19"
     },
     "manifests/h102-sdk1-calfix1-candidate.json": {
       "bytes": 1663,

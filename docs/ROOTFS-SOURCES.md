@@ -76,3 +76,12 @@ The [Raspbian repository](https://www.raspbian.org/RaspbianRepository/) and
 See [source availability](SOURCE-AVAILABILITY.md) for the ADI SDK and other
 component boundaries, and [boot rebuild](BOOT-REBUILD.md) for the separately
 verified boot software.
+
+## Follow-up: retained manual sources
+
+The [manual component review](MANUAL-SOURCES.md) adds 13 retained source trees,
+995 tracked files, 146 build records, installed-file comparisons and eight
+supplementary inputs. Official BlueJ 5.0.3 and Greenfoot 3.7.0 sources are now
+archived, but their unbundled packaging inputs remain unresolved; the nine-package
+gap count is unchanged. This follow-up preserves all earlier archive counts and
+limits.

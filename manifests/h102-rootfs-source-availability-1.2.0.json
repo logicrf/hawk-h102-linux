@@ -2077,7 +2077,16 @@
       ],
       "provenance": "MATCHING_SOURCE_NOT_RECOVERED",
       "files": [],
-      "archives_local_full_readback": "NOT_AVAILABLE"
+      "archives_local_full_readback": "NOT_AVAILABLE",
+      "partial_upstream_source": {
+        "component": "bluej-unbundled",
+        "file": "BlueJ-source-503.zip",
+        "url": "https://www.bluej.org/download/files/source/BlueJ-source-503.zip",
+        "bytes": 19835056,
+        "sha256": "7ff7f0a335c2c4613b2b94b5c7534422f15564751f57ed0e2c0b56441ce08cd2",
+        "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+        "zip_crc": "PASS"
+      }
     },
     {
       "source": "bluez",
@@ -9728,7 +9737,16 @@
       ],
       "provenance": "MATCHING_SOURCE_NOT_RECOVERED",
       "files": [],
-      "archives_local_full_readback": "NOT_AVAILABLE"
+      "archives_local_full_readback": "NOT_AVAILABLE",
+      "partial_upstream_source": {
+        "component": "greenfoot-unbundled",
+        "file": "Greenfoot-source-370.zip",
+        "url": "https://www.greenfoot.org/download/files/source/Greenfoot-source-370.zip",
+        "bytes": 27584682,
+        "sha256": "b736eccf14eb3452e6b3e7d41992be11f58e6ddc5962b85fddcbbc889339cda4",
+        "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+        "zip_crc": "PASS"
+      }
     },
     {
       "source": "grep",
@@ -43352,6 +43370,8 @@
         "bytes": 165,
         "sha256": "b69c3afeed5b0624ba77ea2ec6e535fef48d2db61927d9f8deaeb55928061d7c"
       }
-    ]
+    ],
+    "followup_manifest": "h102-manual-source-provenance-1.2.0.json",
+    "followup_status": "13 retained source trees archived; 31 adidt and 5 colorimeter Python files matched; libm2k header/release recipe matched; full manual-component closure open"
   }
 }
