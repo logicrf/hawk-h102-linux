@@ -1400,13 +1400,13 @@
       "path": "docs/BOARD-SERVICES.md",
       "source_path": "docs/H102-BOARD-SERVICES.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "7139f9d1b665f424006e8da63d95684be5f54933",
-      "source_sha256": "fc1cafee7762b91554a536696bc6ef1426a892744fd500be090d4719c88302ca",
-      "source_git_blob": "d01584d378c490fd15a68a0aafc846c01cb9cbef",
+      "source_commit": "4011dc735d64f44b7bf4bc1a5e7324473b242798",
+      "source_sha256": "c69313ad73c1359cca477971d8aa335e431a5ad378ca6c394a2aa96b844be0e7",
+      "source_git_blob": "bc4608da199e78198fd814908326cd80bfcf8a03",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "6d6f5028eb2cefb6163380d9b469c14525cf149f07ba75a07f1bf5183e89b836",
-      "modification": "English customer guide"
+      "english_sha256": "f94831b5350d2eed74381178b6c4e3316c24e26962545f01cb232f8808dff04d",
+      "modification": "English customer guide with dated scoped new-card validation"
     },
     {
       "path": "tests/test_deployment_fd_fallback.py",
