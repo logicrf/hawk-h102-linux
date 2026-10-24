@@ -1,0 +1,384 @@
+{
+  "schema": 1,
+  "date": "2026-10-24",
+  "version": "H102-1.2.0-source-supplement-r1",
+  "status": "PASS_EXACT_ARCHIVE_RECOVERY_WITH_STATED_PROVENANCE_LIMITS",
+  "baseline_development_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+  "baseline_source_inventory_sha256": "119198453686a5d316f2f49b4b26b12b10c7b37d9314f37f786d99023820cd19",
+  "packages": [
+    {
+      "source": "dpkg",
+      "version": "1.20.12+rpi1",
+      "installed_binaries": [
+        {
+          "package": "dpkg",
+          "version": "1.20.12+rpi1"
+        },
+        {
+          "package": "dpkg-dev",
+          "version": "1.20.12+rpi1"
+        },
+        {
+          "package": "libdpkg-perl",
+          "version": "1.20.12+rpi1"
+        }
+      ],
+      "provenance": "HISTORICAL_HTTPS_DSC_DEVELOPER_SIGNATURE_UNVERIFIED",
+      "files": [
+        {
+          "file": "dpkg_1.20.12+rpi1.dsc",
+          "bytes": 2291,
+          "sha256": "495c6ed6ab236390aac48556ac3f9d847333e71f46c6f3003b3424bd68314f12",
+          "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/d/dpkg/dpkg_1.20.12+rpi1.dsc"
+        },
+        {
+          "file": "dpkg_1.20.12+rpi1.tar.xz",
+          "bytes": 5215456,
+          "sha256": "76bd38cf1a89497c783cbc52c5a18218745f3a09a03cd5f164896d21b14e69be",
+          "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/d/dpkg/dpkg_1.20.12+rpi1.tar.xz"
+        }
+      ],
+      "archives_local_full_readback": "PASS",
+      "recovery_evidence": {
+        "source_version": "DSC_AND_EXTRACTED_DEBIAN_CHANGELOG_MATCH",
+        "archive_integrity": "DSC_SHA256_SIZE_AND_STANDARD_EXTRACTION_PASS",
+        "signature": "DEVELOPER_SIGNATURE_NOT_INDEPENDENTLY_VERIFIED",
+        "dgit": "3af0301c027f44f6d770f84c3f95f5d4ac157917 raspbian archive/raspbian/1.20.12+rpi1 https://dgit.raspbian.org//dpkg.git",
+        "primary_dgit_tag_commit_match": true
+      }
+    },
+    {
+      "source": "python3.9",
+      "version": "3.9.2-1+rpi1+deb11u2",
+      "installed_binaries": [
+        {
+          "package": "idle-python3.9",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "libpython3.9:armhf",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "libpython3.9-dev:armhf",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "libpython3.9-minimal:armhf",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "libpython3.9-stdlib:armhf",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "python3.9",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "python3.9-dev",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "python3.9-minimal",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        },
+        {
+          "package": "python3.9-venv",
+          "version": "3.9.2-1+rpi1+deb11u2"
+        }
+      ],
+      "provenance": "HISTORICAL_HTTPS_DSC_DEVELOPER_SIGNATURE_UNVERIFIED",
+      "files": [
+        {
+          "file": "python3.9_3.9.2-1+rpi1+deb11u2.dsc",
+          "bytes": 3680,
+          "sha256": "4578f60e7fc6cb02f65c5472f8d01d9f20e9f24e6c519374aea6867ad6541a77",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/p/python3.9/python3.9_3.9.2-1+rpi1+deb11u2.dsc"
+        },
+        {
+          "file": "python3.9_3.9.2.orig.tar.xz",
+          "bytes": 18889164,
+          "sha256": "3c2034c54f811448f516668dce09d24008a0716c3a794dd8639b5388cbde247d",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/p/python3.9/python3.9_3.9.2.orig.tar.xz"
+        },
+        {
+          "file": "python3.9_3.9.2-1+rpi1+deb11u2.debian.tar.xz",
+          "bytes": 265844,
+          "sha256": "8472c1a2449aaded9ba35ea6f0813da1f41812e76829f4ecce1b15f55c14ad2d",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/p/python3.9/python3.9_3.9.2-1+rpi1+deb11u2.debian.tar.xz"
+        }
+      ],
+      "archives_local_full_readback": "PASS",
+      "recovery_evidence": {
+        "source_version": "DSC_AND_EXTRACTED_DEBIAN_CHANGELOG_MATCH",
+        "archive_integrity": "DSC_SHA256_SIZE_AND_STANDARD_EXTRACTION_PASS",
+        "signature": "DEVELOPER_SIGNATURE_NOT_INDEPENDENTLY_VERIFIED",
+        "dgit": "9aad1526532e994a2cf37cf87cb5766ad49d1cc1 raspbian archive/raspbian/3.9.2-1+rpi1+deb11u2 https://dgit.raspbian.org//python3.9.git",
+        "primary_dgit_tag_commit_match": true
+      }
+    },
+    {
+      "source": "qtbase-opensource-src",
+      "version": "5.15.2+dfsg-9+rpi1+deb11u1",
+      "installed_binaries": [
+        {
+          "package": "libqt5concurrent5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5core5a:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5dbus5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5gui5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5network5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5opengl5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5opengl5-dev:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5printsupport5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5sql5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5sql5-sqlite:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5test5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5widgets5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "libqt5xml5:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "qt5-gtk-platformtheme:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "qt5-qmake:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "qt5-qmake-bin",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "qtbase5-dev:armhf",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        },
+        {
+          "package": "qtbase5-dev-tools",
+          "version": "5.15.2+dfsg-9+rpi1+deb11u1"
+        }
+      ],
+      "provenance": "HISTORICAL_HTTPS_DSC_DEVELOPER_SIGNATURE_UNVERIFIED",
+      "files": [
+        {
+          "file": "qtbase-opensource-src_5.15.2+dfsg-9+rpi1+deb11u1.dsc",
+          "bytes": 5680,
+          "sha256": "97f676070725cc0c2f9a983a602ce028555ec753b4c8ae57535f5456ccf667a0",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.15.2+dfsg-9+rpi1+deb11u1.dsc"
+        },
+        {
+          "file": "qtbase-opensource-src_5.15.2+dfsg.orig.tar.xz",
+          "bytes": 48055144,
+          "sha256": "9ed5e0ab96a04daec5383a5e642d0308ca8246359a4c857a73a5c58d806237bb",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.15.2+dfsg.orig.tar.xz"
+        },
+        {
+          "file": "qtbase-opensource-src_5.15.2+dfsg-9+rpi1+deb11u1.debian.tar.xz",
+          "bytes": 273308,
+          "sha256": "0a3d993d7ce1f49f83b6fbbf3b6ec4a4432c280c0000da223ac952b00ec4913f",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.15.2+dfsg-9+rpi1+deb11u1.debian.tar.xz"
+        }
+      ],
+      "archives_local_full_readback": "PASS",
+      "recovery_evidence": {
+        "source_version": "DSC_AND_EXTRACTED_DEBIAN_CHANGELOG_MATCH",
+        "archive_integrity": "DSC_SHA256_SIZE_AND_STANDARD_EXTRACTION_PASS",
+        "signature": "DEVELOPER_SIGNATURE_NOT_INDEPENDENTLY_VERIFIED",
+        "dgit": "b07f87aa797394beeb23410ae5b9a1b3d429980c raspbian archive/raspbian/5.15.2+dfsg-9+rpi1+deb11u1 https://dgit.raspbian.org//qtbase-opensource-src.git",
+        "primary_dgit_tag_commit_match": true
+      }
+    },
+    {
+      "source": "systemd",
+      "version": "247.3-7+rpi1+deb11u6",
+      "installed_binaries": [
+        {
+          "package": "libpam-systemd:armhf",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "libsystemd0:armhf",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "libudev1:armhf",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "systemd",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "systemd-sysv",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "systemd-timesyncd",
+          "version": "247.3-7+rpi1+deb11u6"
+        },
+        {
+          "package": "udev",
+          "version": "247.3-7+rpi1+deb11u6"
+        }
+      ],
+      "provenance": "HISTORICAL_HTTPS_DSC_DEVELOPER_SIGNATURE_UNVERIFIED",
+      "files": [
+        {
+          "file": "systemd_247.3-7+rpi1+deb11u6.dsc",
+          "bytes": 5377,
+          "sha256": "c0145d386df2a48c5b79fb28e16f4b0bcdffe73bd028484324b92bd13bce2d8f",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/s/systemd/systemd_247.3-7+rpi1+deb11u6.dsc"
+        },
+        {
+          "file": "systemd_247.3.orig.tar.gz",
+          "bytes": 9895385,
+          "sha256": "2869986e219a8dfc96cc0dffac66e0c13bb70a89e16b85a3948876c146cfa3e0",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/s/systemd/systemd_247.3.orig.tar.gz"
+        },
+        {
+          "file": "systemd_247.3-7+rpi1+deb11u6.debian.tar.xz",
+          "bytes": 200372,
+          "sha256": "358aba6c7608ed98248ac915ca218d95016236f71db81725358fbb9c24d38009",
+          "url": "https://ftp.udx.icscoe.jp/Linux/raspbian/raspbian/pool/main/s/systemd/systemd_247.3-7+rpi1+deb11u6.debian.tar.xz"
+        }
+      ],
+      "archives_local_full_readback": "PASS",
+      "recovery_evidence": {
+        "source_version": "DSC_AND_EXTRACTED_DEBIAN_CHANGELOG_MATCH",
+        "archive_integrity": "DSC_SHA256_SIZE_AND_STANDARD_EXTRACTION_PASS",
+        "signature": "DEVELOPER_SIGNATURE_NOT_INDEPENDENTLY_VERIFIED",
+        "dgit": "6d0e2884472747bc0dc37d653f43c8fb47b36292 raspbian archive/raspbian/247.3-7+rpi1+deb11u6 https://dgit.raspbian.org//systemd.git",
+        "primary_dgit_tag_commit_match": true
+      }
+    }
+  ],
+  "mirror_descriptor_matches": [
+    {
+      "source": "libsdl2",
+      "version": "2.0.14+dfsg2-3+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/libs/libsdl2/libsdl2_2.0.14+dfsg2-3+deb11u1.dsc",
+      "sha256": "bb8f27b879dccc10dd9b13a4b03907d76063ed1a581a26805093e9ad524c37a6",
+      "bytes": 3064,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "libvncserver",
+      "version": "0.9.13+dfsg-2+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/libv/libvncserver/libvncserver_0.9.13+dfsg-2+deb11u1.dsc",
+      "sha256": "0b009ce746ba96170a27d20e670efdf3f7a955acb97035ef982e5150a900b3d9",
+      "bytes": 2358,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "libxslt",
+      "version": "1.1.34-4+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/libx/libxslt/libxslt_1.1.34-4+deb11u1.dsc",
+      "sha256": "0dec0521f4d7cfc08bd61c4d4aa82866881962c12f1429f730830c79c6678e93",
+      "bytes": 2562,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "net-snmp",
+      "version": "5.9+dfsg-4+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/n/net-snmp/net-snmp_5.9+dfsg-4+deb11u1.dsc",
+      "sha256": "88e406faab0274693e443e064208f2e12e8fe99d8ead45170aec3572aff2e64b",
+      "bytes": 2851,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "poppler",
+      "version": "20.09.0-3.1+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/p/poppler/poppler_20.09.0-3.1+deb11u1.dsc",
+      "sha256": "f257d924e41bf7f8122e7ade844b9da40a08701b382c65ae012d70ae141dbb50",
+      "bytes": 3435,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "sudo",
+      "version": "1.9.5p2-3+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/s/sudo/sudo_1.9.5p2-3+deb11u1.dsc",
+      "sha256": "52b792f087d3fc9c65a991b3a58cad82f13816fd0f093a0362eb9a91090ae407",
+      "bytes": 2329,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "udisks2",
+      "version": "2.9.2-2+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/u/udisks2/udisks2_2.9.2-2+deb11u1.dsc",
+      "sha256": "1e6fa8865e001675244e99a484c18dfbcecd71f1288809327fad6892b2987117",
+      "bytes": 3534,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "unzip",
+      "version": "6.0-26+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/u/unzip/unzip_6.0-26+deb11u1.dsc",
+      "sha256": "44f7e29339e16ea91cffc121927ca6a36ce89230fbb1c31c4526ac6cbaa0df8c",
+      "bytes": 1383,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "vim",
+      "version": "2:8.2.2434-3+deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/v/vim/vim_8.2.2434-3+deb11u1.dsc",
+      "sha256": "e95f6b541de36212c380825cf27fae83c6f1dafbf7aa72bb5034d6fda2ac16b4",
+      "bytes": 3055,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    },
+    {
+      "source": "xz-utils",
+      "version": "5.2.5-2.1~deb11u1",
+      "url": "https://mirror.ps.kz/raspbian/raspbian/pool/main/x/xz-utils/xz-utils_5.2.5-2.1~deb11u1.dsc",
+      "sha256": "68a2702d252ab75789130fc9d2f48b9b38fc0181990c42a947b0d923d9d1922a",
+      "bytes": 2681,
+      "scope": "MIRROR_DSC_BYTES_MATCH_DEBIAN_CANDIDATE_PRODUCTION_INPUT_PROVENANCE_STILL_OPEN"
+    }
+  ],
+  "new_files": 11,
+  "new_bytes": 82811701,
+  "missing_packaged_sources_remaining": 5,
+  "debian_candidate_provenance_open": 53,
+  "complete_system_corresponding_source": false,
+  "verification_limits": [
+    "Archive integrity and exact source/version; not binary reproduction, original build inputs, complete dependencies or license clearance",
+    "DSC developer signatures remain independently unverified",
+    "Ten mirror DSC matches retain original Raspbian production input provenance as open"
+  ]
+}

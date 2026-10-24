@@ -1,5 +1,7 @@
 # LogicRF Hawk H102 Kuiper
 
+The [rootfs source inventory](docs/ROOTFS-SOURCES.md) includes four recovered historical package sources: dpkg, Python 3.9, systemd and Qt Base. Five exact packaged source versions and original Raspbian production-input provenance for 53 Debian candidates remain unresolved. The image and complete-system-source status are unchanged.
+
 H102-specific Linux integration, configuration and SD deployment tools for the LogicRF Hawk H102 SDR. The released operating-system baseline is **H102 Kuiper 1.2.0 / 2024.1**, using the 18 March 2025 ADI Kuiper Full userspace image and the pinned H102 kernel/boot inputs.
 
 This repository provides English source and customer documentation. It contains the image integration recipes, H102 kernel patches and software IIO module, system overlays, radio-profile generation requests and tools, SD deployment utilities, optional device-control service source, and C++/Python IIO examples. It is maintained as a **private source distribution**, with component-specific licensing.

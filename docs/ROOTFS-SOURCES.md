@@ -12,13 +12,13 @@ The 2,202 installed binary-package records map to 1,180 source/version pairs:
 | Material | Source/version pairs | Verification |
 |---|---:|---|
 | Matching versions in signed Raspbian/Raspberry Pi indexes | 1,065 | Index signature checked with the installed archive public key; source archives fully reread against SHA-256 |
-| Historical exact-version .dsc records | 53 | Source/version and archive SHA-256 checked; developer signatures not independently verified |
+| Historical exact-version .dsc records | 57 | Source/version and archive SHA-256 checked; developer signatures not independently verified |
 | Exact-version Debian Snapshot candidates | 53 | Source/version and archive hashes checked; original Raspbian source input hashes still needed |
-| Matching source not recovered | 9 | Listed below; no newer version substituted |
+| Matching source not recovered | 5 | Listed below; no newer version substituted |
 
-Across those materials and 20 Python source candidates, 3,545 distinct files
-(5,416,308,124 bytes) were downloaded, retained in compressed form and fully
-reread against SHA-256. All 1,171 collected .dsc source/version identities were
+Across those materials and 20 Python source candidates, 3,556 distinct files
+(5,499,119,825 bytes) were downloaded, retained in compressed form and fully
+reread against SHA-256. All 1,175 collected .dsc source/version identities were
 checked. The archives are held separately for internal source-delivery review;
 this Git repository contains their identities and retrieval URLs, not the full
 archive payloads. All original failed-transfer receipts were retained; one
@@ -30,18 +30,33 @@ for exact filenames, versions, URLs, lengths and hashes. The existing
 and [copyright index](../manifests/h102-kuiper-1.2.0-copyright-index.json) remain
 available. A copyright index is an inventory, not a license grant.
 
+## Recovered historical package sources
+
+The retained Raspbian mirrors provide exact package sources for dpkg
+`1.20.12+rpi1`, Python 3.9 `3.9.2-1+rpi1+deb11u2`, systemd
+`247.3-7+rpi1+deb11u6` and Qt Base `5.15.2+dfsg-9+rpi1+deb11u1`.
+The 11 files total 82,811,701 bytes. DSC Source/Version fields, referenced archive
+sizes and SHA-256 values, standard extraction and the resulting debian/changelog
+versions were checked. Each DSC's Dgit commit also matches the exact-version tag
+in the primary Raspbian Git repository. Developer signatures remain independently
+unverified; mirror HTTPS and matching Git references do not establish binary
+reproducibility or all original build inputs.
+
+The [supplement inventory](../manifests/h102-rootfs-source-supplement-1.2.0.json)
+records these files and ten mirror DSC records that are byte-identical to the
+existing Debian candidates. Those matches add an archival reference, while
+original production-input provenance for all 53 candidates remains open. New
+SHA-addressed cache objects are appended; frozen indexes and previous exports
+retain their original identities.
+
 ## Exact versions still needed
 
 | Source package | Installed source version |
 |---|---|
 | bluej-unbundled | `5.0.3` |
 | chromium-browser | `126.0.6478.164-rpt1` |
-| dpkg | `1.20.12+rpi1` |
 | greenfoot-unbundled | `3.7.0` |
-| python3.9 | `3.9.2-1+rpi1+deb11u2` |
-| qtbase-opensource-src | `5.15.2+dfsg-9+rpi1+deb11u1` |
 | scratch3 | `1.1.0` |
-| systemd | `247.3-7+rpi1+deb11u6` |
 | widevine | `4.10.2252.0+3` |
 
 Matching public archives, project build records and retained inputs are used to
@@ -82,7 +97,7 @@ verified boot software.
 The [manual component review](MANUAL-SOURCES.md) adds 13 retained source trees,
 995 tracked files, 146 build records, installed-file comparisons and eight
 supplementary inputs. Official BlueJ 5.0.3 and Greenfoot 3.7.0 sources are now
-archived, but their unbundled packaging inputs remain unresolved; the nine-package
+archived, but their unbundled packaging inputs remain unresolved; the five-package
 gap count is unchanged. This follow-up preserves all earlier archive counts and
 limits.
 

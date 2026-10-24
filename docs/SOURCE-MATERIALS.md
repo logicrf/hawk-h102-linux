@@ -20,7 +20,7 @@ source-review/
   1.2.0-notices-20261021/H102-Kuiper-1.2.0-installed-copyrights.tar.gz
 ```
 
-The rootfs collection contains 3,545 distinct files totaling 5,416,308,124 bytes;
+The rootfs collection contains 3,556 distinct files totaling 5,499,119,825 bytes;
 eight manual supplements total 113,549,902 bytes. The copyright archive contains
 the exact content of 2,191 indexed installed files, totaling 173,998,822 bytes
 before compression. The archive is 23,776,478 bytes, with SHA-256
@@ -28,6 +28,8 @@ before compression. The archive is 23,776,478 bytes, with SHA-256
 Indexed symlink contents are archived as regular files under their package-doc
 names. This makes those notices retrievable; it does not establish complete
 bundled-dependency coverage or complete system license review.
+
+The SHA-addressed cache also needs the 11 objects in the [historical source supplement](../manifests/h102-rootfs-source-supplement-1.2.0.json) when exporting with the current inventory. Append these objects without replacing frozen indexes or previous exports. A current inventory does not establish that an older delivery already included the supplement.
 
 ## Verify and export
 
@@ -82,7 +84,7 @@ binaries or change the H102. Keep component copyright, license and patch notices
 ## Availability limits
 
 The tool exports all available indexed materials without network or device
-access and never executes archives. Nine exact packaged source records and
+access and never executes archives. Five exact packaged source records and
 further dependency inputs remain unresolved. Debian candidates retain their
 original Raspbian provenance limitation. Remaining materials are assembled from
 public project sources, existing recipes and component licenses; an ADI response

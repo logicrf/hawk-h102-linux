@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 3874,
-      "sha256": "b44e964f41d6d8068ab10342a223d115396a87e20bb991adb5814fccde962990"
+      "bytes": 4209,
+      "sha256": "636528052f0847b17296ac1776cafb5f23652de50cf165e1a02ed79b0c7eaecb"
     },
     "SOURCE-BASE.json": {
       "bytes": 824,
-      "sha256": "0dccbcb7d3a4bf50c0cd72767c37e799915749da7dc11177c4aa0e6094c0b89b"
+      "sha256": "dcf9ad90ddcf7c8af28801e0877f2abfd8a9661a1e016df0344154464f7d8edc"
     },
     "SOURCE-MAP.json": {
-      "bytes": 86344,
-      "sha256": "45324efc7d718da58b1e6e4f5439e8b8b7c9b8f41f9042d387885074872061c3"
+      "bytes": 87186,
+      "sha256": "c7ce9070a46316b144f6ffe10d96aadf396afd7650a7d8cc603a79302f3ce69c"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -199,20 +199,20 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/ROOTFS-SOURCES.md": {
-      "bytes": 5027,
-      "sha256": "91cb57f2fd73a5ca164e306f9def948e660837132d72a1167442263f73b5a6cf"
+      "bytes": 5978,
+      "sha256": "3c8dec373ccaec6781d778bff36c371bcba9160561ecbc3b74c7064ec3d0dd90"
     },
     "docs/SOURCE-AVAILABILITY.md": {
       "bytes": 3299,
-      "sha256": "ca8c80df963dfb5bc6916a70ff564f5993b27c392943a4e2a798b7f794204b44"
+      "sha256": "475668cbed77d589aacb0789951f49f9c9ab1fd50cdf8665770494b357403052"
     },
     "docs/SOURCE-CORRESPONDENCE.md": {
       "bytes": 5251,
       "sha256": "674451cee08eaa0b47f730b15fb205666e8dca5d0ffa8871ba189b6949c0665f"
     },
     "docs/SOURCE-MATERIALS.md": {
-      "bytes": 4626,
-      "sha256": "33cd217024444fd2641a6326cfe4701e024c69ef394edaea2f005d0289cd2396"
+      "bytes": 4983,
+      "sha256": "cb60d23c759f38c97f0527647101d1b47c740bd2978fe19a2056715aa7af2a24"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
@@ -315,8 +315,12 @@
       "sha256": "a7c61290be3e02f715861944c4cb8e4f2845d0dbb58e92b47f96b808c0b32742"
     },
     "manifests/h102-rootfs-source-availability-1.2.0.json": {
-      "bytes": 1678762,
-      "sha256": "119198453686a5d316f2f49b4b26b12b10c7b37d9314f37f786d99023820cd19"
+      "bytes": 1688522,
+      "sha256": "b4147f4b23ff3d42fd2f0cbd2a42f0aaedf9d53b40cd425e5fe960507afbdf11"
+    },
+    "manifests/h102-rootfs-source-supplement-1.2.0.json": {
+      "bytes": 15229,
+      "sha256": "96ddbb6421b389c4db3b3fb4cb6ca072a4dd1118b235e29379502d7cbb3c1320"
     },
     "manifests/h102-sdk1-calfix1-candidate.json": {
       "bytes": 1663,

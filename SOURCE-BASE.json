@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "logicrf/hawk-h102-linux",
-  "development_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
+  "development_commit": "70186f6160d734314404cab271f2c0d5765f8ae7",
   "delivery_branch": "github-en",
   "language": "English",
   "status": "READY_PRIVATE_INTEGRATION_TOOLKIT",
@@ -11,7 +11,7 @@
   "source_notice": "English H102 downstream integration source and tools; original image reconstruction and vendor payloads require separately pinned inputs",
   "includes_integration_source": true,
   "complete_system_corresponding_source": false,
-  "source_package_version": "1.2.0-source-r11",
+  "source_package_version": "1.2.0-source-r12",
   "remote_verification": "Recorded in the separate publication receipt after push",
   "image_release_tag": "h102-kuiper-1.2.0-image",
   "device_service_release_tag": "h102-board-services-1.0.0-en-r1"
