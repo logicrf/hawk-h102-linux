@@ -35,6 +35,8 @@ MANIFEST_NAMES = (
     'h102-manual-source-provenance-1.2.0.json',
     'h102-copyright-materials-1.2.0.json',
     'h102-kuiper-1.2.0-copyright-index.json',
+    'h102-rootfs-source-supplement-1.2.0.json',
+    'h102-package-provenance-review-1.2.0.json',
 )
 """Fixed input documents copied into each export with their exact file hashes."""
 

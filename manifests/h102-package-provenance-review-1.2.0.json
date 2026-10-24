@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "date": "2026-10-24",
+  "version": "H102-1.2.0-package-provenance-r1",
+  "status": "PASS_SCOPED_PROVENANCE_REVIEW_GAPS_RETAINED",
+  "baseline_chinese_commit": "b356740707d5f00dcf824760b6130f490a7a6114",
+  "signed_binary_index": {
+    "inrelease_url": "https://archive.raspberrypi.com/debian/dists/bullseye/InRelease",
+    "inrelease_sha256": "4d1d3ae48e5f4dc1fc441463edb3bdf5d2ed92319dcd7962b1fbe55f857d92ae",
+    "packages_url": "https://archive.raspberrypi.com/debian/dists/bullseye/main/binary-armhf/Packages.gz",
+    "packages_sha256": "0e1820f9a18f7390c66adf9cc2d6a7a151234346dede69499243a86bce359ef4",
+    "key_url": "https://archive.raspberrypi.com/debian/raspberrypi.gpg.key",
+    "key_sha256": "76603890d82a492175caf17aba68dc73acb1189c9fd58ec0c19145dfa3866d56",
+    "key_fingerprint": "CF8A1AF502A2AA2D763BAE7E82B129927FA3303E",
+    "signature_and_index_digest": "PASS",
+    "key_trust": "Current public key obtained from the official HTTPS endpoint; not an original image-key rotation proof",
+    "records": [
+      {
+        "Package": "bluej-unbundled",
+        "Version": "5.0.3",
+        "Source": null,
+        "Filename": "pool/main/b/bluej-unbundled/bluej-unbundled_5.0.3_all.deb",
+        "SHA256": "719094522c63912d972eb4c2cdbc644865061693dba395ede3830613769e1337",
+        "Size": "13665056",
+        "Homepage": null
+      },
+      {
+        "Package": "chromium-browser",
+        "Version": "126.0.6478.164-rpt1",
+        "Source": null,
+        "Filename": "pool/main/c/chromium-browser/chromium-browser_126.0.6478.164-rpt1_armhf.deb",
+        "SHA256": "b54ae9be3bd2b53f8a768e3cc1b648d5aa00a1cc281ca38dc0da085d958f3f5d",
+        "Size": "115600364",
+        "Homepage": "https://chromium.googlesource.com/chromium/src/"
+      },
+      {
+        "Package": "greenfoot-unbundled",
+        "Version": "3.7.0",
+        "Source": null,
+        "Filename": "pool/main/g/greenfoot-unbundled/greenfoot-unbundled_3.7.0_all.deb",
+        "SHA256": "8e3920cb9af7db42ac897e2fba4446a5dcbf7d57579bd16473a0ef76d1b2b09e",
+        "Size": "13258384",
+        "Homepage": null
+      },
+      {
+        "Package": "libwidevinecdm0",
+        "Version": "4.10.2252.0+3",
+        "Source": "widevine",
+        "Filename": "pool/main/w/widevine/libwidevinecdm0_4.10.2252.0+3_armhf.deb",
+        "SHA256": "5b1199bcd3471d126098be42ca0af0e486302df94cdf4643e4fe2a86d4c4c7d1",
+        "Size": "5990532",
+        "Homepage": "https://www.widevine.com/"
+      },
+      {
+        "Package": "scratch3",
+        "Version": "1.1.0",
+        "Source": null,
+        "Filename": "pool/main/s/scratch3/scratch3_1.1.0_armhf.deb",
+        "SHA256": "2b891fa9f0315a4dcb17f27e1f9300a2cef5a6a9291527bc77e11c8836f0e196",
+        "Size": "122483464",
+        "Homepage": null
+      }
+    ]
+  },
+  "upstream_packaging": [
+    {
+      "source": "bluej-unbundled",
+      "source_zip": "BlueJ-source-503.zip",
+      "control_member": "package/debianfiles/DEBIAN/control",
+      "control_template": "Package: bluej-unbundled\nPriority: extra\nSection: Programming\nInstalled-Size: 21648\nMaintainer: BlueJ Team <bluej-support@bluej.org>\nArchitecture: all\nReplaces: bluej (<< 5.0.0)\nBreaks: bluej (<< 5.0.0)\nVersion: VERSION\nDepends: openjdk-11-jdk (>= 11), openjfx (>= 11)\nDescription: A simple but powerful Java IDE.\n  Go to <bluej.org> for more details.\n",
+      "script_matches": [
+        {
+          "source_member": "package/debianfiles/DEBIAN/postinst",
+          "binary_control": "postinst",
+          "source_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "binary_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "equal": true
+        },
+        {
+          "source_member": "package/debianfiles/DEBIAN/postrm",
+          "binary_control": "postrm",
+          "source_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "binary_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "equal": true
+        }
+      ],
+      "payload_matches": [
+        {
+          "source_member": "package/debianfiles/bluej",
+          "binary_member": "./usr/bin/bluej",
+          "equal": false,
+          "source_sha256": "72ed475d8682f6e41c13f292354f7d5099f93f1b75d9fba0fb0b31ea6a5f8389",
+          "binary_sha256": "783db954e9cb3130d10b50c7356f559206c2de358840b064e88bae4f81380fc9"
+        },
+        {
+          "source_member": "doc/LICENSE.txt",
+          "binary_member": "./usr/share/doc/BlueJ/LICENSE.txt",
+          "equal": true,
+          "source_sha256": "8f7cbf291d1f2a44a6b9b513ed8e8658af397d986e94d639dcd7c5749ccbece0",
+          "binary_sha256": "8f7cbf291d1f2a44a6b9b513ed8e8658af397d986e94d639dcd7c5749ccbece0"
+        }
+      ],
+      "control_diff": "--- upstream-control-version-substituted\n+++ official-binary-control\n@@ -7,6 +7,6 @@\n Replaces: bluej (<< 5.0.0)\n Breaks: bluej (<< 5.0.0)\n Version: 5.0.3\n-Depends: openjdk-11-jdk (>= 11), openjfx (>= 11)\n+Depends: openjdk-11-jdk (>= 11) | openjdk-17-jdk (>= 17), openjfx (>= 11)\n Description: A simple but powerful Java IDE.\n   Go to <bluej.org> for more details.\n",
+      "scope": "UPSTREAM_PACKAGING_PRESENT_WITH_IDENTIFIED_DISTRIBUTION_METADATA_CHANGE_ORIGINAL_BUILD_INPUTS_OPEN"
+    },
+    {
+      "source": "greenfoot-unbundled",
+      "source_zip": "Greenfoot-source-370.zip",
+      "control_member": "bluej/package/gfdebianfiles/DEBIAN/control",
+      "control_template": "Package: greenfoot-unbundled\nPriority: extra\nSection: Programming\nInstalled-Size: 25700\nMaintainer: Greenfoot Team <support@greenfoot.org>\nArchitecture: all\nReplaces: greenfoot (<< 3.6.0)\nBreaks: greenfoot (<< 3.6.0)\nVersion: VERSION\nDepends: openjdk-11-jdk (>= 11), openjfx (>= 11)\nDescription: A simple but powerful Java IDE.\n  Go to <greenfoot.org> for more details.\n",
+      "script_matches": [
+        {
+          "source_member": "bluej/package/gfdebianfiles/DEBIAN/postinst",
+          "binary_control": "postinst",
+          "source_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "binary_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "equal": true
+        },
+        {
+          "source_member": "bluej/package/gfdebianfiles/DEBIAN/postrm",
+          "binary_control": "postrm",
+          "source_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "binary_sha256": "892d2987109539368caf595938afec171b33088479d0eb49de90ffb56773d101",
+          "equal": true
+        }
+      ],
+      "payload_matches": [
+        {
+          "source_member": "bluej/package/gfdebianfiles/greenfoot",
+          "binary_member": "./usr/bin/greenfoot",
+          "equal": false,
+          "source_sha256": "f99e42991669912e6f847e5ed5b2f51dd32383113bea7266782b9076f94f1cec",
+          "binary_sha256": "a14da86e2bfc3c2e7a102765df57874ab52dcbcdeb2dc6bec1b30f06a5519a52"
+        },
+        {
+          "source_member": "greenfoot/doc/GREENFOOT_LICENSES.txt",
+          "binary_member": "./usr/share/doc/Greenfoot/GREENFOOT_LICENSES.txt",
+          "equal": true,
+          "source_sha256": "86648bcc4de75dfeebe977a9b34de77d55296af167c20874864902efe69e7bc4",
+          "binary_sha256": "86648bcc4de75dfeebe977a9b34de77d55296af167c20874864902efe69e7bc4"
+        },
+        {
+          "source_member": "greenfoot/doc/LICENSE.txt",
+          "binary_member": "./usr/share/doc/Greenfoot/LICENSE.txt",
+          "equal": true,
+          "source_sha256": "ef07b500a2667f14e2d381ebf7606c1c042f9ffaf934dbc870b9b78e39f3cee6",
+          "binary_sha256": "ef07b500a2667f14e2d381ebf7606c1c042f9ffaf934dbc870b9b78e39f3cee6"
+        }
+      ],
+      "control_diff": "--- upstream-control-version-substituted\n+++ official-binary-control\n@@ -7,6 +7,6 @@\n Replaces: greenfoot (<< 3.6.0)\n Breaks: greenfoot (<< 3.6.0)\n Version: 3.7.0\n-Depends: openjdk-11-jdk (>= 11), openjfx (>= 11)\n+Depends: openjdk-11-jdk (>= 11) | openjdk-17-jdk (>= 17), openjfx (>= 11)\n Description: A simple but powerful Java IDE.\n   Go to <greenfoot.org> for more details.\n",
+      "scope": "UPSTREAM_PACKAGING_PRESENT_WITH_IDENTIFIED_DISTRIBUTION_METADATA_CHANGE_ORIGINAL_BUILD_INPUTS_OPEN"
+    }
+  ],
+  "official_archive_directory_scope": {
+    "bluej-unbundled": "Exact binary exists; directory does not list a DSC or source archive",
+    "greenfoot-unbundled": "Exact binary exists; directory does not list a DSC or source archive",
+    "scratch3": "Exact 1.1.0 binary exists; listed source archives are older versions, not substituted",
+    "chromium-browser": "Exact 126.0.6478.164-rpt1 binary exists; no matching DSC or source archives listed",
+    "widevine": "Exact +3 binary exists; listed +5 source is a different package version, not substituted"
+  },
+  "dgit_candidate_review": {
+    "sources": 53,
+    "exact_archive_tags_found": 0,
+    "repositories_missing": 47,
+    "repositories_present_without_exact_tag": 6,
+    "scope": "Exact-version refs only, not a claim that no source exists elsewhere"
+  },
+  "widevine": {
+    "binary_sha256": "5b1199bcd3471d126098be42ca0af0e486302df94cdf4643e4fe2a86d4c4c7d1",
+    "binary_description": "Widevine is a proprietary digital rights management (DRM) technology",
+    "data_members": 3,
+    "separate_license_or_copyright_named_member_in_exact_deb": false,
+    "reference": "https://developers.google.com/widevine/drm/overview",
+    "chromium_reference": "https://chromium.googlesource.com/chromium/src/third_party/+/master/widevine/LICENSE",
+    "scope": "Upstream references are not a recovered license for this exact installed binary; original component distribution terms remain open"
+  },
+  "missing_packaged_sources": 5,
+  "candidate_original_raspbian_provenance_open": 53,
+  "complete_system_corresponding_source": false,
+  "runtime_or_image_changes": false,
+  "observed_patches": [
+    {
+      "source": "bluej-unbundled",
+      "files": 2,
+      "dry_run_and_application": "PASS",
+      "byte_match_after_control_version_substitution": "PASS",
+      "patch_sha256": "c864d270b0a4667bd1f057cf7bf447664f48b671fa632a42231fb2512f220cf0",
+      "provenance": "OBSERVED_DIFFERENCE_RECONSTRUCTION_NOT_ORIGINAL_BUILD_PATCH"
+    },
+    {
+      "source": "greenfoot-unbundled",
+      "files": 2,
+      "dry_run_and_application": "PASS",
+      "byte_match_after_control_version_substitution": "PASS",
+      "patch_sha256": "cae4992642cc6010448a881f74305260f144566c52242e7c7221ba379f5decd4",
+      "provenance": "OBSERVED_DIFFERENCE_RECONSTRUCTION_NOT_ORIGINAL_BUILD_PATCH"
+    }
+  ]
+}

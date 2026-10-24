@@ -97,9 +97,10 @@ verified boot software.
 The [manual component review](MANUAL-SOURCES.md) adds 13 retained source trees,
 995 tracked files, 146 build records, installed-file comparisons and eight
 supplementary inputs. Official BlueJ 5.0.3 and Greenfoot 3.7.0 sources are now
-archived, but their unbundled packaging inputs remain unresolved; the five-package
-gap count is unchanged. This follow-up preserves all earlier archive counts and
-limits.
+archived with unbundled recipes. Four maintainer scripts match the exact official
+binaries; Java 17 control and launcher differences are documented as observed
+patches. Original distribution build inputs remain open and the five-package
+list is unchanged. See [package provenance](PACKAGE-PROVENANCE.md).
 
 ## Export the collected materials
 

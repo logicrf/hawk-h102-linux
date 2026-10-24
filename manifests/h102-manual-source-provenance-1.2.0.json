@@ -379,7 +379,7 @@
     "scope": "Release label, date and component recipe match. No original generator job receipt; this is not proof of the precise image-generation checkout."
   },
   "open_items": [
-    "Nine exact packaged source/version records remain unresolved; BlueJ and Greenfoot upstream source alone does not recover Raspberry Pi unbundled packaging.",
+    "Five exact packaged source/version records remain unresolved. BlueJ and Greenfoot upstream ZIPs include unbundled recipes; Java17 control/launcher differences are now documented, while original distribution build inputs remain open.",
     "Original Raspbian source hashes/build provenance for 53 exact Debian-version candidates.",
     "Scopy armhf AppImage build inputs and bundled third-party sources, gr-iio/gr-m2k deleted source checkouts, other native/manual dependencies.",
     "Original wheel/native build inputs for the remaining Python packages and gtkdatabox.",
@@ -391,5 +391,7 @@
     "date_text": "18Sep2028",
     "status": "ORIGINAL_SHIPPED_WRITTEN_OFFER_OBSERVED; NOT_CONTACTED_OR_FULFILLED",
     "scope": "The product-name field in the original template is empty. An inquiry must identify the precise image filename and hash. No assumption that this is LogicRF own offer or covers downstream additions."
-  }
+  },
+  "package_provenance_review": "h102-package-provenance-review-1.2.0.json",
+  "current_status_date": "2026-10-24"
 }

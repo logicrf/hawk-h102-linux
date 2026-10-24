@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "date": "2026-10-24",
-  "version": "H102-1.2.0-rootfs-source-materials-r2",
+  "version": "H102-1.2.0-rootfs-source-materials-r3",
   "status": "PASS_COLLECTED_ARCHIVE_INTEGRITY_SYSTEM_SOURCE_HANDOFF_OPEN",
   "image_raw_sha256": "22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d",
   "installed_binary_packages": 2202,
@@ -2084,8 +2084,14 @@
         "url": "https://www.bluej.org/download/files/source/BlueJ-source-503.zip",
         "bytes": 19835056,
         "sha256": "7ff7f0a335c2c4613b2b94b5c7534422f15564751f57ed0e2c0b56441ce08cd2",
-        "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+        "scope": "EXACT_UPSTREAM_SOURCE_WITH_UNBUNDLED_RECIPE; official binary has Java17 dependency and launcher differences; original build inputs remain open",
         "zip_crc": "PASS"
+      },
+      "packaging_review": {
+        "manifest": "h102-package-provenance-review-1.2.0.json",
+        "maintainer_scripts": "4 total byte-identical across both packages",
+        "control_and_launcher_delta": "Java17 support observed; reconstructed patches validated against exact official binary metadata",
+        "closure": "OPEN_ORIGINAL_BUILD_INPUT_CHAIN_AND_DEPENDENCIES"
       }
     },
     {
@@ -9764,8 +9770,14 @@
         "url": "https://www.greenfoot.org/download/files/source/Greenfoot-source-370.zip",
         "bytes": 27584682,
         "sha256": "b736eccf14eb3452e6b3e7d41992be11f58e6ddc5962b85fddcbbc889339cda4",
-        "scope": "EXACT_UPSTREAM_VERSION_ONLY; Raspberry Pi unbundled packaging inputs not recovered",
+        "scope": "EXACT_UPSTREAM_SOURCE_WITH_UNBUNDLED_RECIPE; official binary has Java17 dependency and launcher differences; original build inputs remain open",
         "zip_crc": "PASS"
+      },
+      "packaging_review": {
+        "manifest": "h102-package-provenance-review-1.2.0.json",
+        "maintainer_scripts": "4 total byte-identical across both packages",
+        "control_and_launcher_delta": "Java17 support observed; reconstructed patches validated against exact official binary metadata",
+        "closure": "OPEN_ORIGINAL_BUILD_INPUT_CHAIN_AND_DEPENDENCIES"
       }
     },
     {
@@ -41004,7 +41016,12 @@
       ],
       "provenance": "MATCHING_SOURCE_NOT_RECOVERED",
       "files": [],
-      "archives_local_full_readback": "NOT_AVAILABLE"
+      "archives_local_full_readback": "NOT_AVAILABLE",
+      "packaging_review": {
+        "manifest": "h102-package-provenance-review-1.2.0.json",
+        "kind": "PROPRIETARY_COMPONENT_TERMS_SEPARATE_FROM_OPEN_SOURCE_RECOVERY",
+        "closure": "OPEN_EXACT_PACKAGE_INPUTS_AND_DISTRIBUTION_TERMS"
+      }
     },
     {
       "source": "wildmidi",

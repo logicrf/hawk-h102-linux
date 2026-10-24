@@ -65,7 +65,7 @@ whole operation finishes.
 | candidates/python/name/version/ | 20 PyPI source candidates; original wheel inputs are not established |
 | manual/ | Supplements including the 13 retained source trees, fixed adidt input and libm2k material; consult individual provenance records |
 | notices/ | Archive matching the 2,191-path installed copyright index |
-| manifests/ | Four exact input manifests used for the export |
+| manifests/ | Six input manifests, including historical-source and package-provenance supplements |
 | SOURCE-MATERIALS.json | Output paths, hashes, provenance and remaining gaps; complete_system_corresponding_source remains false |
 | SHA256SUMS | Independent checksum entry point for materials and metadata |
 
@@ -80,6 +80,8 @@ dpkg-source --no-check -x rootfs/a52dec/0.7.4-20/a52dec_0.7.4-20.dsc /path/to/ne
 file. Historical developer signatures remain independently unverified where
 recorded. Successful extraction does not establish reproducible installed
 binaries or change the H102. Keep component copyright, license and patch notices.
+
+The export includes all six inventories used by the current review. Observed-difference patches remain in the matching source repository under docs/source-review; they are not original distribution patches. Previous exports using four inventories retain their original identities.
 
 ## Availability limits
 

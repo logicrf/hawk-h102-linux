@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 4209,
-      "sha256": "636528052f0847b17296ac1776cafb5f23652de50cf165e1a02ed79b0c7eaecb"
+      "bytes": 4513,
+      "sha256": "fd0e3873075be71a0684e69bae01d177ff829499b422cecba1d12afd9ec015a0"
     },
     "SOURCE-BASE.json": {
       "bytes": 824,
-      "sha256": "dcf9ad90ddcf7c8af28801e0877f2abfd8a9661a1e016df0344154464f7d8edc"
+      "sha256": "d9df9fd7937ad64da83edaad1910225fbd1f9b01957ad229105065d455e209fa"
     },
     "SOURCE-MAP.json": {
-      "bytes": 87186,
-      "sha256": "c7ce9070a46316b144f6ffe10d96aadf396afd7650a7d8cc603a79302f3ce69c"
+      "bytes": 89801,
+      "sha256": "1966a431f2a6f6c8b518193c6da33a62429f2b5f3f9e8e99ea161e984d6682c8"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -187,8 +187,12 @@
       "sha256": "ddc146c1fcd42a94e4a800113cf2f9bfdf53aecb438fa07e83c0909e6b37b9e2"
     },
     "docs/MANUAL-SOURCES.md": {
-      "bytes": 5341,
-      "sha256": "2e261851064dcecc141b692bbfcc1f22b4339746db9a9bf6f7ec1f80a99388f2"
+      "bytes": 5590,
+      "sha256": "7fea26ca5b1a9effa0ab6047ca5b4346516ff4c9c24abe0c88b1dbd5fd35057d"
+    },
+    "docs/PACKAGE-PROVENANCE.md": {
+      "bytes": 5495,
+      "sha256": "addcc5d6be9a8e178b7e5901ab009058b1ea861f269ad0d68982947d82ac7382"
     },
     "docs/PROFILE-GENERATION.md": {
       "bytes": 4214,
@@ -199,24 +203,32 @@
       "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
     },
     "docs/ROOTFS-SOURCES.md": {
-      "bytes": 5978,
-      "sha256": "3c8dec373ccaec6781d778bff36c371bcba9160561ecbc3b74c7064ec3d0dd90"
+      "bytes": 6112,
+      "sha256": "a05bef9239ae2a26ea5266d294ce201ee8b5c87c00148a67cf87437f614d596b"
     },
     "docs/SOURCE-AVAILABILITY.md": {
-      "bytes": 3299,
-      "sha256": "475668cbed77d589aacb0789951f49f9c9ab1fd50cdf8665770494b357403052"
+      "bytes": 3347,
+      "sha256": "26495389aaa2bc854107a4271affbca51d32f0c5a95ecb0b389b181f77b4de36"
     },
     "docs/SOURCE-CORRESPONDENCE.md": {
       "bytes": 5251,
       "sha256": "674451cee08eaa0b47f730b15fb205666e8dca5d0ffa8871ba189b6949c0665f"
     },
     "docs/SOURCE-MATERIALS.md": {
-      "bytes": 4983,
-      "sha256": "cb60d23c759f38c97f0527647101d1b47c740bd2978fe19a2056715aa7af2a24"
+      "bytes": 5302,
+      "sha256": "0e40e0058d8eee672698b34e218513ccb5e03ab33585c6b02a431e92879c0770"
     },
     "docs/VALIDATION.md": {
       "bytes": 1938,
       "sha256": "7fc4a192d0e270b21cab9160f29260777a577103ddbe6fbddb4d4d844961ab1f"
+    },
+    "docs/source-review/bluej-java17-observed.patch": {
+      "bytes": 787,
+      "sha256": "c864d270b0a4667bd1f057cf7bf447664f48b671fa632a42231fb2512f220cf0"
+    },
+    "docs/source-review/greenfoot-java17-observed.patch": {
+      "bytes": 819,
+      "sha256": "cae4992642cc6010448a881f74305260f144566c52242e7c7221ba379f5decd4"
     },
     "examples/iio/README.md": {
       "bytes": 3162,
@@ -299,8 +311,12 @@
       "sha256": "7f0f5abb8e886fe17cd61bfc90e9aa397ca94b6c6a788f3c4e4e8331f3dc3bed"
     },
     "manifests/h102-manual-source-provenance-1.2.0.json": {
-      "bytes": 17229,
-      "sha256": "cabb14000ae75e6d006dd50234e9edd1b4895561753e5320dfb7c6f36a0c699c"
+      "bytes": 17422,
+      "sha256": "070973bda6210fc68e1cc1401b6e740a121777abf4cc650991517b78d6533b9f"
+    },
+    "manifests/h102-package-provenance-review-1.2.0.json": {
+      "bytes": 10625,
+      "sha256": "a92c6764b7bf57f22f5eafdf31ea4ab5805aed78e45f7a5ed8638eed5fe989f7"
     },
     "manifests/h102-portable-host-pins.json": {
       "bytes": 1309,
@@ -315,8 +331,8 @@
       "sha256": "a7c61290be3e02f715861944c4cb8e4f2845d0dbb58e92b47f96b808c0b32742"
     },
     "manifests/h102-rootfs-source-availability-1.2.0.json": {
-      "bytes": 1688522,
-      "sha256": "b4147f4b23ff3d42fd2f0cbd2a42f0aaedf9d53b40cd425e5fe960507afbdf11"
+      "bytes": 1689668,
+      "sha256": "08dccec844cf6285a7959206ea777a0a020edada73eb66cf3ab23f20de5cbd7e"
     },
     "manifests/h102-rootfs-source-supplement-1.2.0.json": {
       "bytes": 15229,
@@ -535,8 +551,8 @@
       "sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04"
     },
     "scripts/h102_export_source_materials.py": {
-      "bytes": 11619,
-      "sha256": "feb38482cff33eab7ee23fbf9d0acb4f35f8f507a98def252a7c0ce98b3dfb59"
+      "bytes": 11716,
+      "sha256": "373a8851164574a71251f7bf357bc63b92d53577e5375fcd6d0d2a02eda688c8"
     },
     "scripts/h102_gnss_uart_baseline.py": {
       "bytes": 4727,

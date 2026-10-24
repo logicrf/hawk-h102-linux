@@ -57,12 +57,11 @@ therefore remains unconfirmed.
 ## Additional candidates and remaining gaps
 
 Official BlueJ 5.0.3 and Greenfoot 3.7.0 source ZIPs were retrieved and passed CRC
-checks. Their Raspberry Pi unbundled packaging inputs remain missing, so the
-count of nine unresolved exact packaged source versions is unchanged. The
+checks. The ZIPs include unbundled recipes. Comparison with the exact official binaries identifies Java 17 control/launcher changes, while original distribution build inputs remain open. The [four recovered source packages](ROOTFS-SOURCES.md) reduced the earlier nine open records to five; this review does not reduce that count further. See [package provenance](PACKAGE-PROVENANCE.md). The
 historical recipe's gtkdatabox 1.0.0 URL supplied a verified source archive; its
 original download hash and binary build provenance remain unconfirmed. Eight
 supplementary inputs total 113,549,902 bytes, all read back with SHA-256. The
-previous 3,545 rootfs archive objects remain unchanged.
+original batch of 3,545 rootfs archive objects remain unchanged.
 
 The Scopy armhf AppImage build and bundled third-party inputs, deleted gr-iio and
 gr-m2k checkout identities, and other Python/native build dependencies remain
