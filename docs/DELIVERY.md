@@ -1,17 +1,19 @@
 # Hawk H102 downloads and setup order
 
-Use the matching components below when provisioning a new H102. All linked repositories and releases currently require private repository access. The base image and device services are separate downloads.
+Use the matching components below when provisioning a new H102. All linked repositories and releases currently require private repository access. The base image and device services are separate downloads. The listed current components are stable releases with their own verification scope.
 
 ## Downloads
 
 | Component | Version | Download and purpose |
 |---|---|---|
 | Bootable SD image | H102 Kuiper 1.2.0 / 2024.1 | [Image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image); download all three parts and reassemble the XZ |
+| SD deployment tools | 1.2.0-en-r2 | [Deployment-tool release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2); image writing, identity checks and complete readback |
 | Device services | 1.0.0-en-r1 | [Service release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1); API36/cap3 plus network-performance 1.0.0 |
-| Standalone IIO GUI | 0.8.0-source-en-r2 | [GUI source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r2); bilingual desktop configuration, plots, IQ recording and supported TX |
-| GNU Radio module | gr-logicrf 1.2.2rc2 English source | [Module source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2-rc2); native GRC examples, FM, IQ and time-domain applications |
+| Standalone IIO GUI | 0.8.0-source-en-r3 | [GUI source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r3); bilingual desktop configuration, plots, IQ recording and supported TX |
+| GNU Radio module | gr-logicrf 1.2.2 English source | [Module source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2); native GRC examples, FM, IQ and time-domain applications |
+| Optional USB host tools | 1.0.0-r2 | [USB host-tool source release](https://github.com/logicrf/gr-logicrf/releases/tag/h102-usb-host-tools-1.0.0-r2); administrator preparation, activation and rollback |
 
-Exact filenames, sizes and SHA-256 values are in [the delivery manifest](../manifests/h102-customer-delivery-20261020.json). Source-delivery versions do not identify new firmware or extend earlier hardware tests. The Linux repository is an integration toolkit, not a complete standalone corresponding-source set for every system/vendor component.
+Exact filenames, sizes and SHA-256 values are in [the delivery manifest](../manifests/h102-companion-delivery-20261026.json). Source-delivery versions do not identify new firmware or extend earlier hardware tests. The Linux repository is an integration toolkit, not a complete standalone corresponding-source set for every system/vendor component.
 
 ## 1. Prepare a new SD card
 
@@ -27,11 +29,11 @@ The base image alone does not include these later IP-only services. The staged-f
 
 ## 3. Install the host application
 
-For the IIO GUI, follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.0-source-en-r2/docs/INSTALL.md). English is the first-launch default; Simplified Chinese and saved user preferences are retained.
+For the IIO GUI, follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.0-source-en-r3/docs/INSTALL.md). English is the first-launch default; Simplified Chinese and saved user preferences are retained.
 
-For GNU Radio, install the documented GNU Radio 3.10.12.0 environment and follow [module installation](https://github.com/logicrf/gr-logicrf/blob/v1.2.2-rc2/docs/INSTALL.md). Open the supplied editable `.grc` examples in Companion.
+For GNU Radio, install the documented GNU Radio 3.10.12.0 environment and follow [module installation](https://github.com/logicrf/gr-logicrf/blob/v1.2.2/docs/INSTALL.md). Open the supplied editable `.grc` examples in Companion.
 
-After administrator setup, ordinary applications connect using the H102 IP only. Linux credentials are not requested for ordinary device-control sessions. Use 8 MSPS / 4 MHz and RX1 as a practical initial GUI receive configuration, then verify actual configuration readback.
+After administrator setup, ordinary applications connect using the H102 IP only. Linux credentials are not requested for ordinary device-control sessions. Use 8 MSPS / 4 MHz and RX1 as a practical initial GUI receive configuration, then verify actual configuration readback. After changing a profile, verify RX and TX carrier settings as well as sample rate and bandwidth; reselecting a profile does not restore every earlier custom RF setting.
 
 ## 4. Check the new device
 

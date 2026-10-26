@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "product": "LogicRF Hawk H102",
+  "visibility": "private_by_default",
+  "base_image": {
+    "version": "1.2.0",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image",
+    "filename": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz",
+    "bytes": 2759144392,
+    "sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+    "download_parts": 3,
+    "github_prerelease": false
+  },
+  "device_services": {
+    "version": "1.0.0-en-r1",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1",
+    "filename": "H102-Board-Services-1.0.0-en-r1.zip",
+    "bytes": 1662098,
+    "sha256": "56e192dc8e79aa2e81478d7d01ae1cf1ce922d5dacb73c6fe1457d8dfa49f013",
+    "api": "0.1.0-ip36",
+    "sdk_files": 108,
+    "capability": 3,
+    "github_prerelease": false
+  },
+  "gui": {
+    "version": "0.8.0-source-en-r3",
+    "source_commit": "a8d6f0606fee0fa27dea6118f1afd32fb6eb4f94",
+    "release_url": "https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r3",
+    "filename": "hawk-h102-iio-gui-0.8.0-source-en-r3.zip",
+    "bytes": 197869,
+    "sha256": "0e3fb241803594caf7914a36578b3bc8dd8ae815cad9e9b31460392e278c0498",
+    "default_language": "en",
+    "supported_languages": [
+      "en",
+      "zh_CN"
+    ],
+    "github_prerelease": false,
+    "assets": [
+      {
+        "name": "hawk-h102-iio-gui-0.8.0-source-en-r3.zip",
+        "bytes": 197869,
+        "sha256": "0e3fb241803594caf7914a36578b3bc8dd8ae815cad9e9b31460392e278c0498"
+      },
+      {
+        "name": "SHA256SUMS",
+        "bytes": 107,
+        "sha256": "4eddd47a989d325bdc2c94497a2be3e76af486ae8cdccebc320360ee0755b871"
+      }
+    ]
+  },
+  "gnu_radio": {
+    "version": "1.2.2",
+    "source_commit": "bc434ea08fef82ca96c3075b6d24134cdb459104",
+    "release_url": "https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2",
+    "bytes": 605865,
+    "sha256": "d24271ccf031110416a738a4c2dcb2f2bddd19c6552381ea2f030cb64387901c",
+    "filename": "gr-logicrf-1.2.2-source.zip",
+    "github_prerelease": false,
+    "assets": [
+      {
+        "name": "gr-logicrf-1.2.2-source.tar.gz",
+        "bytes": 423294,
+        "sha256": "869983677d1cf749cc4efefdf98a60ea379de6edbe2bb354a20f14c65d623c3a"
+      },
+      {
+        "name": "gr-logicrf-1.2.2-source.zip",
+        "bytes": 605865,
+        "sha256": "d24271ccf031110416a738a4c2dcb2f2bddd19c6552381ea2f030cb64387901c"
+      },
+      {
+        "name": "SOURCE-SHA256.json",
+        "bytes": 23027,
+        "sha256": "ed637919c5f8fe40d9fa63cae772824d0e6c9d5f36f0c268989f663d76468172"
+      },
+      {
+        "name": "SHA256SUMS",
+        "bytes": 276,
+        "sha256": "e9930f6fcc19a284788c4b365d31bf153f836886b22dcaa77da098cd33b86304"
+      }
+    ]
+  },
+  "scope": {
+    "per_device_installation_and_boot_check": "REQUIRED",
+    "new_hardware_qualification": false,
+    "usb_host_components": "SEPARATE_NOT_BUNDLED",
+    "complete_system_corresponding_source": "NOT_COMPLETE_SEE_SOURCE_AVAILABILITY"
+  },
+  "updated_date": "2026-10-26",
+  "deployment_tools": {
+    "version": "1.2.0-en-r2",
+    "release_url": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2",
+    "filename": "H102-Deployment-Tools-1.2.0-en-r2.zip",
+    "bytes": 24074,
+    "sha256": "a765b3e9cae193f5005937dece6fa691590431ce849a9729b594f25dfd1a9ee1",
+    "github_prerelease": false
+  },
+  "usb_host_tools": {
+    "version": "1.0.0-r2",
+    "source_commit": "6a2c417a9a80d79467790c9c49f4cb8acef4ef5a",
+    "release_url": "https://github.com/logicrf/gr-logicrf/releases/tag/h102-usb-host-tools-1.0.0-r2",
+    "filename": "H102-USB-Host-Tools-1.0.0-r2-source.zip",
+    "bytes": 72183,
+    "sha256": "a0cf0f2ca2cf9fa05c67c29e4a55eca8cb0ac10bc9b9614521a19ce5ae28b153",
+    "github_prerelease": false,
+    "vendor_library_included": false
+  },
+  "current_host_release_scope": "Stable private component releases; unchanged base image and board firmware; exact source and hardware qualification limits remain component-specific"
+}

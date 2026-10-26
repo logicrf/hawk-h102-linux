@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "development_commit": "a310202f49e6f9e771c92e86f52e007e9e0ff14e",
+  "development_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
@@ -349,14 +349,14 @@
     {
       "path": "docs/DELIVERY.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "0edcef0f0aaf457821f7d19538c6f7bfc90f8eb2",
-      "source_sha256": "5f99d7344755f41d566f52062cafe96c9e80c84cf407480a3bafe6542204455f",
-      "source_git_blob": "c9887a628afcc91e210bf8a231a8bee931648c24",
+      "source_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
+      "source_sha256": "cc212b3f59a56210a91d4eec71ca2acac54442773889e69444ee4757d18cb1ca",
+      "source_git_blob": "7173e71d8c353872fc1483e411667a0a293d4c69",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "2cc0f82db29cc1c078903c0ff4c36f79ebddaaee011653070aeb4d5b3478f219",
-      "modification": "English source-material export and component availability guide; verified scope preserved",
-      "source_path": "README.md"
+      "english_sha256": "ad25577feb6eb498abf9233d3a8e7048484c97c7505878d5f11ca6934cbe0e69",
+      "modification": "Current stable companion installation/version/hash references; no image or corresponding-source qualification change",
+      "source_path": "docs/h102-stable-companion-delivery.md"
     },
     {
       "path": "docs/MANUAL-SOURCES.md",
@@ -394,13 +394,14 @@
     {
       "path": "docs/SOURCE-AVAILABILITY.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "a310202f49e6f9e771c92e86f52e007e9e0ff14e",
-      "source_sha256": "7f55565c71bfba3bb8aa587a337b0a8458e5d71782f32229bdfd5b5e0cc43a9d",
-      "source_git_blob": "7bc41719215b9fb6bbf5f6c32434afa32c06e6d9",
+      "source_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
+      "source_sha256": "1a3f9f8dc88868e9bf848a97a5de2369e88f2d8c4df4d204fd51406a28be6f21",
+      "source_git_blob": "d471d28a555e6e5d35b4e9e8151d6ca3eb60c622",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "26495389aaa2bc854107a4271affbca51d32f0c5a95ecb0b389b181f77b4de36",
-      "modification": "Package provenance and self-contained six-inventory export; original build-input limits preserved"
+      "english_sha256": "c83e2ee366ab7fbb4b4175f5a9c30178d5f53a613058cc26c64eae5eac859845",
+      "modification": "Current stable companion installation/version/hash references; no image or corresponding-source qualification change",
+      "source_path": "docs/SOURCE-AVAILABILITY.md"
     },
     {
       "path": "docs/SOURCE-CORRESPONDENCE.md",
@@ -1695,6 +1696,18 @@
       "translation_reused": false,
       "english_sha256": "838ddee231055059cfe11a6c813e2aaae40d835a772034eb75694d51f88fcdae",
       "modification": "English comments/docstrings and localized messages only"
+    },
+    {
+      "path": "manifests/h102-companion-delivery-20261026.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
+      "source_path": "manifests/h102-companion-delivery-20261026.json",
+      "source_sha256": "dd13ad6473a460cfdd8786ed3e083186580a59661811e22cf9ffc23b637868b9",
+      "source_git_blob": "69884d92094602b3599a72c0684e91f6b1147a3d",
+      "mode": "100644",
+      "translation_reused": true,
+      "english_sha256": "dd13ad6473a460cfdd8786ed3e083186580a59661811e22cf9ffc23b637868b9",
+      "modification": "Current stable companion installation/version/hash references; no image or corresponding-source qualification change"
     }
   ],
   "derived_files": {

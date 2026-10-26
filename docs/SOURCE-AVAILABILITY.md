@@ -6,8 +6,8 @@ not a replacement for any source or notice obligations owed to a recipient.
 
 | Component | Available material | Current boundary |
 |---|---|---|
-| gr-logicrf 1.2.2rc2 | [GPL source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2-rc2), build scripts and bundled minimal control runtime | Vendor USB libraries and board firmware are separate |
-| IIO GUI 0.8.0 source r2 | [Private source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r2) and dependency requirements | Existing LogicRF delivery terms; dependencies keep their own licenses |
+| gr-logicrf 1.2.2 | [GPL source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2), build scripts and bundled minimal control runtime | Vendor USB libraries and board firmware are separate |
+| IIO GUI 0.8.0 source r3 | [Private source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r3) and dependency requirements | Existing LogicRF delivery terms; dependencies keep their own licenses |
 | H102 Linux integration | This repository's patches, configuration, scripts and pinned inputs | Not a complete corresponding-source package for the SD image |
 | Linux kernel | ADI upstream commit `c8daf49830b2d19b155756d151f4c881a001a67e` plus H102 changes described in [BUILD.md](BUILD.md) | The [source review](SOURCE-CORRESPONDENCE.md) verified the exact frozen inputs against the real build and released FIT/modules. Vendor import terms and full source distribution remain open |
 | Kuiper base and installed packages | Upstream source and per-package notices | The [rootfs source review](ROOTFS-SOURCES.md) records 1,180 source/version pairs and collected archives. [Thirteen retained manual source trees](MANUAL-SOURCES.md) are now documented. [Five package records with distinct provenance limits](PACKAGE-PROVENANCE.md), original Raspbian provenance for Debian candidates, remaining manual dependencies and individual terms remain open |
