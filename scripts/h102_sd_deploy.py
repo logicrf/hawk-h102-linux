@@ -11,8 +11,8 @@
 @architect  LogicRF
 @email      info@logicrf.com
 @website    https://www.logicrf.com
-@version    0.1.1
-@date       2026-10-21
+@version    0.1.2
+@date       2026-10-27
 """
 from __future__ import annotations
 
@@ -385,11 +385,24 @@ def verify_open_device(fd: int, device: dict) -> None:
 
 
 def eject_device(device: dict, required_bytes: int) -> dict:
-    """After direct readback and FD release, safely eject only the reverified original device."""
-    current = inspect_device(device['identity']['device'], required_bytes)
-    if current['identity'] != device['identity'] or current['blockers']:
-        raise ValueError('DEVICE_CHANGED_OR_BUSY_BEFORE_EJECT')
-    check_kernel_users(current)
+    """Eject only the original device; wait at most five seconds for transient block FDs.
+
+    Every observation rechecks identity and use. Never rewrite, unmount, kill an
+    owner, or ignore a persistent user, changed disk, mount or inspection error.
+    """
+    busy = []
+    for attempt in range(6):
+        current = inspect_device(device['identity']['device'], required_bytes)
+        if current['identity'] != device['identity'] or current['blockers']:
+            raise ValueError('DEVICE_CHANGED_OR_BUSY_BEFORE_EJECT')
+        try:
+            check_kernel_users(current)
+            break
+        except ValueError as error:
+            if not str(error).startswith('BLOCK_FD_IN_USE:') or attempt == 5:
+                raise
+            busy.append(dict(check=attempt + 1, reason=str(error)))
+            time.sleep(1)
     if not shutil.which('udisksctl'):
         return dict(status='NOT_EJECTED', reason='UDISKSCTL_NOT_INSTALLED')
     result = subprocess.run(['udisksctl', 'power-off', '-b', current['identity']['device']],
@@ -397,7 +410,9 @@ def eject_device(device: dict, required_bytes: int) -> dict:
     gone = not (Path('/sys/dev/block') / current['identity']['major_minor']).exists()
     passed = result.returncode == 0 and gone
     return dict(status='PASS' if passed else 'NOT_EJECTED', returncode=result.returncode,
-                target_absent=gone, message=result.stderr.strip() or result.stdout.strip())
+                target_absent=gone, message=result.stderr.strip() or result.stdout.strip(),
+                transient_block_fd_observations=busy)
+
 
 
 def deploy(args, pins: dict) -> int:
@@ -441,7 +456,12 @@ def deploy(args, pins: dict) -> int:
                 report.update(readback=checked, phase='safe_eject', write_readback='PASS')
             finally:
                 os.close(fd)
-        ejected = eject_device(device, pins['raw_bytes'])
+        try:
+            ejected = eject_device(device, pins['raw_bytes'])
+        except (Exception, KeyboardInterrupt) as error:
+            # Completed write/readback must not be relabeled as requiring a rewrite.
+            # Retain the ejection refusal without retrying writes or bypassing checks.
+            ejected = dict(status='NOT_EJECTED', reason=f'{type(error).__name__}: {error}')
         passed = ejected['status'] == 'PASS'
         report.update(status='PASS_WRITE_DIRECT_READBACK_EJECT' if passed else 'WRITE_VERIFIED_NOT_EJECTED',
                       phase='complete', eject=ejected, finished_at=utc_now(), version=pins['version'])

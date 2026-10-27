@@ -8,12 +8,14 @@
 @architect  LogicRF
 @email      info@logicrf.com
 @website    https://www.logicrf.com
-@version    0.1.0
-@date       2026-10-15
+@version    0.1.1
+@date       2026-10-27
 """
 import argparse
 import base64
+import contextlib
 import hashlib
+import io
 import json
 import lzma
 import os
@@ -128,6 +130,63 @@ class DeploymentTests(unittest.TestCase):
         device = dict(identity=dict(device='/dev/test'), blockers=[])
         with mock.patch.object(sd, 'inspect_device', return_value=device), mock.patch.object(sd, 'check_kernel_users'), mock.patch.object(sd.shutil, 'which', return_value=None):
             self.assertEqual(sd.eject_device(device, 1)['status'], 'NOT_EJECTED')
+
+
+    def test_eject_failure_preserves_actual_write_readback_without_rewrite(self):
+        """After real temporary-file I/O, model ejection refusal and require no rewrite."""
+        target = self.root / 'owned-card.img'
+        target.write_bytes(b'\0' * len(self.raw))
+        device = dict(identity=dict(device=str(target)), blockers=[], confirm='test-only')
+        args = argparse.Namespace(image=self.source(True), device=str(target),
+                                  confirm='test-only', report=self.root / 'eject-busy.json')
+        with mock.patch.object(sd.os, 'geteuid', return_value=0), \
+                mock.patch.object(sd.shutil, 'which', return_value='/usr/bin/udisksctl'), \
+                mock.patch.object(sd, 'inspect_device', return_value=device), \
+                mock.patch.object(sd, 'check_kernel_users'), \
+                mock.patch.object(sd, 'verify_open_device'), \
+                mock.patch.object(sd, 'copy_image', wraps=sd.copy_image) as copy, \
+                mock.patch.object(sd, 'eject_device', side_effect=ValueError('BLOCK_FD_IN_USE:123')), \
+                contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(sd.deploy(args, self.pins | dict(version='1.2.1')), 3)
+            self.assertEqual(copy.call_count, 1)
+        report = json.loads(args.report.read_text())
+        self.assertEqual(report['status'], 'WRITE_VERIFIED_NOT_EJECTED')
+        self.assertEqual(report['write_readback'], 'PASS')
+        self.assertTrue(report['readback']['direct'] and report['readback']['same_fd'])
+        self.assertIn('BLOCK_FD_IN_USE', report['eject']['reason'])
+        self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), self.pins['raw_sha256'])
+
+    def test_eject_waits_for_transient_fd_but_never_ignores_live_user(self):
+        """Model transient and persistent block FDs; never eject while an owner remains."""
+        device = dict(identity=dict(device='/dev/test-only', major_minor='0:987654'), blockers=[])
+        ok = subprocess.CompletedProcess([], 0, stdout='', stderr='')
+        with mock.patch.object(sd, 'inspect_device', return_value=device) as inspect, \
+                mock.patch.object(sd, 'check_kernel_users', side_effect=[ValueError('BLOCK_FD_IN_USE:1'), None]), \
+                mock.patch.object(sd.time, 'sleep'), mock.patch.object(sd.shutil, 'which', return_value='udisksctl'), \
+                mock.patch.object(sd.subprocess, 'run', return_value=ok) as eject:
+            result = sd.eject_device(device, 1)
+            self.assertEqual(result['status'], 'PASS')
+            self.assertEqual(len(result['transient_block_fd_observations']), 1)
+            self.assertEqual(inspect.call_count, 2)
+            self.assertEqual(eject.call_count, 1)
+        with mock.patch.object(sd, 'inspect_device', return_value=device), \
+                mock.patch.object(sd, 'check_kernel_users', side_effect=ValueError('BLOCK_FD_IN_USE:1')) as users, \
+                mock.patch.object(sd.time, 'sleep'), mock.patch.object(sd.subprocess, 'run') as eject:
+            with self.assertRaisesRegex(ValueError, 'BLOCK_FD_IN_USE'):
+                sd.eject_device(device, 1)
+            self.assertEqual(users.call_count, 6)
+            eject.assert_not_called()
+
+    def test_eject_identity_change_during_wait_never_touches_replacement(self):
+        """Reject a replacement diskseq observed during the bounded idle wait."""
+        device = dict(identity=dict(device='/dev/test-only', diskseq=1), blockers=[])
+        changed = dict(identity=dict(device='/dev/test-only', diskseq=2), blockers=[])
+        with mock.patch.object(sd, 'inspect_device', side_effect=[device, changed]), \
+                mock.patch.object(sd, 'check_kernel_users', side_effect=ValueError('BLOCK_FD_IN_USE:1')), \
+                mock.patch.object(sd.time, 'sleep'), mock.patch.object(sd.subprocess, 'run') as eject:
+            with self.assertRaisesRegex(ValueError, 'DEVICE_CHANGED_OR_BUSY'):
+                sd.eject_device(device, 1)
+            eject.assert_not_called()
 
 
 class BoardCheckTests(unittest.TestCase):

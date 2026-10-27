@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 5274,
-      "sha256": "6e18c4f188b292b8f7033de13058fc8ecd1c331dd9fbe21caf5f9618d2d09ef6"
+      "bytes": 5285,
+      "sha256": "4c6cb3d270674e070e7e19d4b5918e8f222f2a04dd906e666f47fe51c395d8a9"
     },
     "SOURCE-BASE.json": {
       "bytes": 2978,
       "sha256": "12c5995785801c8f7238a200a445eed277d941f234ae0f1abe55618d03ed4ee9"
     },
     "SOURCE-MAP.json": {
-      "bytes": 106193,
-      "sha256": "1bafc4d0e08a6c4a77db987659648c33fef4a39dc5065fea5efb6612c3e8eaea"
+      "bytes": 107552,
+      "sha256": "7be4d9cbb1966b961dd49a295e1e156a05547a297287fe56bf37f6bb0bff3c22"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -245,6 +245,10 @@
     "docs/ROOTFS-SOURCES.md": {
       "bytes": 6112,
       "sha256": "a05bef9239ae2a26ea5266d294ce201ee8b5c87c00148a67cf87437f614d596b"
+    },
+    "docs/SD-QUICK-WRITE.md": {
+      "bytes": 3285,
+      "sha256": "2d4784cce6c8c5e841a59071034958c5689bdb20160e23e290cbae37d573fccc"
     },
     "docs/SOURCE-AVAILABILITY.md": {
       "bytes": 3340,
@@ -695,12 +699,16 @@
       "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
     },
     "scripts/h102_sd_deploy.py": {
-      "bytes": 22832,
-      "sha256": "b99ef6a14791b11c582a6475c240935839acd8686e1ae184b45ff7b9fbae688a"
+      "bytes": 23711,
+      "sha256": "edabc32b262bc953170ee99e96f2cc89b254e5bbb1f496d006e2e790405220d7"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,
       "sha256": "5ad4589089db8a2960232de91832db6a03c4d01a4b1131e9c64d6a06ea8f8fe1"
+    },
+    "scripts/h102_write_sd.sh": {
+      "bytes": 3562,
+      "sha256": "7ed26320dd7cdfa052ad574c716682e5d2ad42e184bc337af7a5695f7b34f245"
     },
     "scripts/install_network_performance.py": {
       "bytes": 8090,
@@ -759,8 +767,8 @@
       "sha256": "16f48773aa1929afb4ac854960d6369ea6a6c8a43999a6ce20af0f4c65092c2a"
     },
     "tests/test_h102_deployment.py": {
-      "bytes": 12250,
-      "sha256": "a61fb0d460c6103c2d9a40cf64bd298fd59d8a1edb99b57badf473377fe57aac"
+      "bytes": 16367,
+      "sha256": "637e783608071a30c15d2aa7e001fbeb08e979b157ab99ec8f57c0318d447b66"
     },
     "tests/test_iio_api_examples.py": {
       "bytes": 8997,

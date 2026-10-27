@@ -15,7 +15,7 @@ This repository provides English source and customer documentation. It contains 
 | Task | Start here |
 |---|---|
 | Find matching downloads and provision a new H102 | [Downloads and setup order](docs/DELIVERY.md) |
-| Write the released image and prepare a new H102 | [Deployment](docs/DEPLOYMENT.md) |
+| Write and verify an SD card with one shell command | [SD quick write](docs/SD-QUICK-WRITE.md) |
 | Connect and use built-in configurations | [Getting started](docs/GETTING-STARTED.md), [configuration](docs/CONFIGURATION.md) |
 | Generate additional ADRV9002 profiles | [Profile generation](docs/PROFILE-GENERATION.md) |
 | Modify kernel or system-image integration | [Build inputs and workflow](docs/BUILD.md) |

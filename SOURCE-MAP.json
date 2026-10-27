@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "development_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
+  "development_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
+      "source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
       "source_path": "README.md",
-      "source_sha256": "3b733c5199f54f929bc70639ec01a3270bb35b141e931123c025bdd1ed1dde02",
-      "source_git_blob": "7faf5fe5321cf5638c23ef0662aed29d297cb25e",
+      "source_sha256": "f083b9a01df2f55991ca05d7f77584436d804d53b68b39df94eb9116b6bb8bcb",
+      "source_git_blob": "2a75fd025d7d3a8d786a947bb68d079e732c0419",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "6e18c4f188b292b8f7033de13058fc8ecd1c331dd9fbe21caf5f9618d2d09ef6",
-      "modification": "English post-publication receipt; frozen tag and image bytes unchanged; browser download limitation preserved"
+      "english_sha256": "4c6cb3d270674e070e7e19d4b5918e8f222f2a04dd906e666f47fe51c395d8a9",
+      "modification": "Reviewed English quick-write instructions and diagnostics; fixed image inputs unchanged"
     },
     {
       "path": "control-api/.gitignore",
@@ -1461,14 +1461,14 @@
     {
       "path": "scripts/h102_sd_deploy.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
+      "source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
       "source_path": "scripts/h102_sd_deploy.py",
-      "source_sha256": "e64badaf9226c98cb3ea00224e763b6d09e03c9f3b94b0653686be29b6adcd1c",
-      "source_git_blob": "001ffc12004fbe4e22d35869eb5828b8e4bbabae",
+      "source_sha256": "dc6f1acdd347ffad6dc4550895ec7008e2473d6bcb7ef5c6b112349343e828e6",
+      "source_git_blob": "18ed01b178a085fe07a1f1eb733fcd324aa735b1",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "b99ef6a14791b11c582a6475c240935839acd8686e1ae184b45ff7b9fbae688a",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "edabc32b262bc953170ee99e96f2cc89b254e5bbb1f496d006e2e790405220d7",
+      "modification": "Reviewed English quick-write instructions and diagnostics; fixed image inputs unchanged"
     },
     {
       "path": "scripts/h102_tx_v3_config.py",
@@ -1626,13 +1626,14 @@
     {
       "path": "tests/test_h102_deployment.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
-      "source_sha256": "2dfe6cd6a1a411d89123c26c2a8cbee75242e3cd72bbf9b08af96e4e4ec321fe",
-      "source_git_blob": "b7f109912d2397cf27132721b1df09dae8e2bb38",
+      "source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
+      "source_sha256": "5564664dfbfc0ae730e39ec454bf03752b9f79d011e2f1069b645445183802b6",
+      "source_git_blob": "03c2529078b4933caa1e270f94d8be5291a63112",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "a61fb0d460c6103c2d9a40cf64bd298fd59d8a1edb99b57badf473377fe57aac",
-      "modification": "English comments/docstrings and localized messages only"
+      "english_sha256": "637e783608071a30c15d2aa7e001fbeb08e979b157ab99ec8f57c0318d447b66",
+      "modification": "Reviewed English quick-write instructions and diagnostics; fixed image inputs unchanged",
+      "source_path": "tests/test_h102_deployment.py"
     },
     {
       "path": "tests/test_iio_api_examples.py",
@@ -1795,6 +1796,30 @@
       "translation_reused": false,
       "english_sha256": "c69bf99a9961a098732dca59805097a8746cb77afa54ca0b90c3e4e5952d9540",
       "modification": "English post-publication receipt; frozen tag and image bytes unchanged; browser download limitation preserved"
+    },
+    {
+      "path": "scripts/h102_write_sd.sh",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
+      "source_path": "scripts/h102_write_sd.sh",
+      "source_sha256": "7ed26320dd7cdfa052ad574c716682e5d2ad42e184bc337af7a5695f7b34f245",
+      "source_git_blob": "3b55bbcde9ebece5bb33a20823a7a654b48549f0",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "7ed26320dd7cdfa052ad574c716682e5d2ad42e184bc337af7a5695f7b34f245",
+      "modification": "Reviewed English quick-write instructions and diagnostics; fixed image inputs unchanged"
+    },
+    {
+      "path": "docs/SD-QUICK-WRITE.md",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
+      "source_path": "docs/H102-SD-QUICK-WRITE.md",
+      "source_sha256": "72b0514225ff1038c6a02bcd4abe43d6d09630c8155bf8a2d679f42836c9bddf",
+      "source_git_blob": "3133ef75062c2cd0b0eea765b58038768b26c87a",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "2d4784cce6c8c5e841a59071034958c5689bdb20160e23e290cbae37d573fccc",
+      "modification": "Reviewed English quick-write instructions and diagnostics; fixed image inputs unchanged"
     }
   ],
   "derived_files": {
