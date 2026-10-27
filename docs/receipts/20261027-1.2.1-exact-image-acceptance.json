@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "status": "PASS_SCOPED_RELEASE_READY_NOT_PUBLISHED",
+  "status": "PASS_SCOPED_RELEASE_DECISION",
   "distribution_version": "1.2.1",
   "internal_image_build": "1.2.1-rc2",
   "raw_sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
@@ -26,5 +26,6 @@
     "Windows_ADI_GUI"
   ],
   "evidence_report": "Retained engineering evidence: system-delivery-20261027/REPORT-ACCEPTANCE.md",
-  "complete_system_corresponding_source": false
+  "complete_system_corresponding_source": false,
+  "release_decision": "Promote accepted rc2 bytes unchanged as1.2.1; source and artifacts privately distributed; downloads have their own readback receipts"
 }

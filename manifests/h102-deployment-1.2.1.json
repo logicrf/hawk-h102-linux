@@ -145,7 +145,7 @@
   "image_total_files": 618,
   "image_total_links": 5,
   "qualification": "PASS_SCOPED_FIRST_H102_COLD_WARM_ASSETS_IDENTITY_IIO_USB_ADI_GUI_DEFAULT_RESTORE",
-  "released": false,
+  "released": true,
   "required_directories": {
     "/usr/local/lib/h102/control-api/0.1.0-ip36-panel1": 448,
     "/usr/local/lib/h102/control-api/0.1.0-ip36-panel1/bundle": 448,
@@ -154,6 +154,6 @@
   "api_assets_sha256": "971511b20e1050459b286b46076bf36e3f5f01497100871cc4c1df516d443a06",
   "recipe_commit": "e9dfd5ee04f51bc41abc44784252dcca92f06b16",
   "internal_build": "1.2.1-rc2",
-  "publication_status": "RELEASE_READY_NOT_YET_PUBLISHED",
+  "publication_status": "QUALIFIED_PRIVATE_RELEASE_PUBLICATION_IN_PROGRESS",
   "acceptance_receipt": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json"
 }

@@ -1,6 +1,6 @@
 # LogicRF Hawk H102 Kuiper
 
-**Current matching system: Kuiper 1.2.1 / 2024.1, IIO GUI 0.8.1 and gr-logicrf 1.2.3.** The integrated image includes panel indicators, IP-only device control and network affinity. Exact-card first-unit cold/warm boot, representative data checks and Linux ADI IIO Oscilloscope checks passed within the [recorded scope](docs/PANEL-SYSTEM.md). Release attachments are being prepared; existing downloads remain available until publication.
+**Current matching system: Kuiper 1.2.1 / 2024.1, IIO GUI 0.8.1 and gr-logicrf 1.2.3.** The integrated image includes panel indicators, IP-only device control and network affinity. Exact-card first-unit cold/warm boot, representative data checks and Linux ADI IIO Oscilloscope checks passed within the [recorded scope](docs/PANEL-SYSTEM.md). Use the matching release attachments and fixed hashes below; previous releases remain available for rollback.
 
 [Retained-package provenance](docs/PACKAGE-PROVENANCE.md) documents the official signed binary records, recovered upstream packaging recipes and observed distribution differences. Five exact package-input records and 53 original Raspbian provenance records remain open; those source-provenance limits remain open.
 

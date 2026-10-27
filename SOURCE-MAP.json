@@ -6,14 +6,14 @@
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
+      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
       "source_path": "README.md",
       "source_sha256": "c25afb1ab709d5c1f2c20be2549fa9859bd57b528d8e3fe21da7b61d2ba6b3f1",
       "source_git_blob": "9789b5934d68f7ff30dee929440026422cb09bc3",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "345e1358f3096555e2471ad909db831ef7b74a0294ebc77757f5ea8f28282f25",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "0e4860c466da1962e8db1c878ae024758b5cd3bae0dac446dbfde8c929ab5cc9",
+      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
     },
     {
       "path": "control-api/.gitignore",
@@ -350,14 +350,14 @@
     {
       "path": "docs/DELIVERY.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
-      "source_path": "docs/SYSTEM-PANEL-IMAGE.md",
-      "source_sha256": "7feb1e43d0f5f25519676dcc6f797d0a99309471d8377210876e4c86b08c266b",
-      "source_git_blob": "4cd1060df154b4036e9a8317273fcda0101672b5",
+      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
+      "source_path": "docs/releases/LogicRF-Hawk-H102-Kuiper-1.2.1.md",
+      "source_sha256": "28b6c9c7215585b610ff6140682076dc9209240d8bbdc388da91d11c1b072cc4",
+      "source_git_blob": "879edd0458418a57046035f14d805fa8eed81dd5",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "32693b26b5dd36a43edce40ca8b7674b572988ac129d24b731ee915d470ef4ec",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "1f705144c42a9aea4883ef4f074a659627d1d0b41ae6a2a724c3166fe48a6807",
+      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
     },
     {
       "path": "docs/MANUAL-SOURCES.md",
@@ -1751,38 +1751,38 @@
     {
       "path": "docs/RELEASE.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
-      "source_path": "docs/SYSTEM-PANEL-IMAGE.md",
-      "source_sha256": "7feb1e43d0f5f25519676dcc6f797d0a99309471d8377210876e4c86b08c266b",
-      "source_git_blob": "4cd1060df154b4036e9a8317273fcda0101672b5",
+      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
+      "source_path": "docs/releases/LogicRF-Hawk-H102-Kuiper-1.2.1.md",
+      "source_sha256": "28b6c9c7215585b610ff6140682076dc9209240d8bbdc388da91d11c1b072cc4",
+      "source_git_blob": "879edd0458418a57046035f14d805fa8eed81dd5",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "149f089abaea76cc2eae7f4579698169005530ae6f3087aba2d6ed31cbaa3581",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "0c01593a2b847bbd8f4d011477b526c7f6ad61af5123b929631702e049b1ae39",
+      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
     },
     {
       "path": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
+      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
       "source_path": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
-      "source_sha256": "7f64dfdc338f1663ec181f430b187de84a38dd2d159587b97317617b4056293b",
-      "source_git_blob": "52b0dc4d8327a7ff13b39a5446c6e289562b5a3b",
+      "source_sha256": "40c2a328e1c2bf6ea521612eb85a33a760a85f624ec9d40598ac953c1c1bcb81",
+      "source_git_blob": "7ecccb8cc2d5626e4f7bc0bebe4fc898d46dc67c",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "a97e21a8b6aa4abed96a1765e892f009d0490d07cbea37c1201ac1f2e07056c7",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "4bf616249aafed06c22fa1c435ed575e0ccde16f7c420950a038880c65609b89",
+      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
     },
     {
       "path": "manifests/h102-deployment-1.2.1.json",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
+      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
       "source_path": "manifests/h102-deployment-1.2.1.json",
-      "source_sha256": "ef88e8ea633a59d7ea51bd28d68bce4c4ac0d27f186227dade21b11792eb33c9",
-      "source_git_blob": "b2553d442b80f4cbfb20457102fc6cc7e4897009",
+      "source_sha256": "3df949e0fd53601dcdc22b35d08a6bc3aa5b09e0f70b9610e5dc685adbda6239",
+      "source_git_blob": "2c226b0a3003510c44d576159473a5db0eac2f47",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "ef88e8ea633a59d7ea51bd28d68bce4c4ac0d27f186227dade21b11792eb33c9",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "3df949e0fd53601dcdc22b35d08a6bc3aa5b09e0f70b9610e5dc685adbda6239",
+      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
     }
   ],
   "derived_files": {
@@ -1977,5 +1977,5 @@
       "modification": "English documentation; functional statements and fixed version checks preserved"
     }
   ],
-  "stable_delivery_development_commit": "8e224c841cba0564670185b5c019ac9d6c859730"
+  "stable_delivery_development_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4"
 }

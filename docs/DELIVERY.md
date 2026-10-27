@@ -1,6 +1,6 @@
 # Hawk H102 downloads and setup order
 
-Use the integrated Kuiper 1.2.1 image with GUI 0.8.1 or gr-logicrf 1.2.3. The image already includes IP-only device control and network affinity. Do not install the older 1.2.0 board-service add-on over it. The repositories and downloads currently require private GitHub access. New release attachments are being prepared; a source ZIP is not a bootable SD image.
+Use the integrated Kuiper 1.2.1 image with GUI 0.8.1 or gr-logicrf 1.2.3. The image already includes IP-only device control and network affinity. Do not install the older 1.2.0 board-service add-on over it. The repositories and downloads currently require private GitHub access. A source ZIP is not a bootable SD image.
 
 | Component | Matching version | Download |
 |---|---|---|

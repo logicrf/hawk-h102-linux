@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "logicrf/hawk-h102-linux",
-  "development_commit": "8e224c841cba0564670185b5c019ac9d6c859730",
+  "development_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
   "delivery_branch": "github-en",
   "language": "English",
   "status": "READY_PRIVATE_INTEGRATION_TOOLKIT",
@@ -46,7 +46,7 @@
     "version": "1.2.1",
     "internal_build": "1.2.1-rc2",
     "receipt": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
-    "publication": "ATTACHMENTS_PENDING",
+    "publication": "QUALIFIED_SOURCE_FROZEN_FOR_PRIVATE_RELEASE",
     "source_provenance_gaps_preserved": true
   }
 }

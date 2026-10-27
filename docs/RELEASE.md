@@ -15,7 +15,7 @@ The integrated system includes the matching panel status, IP-only control API an
 | API / firmware / stream | 68.21.6 / 1.0.2 / 0.7.22.0 |
 | Device API | 0.1.0-ip36-panel1, included |
 
-Follow [downloads and setup](DELIVERY.md). Attachments are being prepared. The system remains based on the pinned 18 March 2025 ADI Kuiper Full userspace and H102 2024.1 boot/kernel inputs. Upstream notices and open corresponding-source limitations remain in effect.
+Follow [downloads and setup](DELIVERY.md). The system remains based on the pinned 18 March 2025 ADI Kuiper Full userspace and H102 2024.1 boot/kernel inputs. Upstream notices and open corresponding-source limitations remain in effect.
 
 <details><summary>Previous 1.2.0 release record</summary>
 
