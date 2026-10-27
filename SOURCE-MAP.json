@@ -1722,8 +1722,10 @@
       "source_git_blob": "4cd1060df154b4036e9a8317273fcda0101672b5",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "aa10fa9789ebd5845c4771f1235682494a80333829a5406a2cb61d590caf994a",
-      "modification": "Reviewed stable version pins and English customer setup / scoped acceptance documentation"
+      "english_sha256": "7a3571460df1699e8804ca4e746465db456386e791e35e0310c21472354c5052",
+      "modification": "Preserve the detailed reference and clarify quick writing, optional administration and UART static IPv4 setup",
+      "integration_source_commit": "e11e2480bdd654c00ef2968be0e803d4eb8ab9d3",
+      "integration_source_path": "docs/H102-SD-QUICK-WRITE.md"
     },
     {
       "path": "docs/IMAGE-DOWNLOAD.md",

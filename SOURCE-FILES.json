@@ -27,8 +27,8 @@
       "sha256": "12c5995785801c8f7238a200a445eed277d941f234ae0f1abe55618d03ed4ee9"
     },
     "SOURCE-MAP.json": {
-      "bytes": 107552,
-      "sha256": "7be4d9cbb1966b961dd49a295e1e156a05547a297287fe56bf37f6bb0bff3c22"
+      "bytes": 107715,
+      "sha256": "d8c339c216702a7aee67707ab5ee73cf1dc190f8221d86d89e5fc5b0b89fb989"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -203,8 +203,8 @@
       "sha256": "1f705144c42a9aea4883ef4f074a659627d1d0b41ae6a2a724c3166fe48a6807"
     },
     "docs/DEPLOYMENT.md": {
-      "bytes": 4194,
-      "sha256": "aa10fa9789ebd5845c4771f1235682494a80333829a5406a2cb61d590caf994a"
+      "bytes": 4499,
+      "sha256": "7a3571460df1699e8804ca4e746465db456386e791e35e0310c21472354c5052"
     },
     "docs/GETTING-STARTED.md": {
       "bytes": 2799,

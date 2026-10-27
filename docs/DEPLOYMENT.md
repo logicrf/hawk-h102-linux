@@ -1,5 +1,7 @@
 # Deploy the released image to a new H102
 
+For one-command writing, start with [SD quick write](SD-QUICK-WRITE.md). The detailed inspection and SSH checks below are administrator tools; normal GUI and GNU Radio use only the device IP. For a static-only network, use the [UART IPv4 setup](https://docs.logicrf.com/en/hawk-h102/system#static-ipv4).
+
 Use a Linux host with Python 3.10+, util-linux (`lsblk`, `blockdev`), udisks2 (`udisksctl`), and administrator access for the write operation. Use a card large enough for the 11,823,742,976-byte image. A 32-GB card is suitable; the first boot expands the root filesystem.
 
 ## 1. Obtain and verify the image
