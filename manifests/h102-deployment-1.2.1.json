@@ -154,6 +154,7 @@
   "api_assets_sha256": "971511b20e1050459b286b46076bf36e3f5f01497100871cc4c1df516d443a06",
   "recipe_commit": "e9dfd5ee04f51bc41abc44784252dcca92f06b16",
   "internal_build": "1.2.1-rc2",
-  "publication_status": "QUALIFIED_PRIVATE_RELEASE_PUBLICATION_IN_PROGRESS",
-  "acceptance_receipt": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json"
+  "publication_status": "PRIVATE_RELEASE_PUBLISHED_SERVER_SHA_VERIFIED_HTTP_DOWNLOAD_READBACK_OPEN",
+  "acceptance_receipt": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
+  "publication_receipt": "docs/receipts/20261027-1.2.1-private-publication.json"
 }

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "version": "1.2.1",
+  "internal_image_build": "1.2.1-rc2",
+  "status": "PUBLISHED_PRIVATE_WITH_DOWNLOAD_READBACK_OPEN",
+  "image_release": "https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.1-image",
+  "gui_release": "https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.1",
+  "gnuradio_release": "https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.3",
+  "image_server_asset_hashes": "PASS8of8",
+  "host_server_asset_hashes": "PASS4of4",
+  "attachment_HTTP_download_SHA": "BLOCKED_Chrome_ERR_BLOCKED_BY_CLIENT",
+  "image_bytes_unchanged": true,
+  "compressed_sha256": "31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5",
+  "source_en_at_release_tag": "57d5baaf88c70d70922bc4c818accf8f343fbc1c",
+  "hardware_acceptance": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
+  "customer_docs": "https://docs.logicrf.com/zh/hawk-h102/downloads",
+  "customer_doc_scope": "26 bilingual pages and9 assets; native readback PASS; outside pages/navigation unchanged",
+  "complete_system_corresponding_source": false
+}

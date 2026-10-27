@@ -6,14 +6,14 @@
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
+      "source_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
       "source_path": "README.md",
-      "source_sha256": "c25afb1ab709d5c1f2c20be2549fa9859bd57b528d8e3fe21da7b61d2ba6b3f1",
-      "source_git_blob": "9789b5934d68f7ff30dee929440026422cb09bc3",
+      "source_sha256": "3b733c5199f54f929bc70639ec01a3270bb35b141e931123c025bdd1ed1dde02",
+      "source_git_blob": "7faf5fe5321cf5638c23ef0662aed29d297cb25e",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "0e4860c466da1962e8db1c878ae024758b5cd3bae0dac446dbfde8c929ab5cc9",
-      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
+      "english_sha256": "6e18c4f188b292b8f7033de13058fc8ecd1c331dd9fbe21caf5f9618d2d09ef6",
+      "modification": "English post-publication receipt; frozen tag and image bytes unchanged; browser download limitation preserved"
     },
     {
       "path": "control-api/.gitignore",
@@ -1775,14 +1775,26 @@
     {
       "path": "manifests/h102-deployment-1.2.1.json",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
+      "source_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
       "source_path": "manifests/h102-deployment-1.2.1.json",
-      "source_sha256": "3df949e0fd53601dcdc22b35d08a6bc3aa5b09e0f70b9610e5dc685adbda6239",
-      "source_git_blob": "2c226b0a3003510c44d576159473a5db0eac2f47",
+      "source_sha256": "73de7604f50c65eeaf248284970cb220a5d001582a4878b0cb5c7e1e4edf3817",
+      "source_git_blob": "18b11c5bad9f2a1ba47721a47f51dfafe11d43e7",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "3df949e0fd53601dcdc22b35d08a6bc3aa5b09e0f70b9610e5dc685adbda6239",
-      "modification": "English stable release decision and customer delivery instructions; unchanged firmware bytes"
+      "english_sha256": "73de7604f50c65eeaf248284970cb220a5d001582a4878b0cb5c7e1e4edf3817",
+      "modification": "English post-publication receipt; frozen tag and image bytes unchanged; browser download limitation preserved"
+    },
+    {
+      "path": "docs/receipts/20261027-1.2.1-private-publication.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
+      "source_path": "docs/receipts/20261027-1.2.1-private-publication.json",
+      "source_sha256": "c69bf99a9961a098732dca59805097a8746cb77afa54ca0b90c3e4e5952d9540",
+      "source_git_blob": "2ff4c0d1f377f9c599b9c36d2012743479e77478",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "c69bf99a9961a098732dca59805097a8746cb77afa54ca0b90c3e4e5952d9540",
+      "modification": "English post-publication receipt; frozen tag and image bytes unchanged; browser download limitation preserved"
     }
   ],
   "derived_files": {
@@ -1977,5 +1989,6 @@
       "modification": "English documentation; functional statements and fixed version checks preserved"
     }
   ],
-  "stable_delivery_development_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4"
+  "stable_delivery_development_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
+  "post_publication_development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864"
 }

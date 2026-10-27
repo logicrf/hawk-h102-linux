@@ -49,3 +49,5 @@ The 1.2.1 image includes the matching API/cap3 and network services. The older [
 [Licensing](LICENSE.md) · [Third-party notices](LICENSES/THIRD-PARTY-NOTICES.md) · [English branch maintenance](docs/MAINTAINING.md)
 
 - [Source availability and component terms](docs/SOURCE-AVAILABILITY.md)
+
+The private1.2.1 release is published. See the [publication receipt](docs/receipts/20261027-1.2.1-private-publication.json) for server-side asset verification and the remaining browser download-readback limitation. The image and frozen release tag remain unchanged.
