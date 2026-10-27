@@ -1207,13 +1207,13 @@
     {
       "path": "scripts/build_h102_sdk1_image.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "a87c213974df11a243d06dcc7f5b94a58ce4da54",
-      "source_sha256": "365626d2e108a9777ae5f8709e7a7a6f41a041d72b3b08acb44c1a367ef0a278",
-      "source_git_blob": "bbed996365e93627439a21f16ce0878549493ee0",
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "7fd0d2d82a0eaf4990189113fe8f30027d26ee72b047d7983c9b19b853aaae75",
+      "source_git_blob": "96983726c3da81dc783311693f6d655dd3c8815a",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "c09d2dfe9f894a6ae8aa98df1ada8106ed336829b334466258a95745b3b21778",
-      "modification": "English comments/docstrings and localized messages only"
+      "english_sha256": "f18ce25cd7fb98f202a8f527f89e1d7659fe4affd94f126522b13c0822cef96b",
+      "modification": "English documentation; functional statements and fixed version checks preserved"
     },
     {
       "path": "scripts/compact_h102_image.py",
@@ -1459,13 +1459,13 @@
     {
       "path": "scripts/h102_sd_deploy.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "02f8158d3cabccf0b740721e703ed014fa2c92d1",
-      "source_sha256": "dc304197f8b4c98e13b20f24791e4dc066655c25270f8ae3f3ce2235b8d23f0d",
-      "source_git_blob": "bd5322d23fca7ea8d87360574b67623ca43b9d19",
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "31cdf981565e4e918ad9511554cbfe2abb7c46c2f3ee8a5b89b0ddf21b718de3",
+      "source_git_blob": "175fc1a1ef5f562cc509bdc10a1f39e5c9263074",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "c5fc1e60a7b0c49fa3b505af6ecffe96fcaad974596df1a6d7aeb6c7e9c3cdb7",
-      "modification": "Export the reviewed owner-scoped FD probe and targeted tests; preserve other deployment checks"
+      "english_sha256": "5a8edb6fdc50b226364cda7e3f742968dcd06985a4debfddb26cdfd84cd15168",
+      "modification": "English documentation; functional statements and fixed version checks preserved"
     },
     {
       "path": "scripts/h102_tx_v3_config.py",
@@ -1787,34 +1787,38 @@
     {
       "path": "control-api/image_api_preflight.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
-      "source_sha256": "67f309e563803a48e7ebbc506b418e31179d5d00fe28ce23105d7252ca8c4464",
-      "english_sha256": "b006bdcc91d6addd4b50e8edf06b075faa041f7fdfdcd8e803f47b3fccd4d1b0",
-      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "5491504c2615c61d8fd743c9dde84f02d3024b3df8b9fc53f7d1f077e5cf74d2",
+      "english_sha256": "0c4ec8557eabfef0f5d24fd57caf710ca484ce88c27e73924bc00c11c087ab10",
+      "modification": "English documentation; functional statements and fixed version checks preserved",
+      "source_git_blob": "4a36333c5bf758e63cec3c6fc154848d04dec765"
     },
     {
       "path": "scripts/prepare_h102_panel_image.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
-      "source_sha256": "62755e404ad7eeaeacc37a0e353a4b9640504231ae5067ef6560b647bdada7f6",
-      "english_sha256": "edb2a3ed76eff562c6bc0d90315fbd9d237f6bcb8da569cc8d23f9c29700cdad",
-      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "31a8d2ef99784f67660cb78a2902e07f57315df8122e1253cecc4434909f6918",
+      "english_sha256": "27aef7ad44086fbb5963f9f6cdfbe1dc29f66b103d1c570fdd08d9d7423cae68",
+      "modification": "English documentation; functional statements and fixed version checks preserved",
+      "source_git_blob": "7303c9ee74c6b2c2cb3185ae6a56cc4782cc25ff"
     },
     {
       "path": "scripts/build_h102_panel_image.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
-      "source_sha256": "138fa557a98134890ee17f2fcca483919afa5b30c783689924f7e09618211b8d",
-      "english_sha256": "5b5d62027e9a95f4ed9838b391c0b4f54f3ab317a7368adcc644aec1023a45f6",
-      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "4ab09341574f29d2647efced3e31d735100b40c86d0facb2eac916610a28b65b",
+      "english_sha256": "56dd02ba92f57838291dba120722cd651c039cfba73dc5deb04e14ba2dce3cc6",
+      "modification": "English documentation; functional statements and fixed version checks preserved",
+      "source_git_blob": "2c8dcb640b798ee0b06056a7245257fdb19ea64d"
     },
     {
       "path": "scripts/h102_sd_deploy.py",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "c59064976a85b9806a0fb2ac6a8c3b99ac74dd4d",
-      "source_sha256": "d8c37d4871e8881191c0897c98b283b2351b182e03dea6bd4ad69faddb262b2e",
-      "english_sha256": "e7316ec9d2c8aa16ad644574097d551dced53465814d7a7ca29321adb3770ab8",
-      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+      "source_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf",
+      "source_sha256": "31cdf981565e4e918ad9511554cbfe2abb7c46c2f3ee8a5b89b0ddf21b718de3",
+      "english_sha256": "5a8edb6fdc50b226364cda7e3f742968dcd06985a4debfddb26cdfd84cd15168",
+      "modification": "English documentation; functional statements and fixed version checks preserved",
+      "source_git_blob": "175fc1a1ef5f562cc509bdc10a1f39e5c9263074"
     },
     {
       "path": "docs/receipts/20261015-common-lo-rc2-image-candidate.json",
