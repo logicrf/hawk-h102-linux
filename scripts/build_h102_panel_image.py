@@ -18,12 +18,13 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import stat
 
 from compact_h102_image import Builder, ROOT_SECTORS, digest, verify_geometry
 from build_h102_sdk1_image import compare, destination, fat_mount
 from build_h102_irq_hotfix_image import verify_files, encoded
 from build_h102_driver_fix_image import check_firstboot
-from prepare_h102_panel_image import BASE_SHA, BASE_MANIFEST_SHA, METADATA, VERSION
+from prepare_h102_panel_image import BASE_SHA, BASE_MANIFEST_SHA, METADATA, VERSION, API_DIRECTORY_MODES
 
 BASE_BYTES = 11823742976
 """Keep the fixed 9 GiB root partition and DOS geometry; do not derive them from a running card."""
@@ -45,6 +46,18 @@ def firstboot(builder, root):
             raise ValueError('PANEL_IMAGE_DEVICE_STATE_FORBIDDEN:'+name)
 
 
+def verify_api_directories(root, boot, expected):
+    """Check exact API directories, root ownership and 0700 independently of file hashes."""
+    if expected != API_DIRECTORY_MODES:
+        raise ValueError('PANEL_IMAGE_EXACT_API_DIRECTORY_MODES')
+    for name, mode in expected.items():
+        path = destination(root, boot, name)
+        value = path.lstat()
+        if (not stat.S_ISDIR(value.st_mode) or value.st_uid != 0 or value.st_gid != 0
+                or stat.S_IMODE(value.st_mode) != mode):
+            raise ValueError('PANEL_IMAGE_API_DIRECTORY_OWNER_MODE:'+name)
+
+
 def build(source, stage, output, project):
     """Validate fixed ordinary inputs, generate a new output, and independently verify the result.
 
@@ -64,6 +77,8 @@ def build(source, stage, output, project):
             or delta['base_manifest_sha256'] != BASE_MANIFEST_SHA):
         raise ValueError('PANEL_IMAGE_STAGE_IDENTITY')
     source_tools(project, delta['tools'])
+    if delta.get('directories') != API_DIRECTORY_MODES:
+        raise ValueError('PANEL_IMAGE_REQUIRED_PRIVATE_DIRECTORIES')
     expected = dict(base['files'])
     expected.update(delta['delta_files'])
     if expected != delta['files']:
@@ -107,6 +122,9 @@ def build(source, stage, output, project):
             src = stage/'assets'/name.lstrip('/')
             builder.run(['install', '-D', '-o', 'root', '-g', 'root', '-m', format(row['mode'], 'o'),
                          str(src), str(destination(root, boot, name))], privileged=True)
+        for name, mode in delta['directories'].items():
+            builder.run(['chmod', format(mode, 'o'), str(destination(root, boot, name))], privileged=True)
+        verify_api_directories(root, boot, delta['directories'])
         new_link = '/etc/systemd/system/multi-user.target.wants/h102-control-api.service'
         target = destination(root, boot, new_link, allow_symlink=True)
         if os.path.lexists(target):
@@ -124,10 +142,12 @@ def build(source, stage, output, project):
         boot = fat_mount(builder, dl+'p1', 'verified-boot', True)
         changes = delta['delta_files']
         compare(builder, source_root, root,
-                [n.lstrip('/') for n in changes if not n.startswith('/boot/')]+[new_link.lstrip('/')], 'root')
+                [n.lstrip('/') for n in changes if not n.startswith('/boot/')]+[new_link.lstrip('/')], 'root',
+                directory_modes={name.lstrip('/'): mode for name, mode in delta['directories'].items()})
         compare(builder, source_boot, boot,
                 [n.removeprefix('/boot/') for n in changes if n.startswith('/boot/')], 'boot')
         verify_files(root, boot, expected)
+        verify_api_directories(root, boot, delta['directories'])
         firstboot(builder, root)
         for name, target in delta['links'].items():
             path = destination(root, boot, name, allow_symlink=True)
@@ -149,7 +169,7 @@ def build(source, stage, output, project):
         result = dict(schema=1, status='PASS_OFFLINE_PANEL_FULL_IMAGE_NOT_COLD_BOOT_OR_RELEASE',
             version=VERSION, image=builder.image.name, bytes=builder.image.stat().st_size,
             sha256=digest(builder.image), base_image_sha256=BASE_SHA,
-            source_commit=commit, files=expected, links=delta['links'], boot_pins=delta['boot_pins'],
+            source_commit=commit, files=expected, directories=delta['directories'], links=delta['links'], boot_pins=delta['boot_pins'],
             files_verified=len(expected), sdk_sources=108, profile_packages=58,
             identity_firstboot=True, FAT_ext4_checks=True, root_and_FAT_whitelist=True,
             no_device_install_transaction=True, hardware_qualified=False, released=False)

@@ -51,8 +51,9 @@ def destination(root: Path, boot: Path, name: str, *, allow_symlink: bool = Fals
     return target
 
 
-def compare(builder: Builder, source: Path, output: Path, excluded: list[str], label: str) -> None:
-    """Compare complete trees, allowing only listed leaves and their newly required parents."""
+def compare(builder: Builder, source: Path, output: Path, excluded: list[str], label: str,
+            directory_modes: dict[str, int] | None = None) -> None:
+    """Compare the complete tree outside approved leaves; new parents default to 0755 with explicit private-directory overrides."""
     allowed = set()
     for name in excluded:
         path = Path(name)
@@ -63,7 +64,7 @@ def compare(builder: Builder, source: Path, output: Path, excluded: list[str], l
                 allowed.add('cannot delete non-empty directory: ' + str(parent))
                 info = (output / parent).lstat()
                 if (not stat.S_ISDIR(info.st_mode) or info.st_uid != 0 or info.st_gid != 0 or
-                        stat.S_IMODE(info.st_mode) != 0o755):
+                        stat.S_IMODE(info.st_mode) != (directory_modes or {}).get(str(parent), 0o755)):
                     raise RuntimeError('NEW_ASSET_PARENT_OWNER_MODE: ' + str(parent))
     result = builder.run(['rsync', '-aHAXnci', '--numeric-ids', '--delete', '--omit-dir-times',
                           *['--exclude=/' + name for name in excluded],

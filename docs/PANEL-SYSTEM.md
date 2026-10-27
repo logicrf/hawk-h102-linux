@@ -1,23 +1,11 @@
-# Install the panel system image
+# Complete system image candidate
 
-Kuiper 1.2.1-rc1 is a complete H102 SD image with the panel bitstream, SDK and device-control service already integrated. It is a release candidate. Offline verification has passed; an SD card written from this exact image still needs physical cold-boot acceptance.
+Kuiper 1.2.1-rc2 includes the H102 panel indicators, the matching device control API and the fixed SDK runtime. Use GUI 0.8.1 or the matching gr-logicrf 1.2.3rc3 package. The exact rc2 image has passed offline checks; SD deployment and hardware acceptance remain pending. The stable 1.2.0 release is unchanged.
 
-## Matching components
+The rc2 image corrects the private permissions of three API installation directories. The preceding rc1 booted Linux, but its API correctly rejected the directories created with 0755 permissions. A diagnostic repair to 0700 restored the API and passed short IIO RX and digital USB TX checks. That repair does not qualify the original rc1 image or the new rc2 image as a released system.
 
-Use GUI 0.8.1 and gr-logicrf 1.2.3rc2 with this image. Normal applications connect using only the device IP address. No separate control-service installation or device Linux password is needed for ordinary operation. USB requires the documented one-time host setup.
+The new recipe records, sets and independently reads back root-owned 0700 permissions for the API root, bundle and package directories. File hashes, 618 installed files, five service links, filesystem integrity, first-boot identity preparation and changes outside the approved file list are checked separately.
 
-S0 flashes once per second while the FPGA runs. S1 indicates host IQ activity and turns off when activity stops. Neither LED establishes RF level, GNSS lock or recording integrity.
+The compressed image is 2,760,770,292 bytes, SHA-256 `31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5`. Its decoded image is 11,823,742,976 bytes, SHA-256 `ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92`.
 
-## Prepare an SD card
-
-Use the published image and its matching deployment-tool revision. The tool binds the compressed and raw SHA-256 values; it does not choose a target automatically. A full-card write erases the selected card. Back up any files you need before proceeding.
-
-Run `python3 scripts/h102_sd_deploy.py list`, then `python3 scripts/h102_sd_deploy.py inspect --device /dev/SELECTED_CARD`. Check the reported model, capacity and identity, unmount its partitions, and use the current confirmation code with `sudo python3 scripts/h102_sd_deploy.py write --device /dev/SELECTED_CARD --image LogicRF-Hawk-H102-Kuiper-1.2.1-rc1-2024.1.img.xz --confirm CURRENT_CODE --report NEW_REPORT.json`. Replace the example device with the actual whole card. The report path must be new and its parent directory must exist. The tool writes, performs a complete direct readback and safely ejects the same device.
-
-Insert the card into the powered-off H102 and power it on. First boot creates device-specific network and SSH identities and expands the root partition. Find its DHCP address and connect from the matching host application. Preserve the original card for rollback until the new installation has been accepted.
-
-## Rebuild and verify
-
-The image recipe starts from the exact 1.2.0 raw image, the reviewed panel SDK/API input set and the pinned base asset manifest. Run `scripts/prepare_h102_panel_image.py` with explicit input/output directories, then `scripts/build_h102_panel_image.py` with the base image, new stage and new output directory. Inputs remain unchanged. The recipe checks all packaged files, service links, filesystems, first-boot identity preparation and changes outside the declared file list. A rebuilt output is a new candidate requiring its own acceptance.
-
-Vendor SDK/profile inputs and full root filesystem source materials remain subject to their separate availability and license records. This downstream integration toolkit does not claim complete corresponding source for the entire operating system. See [source availability](SOURCE-AVAILABILITY.md).
+Use the pinned SD deployment tool with the exact rc2 manifest. The tool verifies the complete source, the selected disk identity, the complete direct readback and safe ejection. Keep the previous working card for rollback. Successful file verification does not establish cold-boot, RF, USB or profile-matrix qualification.

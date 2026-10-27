@@ -23,12 +23,12 @@
       "sha256": "3cf7cd3ab2c3eb0cd798e8f589dcfe51603dd2a9a01824591a5e52c826cc6a56"
     },
     "SOURCE-BASE.json": {
-      "bytes": 1854,
-      "sha256": "c5bbb7757fb8c0fdf7c89909263e4719dfcf9f6c0c64d820a59d3060eda5ab3c"
+      "bytes": 2595,
+      "sha256": "b335fc5641c7fddb3fac490c8cd4f1f69f25fecb8ce2df36a1da7d7d0a1cd167"
     },
     "SOURCE-MAP.json": {
-      "bytes": 97004,
-      "sha256": "230008deffc5a9c1da26f18905c9e702859a95f8fd9dba64702cda04278934a6"
+      "bytes": 100836,
+      "sha256": "c940b7071c5615bcc13669868c646f79b3d04368755207d440a9bd36b24c9d53"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -95,8 +95,8 @@
       "sha256": "b5b560bee1e22a93b08dd62bc42b6392f5186197a231c191d9ff443365bcd4b0"
     },
     "control-api/image_api_preflight.py": {
-      "bytes": 4312,
-      "sha256": "b006bdcc91d6addd4b50e8edf06b075faa041f7fdfdcd8e803f47b3fccd4d1b0"
+      "bytes": 4632,
+      "sha256": "0c4ec8557eabfef0f5d24fd57caf710ca484ce88c27e73924bc00c11c087ab10"
     },
     "control-api/install_hotmeta_addon.py": {
       "bytes": 14966,
@@ -227,8 +227,8 @@
       "sha256": "addcc5d6be9a8e178b7e5901ab009058b1ea861f269ad0d68982947d82ac7382"
     },
     "docs/PANEL-SYSTEM.md": {
-      "bytes": 2858,
-      "sha256": "4c8b45af5512c5813cecf6e93d55a3dbce12e5dd37c35c85c9467b9a226cbe63"
+      "bytes": 1611,
+      "sha256": "2cd801b1f01628b05981eedae1ca228dda332960fb1142061472373f65a8139e"
     },
     "docs/PANEL-UPGRADE.md": {
       "bytes": 1329,
@@ -349,6 +349,10 @@
     "manifests/h102-deployment-1.2.1-rc1.json": {
       "bytes": 5910,
       "sha256": "e51a8f930dfb7b908544fe6996f285c19f26686c173cb737c91989caaa386d5d"
+    },
+    "manifests/h102-deployment-1.2.1-rc2.json": {
+      "bytes": 6338,
+      "sha256": "4bfbeb1fd05498956b739fc9830db3e699eafe414a6f8067c0b8bfc347a4c7cd"
     },
     "manifests/h102-image-parts-1.2.0.json": {
       "bytes": 1107,
@@ -575,12 +579,12 @@
       "sha256": "6b7cef3aae6c2c8bc4e5db4427efee4bb7e86fd8ca10e57d902c2cd06ee686f0"
     },
     "scripts/build_h102_panel_image.py": {
-      "bytes": 9821,
-      "sha256": "5b5d62027e9a95f4ed9838b391c0b4f54f3ab317a7368adcc644aec1023a45f6"
+      "bytes": 10994,
+      "sha256": "56dd02ba92f57838291dba120722cd651c039cfba73dc5deb04e14ba2dce3cc6"
     },
     "scripts/build_h102_sdk1_image.py": {
-      "bytes": 12834,
-      "sha256": "c09d2dfe9f894a6ae8aa98df1ada8106ed336829b334466258a95745b3b21778"
+      "bytes": 12971,
+      "sha256": "f18ce25cd7fb98f202a8f527f89e1d7659fe4affd94f126522b13c0822cef96b"
     },
     "scripts/check_distribution.py": {
       "bytes": 5546,
@@ -680,7 +684,7 @@
     },
     "scripts/h102_sd_deploy.py": {
       "bytes": 22844,
-      "sha256": "e7316ec9d2c8aa16ad644574097d551dced53465814d7a7ca29321adb3770ab8"
+      "sha256": "5a8edb6fdc50b226364cda7e3f742968dcd06985a4debfddb26cdfd84cd15168"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,
@@ -703,8 +707,8 @@
       "sha256": "50f094235c07058aa7eee164689806e9654be4568dafdc73ae6ed6b8909cddf6"
     },
     "scripts/prepare_h102_panel_image.py": {
-      "bytes": 8991,
-      "sha256": "edb2a3ed76eff562c6bc0d90315fbd9d237f6bcb8da569cc8d23f9c29700cdad"
+      "bytes": 9120,
+      "sha256": "27aef7ad44086fbb5963f9f6cdfbe1dc29f66b103d1c570fdd08d9d7423cae68"
     },
     "scripts/prepare_h102_sdk1_assets.py": {
       "bytes": 16617,
@@ -761,6 +765,10 @@
     "tests/test_network_performance.py": {
       "bytes": 6978,
       "sha256": "ac0b3e6b35189b9dfd4944c6f544a9ac48dfadaa109e69ab249fd3b8729c51cf"
+    },
+    "tests/test_panel_image_directories.py": {
+      "bytes": 4497,
+      "sha256": "c798815225284a38430dbc97ce2bd51862c699714e0bff952c8d37e46bbd293c"
     },
     "tests/test_profile_config.py": {
       "bytes": 19686,

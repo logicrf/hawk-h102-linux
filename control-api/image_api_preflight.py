@@ -45,6 +45,11 @@ def preflight(expected):
         value = p.lstat()
         if not stat.S_ISDIR(value.st_mode) or value.st_uid != 0 or value.st_mode & 0o022:
             raise PermissionError('IMAGE_API_UNTRUSTED_DIRECTORY')
+    for relative in ('', 'bundle', 'h102_control'):
+        value = (root/relative).lstat()
+        if (not stat.S_ISDIR(value.st_mode) or value.st_uid != 0 or value.st_gid != 0
+                or stat.S_IMODE(value.st_mode) != 0o700):
+            raise PermissionError('IMAGE_API_PRIVATE_DIRECTORY_REQUIRED:'+relative)
     if digest(root/'assets.json') != expected:
         raise ValueError('IMAGE_API_ASSETS_SHA')
     assets = json.loads((root/'assets.json').read_text())

@@ -23,12 +23,22 @@
   },
   "previous_development_commit": "a310202f49e6f9e771c92e86f52e007e9e0ff14e",
   "panel_system_candidate": {
+    "version": "1.2.1-rc2",
+    "design_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
+    "recipe_commit": "e9dfd5ee04f51bc41abc44784252dcca92f06b16",
+    "raw_sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
+    "compressed_sha256": "31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5",
+    "verification": "OFFLINE_FILES_AND_PRIVATE_DIRECTORIES_VERIFIED; EXACT_RC2_SD_COLD_BOOT_NOT_RUN",
+    "source_scope": "English downstream recipes; exact external inputs and complete-system source limits remain separate",
+    "delivery_commit": "355eab2ae407e7a1b1022e6bd55713b9353370bf"
+  },
+  "previous_panel_system_candidate": {
     "version": "1.2.1-rc1",
     "design_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
     "recipe_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
     "raw_sha256": "b4a63ad9449f287a09daee2da2a2a148f1af713716870268058c3afb03180e04",
     "compressed_sha256": "ebe0ead8d8c5bb690e50d3d30cc97bf41611aab9def57c6ac214a9dfc4e46bea",
-    "verification": "OFFLINE_ONLY; PHYSICAL_SD_COLD_BOOT_NOT_RUN",
+    "verification": "COLD_BOOT_LINUX_CONFIRMED; API_PRIVATE_DIRECTORY_FAILURE; DIAGNOSTIC_REPAIR_PASSED_NOT_ORIGINAL_IMAGE_ACCEPTANCE",
     "source_scope": "English downstream recipes; exact external inputs and complete-system source limits remain separate",
     "delivery_commit": "c59064976a85b9806a0fb2ac6a8c3b99ac74dd4d"
   }

@@ -21,7 +21,7 @@ from pathlib import Path
 import shutil
 import subprocess
 
-VERSION = '1.2.1-rc1'
+VERSION = '1.2.1-rc2'
 BASE_SHA = '22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d'
 BASE_MANIFEST_SHA = '98acca70039c8119b5cada0f8a561c70b931960fda364f0de38922e28cd11b11'
 PANEL_METADATA = '4341109181b16f9f84611af9d592ea54acf5d3356fbad9e76030b5a3cc178bc8'
@@ -29,6 +29,7 @@ PANEL_API_MANIFEST = '031024c436a52b3c6eb1a0b4a2fd6b1293fce9c176f7292bc85dd6ea42
 BIT_SHA = 'd6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff'
 API_TARGET = '/usr/local/lib/h102/control-api/0.1.0-ip36-panel1'
 METADATA = '/etc/h102/sdk1-image.json'
+API_DIRECTORY_MODES = {API_TARGET+suffix: 0o700 for suffix in ('', '/bundle', '/h102_control')}
 """Accept only the reviewed panel inputs and exact 1.2.0 base; filenames do not establish identity."""
 
 
@@ -152,7 +153,7 @@ def prepare(inputs, output, project):
     result = dict(schema=1, status='PREPARED_FULL_IMAGE_ASSETS_NOT_COLD_BOOT_QUALIFIED',
         version=VERSION, source_commit=commit, base_raw_sha256=BASE_SHA,
         base_manifest_sha256=BASE_MANIFEST_SHA, kernel=base['kernel'], files=files,
-        delta_files=delta, links=links, boot_pins=firmware['boot_pins'],
+        delta_files=delta, directories=API_DIRECTORY_MODES, links=links, boot_pins=firmware['boot_pins'],
         sdk_changes=sorted(changed_sdk), api_assets_sha256=sha(api/'assets.json'),
         tools={name: sha(project/name) for name in ('scripts/prepare_h102_panel_image.py',
             'scripts/build_h102_panel_image.py', 'control-api/image_api_preflight.py',

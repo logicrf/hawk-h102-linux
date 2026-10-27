@@ -36,7 +36,7 @@ import time
 
 CHUNK = 4 * 1024 * 1024
 """Bound stream memory and page-align direct reads; released RAW size is 4-KiB aligned."""
-PINS = Path(__file__).resolve().parents[1] / 'manifests/h102-deployment-1.2.1-rc1.json'
+PINS = Path(__file__).resolve().parents[1] / 'manifests/h102-deployment-1.2.1-rc2.json'
 BLKGETSIZE64, BLKROGET, BLKFLSBUF = 0x80081272, 0x125e, 0x1261
 """Use Linux block ioctls; reject unsupported direct readback instead of cached fallback."""
 
@@ -49,7 +49,7 @@ def utc_now() -> str:
 def load_pins() -> dict:
     """Load the bundled release manifest without arbitrary hash overrides or downloads."""
     pins = json.loads(PINS.read_text())
-    if pins['schema'] != 1 or pins['version'] != '1.2.1-rc1' or pins['raw_bytes'] % 4096:
+    if pins['schema'] != 1 or pins['version'] != '1.2.1-rc2' or pins['raw_bytes'] % 4096:
         raise ValueError('INVALID_RELEASE_PINS')
     return pins
 
@@ -457,7 +457,7 @@ def deploy(args, pins: dict) -> int:
 
 def main(argv=None) -> int:
     """Require an explicit disk target; list/inspect are read-only and write overwrites the disk."""
-    parser = argparse.ArgumentParser(description='H102 1.2.1-rc1 Linux SD deployment with complete direct readback')
+    parser = argparse.ArgumentParser(description='H102 1.2.1-rc2 Linux SD deployment with complete direct readback')
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('list', help='List removable/USB disk candidates read-only without selecting one')
     inspect = sub.add_parser('inspect', help='Inspect disk identity, confirmation code and blockers read-only')
