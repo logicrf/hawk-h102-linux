@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 4902,
-      "sha256": "3cf7cd3ab2c3eb0cd798e8f589dcfe51603dd2a9a01824591a5e52c826cc6a56"
+      "bytes": 4992,
+      "sha256": "345e1358f3096555e2471ad909db831ef7b74a0294ebc77757f5ea8f28282f25"
     },
     "SOURCE-BASE.json": {
-      "bytes": 2595,
-      "sha256": "b335fc5641c7fddb3fac490c8cd4f1f69f25fecb8ce2df36a1da7d7d0a1cd167"
+      "bytes": 2848,
+      "sha256": "9042ea887803e3d5b095df4ebb08268033ec65a825b7e2dadd866dc94a4182ce"
     },
     "SOURCE-MAP.json": {
-      "bytes": 101093,
-      "sha256": "5258e2a02f0173312b4dbcb2e18bc4ad03717479e827950eed08ada951c25340"
+      "bytes": 105289,
+      "sha256": "3fc8f812186aea261c8649ca344db5f5c6859ecda1c49b331d92f142e254cf6c"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -199,20 +199,20 @@
       "sha256": "bb7e3dba7760b80918f0219fc571cf9820bf12866e280cf4f4ccf37fec490976"
     },
     "docs/DELIVERY.md": {
-      "bytes": 6196,
-      "sha256": "ad25577feb6eb498abf9233d3a8e7048484c97c7505878d5f11ca6934cbe0e69"
+      "bytes": 4105,
+      "sha256": "32693b26b5dd36a43edce40ca8b7674b572988ac129d24b731ee915d470ef4ec"
     },
     "docs/DEPLOYMENT.md": {
-      "bytes": 4263,
-      "sha256": "3e1bb0f4de58586cae412652558a8ed45d8c751a90cd12125198c7db91727864"
+      "bytes": 4194,
+      "sha256": "aa10fa9789ebd5845c4771f1235682494a80333829a5406a2cb61d590caf994a"
     },
     "docs/GETTING-STARTED.md": {
       "bytes": 2799,
       "sha256": "b07da180cf4fb1ad29cca55a5bff5fe910d5f14921fea9f522721936ae5ffdeb"
     },
     "docs/IMAGE-DOWNLOAD.md": {
-      "bytes": 3609,
-      "sha256": "caf7b1e97a39dba39d4c3373464ae307f75ffbd24587a44cef557a65965ffda0"
+      "bytes": 3591,
+      "sha256": "4330b485d86c33c6889ed80a667ed39aff46016f8975075637cc4d73e9274b7b"
     },
     "docs/MAINTAINING.md": {
       "bytes": 1189,
@@ -227,8 +227,8 @@
       "sha256": "addcc5d6be9a8e178b7e5901ab009058b1ea861f269ad0d68982947d82ac7382"
     },
     "docs/PANEL-SYSTEM.md": {
-      "bytes": 1611,
-      "sha256": "2cd801b1f01628b05981eedae1ca228dda332960fb1142061472373f65a8139e"
+      "bytes": 2218,
+      "sha256": "f0f3305cdd3d6f005381bf6b1a3c769e3928d17cb3d1bdb930d145c3d85cbcfe"
     },
     "docs/PANEL-UPGRADE.md": {
       "bytes": 1329,
@@ -239,8 +239,8 @@
       "sha256": "5e8fc6f4f02c2d7dbcbed03348f8c7c276892a1e1170016b79b7709efec2908b"
     },
     "docs/RELEASE.md": {
-      "bytes": 2570,
-      "sha256": "0b903a98b7907fc2d91a8e18c8ead03d447f6880e02b4186e393213b17c9b5ff"
+      "bytes": 3914,
+      "sha256": "149f089abaea76cc2eae7f4579698169005530ae6f3087aba2d6ed31cbaa3581"
     },
     "docs/ROOTFS-SOURCES.md": {
       "bytes": 6112,
@@ -265,6 +265,10 @@
     "docs/receipts/20261015-common-lo-rc2-image-candidate.json": {
       "bytes": 146525,
       "sha256": "98acca70039c8119b5cada0f8a561c70b931960fda364f0de38922e28cd11b11"
+    },
+    "docs/receipts/20261027-1.2.1-exact-image-acceptance.json": {
+      "bytes": 1681,
+      "sha256": "a97e21a8b6aa4abed96a1765e892f009d0490d07cbea37c1201ac1f2e07056c7"
     },
     "docs/source-review/bluej-java17-observed.patch": {
       "bytes": 787,
@@ -353,6 +357,10 @@
     "manifests/h102-deployment-1.2.1-rc2.json": {
       "bytes": 6338,
       "sha256": "4bfbeb1fd05498956b739fc9830db3e699eafe414a6f8067c0b8bfc347a4c7cd"
+    },
+    "manifests/h102-deployment-1.2.1.json": {
+      "bytes": 6506,
+      "sha256": "ef88e8ea633a59d7ea51bd28d68bce4c4ac0d27f186227dade21b11792eb33c9"
     },
     "manifests/h102-image-parts-1.2.0.json": {
       "bytes": 1107,
@@ -608,7 +616,7 @@
     },
     "scripts/h102_check_new_board.py": {
       "bytes": 23135,
-      "sha256": "4009a9a412f6f40d9bfa7b6c15065652c9d1b1cf49859786df46b5150baafe04"
+      "sha256": "e603f232f9c65c8f73bcb68b742b7333d8bc77c631edccebd8c72671b25fc905"
     },
     "scripts/h102_export_source_materials.py": {
       "bytes": 11716,
@@ -683,8 +691,8 @@
       "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
     },
     "scripts/h102_sd_deploy.py": {
-      "bytes": 22844,
-      "sha256": "5a8edb6fdc50b226364cda7e3f742968dcd06985a4debfddb26cdfd84cd15168"
+      "bytes": 22832,
+      "sha256": "b99ef6a14791b11c582a6475c240935839acd8686e1ae184b45ff7b9fbae688a"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,

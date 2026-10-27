@@ -1,59 +1,33 @@
 # Hawk H102 downloads and setup order
 
-Use the matching components below when provisioning a new H102. All linked repositories and releases currently require private repository access. The base image and device services are separate downloads. The listed current components are stable releases with their own verification scope.
+Use the integrated Kuiper 1.2.1 image with GUI 0.8.1 or gr-logicrf 1.2.3. The image already includes IP-only device control and network affinity. Do not install the older 1.2.0 board-service add-on over it. The repositories and downloads currently require private GitHub access. New release attachments are being prepared; a source ZIP is not a bootable SD image.
 
-## Downloads
-
-| Component | Version | Download and purpose |
+| Component | Matching version | Download |
 |---|---|---|
-| Bootable SD image | H102 Kuiper 1.2.0 / 2024.1 | [Image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image); download all three parts and reassemble the XZ |
-| SD deployment tools | 1.2.0-en-r2 | [Deployment-tool release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2); image writing, identity checks and complete readback |
-| Device services | 1.0.0-en-r1 | [Service release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-board-services-1.0.0-en-r1); API36/cap3 plus network-performance 1.0.0 |
-| Standalone IIO GUI | 0.8.0-source-en-r3 | [GUI source release](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.0-source-en-r3); bilingual desktop configuration, plots, IQ recording and supported TX |
-| GNU Radio module | gr-logicrf 1.2.2 English source | [Module source release](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.2); native GRC examples, FM, IQ and time-domain applications |
-| Optional USB host tools | 1.0.0-r2 | [USB host-tool source release](https://github.com/logicrf/gr-logicrf/releases/tag/h102-usb-host-tools-1.0.0-r2); administrator preparation, activation and rollback |
+| Bootable SD image | Kuiper 1.2.1 / 2024.1 | [Image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.1-image); all three parts are required |
+| SD deployment tools | 1.2.1 English | Included with the image release; fixed manifests, exact card selection, complete direct readback and first-boot checks |
+| IIO GUI | 0.8.1 | [GUI source](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.1) |
+| GNU Radio module | gr-logicrf 1.2.3 | [Module source](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.3) |
+| Optional USB host tools | 1.0.0-r2 | [USB host setup](https://github.com/logicrf/gr-logicrf/releases/tag/h102-usb-host-tools-1.0.0-r2) |
 
-Exact filenames, sizes and SHA-256 values are in [the delivery manifest](../manifests/h102-companion-delivery-20261026.json). Source-delivery versions do not identify new firmware or extend earlier hardware tests. The Linux repository is an integration toolkit, not a complete standalone corresponding-source set for every system/vendor component.
+## Prepare the card
 
-## 1. Prepare a new SD card
+Follow [download and reassembly](IMAGE-DOWNLOAD.md), then [SD deployment](DEPLOYMENT.md). Download all parts and verify the compressed image. The Linux writer accepts XZ directly, checks both complete input hashes, holds an exclusive FD on the explicitly inspected whole card, performs complete O_DIRECT readback and safely ejects. A 32-GB card is suitable. Writing overwrites that card.
 
-Follow [image download and reassembly](IMAGE-DOWNLOAD.md), then use the [current deployment tools](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-deployment-tools-1.2.0-en-r2) and [SD deployment guide](DEPLOYMENT.md). The writer streams XZ input, verifies the full compressed and expanded hashes and performs complete direct card readback. A source ZIP is not an SD image. Select and inspect the exact whole-card device before any write.
+With the H102 powered off, insert the card and connect Ethernet to DHCP. Keep the factory SD-boot setting. Allow first-boot identity creation and filesystem expansion to finish, including any automatic reboot. Find the device's actual IP and run the documented administrator first-boot checks. Each new H102 needs independent machine/MAC/SSH identities and its own bounded receive check.
 
-Boot the H102 normally, allow initial identity creation/root expansion to finish, find its DHCP address and complete the documented first-boot checks. Each device needs independent identity; do not clone another unit's installation transactions or generated host keys.
+## Install the host application
 
-## 2. Install matching device services once
+Follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.1/docs/INSTALL.md) or [GNU Radio installation](https://github.com/logicrf/gr-logicrf/blob/v1.2.3/docs/INSTALL.md). The GUI defaults to English and retains Simplified Chinese and saved preferences. GNU Radio uses the supplied editable `.grc` examples, GNU Radio 3.10.12.0 and QtGUI.
 
-Use [the device-service guide](BOARD-SERVICES.md). Verify the bundle, stage its unchanged firmware payloads in a new root-controlled directory on the H102, install the API36/cap3 package, reboot normally and check actual activation before installing the network add-on.
+Ordinary application sessions use only the device IP; no Linux username or password is requested. Administrator installation and diagnostic SSH are separate operations. Begin with an admitted low-rate receive configuration, such as 4 MSPS / 2 MHz, and verify actual profile, carriers, gain and bandwidth before capture. Stop and disconnect one application before opening another.
 
-The base image alone does not include these later IP-only services. The staged-files receipt is not an installation receipt. Keep per-device backup/activation records. The optional 4 MSPS / 2 MHz shared-LO boot profile requires an explicit administrator choice.
+## Check data integrity
 
-## 3. Install the host application
+The Ethernet IQ16 aggregate admission budget is 64 MB/s. Displaying a spectrum does not establish loss-free recording. Use the application's recording result, complete file checksums and preserved partial files on failure. USB additionally requires the matching FT601 host service and separately obtained vendor inputs. RF TX requires the intended load/attenuated connection and explicit TX operation.
 
-For the IIO GUI, follow [GUI installation](https://github.com/logicrf/hawk-h102-iio-gui/blob/v0.8.0-source-en-r3/docs/INSTALL.md). English is the first-launch default; Simplified Chinese and saved user preferences are retained.
+The exact new image passed first-unit card/cold/warm/identity checks, representative IIO dual RX and digital USB dual TX, and Linux ADI Oscilloscope control/display/reconnect. All defaults were restored with RF off. See [precise scope](PANEL-SYSTEM.md). This is not an all-host/all-profile endurance or absolute RF/UTC guarantee.
 
-For GNU Radio, install the documented GNU Radio 3.10.12.0 environment and follow [module installation](https://github.com/logicrf/gr-logicrf/blob/v1.2.2/docs/INSTALL.md). Open the supplied editable `.grc` examples in Companion.
+## Previous installations and source materials
 
-After administrator setup, ordinary applications connect using the H102 IP only. Linux credentials are not requested for ordinary device-control sessions. Use 8 MSPS / 4 MHz and RX1 as a practical initial GUI receive configuration, then verify actual configuration readback. After changing a profile, verify RX and TX carrier settings as well as sample rate and bandwidth; reselecting a profile does not restore every earlier custom RF setting.
-
-## 4. Check the new device
-
-Confirm the current boot, actual API/capability, profile/sample-rate/bandwidth readback and a bounded receive window on that unit. Ethernet IQ16 admission uses a 64 MB/s aggregate budget; a displayed spectrum does not prove loss-free recording. Follow the application's recording result and keep partial files on failure.
-
-USB additionally requires the matching FT601 host service and applicable driver/library terms. Those host components are not bundled in the device-service ZIP. RF transmission requires an appropriate load/attenuated connection and explicit TX operation.
-
-## Licensing and support scope
-
-Each component retains its own terms. The gr-logicrf GPL grant does not automatically relicense the standalone GUI, firmware, RTL or vendor SDK. Original qualified firmware archive bytes are preserved; English source/documentation updates are managed separately.
-
-The [21 October 2026 new-card validation](CUSTOMER-SETUP-VALIDATION.md) exercised this installation sequence and representative GUI/GRC RX recording/replay on one device. It did not add USB/RF, all-profile or arbitrary-duration qualification. Keep the existing release's precise hardware limits and perform each new unit's checks before use.
-
-For component-specific source availability and remaining source-delivery review,
-read [Source availability](SOURCE-AVAILABILITY.md).
-
-## Source materials
-
-See [boot software rebuild](BOOT-REBUILD.md), [rootfs source materials](ROOTFS-SOURCES.md) and [component source availability](SOURCE-AVAILABILITY.md) when requesting matching source inputs. The additional internal archives are not yet GitHub download attachments. These documentation and build-tool changes do not identify a new SD image.
-
-For a verified collection with original package filenames and installed copyright
-content, follow [offline source-material export](SOURCE-MATERIALS.md). It retains
-all recorded candidate and missing-source limits.
+The previous 1.2.0 image and [separately installed services](BOARD-SERVICES.md) keep their original versions and qualification. Back up a previous working card before replacing it; do not mix helper/firmware locks. Complete-system corresponding source is still incomplete: see [source availability](SOURCE-AVAILABILITY.md), [boot rebuild](BOOT-REBUILD.md), [rootfs source materials](ROOTFS-SOURCES.md) and [offline source export](SOURCE-MATERIALS.md). Each component retains its own license; the module's GPL does not relicense the separate GUI, RTL or vendor SDK.

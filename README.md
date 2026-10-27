@@ -1,14 +1,12 @@
-## Panel system release candidate
-
-The complete Kuiper 1.2.1-rc1 image integrates panel status and IP-only device control. Offline verification has passed; exact-card cold boot is pending. See [SD installation and matching software](docs/PANEL-SYSTEM.md) or [updating the exact existing baseline](docs/PANEL-UPGRADE.md). Existing stable downloads retain their original version and scope.
-
 # LogicRF Hawk H102 Kuiper
 
-[Retained-package provenance](docs/PACKAGE-PROVENANCE.md) documents the official signed binary records, recovered upstream packaging recipes and observed distribution differences. Five exact package-input records and 53 original Raspbian provenance records remain open; the released image is unchanged.
+**Current matching system: Kuiper 1.2.1 / 2024.1, IIO GUI 0.8.1 and gr-logicrf 1.2.3.** The integrated image includes panel indicators, IP-only device control and network affinity. Exact-card first-unit cold/warm boot, representative data checks and Linux ADI IIO Oscilloscope checks passed within the [recorded scope](docs/PANEL-SYSTEM.md). Release attachments are being prepared; existing downloads remain available until publication.
 
-The [rootfs source inventory](docs/ROOTFS-SOURCES.md) includes four recovered historical package sources: dpkg, Python 3.9, systemd and Qt Base. Five exact packaged source versions and original Raspbian production-input provenance for 53 Debian candidates remain unresolved. The image and complete-system-source status are unchanged.
+[Retained-package provenance](docs/PACKAGE-PROVENANCE.md) documents the official signed binary records, recovered upstream packaging recipes and observed distribution differences. Five exact package-input records and 53 original Raspbian provenance records remain open; those source-provenance limits remain open.
 
-H102-specific Linux integration, configuration and SD deployment tools for the LogicRF Hawk H102 SDR. The released operating-system baseline is **H102 Kuiper 1.2.0 / 2024.1**, using the 18 March 2025 ADI Kuiper Full userspace image and the pinned H102 kernel/boot inputs.
+The [rootfs source inventory](docs/ROOTFS-SOURCES.md) includes four recovered historical package sources: dpkg, Python 3.9, systemd and Qt Base. Five exact packaged source versions and original Raspbian production-input provenance for 53 Debian candidates remain unresolved. The complete-system-source limitations remain open.
+
+H102-specific Linux integration, configuration and SD deployment tools for the LogicRF Hawk H102 SDR. The integrated operating-system baseline is **H102 Kuiper 1.2.1 / 2024.1**, using the 18 March 2025 ADI Kuiper Full userspace image and the pinned H102 kernel/boot inputs.
 
 This repository provides English source and customer documentation. It contains the image integration recipes, H102 kernel patches and software IIO module, system overlays, radio-profile generation requests and tools, SD deployment utilities, optional device-control service source, and C++/Python IIO examples. It is maintained as a **private source distribution**, with component-specific licensing.
 
@@ -42,11 +40,11 @@ The source checker is offline: it verifies the included file set, hashes, Englis
 
 ## Images and exact-version inputs
 
-Download all three parts from the private [1.2.0 SD image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.0-image), then follow [image download instructions](docs/IMAGE-DOWNLOAD.md) to restore and verify the actual `.img.xz`. Images, generated firmware/stream binaries, vendor SDKs, complete RTL and build outputs are not stored in this Git repository. A source archive is not a bootable image.
+Download all three parts from the private [1.2.1 SD image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.1-image), then follow [image download instructions](docs/IMAGE-DOWNLOAD.md) to restore and verify the actual `.img.xz`. Images, generated firmware/stream binaries, vendor SDKs, complete RTL and build outputs are not stored in this Git repository. A source archive is not a bootable image.
 
 The historical image recipes retain their original source/asset checks. English translation changes source hashes: this export is **not** a new firmware release or a claim that translated files reproduce the released image byte-for-byte. Exact historical reconstruction requires the original pinned inputs listed in [build inputs](docs/BUILD.md). The source checkout alone is insufficient for a complete image build.
 
-The [matching device-service bundle](docs/BOARD-SERVICES.md) supplies the later API36/cap3 and network add-ons separately from the released 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
+The 1.2.1 image includes the matching API/cap3 and network services. The older [device-service bundle](docs/BOARD-SERVICES.md) is a separate maintenance path for the previous 1.2.0 image. Do not overwrite a deployed stack with source files from this checkout without preparing and qualifying a matching installation.
 
 [Licensing](LICENSE.md) · [Third-party notices](LICENSES/THIRD-PARTY-NOTICES.md) · [English branch maintenance](docs/MAINTAINING.md)
 

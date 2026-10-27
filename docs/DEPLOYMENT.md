@@ -4,7 +4,7 @@ Use a Linux host with Python 3.10+, util-linux (`lsblk`, `blockdev`), udisks2 (`
 
 ## 1. Obtain and verify the image
 
-Obtain `LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz` through the product delivery channel. Compare the size and SHA-256 with [release information](RELEASE.md) and `manifests/h102-deployment-1.2.0.json`. Do not use a Git LFS pointer or source ZIP.
+Obtain `LogicRF-Hawk-H102-Kuiper-1.2.1-2024.1.img.xz` through the product delivery channel. Compare the size and SHA-256 with [release information](RELEASE.md) and `manifests/h102-deployment-1.2.1.json`. Do not use a Git LFS pointer or source ZIP.
 
 The writer streams compressed input and needs no separate expanded IMG file, but verifies both complete compressed and expanded hashes before writing. A complete direct readback follows writing, so the operation reads the image/card more than once.
 
@@ -25,7 +25,7 @@ This command overwrites the selected card completely. Replace `CURRENT_INSPECT_C
 ```bash
 sudo python3 scripts/h102_sd_deploy.py write \
   --device "$SD_DEVICE" \
-  --image /path/to/LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz \
+  --image /path/to/LogicRF-Hawk-H102-Kuiper-1.2.1-2024.1.img.xz \
   --confirm CURRENT_INSPECT_CODE \
   --report /path/to/new-card-write.json
 ```
@@ -36,7 +36,7 @@ The tool holds one exclusive block-device FD through write, fsync and full O_DIR
 
 With the H102 powered off, install the card and connect Ethernet to a DHCP network. UART0 uses 115200 baud, 8N1, no flow control. Power on and allow identity generation, root expansion and initialization to finish; do not interrupt any automatic reboot. Find its actual DHCP address.
 
-Ordinary matching GUI/GNU Radio control sessions use only the device IP after the required control service is installed. Administrator first-boot checks use an existing trusted SSH connection or run locally on the board:
+Ordinary matching GUI/GNU Radio control sessions use only the device IP with the control service already included in this image. Administrator first-boot checks use an existing trusted SSH connection or run locally on the board:
 
 ```bash
 python3 scripts/h102_check_new_board.py --host H102_IP \
@@ -49,12 +49,11 @@ Check independent machine/MAC/SSH identities, matching kernel/boot assets, 58 pr
 
 ## Validation scope
 
-The released image has the recorded two-board checks. The SD deployment CLI has offline rejection and real regular-file/loop transfer evidence; it must not inherit a physical-card test from an older independent writer. A later [new-card setup check on 21 October 2026](CUSTOMER-SETUP-VALIDATION.md) used the exact English r2 tools for a physical-card write/full direct readback and representative new-card RX setup. Preserve each actual tool/card report; that check did not transmit RF.
-
+The exact 1.2.1 image and physical-card writer passed complete write/direct readback and first-unit cold/warm boot, identity persistence and representative data checks. See the [acceptance scope](PANEL-SYSTEM.md). Earlier two-board checks apply to their original 1.2.0 inputs; they do not qualify an untested new unit. Run basic identity/service checks and bounded, bandwidth-admitted receive checks on every new H102.
 
 ## Hosts using AppImage/FUSE
 
-Deployment tools 1.2.0-en-r2 handle a process descriptor that FUSE exposes to its
+The deployment tools handle a process descriptor that FUSE exposes to its
 owner but denies to root. A bounded read-only child drops privileges to that owner
 to classify it. Actual target block descriptors, unreadable descriptors and changed
 descriptors still refuse the write. No mount permissions are changed. A failure

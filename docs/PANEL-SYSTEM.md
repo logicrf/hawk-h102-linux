@@ -1,11 +1,20 @@
-# Complete system image candidate
+# Kuiper 1.2.1 integrated system image
 
-Kuiper 1.2.1-rc2 includes the H102 panel indicators, the matching device control API and the fixed SDK runtime. Use GUI 0.8.1 or the matching gr-logicrf 1.2.3rc3 package. The exact rc2 image has passed offline checks; SD deployment and hardware acceptance remain pending. The stable 1.2.0 release is unchanged.
+Kuiper 1.2.1 includes the S0/S1 panel indicators, IP-only device control, the matching SDK runtime and network affinity service. Use IIO GUI 0.8.1 or gr-logicrf 1.2.3. A newly written card does not require the older separately installed board-service add-on.
 
-The rc2 image corrects the private permissions of three API installation directories. The preceding rc1 booted Linux, but its API correctly rejected the directories created with 0755 permissions. A diagnostic repair to 0700 restored the API and passed short IIO RX and digital USB TX checks. That repair does not qualify the original rc1 image or the new rc2 image as a released system.
+The stable image preserves the accepted 1.2.1-rc2 bytes. Its internal metadata still identifies rc2; this is intentional. Use the exact manifest rather than editing the image to change that label. The pinned original integration recipe is `e9dfd5ee04f51bc41abc44784252dcca92f06b16`; a later source checkout is not a byte-identical reconstruction of those original inputs.
 
-The new recipe records, sets and independently reads back root-owned 0700 permissions for the API root, bundle and package directories. File hashes, 618 installed files, five service links, filesystem integrity, first-boot identity preparation and changes outside the approved file list are checked separately.
+| Component | Matching version |
+|---|---|
+| System | Kuiper 1.2.1 / 2024.1; internal build 1.2.1-rc2 |
+| RTL | 1.2.1; compiled design 134a61f; BIT d6a2412c... |
+| ADRV9002 | API 68.21.6, firmware 1.0.2, stream 0.7.22.0 |
+| Profiles | 29 sample-rate/bandwidth choices; 58 packages across two LO modes |
+| Device API | 0.1.0-ip36-panel1, included |
+| Desktop applications | IIO GUI 0.8.1; gr-logicrf 1.2.3 / GNU Radio 3.10.12.0 |
 
-The compressed image is 2,760,770,292 bytes, SHA-256 `31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5`. Its decoded image is 11,823,742,976 bytes, SHA-256 `ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92`.
+S0 indicates the FPGA heartbeat at approximately 1 Hz. S1 flashes at approximately 4 Hz during host IQ activity and is off when idle. These indicators do not establish Linux readiness, RF power, UTC validity or recording integrity.
 
-Use the pinned SD deployment tool with the exact rc2 manifest. The tool verifies the complete source, the selected disk identity, the complete direct readback and safe ejection. Keep the previous working card for rollback. Successful file verification does not establish cold-boot, RF, USB or profile-matrix qualification.
+The exact image passed complete physical-card write/direct readback, cold and warm boot, independent persistent identity, 618 file/five link/three private-directory checks, representative IIO dual RX and digital USB dual TX, and the Linux ADI IIO Oscilloscope control/display/reconnect checks. All default settings were restored with RF TX off. See the [scoped acceptance receipt](receipts/20261027-1.2.1-exact-image-acceptance.json). This does not extend qualification to a second unit, a new full-profile endurance matrix, RF metrology, absolute UTC or Windows Oscilloscope.
+
+Use [downloads and setup order](DELIVERY.md), [SD deployment](DEPLOYMENT.md) and the fixed `manifests/h102-deployment-1.2.1.json`. The source distribution remains an integration toolkit, not the complete corresponding source for every system component; see [source availability](SOURCE-AVAILABILITY.md).

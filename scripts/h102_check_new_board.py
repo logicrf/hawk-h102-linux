@@ -30,7 +30,7 @@ import stat
 import subprocess
 import sys
 
-PINS = Path(__file__).resolve().parents[1] / 'manifests/h102-deployment-1.2.0.json'
+PINS = Path(__file__).resolve().parents[1] / 'manifests/h102-deployment-1.2.1.json'
 DMA_NAMES = ('axi-adrv9002-rx-lpc', 'axi-adrv9002-rx2-lpc',
              'axi-adrv9002-tx-lpc', 'axi-adrv9002-tx2-lpc')
 """Use stable sampling-device names rather than variable iio:device indices."""
@@ -352,7 +352,7 @@ def remote_probe(args, pins: dict) -> dict:
 
 def main(argv=None) -> int:
     """Run on board or host SSH, creating a new report without device or service changes."""
-    parser = argparse.ArgumentParser(description='Read-only H102 1.2.0 first-boot checks; no IQ or TX start')
+    parser = argparse.ArgumentParser(description='Read-only H102 1.2.1 first-boot checks; no IQ or TX start')
     parser.add_argument('--host', help='Board IP/hostname for host-side checks; omit to run on the H102')
     parser.add_argument('--user', default='logicrf')
     parser.add_argument('--known-hosts', type=Path)
@@ -373,7 +373,7 @@ def main(argv=None) -> int:
     try:
         try:
             pins = json.loads(PINS.read_text())
-            require(pins['schema'] == 1 and pins['version'] == '1.2.0', 'INVALID_RELEASE_PINS')
+            require(pins['schema'] == 1 and pins['version'] == '1.2.1', 'INVALID_RELEASE_PINS')
             if args.host:
                 report = remote_probe(args, pins)
             else:

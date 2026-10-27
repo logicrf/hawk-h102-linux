@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "status": "PASS_SCOPED_RELEASE_READY_NOT_PUBLISHED",
+  "distribution_version": "1.2.1",
+  "internal_image_build": "1.2.1-rc2",
+  "raw_sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
+  "compressed_sha256": "31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5",
+  "raw_bytes": 11823742976,
+  "compressed_bytes": 2760770292,
+  "recipe_commit": "e9dfd5ee04f51bc41abc44784252dcca92f06b16",
+  "BIT_sha256": "d6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff",
+  "compiled_RTL_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
+  "metadata_sha256": "7b58e2f3eb0d8427d35af6378e91f7c138e9386b2f0acf981830ebf79aeafd42",
+  "scope": "Current first H102; exact image SD write/direct readback/eject, cold and warm boot,618files5links3privateDirectories,independent/persistent identity,default41settings12sources",
+  "IIO": "dualRX4MSPS_each4000000samples32MB_fullSHA",
+  "USB": "dualTX_each18726912_socket_equals_SSI_zero_discard_RF_OFF",
+  "ADI_Oscilloscope": "v0.18-main_Linux_IP_only_control_sharedLO_gain_dualIQ_time_RX1_RX2_complexFFT_stop_close_reconnect",
+  "ADI_startup_behavior": "Plugin enables DDS raw; explicitly select Disable for both DDS panels before RX; RF remained off",
+  "final_default": "40MSPS20MHz_all41settings12sources_restored",
+  "not_added": [
+    "second_board_new_image",
+    "full58continuous_matrix",
+    "RF_TX_or_absolute_RF",
+    "GNSS_UTC_precision",
+    "ADI_profile_generator_or_profile_file_import",
+    "Windows_ADI_GUI"
+  ],
+  "evidence_report": "Retained engineering evidence: system-delivery-20261027/REPORT-ACCEPTANCE.md",
+  "complete_system_corresponding_source": false
+}
