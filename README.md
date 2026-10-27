@@ -1,3 +1,7 @@
+## Panel system release candidate
+
+The complete Kuiper 1.2.1-rc1 image integrates panel status and IP-only device control. Offline verification has passed; exact-card cold boot is pending. See [SD installation and matching software](docs/PANEL-SYSTEM.md) or [updating the exact existing baseline](docs/PANEL-UPGRADE.md). Existing stable downloads retain their original version and scope.
+
 # LogicRF Hawk H102 Kuiper
 
 [Retained-package provenance](docs/PACKAGE-PROVENANCE.md) documents the official signed binary records, recovered upstream packaging recipes and observed distribution differences. Five exact package-input records and 53 original Raspbian provenance records remain open; the released image is unchanged.

@@ -1723,6 +1723,114 @@
   "generated_delivery_documents": [
     "docs/DELIVERY.md",
     "manifests/h102-customer-delivery-20261020.json",
-    "docs/SOURCE-AVAILABILITY.md"
+    "docs/SOURCE-AVAILABILITY.md",
+    "docs/PANEL-SYSTEM.md",
+    "docs/PANEL-UPGRADE.md"
+  ],
+  "panel_system_update": [
+    {
+      "path": "control-api/install_panel_addon.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "5e42c3f7b8a3c657309be7117b0064c040554843f606ff268c7194ae21af5d5a",
+      "english_sha256": "aa24fcfde4e62aef7b6121af7d3569d936d2a5b6e55d948ae8e85c68af51252c",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/panel_transaction.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "589fad1cd6f7397c95ba4c8b0f633a33a2728ac8458910da997b4af5a81bbd68",
+      "english_sha256": "636703d17fc288e34728169efa4e7d6fda8a5dae213b150ed11141b1430b68e4",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/package_panel_addon.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "dfaba2ae5cbddfc2a2d35fb37c6ce19b30c17c283bd0b7abd95188f72fe5eda5",
+      "english_sha256": "8025e5a96f3db512e480a752e517ed4e83ed033f26bb88a03d635b2ae2574a2d",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/panel_preflight.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "fc9245b8aef0b12d920c4497033fa1ce7c28fe8cab1a9a0acf5ec8c4cece31c9",
+      "english_sha256": "b699de981144733267fa84064f65ee3df0054de94617c25f36b437b4dc46be6f",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/prepare_panel_inputs.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "2b29af6d308e8086722c6fda6b1312c7114edd2e9a01cbaac6e707aa8866f91f",
+      "english_sha256": "e71506708ec993fa2cff6e3332ad33a6118a074138c7bb649f0934bbfcee0fb6",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/panel-base-sdk.lock.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "49f91c570e52e8b8825f5481ff88206882013484b790941975677f99b3064e1a",
+      "english_sha256": "49f91c570e52e8b8825f5481ff88206882013484b790941975677f99b3064e1a",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/tests/test_panel_transaction.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "874c61095f3eca35c07616627acc7af14e33cf5c8997235b4cb9f8a15ad5bfa9",
+      "english_sha256": "42ca695c684a8997b9af5181fcf6a5d3ef300ef93ad0001fce2c4a334b44c616",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "control-api/image_api_preflight.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "67f309e563803a48e7ebbc506b418e31179d5d00fe28ce23105d7252ca8c4464",
+      "english_sha256": "b006bdcc91d6addd4b50e8edf06b075faa041f7fdfdcd8e803f47b3fccd4d1b0",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "scripts/prepare_h102_panel_image.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "62755e404ad7eeaeacc37a0e353a4b9640504231ae5067ef6560b647bdada7f6",
+      "english_sha256": "edb2a3ed76eff562c6bc0d90315fbd9d237f6bcb8da569cc8d23f9c29700cdad",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "scripts/build_h102_panel_image.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "138fa557a98134890ee17f2fcca483919afa5b30c783689924f7e09618211b8d",
+      "english_sha256": "5b5d62027e9a95f4ed9838b391c0b4f54f3ab317a7368adcc644aec1023a45f6",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "scripts/h102_sd_deploy.py",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "c59064976a85b9806a0fb2ac6a8c3b99ac74dd4d",
+      "source_sha256": "d8c37d4871e8881191c0897c98b283b2351b182e03dea6bd4ad69faddb262b2e",
+      "english_sha256": "e7316ec9d2c8aa16ad644574097d551dced53465814d7a7ca29321adb3770ab8",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "docs/receipts/20261015-common-lo-rc2-image-candidate.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "8811475a27754c47d0c625e9ce4e4f9905170f23",
+      "source_sha256": "98acca70039c8119b5cada0f8a561c70b931960fda364f0de38922e28cd11b11",
+      "english_sha256": "98acca70039c8119b5cada0f8a561c70b931960fda364f0de38922e28cd11b11",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    },
+    {
+      "path": "manifests/h102-deployment-1.2.1-rc1.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "c59064976a85b9806a0fb2ac6a8c3b99ac74dd4d",
+      "source_sha256": "e51a8f930dfb7b908544fe6996f285c19f26686c173cb737c91989caaa386d5d",
+      "english_sha256": "e51a8f930dfb7b908544fe6996f285c19f26686c173cb737c91989caaa386d5d",
+      "modification": "English documentation/diagnostics; preserve exact input checks and device-byte anchors"
+    }
   ]
 }

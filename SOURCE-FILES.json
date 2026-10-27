@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 4513,
-      "sha256": "fd0e3873075be71a0684e69bae01d177ff829499b422cecba1d12afd9ec015a0"
+      "bytes": 4902,
+      "sha256": "3cf7cd3ab2c3eb0cd798e8f589dcfe51603dd2a9a01824591a5e52c826cc6a56"
     },
     "SOURCE-BASE.json": {
-      "bytes": 1226,
-      "sha256": "ed2a7b6e796d7b4ee07f9df93f81c66eff4c4874d0f4426713ba8fec05d11b9e"
+      "bytes": 1854,
+      "sha256": "c5bbb7757fb8c0fdf7c89909263e4719dfcf9f6c0c64d820a59d3060eda5ab3c"
     },
     "SOURCE-MAP.json": {
-      "bytes": 90650,
-      "sha256": "f055e3bd54aabcbfe519d0fc5f439e8f1b99b08fa08940d82a9dc0f5f410b0f5"
+      "bytes": 97004,
+      "sha256": "230008deffc5a9c1da26f18905c9e702859a95f8fd9dba64702cda04278934a6"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -94,9 +94,17 @@
       "bytes": 6639,
       "sha256": "b5b560bee1e22a93b08dd62bc42b6392f5186197a231c191d9ff443365bcd4b0"
     },
+    "control-api/image_api_preflight.py": {
+      "bytes": 4312,
+      "sha256": "b006bdcc91d6addd4b50e8edf06b075faa041f7fdfdcd8e803f47b3fccd4d1b0"
+    },
     "control-api/install_hotmeta_addon.py": {
       "bytes": 14966,
       "sha256": "10e413033e2c0d57e45ff475000b90114722fc82f7451caa736b4dc3fe747170"
+    },
+    "control-api/install_panel_addon.py": {
+      "bytes": 15186,
+      "sha256": "aa24fcfde4e62aef7b6121af7d3569d936d2a5b6e55d948ae8e85c68af51252c"
     },
     "control-api/install_service.py": {
       "bytes": 5196,
@@ -106,9 +114,29 @@
       "bytes": 5015,
       "sha256": "db14a1f394cceccc78f487ed71bbef380fc41694496e1921194dad08a4e32418"
     },
+    "control-api/package_panel_addon.py": {
+      "bytes": 5388,
+      "sha256": "8025e5a96f3db512e480a752e517ed4e83ed033f26bb88a03d635b2ae2574a2d"
+    },
+    "control-api/panel-base-sdk.lock.json": {
+      "bytes": 11079,
+      "sha256": "49f91c570e52e8b8825f5481ff88206882013484b790941975677f99b3064e1a"
+    },
+    "control-api/panel_preflight.py": {
+      "bytes": 4121,
+      "sha256": "b699de981144733267fa84064f65ee3df0054de94617c25f36b437b4dc46be6f"
+    },
+    "control-api/panel_transaction.py": {
+      "bytes": 6707,
+      "sha256": "636703d17fc288e34728169efa4e7d6fda8a5dae213b150ed11141b1430b68e4"
+    },
     "control-api/prepare_hotmeta_inputs.py": {
       "bytes": 6489,
       "sha256": "33a7e590aa1003467365b55f4f043f229197806558c4e14bc56177b44c654d0d"
+    },
+    "control-api/prepare_panel_inputs.py": {
+      "bytes": 7791,
+      "sha256": "e71506708ec993fa2cff6e3332ad33a6118a074138c7bb649f0934bbfcee0fb6"
     },
     "control-api/tests/test_hotmeta_package.py": {
       "bytes": 3181,
@@ -129,6 +157,10 @@
     "control-api/tests/test_native_contract.py": {
       "bytes": 2317,
       "sha256": "8a015069db071bd77a5f3e392ad259e24a534bd69594d611b26105c17f61be4d"
+    },
+    "control-api/tests/test_panel_transaction.py": {
+      "bytes": 5694,
+      "sha256": "42ca695c684a8997b9af5181fcf6a5d3ef300ef93ad0001fce2c4a334b44c616"
     },
     "control-api/tests/test_protocol.py": {
       "bytes": 2094,
@@ -194,6 +226,14 @@
       "bytes": 5495,
       "sha256": "addcc5d6be9a8e178b7e5901ab009058b1ea861f269ad0d68982947d82ac7382"
     },
+    "docs/PANEL-SYSTEM.md": {
+      "bytes": 2858,
+      "sha256": "4c8b45af5512c5813cecf6e93d55a3dbce12e5dd37c35c85c9467b9a226cbe63"
+    },
+    "docs/PANEL-UPGRADE.md": {
+      "bytes": 1329,
+      "sha256": "810b7dddd97098354056880bdbb9007d30821b84aab53ac7ca925b1ca94a9ae6"
+    },
     "docs/PROFILE-GENERATION.md": {
       "bytes": 4214,
       "sha256": "5e8fc6f4f02c2d7dbcbed03348f8c7c276892a1e1170016b79b7709efec2908b"
@@ -221,6 +261,10 @@
     "docs/VALIDATION.md": {
       "bytes": 1938,
       "sha256": "7fc4a192d0e270b21cab9160f29260777a577103ddbe6fbddb4d4d844961ab1f"
+    },
+    "docs/receipts/20261015-common-lo-rc2-image-candidate.json": {
+      "bytes": 146525,
+      "sha256": "98acca70039c8119b5cada0f8a561c70b931960fda364f0de38922e28cd11b11"
     },
     "docs/source-review/bluej-java17-observed.patch": {
       "bytes": 787,
@@ -282,6 +326,10 @@
       "bytes": 1560,
       "sha256": "25c666b5bcb481aaf824b6c7f3846dfffee5274de406ce8dc830a119be620202"
     },
+    "manifests/h102-companion-delivery-20261026.json": {
+      "bytes": 4101,
+      "sha256": "dd13ad6473a460cfdd8786ed3e083186580a59661811e22cf9ffc23b637868b9"
+    },
     "manifests/h102-copyright-materials-1.2.0.json": {
       "bytes": 769,
       "sha256": "483e3ad2fc8d2bd4667b847942231983ecbb7866b1ed96a238053091443a82ad"
@@ -297,6 +345,10 @@
     "manifests/h102-deployment-1.2.0.json": {
       "bytes": 3259,
       "sha256": "9b6edcec88d221706b9458bd51c354249848e1c57950d65fe04b46ff3d7337cd"
+    },
+    "manifests/h102-deployment-1.2.1-rc1.json": {
+      "bytes": 5910,
+      "sha256": "e51a8f930dfb7b908544fe6996f285c19f26686c173cb737c91989caaa386d5d"
     },
     "manifests/h102-image-parts-1.2.0.json": {
       "bytes": 1107,
@@ -522,6 +574,10 @@
       "bytes": 11396,
       "sha256": "6b7cef3aae6c2c8bc4e5db4427efee4bb7e86fd8ca10e57d902c2cd06ee686f0"
     },
+    "scripts/build_h102_panel_image.py": {
+      "bytes": 9821,
+      "sha256": "5b5d62027e9a95f4ed9838b391c0b4f54f3ab317a7368adcc644aec1023a45f6"
+    },
     "scripts/build_h102_sdk1_image.py": {
       "bytes": 12834,
       "sha256": "c09d2dfe9f894a6ae8aa98df1ada8106ed336829b334466258a95745b3b21778"
@@ -623,8 +679,8 @@
       "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
     },
     "scripts/h102_sd_deploy.py": {
-      "bytes": 22832,
-      "sha256": "c5fc1e60a7b0c49fa3b505af6ecffe96fcaad974596df1a6d7aeb6c7e9c3cdb7"
+      "bytes": 22844,
+      "sha256": "e7316ec9d2c8aa16ad644574097d551dced53465814d7a7ca29321adb3770ab8"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,
@@ -645,6 +701,10 @@
     "scripts/prepare_h102_common_lo_assets.py": {
       "bytes": 10386,
       "sha256": "50f094235c07058aa7eee164689806e9654be4568dafdc73ae6ed6b8909cddf6"
+    },
+    "scripts/prepare_h102_panel_image.py": {
+      "bytes": 8991,
+      "sha256": "edb2a3ed76eff562c6bc0d90315fbd9d237f6bcb8da569cc8d23f9c29700cdad"
     },
     "scripts/prepare_h102_sdk1_assets.py": {
       "bytes": 16617,
@@ -709,10 +769,6 @@
     "tests/test_profile_iio_broker.py": {
       "bytes": 5345,
       "sha256": "838ddee231055059cfe11a6c813e2aaae40d835a772034eb75694d51f88fcdae"
-    },
-    "manifests/h102-companion-delivery-20261026.json": {
-      "bytes": 4101,
-      "sha256": "dd13ad6473a460cfdd8786ed3e083186580a59661811e22cf9ffc23b637868b9"
     }
   }
 }
