@@ -2,6 +2,8 @@
 
 **Current matching system: Kuiper 1.2.1 / 2024.1, IIO GUI 0.8.1 and gr-logicrf 1.2.3.** The integrated image includes panel indicators, IP-only device control and network affinity. Exact-card first-unit cold/warm boot, representative data checks and Linux ADI IIO Oscilloscope checks passed within the [recorded scope](docs/PANEL-SYSTEM.md). Use the matching release attachments and fixed hashes below; previous releases remain available for rollback.
 
+Deployment tools **0.3.0** add DHCP-first setup with static fallback to **10.168.1.199/24**. Follow [one-command SD deployment](docs/SD-QUICK-WRITE.md) to apply it. Complete card write/readback, fresh-card cold/warm boot and a representative dual-RX GUI recording passed within the documented scope. The original image file and its hashes remain unchanged; network customization is performed by the writer.
+
 [Retained-package provenance](docs/PACKAGE-PROVENANCE.md) documents the official signed binary records, recovered upstream packaging recipes and observed distribution differences. Five exact package-input records and 53 original Raspbian provenance records remain open; those source-provenance limits remain open.
 
 The [rootfs source inventory](docs/ROOTFS-SOURCES.md) includes four recovered historical package sources: dpkg, Python 3.9, systemd and Qt Base. Five exact packaged source versions and original Raspbian production-input provenance for 53 Debian candidates remain unresolved. The complete-system-source limitations remain open.

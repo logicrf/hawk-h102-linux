@@ -92,7 +92,7 @@ class DeploymentTests(unittest.TestCase):
         source = self.source()
         source.write_bytes(b'bad')
         report = self.root / 'result.json'
-        args = argparse.Namespace(image=source, device='/dev/never-open', confirm='invalid', report=report)
+        args = argparse.Namespace(image=source, device='/dev/never-open', confirm='invalid', report=report, network='dhcp')
         with mock.patch.object(sd.os, 'geteuid', return_value=0), mock.patch.object(sd, 'inspect_device', side_effect=AssertionError('must not inspect target')):
             self.assertEqual(sd.deploy(args, self.pins), 1)
         result = json.loads(report.read_text())
@@ -138,7 +138,7 @@ class DeploymentTests(unittest.TestCase):
         target.write_bytes(b'\0' * len(self.raw))
         device = dict(identity=dict(device=str(target)), blockers=[], confirm='test-only')
         args = argparse.Namespace(image=self.source(True), device=str(target),
-                                  confirm='test-only', report=self.root / 'eject-busy.json')
+                                  confirm='test-only', report=self.root / 'eject-busy.json', network='dhcp')
         with mock.patch.object(sd.os, 'geteuid', return_value=0), \
                 mock.patch.object(sd.shutil, 'which', return_value='/usr/bin/udisksctl'), \
                 mock.patch.object(sd, 'inspect_device', return_value=device), \
@@ -155,6 +155,32 @@ class DeploymentTests(unittest.TestCase):
         self.assertTrue(report['readback']['direct'] and report['readback']['same_fd'])
         self.assertIn('BLOCK_FD_IN_USE', report['eject']['reason'])
         self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), self.pins['raw_sha256'])
+
+    def test_static_personalization_failure_never_ejects_or_claims_success(self):
+        """Base direct-readback success cannot hide a failed static profile mutation."""
+        target = self.root / 'owned-static-failure.img'
+        target.write_bytes(bytes(len(self.raw)))
+        device = dict(identity=dict(device=str(target)), blockers=[], confirm='test-only')
+        args = argparse.Namespace(image=self.source(True), device=str(target), confirm='test-only',
+            report=self.root/'static-failure.json', network='static',address='172.31.102.2/24',gateway=None,dns=None)
+        with mock.patch.object(sd.os, 'geteuid', return_value=0), \
+                mock.patch.object(sd.shutil, 'which', return_value='/usr/bin/udisksctl'), \
+                mock.patch.object(sd.network, 'check_dependencies'), \
+                mock.patch.object(sd, 'inspect_device', return_value=device), \
+                mock.patch.object(sd, 'check_kernel_users'), \
+                mock.patch.object(sd, 'verify_open_device'), \
+                mock.patch.object(sd.network, 'personalize', side_effect=ValueError('PROFILE_READBACK_BAD')) as personalize, \
+                mock.patch.object(sd, 'eject_device') as eject, \
+                contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(sd.deploy(args, self.pins | dict(version='1.2.1')), 1)
+            personalize.assert_called_once()
+            eject.assert_not_called()
+        report=json.loads(args.report.read_text())
+        self.assertEqual(report['status'],'FAIL')
+        self.assertEqual(report['phase'],'network_personalization')
+        self.assertEqual(report['write_readback'],'PASS')
+        self.assertNotIn('network_personalization',report)
+        self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(),self.pins['raw_sha256'])
 
     def test_eject_waits_for_transient_fd_but_never_ignores_live_user(self):
         """Model transient and persistent block FDs; never eject while an owner remains."""

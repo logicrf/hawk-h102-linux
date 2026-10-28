@@ -5,7 +5,7 @@ Use the integrated Kuiper 1.2.1 image with GUI 0.8.1 or gr-logicrf 1.2.3. The im
 | Component | Matching version | Download |
 |---|---|---|
 | Bootable SD image | Kuiper 1.2.1 / 2024.1 | [Image release](https://github.com/logicrf/hawk-h102-linux/releases/tag/h102-kuiper-1.2.1-image); all three parts are required |
-| SD deployment tools | 1.2.1 English | Included with the image release; fixed manifests, exact card selection, complete direct readback and first-boot checks |
+| SD deployment tools | 1.2.1 English r3 / tool 0.3.0 | Matching image-release attachment; exact card selection, complete direct readback and DHCP-first/static fallback setup |
 | IIO GUI | 0.8.1 | [GUI source](https://github.com/logicrf/hawk-h102-iio-gui/releases/tag/v0.8.1) |
 | GNU Radio module | gr-logicrf 1.2.3 | [Module source](https://github.com/logicrf/gr-logicrf/releases/tag/v1.2.3) |
 | Optional USB host tools | 1.0.0-r2 | [USB host setup](https://github.com/logicrf/gr-logicrf/releases/tag/h102-usb-host-tools-1.0.0-r2) |
@@ -14,7 +14,7 @@ Use the integrated Kuiper 1.2.1 image with GUI 0.8.1 or gr-logicrf 1.2.3. The im
 
 Follow [download and reassembly](IMAGE-DOWNLOAD.md), then [SD deployment](DEPLOYMENT.md). Download all parts and verify the compressed image. The Linux writer accepts XZ directly, checks both complete input hashes, holds an exclusive FD on the explicitly inspected whole card, performs complete O_DIRECT readback and safely ejects. A 32-GB card is suitable. Writing overwrites that card.
 
-With the H102 powered off, insert the card and connect Ethernet to DHCP. Keep the factory SD-boot setting. Allow first-boot identity creation and filesystem expansion to finish, including any automatic reboot. Find the device's actual IP and run the documented administrator first-boot checks. Each new H102 needs independent machine/MAC/SSH identities and its own bounded receive check.
+With the H102 powered off, insert the card and connect Ethernet. Keep the factory SD-boot setting. Allow first-boot identity creation and filesystem expansion to finish. The matching writer defaults to DHCP first, then 10.168.1.199/24 if no lease is obtained; see [network setup](SD-QUICK-WRITE.md#connect-after-first-boot). Find the actual address. Administrator checks are optional diagnostics; ordinary host applications require only the device IP. Each new H102 needs independent identities and a bounded receive check. The unchanged image written without these tools retains DHCP-only settings.
 
 ## Install the host application
 

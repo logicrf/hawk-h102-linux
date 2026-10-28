@@ -7,7 +7,7 @@ umask 077
 
 usage() {
     cat <<'EOF'
-Usage: sudo sh scripts/h102_write_sd.sh --image IMAGE.img.xz --device /dev/SD --report NEW.json
+Usage: sudo sh scripts/h102_write_sd.sh --image IMAGE.img.xz --device /dev/SD --report NEW.json [--network auto|dhcp|static --address IP/PREFIX [--gateway IP] [--dns IP,IP]]
 
 Overwrites the explicitly selected SD disk after physical identity confirmation.
 Checks the complete image, writes, performs full direct readback, and ejects.
@@ -15,16 +15,20 @@ Unmount SD partitions first. No separate decompression or formatting is needed.
 EOF
 }
 
-image= device= report=
+image= device= report= network=auto address= gateway= dns=
 while [ "$#" -gt 0 ]; do
     case "$1" in
         --help|-h) usage; exit 0 ;;
-        --image|--device|--report)
+        --image|--device|--report|--network|--address|--gateway|--dns)
             [ "$#" -ge 2 ] || { usage >&2; exit 2; }
             case "$1" in
                 --image) image=$2 ;;
                 --device) device=$2 ;;
                 --report) report=$2 ;;
+                --network) network=$2 ;;
+                --address) address=$2 ;;
+                --gateway) gateway=$2 ;;
+                --dns) dns=$2 ;;
             esac
             shift 2 ;;
         *) usage >&2; exit 2 ;;
@@ -65,7 +69,12 @@ IFS= read -r answer || { echo 'Cancelled.' >&2; exit 2; }
 [ "$answer" = "$token" ] || { echo 'Confirmation mismatch. Nothing written.' >&2; exit 2; }
 echo
 echo 'Verifying the full compressed and raw image before writing...'
-if python3 "$backend" write --image "$image" --device "$device" --confirm "$token" --report "$report"; then
+[ "$network" = dhcp ] || address=${address:-10.168.1.199/24}
+set -- write --image "$image" --device "$device" --confirm "$token" --report "$report" --network "$network"
+[ -z "$address" ] || set -- "$@" --address "$address"
+[ -z "$gateway" ] || set -- "$@" --gateway "$gateway"
+[ -z "$dns" ] || set -- "$@" --dns "$dns"
+if python3 "$backend" "$@"; then
     :
 else
     deploy_status=$?
@@ -81,7 +90,13 @@ fi
 echo
 echo 'PASS: full image written, direct readback verified, SD safely ejected.'
 echo 'Insert the SD into the powered-off H102, connect Ethernet, then power on.'
-echo 'The stock image uses DHCP. A static-only network requires separate configuration.'
+if [ "$network" = auto ]; then
+    echo "DHCP first; if no lease is obtained, fallback IPv4: $address."
+elif [ "$network" = static ]; then
+    echo "Static IPv4: $address. Put the PC on the same subnet; use this device IP to connect."
+else
+    echo 'The SD uses DHCP; obtain its actual IP from the router or UART.'
+fi
 echo "Deployment receipt: $report"
 
 # Contact: info@logicrf.com | Website: https://www.logicrf.com

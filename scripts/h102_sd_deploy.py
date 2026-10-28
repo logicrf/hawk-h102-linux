@@ -11,8 +11,8 @@
 @architect  LogicRF
 @email      info@logicrf.com
 @website    https://www.logicrf.com
-@version    0.1.2
-@date       2026-10-27
+@version    0.3.0
+@date       2026-10-28
 """
 from __future__ import annotations
 
@@ -33,6 +33,8 @@ import struct
 import subprocess
 import sys
 import time
+
+import h102_sd_network as network
 
 CHUNK = 4 * 1024 * 1024
 """Bound stream memory and page-align direct reads; released RAW size is 4-KiB aligned."""
@@ -203,7 +205,7 @@ def process_fd_kind(fd: Path) -> tuple[int, int]:
         return tuple(value)
 
 
-def check_kernel_users(device: dict) -> None:
+def check_kernel_users(device: dict, owned_fd: int | None = None) -> None:
     """Require complete root preflight over mount namespaces, swap and block FDs.
 
     A vanished process is an expected race; preserve other errors. Match only the selected
@@ -230,6 +232,8 @@ def check_kernel_users(device: dict) -> None:
                 except FileNotFoundError:
                     continue
                 if stat.S_ISBLK(mode) and rdev in rdevs:
+                    if process.name == str(os.getpid()) and owned_fd is not None and fd.name == str(owned_fd):
+                        continue  # Only the verified descriptor owned by this write; reject other handles.
                     raise ValueError('BLOCK_FD_IN_USE:' + process.name)
         except (FileNotFoundError, ProcessLookupError):
             continue
@@ -421,6 +425,10 @@ def deploy(args, pins: dict) -> int:
     try:
         if os.geteuid() != 0:
             raise PermissionError('ROOT_REQUIRED_FOR_WRITE')
+        plan = network.network_plan(args)
+        report.update(network_plan=plan)
+        if plan['personalization']:
+            network.check_dependencies()
         if not shutil.which('udisksctl'):
             raise RuntimeError('UDISKSCTL_REQUIRED_FOR_SAFE_EJECT')
         source_fd = os.open(args.image, os.O_RDONLY | os.O_NOFOLLOW)
@@ -454,6 +462,16 @@ def deploy(args, pins: dict) -> int:
                 checked = direct_readback(fd, pins)
                 verify_open_device(fd, device)
                 report.update(readback=checked, phase='safe_eject', write_readback='PASS')
+                if plan['personalization']:
+                    report.update(phase='network_personalization')
+                    check_kernel_users(device, owned_fd=fd)
+                    current = inspect_device(args.device, pins['raw_bytes'])
+                    if current['identity'] != device['identity'] or current['blockers']:
+                        raise ValueError('DEVICE_CHANGED_OR_BUSY_BEFORE_NETWORK')
+                    verify_open_device(fd, device)
+                    personalized = network.personalize(fd, plan)
+                    verify_open_device(fd, device)
+                    report.update(network_personalization=personalized, phase='safe_eject')
             finally:
                 os.close(fd)
         try:
@@ -487,6 +505,11 @@ def main(argv=None) -> int:
     write.add_argument('--image', type=Path, required=True)
     write.add_argument('--confirm', required=True, help='Current device confirmation code from inspect')
     write.add_argument('--report', type=Path, required=True, help='New JSON report with an existing parent directory')
+    write.add_argument('--network', choices=['auto', 'dhcp', 'static'], default='auto',
+                       help='DHCP first with 10.168.1.199 fallback; or DHCP-only/manual mode')
+    write.add_argument('--address', help='Fallback/manual IPv4 with prefix, e.g. 10.168.1.199/24')
+    write.add_argument('--gateway', help='Optional gateway in the selected static subnet')
+    write.add_argument('--dns', help='Optional comma-separated IPv4 DNS servers, up to three')
     args = parser.parse_args(argv)
     pins = load_pins()
     if args.command == 'write':

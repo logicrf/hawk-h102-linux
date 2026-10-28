@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "logicrf/hawk-h102-linux",
-  "development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
+  "development_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
   "delivery_branch": "github-en",
   "language": "English",
   "status": "READY_PRIVATE_INTEGRATION_TOOLKIT",
@@ -21,7 +21,7 @@
     "manifest": "manifests/h102-companion-delivery-20261026.json",
     "scope": "Stable host/tool releases and matching setup references; rootfs source-materials r13 and existing open gaps unchanged"
   },
-  "previous_development_commit": "d3b85cfd65cbc232510998493dc952bc4c70c472",
+  "previous_development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
   "panel_system_candidate": {
     "version": "1.2.1-rc2",
     "design_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
@@ -49,5 +49,15 @@
     "publication": "PUBLISHED_PRIVATE_SERVER_SHA_VERIFIED_HTTP_DOWNLOAD_READBACK_OPEN",
     "source_provenance_gaps_preserved": true,
     "publication_receipt": "docs/receipts/20261027-1.2.1-private-publication.json"
+  },
+  "auto_network_deployment": {
+    "tool_version": "0.3.0",
+    "production_source_commit": "51f027f89451e831568db4bb1cd76013adff08d6",
+    "integration_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
+    "base_image_version": "1.2.1",
+    "base_image_unchanged": true,
+    "default_network": "DHCP first, static fallback 10.168.1.199/24",
+    "verification": "PASS_SCOPED_DEFAULT_AUTO_SINGLE_COMMAND_NEW_CARD_COLD_GUI_WARM",
+    "limits": "No new image, RTL, full-profile, USB, Windows or absolute RF qualification; complete-system corresponding source remains incomplete"
   }
 }

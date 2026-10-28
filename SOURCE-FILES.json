@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 5285,
-      "sha256": "4c6cb3d270674e070e7e19d4b5918e8f222f2a04dd906e666f47fe51c395d8a9"
+      "bytes": 5693,
+      "sha256": "33fa828c8375b70020335eccdd0c812d90ce69f961c14f2816e36f3abab90fd4"
     },
     "SOURCE-BASE.json": {
-      "bytes": 2978,
-      "sha256": "12c5995785801c8f7238a200a445eed277d941f234ae0f1abe55618d03ed4ee9"
+      "bytes": 3562,
+      "sha256": "959c11981cb34752a46370f3dedae4406c81da943d0f9fb22c64fccf3a1781e5"
     },
     "SOURCE-MAP.json": {
-      "bytes": 107715,
-      "sha256": "d8c339c216702a7aee67707ab5ee73cf1dc190f8221d86d89e5fc5b0b89fb989"
+      "bytes": 110546,
+      "sha256": "c3b59c12d11b6eee5ccc7015e1e60f5108bed00ceb55e0be2774b0eacde40710"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -199,12 +199,12 @@
       "sha256": "bb7e3dba7760b80918f0219fc571cf9820bf12866e280cf4f4ccf37fec490976"
     },
     "docs/DELIVERY.md": {
-      "bytes": 4061,
-      "sha256": "1f705144c42a9aea4883ef4f074a659627d1d0b41ae6a2a724c3166fe48a6807"
+      "bytes": 4289,
+      "sha256": "1606e92c125f3fb48f2a0a6007e1dddc1e7a117125ee5d286d091b80844c1003"
     },
     "docs/DEPLOYMENT.md": {
-      "bytes": 4499,
-      "sha256": "7a3571460df1699e8804ca4e746465db456386e791e35e0310c21472354c5052"
+      "bytes": 5678,
+      "sha256": "d207c42f96cdafa850bcb29503dbd30f180a0df4fe7cc1a5ddcae4a23980ceba"
     },
     "docs/GETTING-STARTED.md": {
       "bytes": 2799,
@@ -247,8 +247,8 @@
       "sha256": "a05bef9239ae2a26ea5266d294ce201ee8b5c87c00148a67cf87437f614d596b"
     },
     "docs/SD-QUICK-WRITE.md": {
-      "bytes": 3285,
-      "sha256": "2d4784cce6c8c5e841a59071034958c5689bdb20160e23e290cbae37d573fccc"
+      "bytes": 5539,
+      "sha256": "892fc0303ca4caede28e7c3724e8bd47628545083a5c63b781cec7c7ca8490bc"
     },
     "docs/SOURCE-AVAILABILITY.md": {
       "bytes": 3340,
@@ -658,6 +658,10 @@
       "bytes": 11650,
       "sha256": "e66c77d51f85b61eed9e5572b44014967f7eed681d0afa74fec947288b955fcd"
     },
+    "scripts/h102_network_profiles.py": {
+      "bytes": 6913,
+      "sha256": "2dac8069c4f69533a93d0e4de2b8b4b6bb999137a4b55adaa06e36cd5894b843"
+    },
     "scripts/h102_prepare_sdk1_kernel.py": {
       "bytes": 6109,
       "sha256": "121cbc4e10e2a4be83662f5055d555aac880b56adf8a178736fcb95118d42f1f"
@@ -699,16 +703,20 @@
       "sha256": "d32e7c34b708783764fe17e7444c3fdfd3b7b29e3be6bfc242f1f0e624603b75"
     },
     "scripts/h102_sd_deploy.py": {
-      "bytes": 23711,
-      "sha256": "edabc32b262bc953170ee99e96f2cc89b254e5bbb1f496d006e2e790405220d7"
+      "bytes": 25300,
+      "sha256": "b30df09866fb53c009dd83e5190f96f960649c33934e01236bb25f180c78c194"
+    },
+    "scripts/h102_sd_network.py": {
+      "bytes": 11862,
+      "sha256": "2712ec0f5b23592c20e8d482ff1c59b4d0c4fcf202694bbad5b071036d2eb9ea"
     },
     "scripts/h102_tx_v3_config.py": {
       "bytes": 4152,
       "sha256": "5ad4589089db8a2960232de91832db6a03c4d01a4b1131e9c64d6a06ea8f8fe1"
     },
     "scripts/h102_write_sd.sh": {
-      "bytes": 3562,
-      "sha256": "7ed26320dd7cdfa052ad574c716682e5d2ad42e184bc337af7a5695f7b34f245"
+      "bytes": 4341,
+      "sha256": "2da2df0c93dc60bf3f89e1ef71d686df5c3f1727cfa5c1dc6a9cbddbf136d3af"
     },
     "scripts/install_network_performance.py": {
       "bytes": 8090,
@@ -767,8 +775,16 @@
       "sha256": "16f48773aa1929afb4ac854960d6369ea6a6c8a43999a6ce20af0f4c65092c2a"
     },
     "tests/test_h102_deployment.py": {
-      "bytes": 16367,
-      "sha256": "637e783608071a30c15d2aa7e001fbeb08e979b157ab99ec8f57c0318d447b66"
+      "bytes": 18268,
+      "sha256": "918a06b23eeb70255a4aa103cdc92d9a3f85658861d375fcf41ff8b0615942cc"
+    },
+    "tests/test_h102_sd_launcher.py": {
+      "bytes": 3415,
+      "sha256": "b10b2ab3b4ac6d180a79f704759aa52ef68f659fd760b64860aa5cbee1335dc6"
+    },
+    "tests/test_h102_sd_network.py": {
+      "bytes": 10719,
+      "sha256": "2266ed78f352d1386decb1e87ebb085fcf09c3cb55dbfcb2b2aeb32ff8f757d7"
     },
     "tests/test_iio_api_examples.py": {
       "bytes": 8997,

@@ -1,8 +1,8 @@
 # Deploy the released image to a new H102
 
-For one-command writing, start with [SD quick write](SD-QUICK-WRITE.md). The detailed inspection and SSH checks below are administrator tools; normal GUI and GNU Radio use only the device IP. For a static-only network, use the [UART IPv4 setup](https://docs.logicrf.com/en/hawk-h102/system#static-ipv4).
+For one-command writing and DHCP-first/static fallback setup, start with [SD quick write](SD-QUICK-WRITE.md). The detailed inspection and SSH checks below are administrator tools; normal GUI and GNU Radio use only the device IP. Existing cards can use the [UART IPv4 setup](https://docs.logicrf.com/en/hawk-h102/system#static-ipv4).
 
-Use a Linux host with Python 3.10+, util-linux (`lsblk`, `blockdev`), udisks2 (`udisksctl`), and administrator access for the write operation. Use a card large enough for the 11,823,742,976-byte image. A 32-GB card is suitable; the first boot expands the root filesystem.
+Use a Linux host with Python 3.10+, util-linux (`lsblk`, `blockdev`), udisks2 (`udisksctl`), e2fsprogs (`debugfs`, `e2fsck`), kernel loop support and administrator access for writing. Use a card large enough for the 11,823,742,976-byte image. A 32-GB card is suitable; the first boot expands the root filesystem.
 
 ## 1. Obtain and verify the image
 
@@ -32,11 +32,11 @@ sudo python3 scripts/h102_sd_deploy.py write \
   --report /path/to/new-card-write.json
 ```
 
-The tool holds one exclusive block-device FD through write, fsync and full O_DIRECT readback. A failed stage is reported explicitly. It does not fall back to cached readback or retry writing automatically. Follow the final ejection result before removing the card.
+The tool holds one exclusive block-device FD through write, fsync, full O_DIRECT readback and network customization. By default it installs DHCP-first startup with fallback to 10.168.1.199/24. It checks all five network files and ext4 consistency before ejection. A failed stage is reported explicitly; it does not use cached readback or retry writing automatically. Follow the final ejection result before removing the card. Use `--network dhcp` for DHCP only or `--network static --address IP/PREFIX` for a manual address; optional `--gateway` must be another host in that subnet, and `--dns` accepts up to three comma-separated IPv4 addresses.
 
 ## 4. First boot and basic checks
 
-With the H102 powered off, install the card and connect Ethernet to a DHCP network. UART0 uses 115200 baud, 8N1, no flow control. Power on and allow identity generation, root expansion and initialization to finish; do not interrupt any automatic reboot. Find its actual DHCP address.
+With the H102 powered off, install the card and connect Ethernet. UART0 uses 115200 baud, 8N1, no flow control. Power on and allow identity generation, root expansion and initialization to finish. Use the actual DHCP address when a lease is available. Otherwise the default writer's setup falls back to 10.168.1.199/24 after the DHCP transaction timeout; the computer must have a different address in that subnet. Provision different fallback addresses for multiple H102 units.
 
 Ordinary matching GUI/GNU Radio control sessions use only the device IP with the control service already included in this image. Administrator first-boot checks use an existing trusted SSH connection or run locally on the board:
 
@@ -52,6 +52,8 @@ Check independent machine/MAC/SSH identities, matching kernel/boot assets, 58 pr
 ## Validation scope
 
 The exact 1.2.1 image and physical-card writer passed complete write/direct readback and first-unit cold/warm boot, identity persistence and representative data checks. See the [acceptance scope](PANEL-SYSTEM.md). Earlier two-board checks apply to their original 1.2.0 inputs; they do not qualify an untested new unit. Run basic identity/service checks and bounded, bandwidth-admitted receive checks on every new H102.
+
+Tools 0.3.0 additionally passed default-auto single-command card deployment, fresh-card cold/warm boot, identity persistence and a ten-second dual-RX GUI recording at 4 MSPS. The earlier DHCP-failure test rejected fresh offers on the board while preserving the laboratory DHCP server; physical server absence and deliberate address conflicts were not newly tested. No new image, RTL, USB, full-profile or RF performance qualification is implied. The original 1.2.1 image retains DHCP-only settings when written without these tools.
 
 ## Hosts using AppImage/FUSE
 
