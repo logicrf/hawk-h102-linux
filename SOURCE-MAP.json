@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "development_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
+  "development_commit": "2e4fe3b1f3d63ac7fc94546944ff08fee1ef9c24",
   "scope": "H102 downstream integration toolkit, not complete image corresponding source",
   "files": [
     {
       "path": "README.md",
       "source_repository": "logicrf/hawk-h102-linux",
-      "source_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
+      "source_commit": "2e4fe3b1f3d63ac7fc94546944ff08fee1ef9c24",
       "source_path": "README.md",
-      "source_sha256": "83d73b09a62134b6c9c471e8de9a0fc73ad6c298e00bc849351486e294ff48d3",
-      "source_git_blob": "13dad21812a033ec3fe502dc27d9df4aacb4d8cc",
+      "source_sha256": "3a3b011741872e3b7a7ca8bb7de6987adc15e8e6f130f80363ed636049e3b2ed",
+      "source_git_blob": "bea8dcff5db87d4b5c086428540ca1b46a9a53a7",
       "mode": "100644",
       "translation_reused": false,
-      "english_sha256": "33fa828c8375b70020335eccdd0c812d90ce69f961c14f2816e36f3abab90fd4",
-      "modification": "Reviewed English diagnostics and customer instructions for DHCP-first deployment; base image unchanged"
+      "english_sha256": "2c8b11ebdddf09d5778d232735b30382d7306239271362d31b877e58865fd285",
+      "modification": "Reviewed English download-integrity result and scope; no firmware or tool behavior changed"
     },
     {
       "path": "control-api/.gitignore",
@@ -1874,6 +1874,18 @@
       "translation_reused": false,
       "english_sha256": "838ddee231055059cfe11a6c813e2aaae40d835a772034eb75694d51f88fcdae",
       "modification": "English comments/docstrings and localized messages only"
+    },
+    {
+      "path": "docs/receipts/20261028-image-http-readback.json",
+      "source_repository": "logicrf/hawk-h102-linux",
+      "source_commit": "2e4fe3b1f3d63ac7fc94546944ff08fee1ef9c24",
+      "source_path": "docs/receipts/20261028-image-http-readback.json",
+      "source_sha256": "9c710734d6626161211bf583bce40e3497d23f3e9d3f6c0a0c666d79b2c398af",
+      "source_git_blob": "3b846ab0ff86549c2cf34b1f7663173038ea28ec",
+      "mode": "100644",
+      "translation_reused": false,
+      "english_sha256": "d94becea92c166694ce83fe34fc089c27637035d63403cb6d628cbdb9718cb74",
+      "modification": "Reviewed English download-integrity result and scope; no firmware or tool behavior changed"
     }
   ],
   "derived_files": {
@@ -2069,5 +2081,10 @@
     }
   ],
   "stable_delivery_development_commit": "2c3fa8d30bf5b57dad98614b75ac30d03193adb4",
-  "post_publication_development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864"
+  "post_publication_development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
+  "download_integrity_update": {
+    "development_commit": "2e4fe3b1f3d63ac7fc94546944ff08fee1ef9c24",
+    "receipt": "docs/receipts/20261028-image-http-readback.json",
+    "scope": "Actual three-part browser download, complete compressed and RAW hashes only; original image and hardware/source limits preserved"
+  }
 }

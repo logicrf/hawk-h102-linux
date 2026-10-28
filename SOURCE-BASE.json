@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "logicrf/hawk-h102-linux",
-  "development_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
+  "development_commit": "2e4fe3b1f3d63ac7fc94546944ff08fee1ef9c24",
   "delivery_branch": "github-en",
   "language": "English",
   "status": "READY_PRIVATE_INTEGRATION_TOOLKIT",
@@ -21,7 +21,7 @@
     "manifest": "manifests/h102-companion-delivery-20261026.json",
     "scope": "Stable host/tool releases and matching setup references; rootfs source-materials r13 and existing open gaps unchanged"
   },
-  "previous_development_commit": "7c4a50cb69cfbee31f33e0dd919f7d5262afa864",
+  "previous_development_commit": "b6daa68654e7f91f3cf8a5c1119b31354690b02d",
   "panel_system_candidate": {
     "version": "1.2.1-rc2",
     "design_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
@@ -46,9 +46,11 @@
     "version": "1.2.1",
     "internal_build": "1.2.1-rc2",
     "receipt": "docs/receipts/20261027-1.2.1-exact-image-acceptance.json",
-    "publication": "PUBLISHED_PRIVATE_SERVER_SHA_VERIFIED_HTTP_DOWNLOAD_READBACK_OPEN",
+    "publication": "PUBLISHED_PRIVATE_ACTUAL_PARTS_XZ_RAW_READBACK_VERIFIED",
     "source_provenance_gaps_preserved": true,
-    "publication_receipt": "docs/receipts/20261027-1.2.1-private-publication.json"
+    "publication_receipt": "docs/receipts/20261027-1.2.1-private-publication.json",
+    "previous_publication_status": "PUBLISHED_PRIVATE_SERVER_SHA_VERIFIED_HTTP_DOWNLOAD_READBACK_OPEN",
+    "download_readback_receipt": "docs/receipts/20261028-image-http-readback.json"
   },
   "auto_network_deployment": {
     "tool_version": "0.3.0",

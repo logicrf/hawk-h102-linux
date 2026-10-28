@@ -19,16 +19,16 @@
       "sha256": "8ad9de8a23fee678f4da56aabfc070ddf0950aa62497d2e467571e0d2cf483b6"
     },
     "README.md": {
-      "bytes": 5693,
-      "sha256": "33fa828c8375b70020335eccdd0c812d90ce69f961c14f2816e36f3abab90fd4"
+      "bytes": 6016,
+      "sha256": "2c8b11ebdddf09d5778d232735b30382d7306239271362d31b877e58865fd285"
     },
     "SOURCE-BASE.json": {
-      "bytes": 3562,
-      "sha256": "959c11981cb34752a46370f3dedae4406c81da943d0f9fb22c64fccf3a1781e5"
+      "bytes": 3740,
+      "sha256": "9bd96a42303802612ee3ab9b0abcf0f338e5742d18ba182581b017062d9992f4"
     },
     "SOURCE-MAP.json": {
-      "bytes": 110546,
-      "sha256": "c3b59c12d11b6eee5ccc7015e1e60f5108bed00ceb55e0be2774b0eacde40710"
+      "bytes": 111549,
+      "sha256": "0d240218118ea528a41bbee148c2993279c66bfac26bb9346555e20312594863"
     },
     "control-api/.gitignore": {
       "bytes": 38,
@@ -277,6 +277,10 @@
     "docs/receipts/20261027-1.2.1-private-publication.json": {
       "bytes": 1087,
       "sha256": "c69bf99a9961a098732dca59805097a8746cb77afa54ca0b90c3e4e5952d9540"
+    },
+    "docs/receipts/20261028-image-http-readback.json": {
+      "bytes": 1926,
+      "sha256": "d94becea92c166694ce83fe34fc089c27637035d63403cb6d628cbdb9718cb74"
     },
     "docs/source-review/bluej-java17-observed.patch": {
       "bytes": 787,

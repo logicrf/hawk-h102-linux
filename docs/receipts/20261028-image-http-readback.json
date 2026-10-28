@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "product": "LogicRF Hawk H102 Kuiper",
+  "version": "1.2.1",
+  "release_tag": "h102-kuiper-1.2.1-image",
+  "status": "PASS_ACTUAL_RELEASE_PARTS_XZ_RAW_READBACK",
+  "verified_at": "2026-10-28T11:45:43.771212+08:00",
+  "source": "Authenticated GitHub release download through Chrome, including manual completion for part03",
+  "parts": [
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.1-2024.1.img.xz.part01",
+      "bytes": 1073741824,
+      "sha256": "6beae730922c34c66229216b78073e07e8b1c15a1591ba9642ee1df5527cf341"
+    },
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.1-2024.1.img.xz.part02",
+      "bytes": 1073741824,
+      "sha256": "e355f8738afb947db366af9cef23d7d87865e8ce4b3f87fcb08fc532f71c3217"
+    },
+    {
+      "name": "LogicRF-Hawk-H102-Kuiper-1.2.1-2024.1.img.xz.part03",
+      "bytes": 613286644,
+      "sha256": "0b74ef71b9e27c9467930b08fe3327117b9e95845d96defa84f554e945748d13"
+    }
+  ],
+  "compressed": {
+    "bytes": 2760770292,
+    "sha256": "31d554358ab80111c8b9244a93261e184c0766a13680fb860199a4154df5aea5"
+  },
+  "raw": {
+    "bytes": 11823742976,
+    "sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
+    "verification": "complete streaming decompression and SHA256; no RAW disk copy"
+  },
+  "image_bytes_modified": false,
+  "new_SD_or_hardware_operations": false,
+  "browser_automation_part03": "ERR_BLOCKED_BY_CLIENT; manual download completed; original failure retained",
+  "qualification_scope": "Downloaded-image integrity only; device, RF, endurance and source-licensing scope unchanged",
+  "complete_system_corresponding_source": false,
+  "verification_note": "This receipt closes the actual three-part download, reassembly and full RAW integrity check. Automated part03 access was blocked and the user completed that download manually. This does not claim a browser-policy fix, a new SD deployment or expanded hardware qualification."
+}
